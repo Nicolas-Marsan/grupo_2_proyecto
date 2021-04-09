@@ -7,7 +7,7 @@ Descripcion del grupo:
 
 Franco Spinelli: Tengo 23 años, soy estudiante del profesorado en la UTN, soy hincha de Boca y me gusta aprender nuevas herramientas para facilitar la vida.
 Rodrigo Fernández: Tengo 20 años, estudié para TCP, ahora programación web, trabajo en una empresa de seguridad privada y soy hincha de Racing.
-...
+Gaston Molinari: Tengo 19 años, estoy estudiando este curso de programacion, soy hincha de Chicago y ayudo a mi abuela en el trabajo.
 ...
 
 
