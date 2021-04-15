@@ -13,11 +13,11 @@ Nicolas Marsan: soy estudiante de programacion en la Universidad de San Martin, 
 
 Sitios de referencia
 
--Mercado libre.
--Tienda supervielle.
--Tienda personal.
--Tienda movistar.
--Tienda claro.
+-https://www.mercadolibre.com.ar/
+-https://www.tiendasupervielle.com/
+-https://tienda.personal.com.ar/
+-https://tienda.movistar.com.ar
+-https://tienda.claro.com.ar
 
 Fueron elegidos por tener un contenido directamente relacionado con los productos que comercializara nuestra empresa.
 
@@ -32,3 +32,11 @@ Detalle de producto - https://www.figma.com/file/K0wA9t3j8OTBrrp6TnZle5/Trabajo-
 Formulario de registro - https://www.figma.com/file/K0wA9t3j8OTBrrp6TnZle5/Trabajo-Integrador-DH?node-id=24%3A2
 
 Formulario login - https://www.figma.com/file/K0wA9t3j8OTBrrp6TnZle5/Trabajo-Integrador-DH?node-id=25%3A0
+
+Enlace trello
+
+https://trello.com/b/zu3kDLFm/proyecto
+
+Enlace hitHub
+
+https://github.com/Nicolas-Marsan/grupo_2_proyecto
