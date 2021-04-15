@@ -21,7 +21,7 @@ Sitios de referencia
 
 Fueron elegidos por tener un contenido directamente relacionado con los productos que comercializara nuestra empresa.
 
-Enlases a los wireframes
+Enlaces a los wireframes
 
 HOME - https://www.figma.com/file/K0wA9t3j8OTBrrp6TnZle5/Trabajo-Integrador-DH?node-id=0%3A1
 
