@@ -20,3 +20,15 @@ Sitios de referencia
 -Tienda claro.
 
 Fueron elegidos por tener un contenido directamente relacionado con los productos que comercializara nuestra empresa.
+
+Enlases a los wireframes
+
+HOME - https://www.figma.com/file/K0wA9t3j8OTBrrp6TnZle5/Trabajo-Integrador-DH?node-id=0%3A1
+
+Carrito de compras - https://www.figma.com/file/K0wA9t3j8OTBrrp6TnZle5/Trabajo-Integrador-DH?node-id=7%3A2
+
+Detalle de producto - https://www.figma.com/file/K0wA9t3j8OTBrrp6TnZle5/Trabajo-Integrador-DH?node-id=10%3A2
+
+Formulario de registro - https://www.figma.com/file/K0wA9t3j8OTBrrp6TnZle5/Trabajo-Integrador-DH?node-id=24%3A2
+
+Formulario login - https://www.figma.com/file/K0wA9t3j8OTBrrp6TnZle5/Trabajo-Integrador-DH?node-id=25%3A0
