@@ -1,0 +1,49 @@
+/*verde oscuro #C3CA02
+verde claro  #F3FB9D*/
+*{
+    box-sizing: border-box;
+}
+
+.carrito i{    
+    color: #000000;
+}
+.logo_barra_manu_carrito{
+    width: 100vw;
+    display: flex;
+    background-color: #C3CA02 ;
+    align-items: center;
+}
+.logo_barra_manu_carrito .logo{
+    width: 20%;
+    
+}
+.logo_barra_manu_carrito .logo img{
+    width: 100%;
+}
+
+.logo_barra_manu_carrito .barra_busqueda{
+    width: 50%;
+   
+}
+
+.logo_barra_manu_carrito .barra_busqueda input{
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    text-align: center;
+    border: transparent;
+    
+}
+
+.logo_barra_manu_carrito .hamburguesa{
+    width: 15%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.logo_barra_manu_carrito .carrito{
+    width: 15%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
