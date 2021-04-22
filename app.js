@@ -13,4 +13,24 @@ app.get('/', function(req , res){
     res.sendFile(htmlPath);
 });
 
+app.get('/register', function(req , res){
+    let htmlPath = path.join(__dirname,'./views/register.html' );
+    res.sendFile(htmlPath);
+});
+
+app.get('/login', function(req , res){
+    let htmlPath = path.join(__dirname,'./views/login.html' );
+    res.sendFile(htmlPath);
+});
+
+app.get('/productDetail', function(req , res){
+    let htmlPath = path.join(__dirname,'./views/productDetail.html');
+    res.sendFile(htmlPath);
+});
+
+app.get('/productCart', function(req , res){
+    let htmlPath = path.join(__dirname,'./views/productCart.html' );
+    res.sendFile(htmlPath);
+});
+
 
