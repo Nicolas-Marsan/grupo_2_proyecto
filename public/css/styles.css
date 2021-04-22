@@ -12,6 +12,7 @@ verde claro  #F3FB9D*/
     display: flex;
     background-color: #C3CA02 ;
     align-items: center;
+    max-height: 100px;
 }
 .logo_barra_manu_carrito .logo{
     width: 20%;
@@ -19,6 +20,8 @@ verde claro  #F3FB9D*/
 }
 .logo_barra_manu_carrito .logo img{
     width: 100%;
+    max-width: 140px;
+    max-height: 100px;
 }
 
 .logo_barra_manu_carrito .barra_busqueda{
