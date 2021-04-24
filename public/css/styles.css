@@ -125,45 +125,98 @@ body{
 
 .cuatro .envio, .cuatro .cuotas, .cuatro .garantia, .cuatro .celulares{
 
-    width: 240px;
+    width: 140px;
     background-color: #F3FB9D;
     margin:  1px;
-    height: 80px;
+    height: 50px;
     display: flex;
     flex-direction: column; 
-    border-radius: 5px;   
+    border-radius: 5px;  
+    padding-bottom: 10px; 
 }
 .cuatro .envio .encabezado_envio, .cuatro .cuotas .encabezado_cuotas, .cuatro .garantia .encabezado_garantia, .cuatro .celulares .encabezado_celulares{
     display: flex;
 }
 .cuatro p{
     margin: 0px;
+    font-size: 10px;
 }
 .cuatro i{
     color:  #252850;
-    font-size: 2em;
+    font-size: 1em;
 }
 .encabezado_envio, .encabezado_cuotas, .encabezado_celulares, .encabezado_garantia{
     justify-content: space-around;
-    padding-top: 20px;
+    padding-top: 10px;
+    font-weight: bold;
     
 }
 .detalle1, .detalle2, .detalle3, .detalle4{
     align-self: center;
 }
 .pie_envio {
-    padding-left: 86px;
+    padding-left: 53px;
     font-size: 0.9em;
 }
 .pie_garantia {
-    padding-left: 92px;
+    padding-left: 56px;
     font-size: 0.9em;
 }
 .pie_celulares {
-    padding-left: 81px;
+    padding-left: 51px;
     font-size: 0.9em;
 }
 .pie_cuotas {
-    padding-left: 82px;
+    padding-left: 51px;
     font-size: 0.9em;
+}
+.descuento{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    
+   
+}
+.descuento img{
+    width: 100%;
+    max-width: 700px;
+    padding-top: 15px;
+    
+    
+    
+}
+.destacados{
+    width: 100vw;
+    background-color: #C3CA02;
+}
+.destacados p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.celulares_destacados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.celulares_destacados img{
+
+    width: 100%;
+    max-width: 200px;
+}
+.detalle_celu{
+
+    text-align: center;
+    margin: 0px;
+    background-color: #C3CA02;
+    font-weight: bold;
+    border-radius: 10px;
+    
+}
+.celu2, .celu3, .celu4{
+    align-self: flex-end;
+    padding-left: 10px;
+    padding-right: 10px;
 }
