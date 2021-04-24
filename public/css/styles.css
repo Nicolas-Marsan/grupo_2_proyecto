@@ -1,11 +1,18 @@
 /*verde oscuro #C3CA02
-verde claro  #F3FB9D*/
+verde claro  #F3FB9D
+azul noche #252850*/
 *{
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+body{
+
+    min-width: 360px;
 }
 
+
 .carrito i{    
-    color: #000000;
+    color: #252850;
 }
 .logo_barra_manu_carrito{
     width: 100vw;
@@ -20,33 +27,143 @@ verde claro  #F3FB9D*/
 }
 .logo_barra_manu_carrito .logo img{
     width: 100%;
-    max-width: 140px;
+    max-width: 130px;
     max-height: 100px;
 }
 
 .logo_barra_manu_carrito .barra_busqueda{
-    width: 50%;
+    width: 60%;
+    display: flex;
+   
+}
+
+
+.logo_barra_manu_carrito .barra_busqueda i{
+    
+    font-size: 1.5em;
+    align-self: center;
+    height: 35px;
+    padding-top: 5px;
+    background-color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: -1px;
+    color: #252850;
+
    
 }
 
 .logo_barra_manu_carrito .barra_busqueda input{
     width: 100%;
     height: 35px;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     text-align: center;
     border: transparent;
     
 }
 
 .logo_barra_manu_carrito .hamburguesa{
-    width: 15%;
+    width: 10%;
     text-align: center;
     font-size: 1.5em;
+    color: #252850;
+    
 }
 
 .logo_barra_manu_carrito .carrito{
-    width: 15%;
+    width: 10%;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.5em;    
 }
 
+.iniciar_crear_sesion{
+    display: flex;
+    width: 100vw;
+    height: 30px;
+    border-bottom: 4px solid #C3CA02;
+
+}
+.iniciar_crear_sesion .iniciar_sesion, .iniciar_crear_sesion .crear_cuenta{
+        background-color:  #F3FB9D;
+        width: 50%;
+        margin: 0px;
+        text-align: center;
+        font-weight: bold;
+        
+        
+
+}
+.iniciar_crear_sesion .iniciar_sesion p{
+    padding-bottom: 10px;
+    margin: 0px;
+    padding-top: 5px;
+}
+
+.iniciar_crear_sesion .crear_cuenta p{
+    padding-bottom: 10px;
+    margin: 0px;
+    padding-top: 5px;
+}
+
+
+
+.banner_bluedays img{
+
+    width: 100%;
+}
+
+.cuatro{
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color:  #C3CA02;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.cuatro .envio, .cuatro .cuotas, .cuatro .garantia, .cuatro .celulares{
+
+    width: 240px;
+    background-color: #F3FB9D;
+    margin:  1px;
+    height: 80px;
+    display: flex;
+    flex-direction: column; 
+    border-radius: 5px;   
+}
+.cuatro .envio .encabezado_envio, .cuatro .cuotas .encabezado_cuotas, .cuatro .garantia .encabezado_garantia, .cuatro .celulares .encabezado_celulares{
+    display: flex;
+}
+.cuatro p{
+    margin: 0px;
+}
+.cuatro i{
+    color:  #252850;
+    font-size: 2em;
+}
+.encabezado_envio, .encabezado_cuotas, .encabezado_celulares, .encabezado_garantia{
+    justify-content: space-around;
+    padding-top: 20px;
+    
+}
+.detalle1, .detalle2, .detalle3, .detalle4{
+    align-self: center;
+}
+.pie_envio {
+    padding-left: 86px;
+    font-size: 0.9em;
+}
+.pie_garantia {
+    padding-left: 92px;
+    font-size: 0.9em;
+}
+.pie_celulares {
+    padding-left: 81px;
+    font-size: 0.9em;
+}
+.pie_cuotas {
+    padding-left: 82px;
+    font-size: 0.9em;
+}
