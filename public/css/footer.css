@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer{
+    background-color: #C3CA02;
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px 0 0 0;
+}
+
+.footer .logo{
+    padding: 0;
+}
+
+.footer .titulos{
+
+    font-size: bolder;
+    text-decoration: underline;
+    margin: 30px 0 20px 0;
+    text-align: center;
+}
+
+.footer section{
+    display: block;
+    width: 60%;
+    max-width: 215px;
+    margin: 15px auto;
+
+
+}
+
+.footer section .titulos{
+    text-align: start;
+}
+
+
+.footer section ul li {
+    text-align: start;
+    line-height: 35px;
+    list-style-type: none;
+}
+
+.footer section ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer section ul li a:hover{
+    text-decoration: underline;
+}
+
+.footer .bot-copyright .espacio-blanco{
+    padding: 8%;
+    background-color: #fff;
+}
+
+.footer .bot-copyright .copyright{
+    display: flex;
+    padding: 30px 10%;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    background-color: #fff;
+    border-top: black 1.5px solid;
+}
+
+
+.footer .bot-copyright .copyright p{
+    text-align: start;
+    justify-self: center;
+    align-self: center;
+    margin-left: 10px;
+}
+
+@media (min-width: 481px){
+    .footer{
+        font-size: 130%;
+    }
+
+    .footer section{
+        width: 90%;
+        max-width: 280px;
+    }
+}
+
+
+@media (min-width: 769px){
+
+    .footer{
+        display: flex;
+        font-size: 80%;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        padding: 3% 0 0 0;
+    }
+    
+    .footer .logo, .footer section{
+        max-width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 3%;
+    }
+
+    .footer .titulos{
+        margin: 10px 0 20px 0;
+    }
+
+    .footer .bot-copyright{
+        display: flex;
+        flex-direction: column;
+        width: 100%; 
+    }
+
+    .footer .bot-copyright .espacio-blanco{
+        padding: 3%;
+    }
+
+    .footer .bot-copyright .copyright{
+        margin: 0; 
+    }
+
+
+}
+
+@media (min-width: 1280px){
+    .footer{
+        font-size: 120%;
+    }
+}

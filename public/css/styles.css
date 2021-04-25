@@ -1,6 +1,9 @@
 /*verde oscuro #C3CA02
 verde claro  #F3FB9D
 azul noche #252850*/
+
+@import url(/css/footer.css); /* FOOTER*/
+
 *{
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
