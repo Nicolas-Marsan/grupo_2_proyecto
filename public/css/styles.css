@@ -97,6 +97,18 @@ body{
         
 
 }
+
+
+.iniciar_crear_sesion  a{
+    text-decoration: none;
+    color: black;
+}
+
+.iniciar_crear_sesion a:hover{
+    text-decoration: underline;
+}
+
+
 .iniciar_crear_sesion .iniciar_sesion p{
     padding-bottom: 10px;
     margin: 0px;
