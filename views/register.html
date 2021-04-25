@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         <link href="./css/normalize.css" rel="stylesheet">
         <link href="./css/styles.css" rel="stylesheet">
+        <link href="./css/register.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 <body>
@@ -46,9 +47,64 @@
 
         </header>
 
-        <main>
+        <main class="main-login">
+
+                <h2 class="titulo">
+                    CREÁ TU CUENTA
+                </h2>
+
+                <section class="datos-personales">
+                    <div class="div-nombre">
+                        <label class="label" for="">Nombre</label>
+                        <input type="text" name="nombre" id="" class="control">
+                    </div>
+                    <div class="div-apellido">
+                        <label class="label" for="">Apellido</label>
+                        <input type="text" name="apellido" id="" class="control">
+                    </div>
+                    <div class="div-correo" >
+                        <label class="label" for="">Correo electónico</label>
+                        <input type="email" name="correo" id="" class="control">
+                    </div>
+                </section>
+
+                <section class="pass">
+                        <div class="div-pass">
+                            <label class="label" for="">Contraseña</label>
+                            <input type="password" name="pass" id="" class="control">
+                        </div>
+                        <div class="div-confirm-pass"> 
+                            <label class="label" for="">Confirmar contraeña</label>
+                            <input type="password" name="" id="" class="control">
+                        </div>
+                </section>
+
+
+                <section class="terminos-condiciones">
+                    <div class="div-informacion">
+                        <input class="cbx" type="checkbox" name="información" id="">
+                        <label for="">Deseo recibir información sobre nuestros nuevos productos.</label>
+                    </div>
+                    <div class="div-terminos">
+                        <input class="cbx" type="checkbox" name="terminos" id="">
+                        <label for="">He leido y acepto los <a href="#">Términos y Condiciones</a>.</label>
+                    </div>
+                </section>
+
+
+                <section class="buttons">
+                    <button id="enviar" type="submit">Crear cuenta</button>
+                    <button type="menu">Volver</button>
+                </section>
 
         </main>
+
+
+
+
+
+
+
 
 
         <footer class="footer">

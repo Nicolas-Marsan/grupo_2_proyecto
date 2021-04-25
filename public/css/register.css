@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.main-login{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5% 0 0 0;
+    font-size: 18px;
+
+}
+
+.main-login .titulo{
+    background-color: #C3CA02;
+    width: 100%;
+    padding: 3% 1%;
+    border-radius: 10px;
+}
+
+
+.main-login .control{
+    height: 35px;
+    border-radius: 10px;
+}
+
+.main-login .datos-personales, .pass{
+    width: 100%;
+    background-color:#F3FB9D;
+    padding: 15px 5%;
+    margin: 5% 0 0 0 ;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-login .datos-personales .div-nombre, .div-apellido, .div-correo {
+    display: flex;
+    flex-direction: column;
+    margin: 5% 0;
+}
+
+.main-login .datos-personales .label, .pass .label{
+    text-align: left;
+    width: 100%;
+}
+
+.main-login .pass .div-pass, .div-confirm-pass{
+    display: flex;
+    flex-direction: column;
+    margin: 5% 0;
+}
+
+.main-login .terminos-condiciones{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    font-size: 80%;
+    justify-content: left;
+}
+
+.main-login .terminos-condiciones .div-informacion, .div-terminos{
+    display: flex;
+    text-align: left;
+    margin: 10px 5%;
+}
+
+.main-login .terminos-condiciones .cbx{
+    margin-right: 10px;
+    align-self: center;
+}
+
+.main-login .buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+}
+
+.main-login .buttons button{
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.main-login .buttons #enviar{
+    background-color: #C3CA02;
+    font-weight: bolder;
+}
+
+
+
+
+
+
