@@ -5,25 +5,50 @@
     padding: 0;
 }
 
-.celu-elegido img{
-    width: 40%;
-    margin-top: 20px;
-    margin-left: 15px;
-}
-
-.nombre-celu img{
-    width: 60%;
-}
-
-.detalle-celu img{
-    width: 60%;
-}
-
-/* .celu-elegido, .nombre-celu, .detalle-celu{
+.imgchicas-celu-elegido-junto{
     display: flex;
-    flex-wrap: wrap;
-} */
+    max-width: 100%;
+}
+
+.mas-vistas{
+    margin-top: 25px;
+}
+
+.nombre-celu{
+    margin-top: 20px;
+}
+
+.precio{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.detalle-celu{
+    margin-top: 50px;
+}
+
+.botones1{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.botones2{
+    margin-top: 60px;
+}
+
+.button-form{
+    background-color: rgba(216, 234, 7, 1);
+    border: none;
+    font-size: 20px;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 
 .banner-bajo img{
     width: 100%;
+    margin-top: 50px;
 }
