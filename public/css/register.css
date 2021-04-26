@@ -68,11 +68,11 @@
 
 
 .main-register .terminos-condiciones{
-    display: flex;
     flex-direction: column;
     align-content: center;
     font-size: 80%;
     justify-content: left;
+    width: 100%;
 }
 
 .main-register .terminos-condiciones .div-informacion, .div-terminos{

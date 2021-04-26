@@ -33,7 +33,7 @@
  .main-login .datos-usuario{
     width: 100%;
     background-color:#F3FB9D;
-    padding: 10px 10px 15px 10px;
+    padding: 5px 10px 15px 10px;
     margin: 20px 0 0 0 ;
     border-radius: 10px;
     display: flex;
@@ -50,7 +50,7 @@
  .main-login .datos-usuario .label,  .div-pass .label{
     text-align: left;
     width: 100%;
-    margin: 10px 0;
+    margin: 20px 0 5px 0;
 }
 
  .main-login  .div-pass {
@@ -100,9 +100,6 @@
     background-color: #C3CA02;
     font-weight: bolder;
 }
-
-
-
 
 
 
