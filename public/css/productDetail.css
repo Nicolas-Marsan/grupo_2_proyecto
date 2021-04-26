@@ -80,6 +80,8 @@
     padding: 5px 10px;
     height: 50px;
     border: none;
+    width: 90vw;
+    /* border: solid 1px black; */
 }
 
 .banner-bajo img{
