@@ -8,6 +8,7 @@
 .imgchicas-celu-elegido-junto{
     display: flex;
     max-width: 100%;
+    margin-top: 20px;
 }
 
 .mas-vistas{
@@ -16,6 +17,8 @@
 
 .nombre-celu{
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .precio{
@@ -36,16 +39,47 @@
 }
 
 .botones2{
-    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.botones3{
+    position: fixed;
+    z-index: 1000;
+    left: 5%;
+    bottom: 10px;
 }
 
 .button-form{
     background-color: rgba(216, 234, 7, 1);
-    border: none;
     font-size: 20px;
     color: black;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+.button-form2{
+    background-color: rgba(216, 234, 7, 1);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.button-form3{
+    background-color: rgba(216, 234, 7, 1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.button-form4{
+    background-color: #5bc500;
+    border-radius: 8px;
+    padding: 5px 10px;
+    height: 50px;
+    border: none;
 }
 
 .banner-bajo img{
