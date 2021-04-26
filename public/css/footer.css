@@ -84,7 +84,7 @@
 
     .footer section{
         width: 90%;
-        max-width: 280px;
+        max-width: 186px;
     }
 }
 
@@ -128,8 +128,11 @@
 
 }
 
-@media (min-width: 1280px){
+@media (min-width: 1200px){
     .footer{
         font-size: 120%;
+    }
+    .footer section{
+        max-width: 186px;
     }
 }
