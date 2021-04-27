@@ -177,23 +177,23 @@ input{
     .imgchicas-celu-elegido-junto{
         justify-content: flex-start;
     }
-    .nombre-celu{
+    /* .nombre-celu{
         justify-content: flex-end;
-    }
-    .nombre-celu img{
+    } */
+    /* .nombre-celu img{
         width: 50%;
-    }
-    .precio{
+    } */
+    /* .precio{
         justify-content: flex-end;
-    }
-    .precio img{
+    } */
+    /* .precio img{
         width: 50%;
-    }
-    .detalle-celu{
+    } */
+    /* .detalle-celu{
         display: flex;
         justify-content: flex-end;
-    }
-    .detalle-celu img{
+    } */
+    /* .detalle-celu img{
         width: 50%;
-    }
+    } */
 }
