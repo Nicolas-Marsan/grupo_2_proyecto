@@ -84,6 +84,16 @@
     /* border: solid 1px black; */
 }
 
+.medios-de-pago-todo{
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.medios-de-pago h3{
+    color: rgba(0,0,0,.8);
+    
+}
+
 .banner-bajo img{
     width: 100%;
     margin-top: 50px;
