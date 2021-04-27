@@ -81,7 +81,6 @@
     height: 50px;
     border: none;
     width: 90vw;
-    /* border: solid 1px black; */
 }
 
 .medios-de-pago-todo{
@@ -91,7 +90,7 @@
 
 .medios-de-pago h3{
     color: rgba(0,0,0,.8);
-    
+
 }
 
 .banner-bajo img{
