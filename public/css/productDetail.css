@@ -156,9 +156,44 @@ input{
     margin-top: 20px;
 }
 
-
-
 .banner-bajo img{
     width: 100%;
     margin-top: 50px;
+}
+
+/* COMIENZO MEDIA QUERIES */
+
+@media(min-width: 481px){
+    .imgchicas-celu-elegido-junto{
+        justify-content: center;
+    }
+}
+
+@media (min-width: 769px){
+    .celu-elegido img{
+        width: 70%;
+    }
+    }
+    .imgchicas-celu-elegido-junto{
+        justify-content: flex-start;
+    }
+    .nombre-celu{
+        justify-content: flex-end;
+    }
+    .nombre-celu img{
+        width: 50%;
+    }
+    .precio{
+        justify-content: flex-end;
+    }
+    .precio img{
+        width: 50%;
+    }
+    .detalle-celu{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .detalle-celu img{
+        width: 50%;
+    }
 }
