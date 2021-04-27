@@ -1,0 +1,154 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+ .main-login{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0 0 0;
+    font-size: 18px;
+
+}
+
+ .main-login .titulo{
+    background-color: #C3CA02;
+    width: 100%;
+    padding: 15px 1%;
+    border-radius: 10px;
+}
+
+
+ .main-login .control{
+    height: 40px;
+    border-radius: 10px;
+}
+
+ .main-login .datos-usuario{
+    width: 100%;
+    background-color:#F3FB9D;
+    padding: 5px 10px 15px 10px;
+    margin: 20px 0 0 0 ;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+ .main-login, .div-correo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+ .main-login .datos-usuario .label,  .div-pass .label{
+    text-align: left;
+    width: 100%;
+    margin: 20px 0 5px 0;
+}
+
+ .main-login  .div-pass {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+ .main-login  .div-pass i{
+    position: absolute;
+    top: 50px;
+    right: 10px;
+}
+
+.main-login .div-recordar-usuario{
+    display: flex;
+    margin: 10px 0 5px 5px;
+    justify-content: space-between;
+    text-align: end;
+}
+
+.main-login .div-recordar-usuario .div-recordar{
+    display: flex;
+    align-items: center;
+}
+
+.main-login .div-recordar-usuario .cbx{
+    margin-right: 5px;
+    align-self: center;
+}
+
+ .main-login .buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 30px;
+}
+
+ .main-login .buttons button{
+    padding: 5px;
+    border-radius: 10px;
+}
+
+ .main-login .buttons #iniciar-sesion{
+    background-color: #C3CA02;
+    font-weight: bolder;
+}
+
+
+
+
+@media (min-width: 481px){
+
+    .main .login{
+        width: 80%;
+    }
+
+    .main .login .datos-usuario{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 25px 0 5px 0;
+    }
+
+    .main .login  .datos-usuario .div-nombre, .div-apellido{
+        display: flex;
+        justify-items: left;
+        width: 45%;
+    }
+
+    .main .login .datos-usuario .div-correo{
+        width: 95%;
+    }
+
+
+    .main .login .terminos-condiciones{
+        display: inline-block;
+        font-size: 100%;
+        margin: 20px 0;
+    }
+
+}
+
+
+@media (min-width: 769px){
+
+    .main .login{
+        width: 70%;
+    }
+}
+
+
+@media (min-width: 1200px){
+
+     .main-login{
+        width: 40%;
+    }
+}
