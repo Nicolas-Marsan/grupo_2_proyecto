@@ -8,6 +8,7 @@
 .imgchicas-celu-elegido-junto{
     display: flex;
     max-width: 100%;
+    margin-top: 20px;
 }
 
 .mas-vistas{
@@ -16,6 +17,8 @@
 
 .nombre-celu{
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .precio{
@@ -36,19 +39,161 @@
 }
 
 .botones2{
-    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.botones3{
+    position: fixed;
+    z-index: 1000;
+    left: 5%;
+    bottom: 10px;
 }
 
 .button-form{
     background-color: rgba(216, 234, 7, 1);
-    border: none;
     font-size: 20px;
     color: black;
     padding: 5px 10px;
     border-radius: 5px;
+    border: none;
+}
+
+.button-form2{
+    background-color: rgba(216, 234, 7, 1);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.button-form3{
+    background-color: rgba(216, 234, 7, 1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.button-form4{
+    background-color: rgba(216, 234, 7, 1);
+    border-radius: 8px;
+    padding: 5px 10px;
+    height: 50px;
+    border: none;
+    width: 90vw;
+}
+
+.medios-de-pago-todo{
+    margin-top: 40px;
+    /* margin-left: 20px; */
+}
+
+.medios-de-pago h3{
+    color: rgba(0,0,0,.8);
+
+}
+
+/* .payment-methods1{
+    margin-top: 15px;
+}
+ */
+
+.medios-de-pago{
+    padding: 15px 0;
+}
+
+.medios-de-pago div{
+    margin-top: 40px;
+}
+
+.medios-de-pago-todo{
+    border-top: solid 1px gray;
+    padding: 10px;
+}
+
+.preguntas-frecuentes-todo{
+    padding: 10px;
+    border-top: solid 1px gray;
+}
+
+.preguntas-frecuentes-todo div{
+    margin-top: 20px;
+}
+
+.cuadro-pregunta{
+    margin-top: 20px;
+}
+
+input{
+    width: 100%;
+    padding: 5px;
+    
+}
+
+.boton-preguntar-todo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.button-form-preguntar{
+    background-color: rgba(216, 234, 7, 1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    width: 95vw;
+    height: 30px;
+}
+
+.comentarios-todo{
+    padding: 10px;
+    border-top: solid 1px gray;
+    
+}
+
+.subtitulo-opiniones{
+    margin-top: 20px;
 }
 
 .banner-bajo img{
     width: 100%;
     margin-top: 50px;
+}
+
+/* COMIENZO MEDIA QUERIES */
+
+@media(min-width: 481px){
+    .imgchicas-celu-elegido-junto{
+        justify-content: center;
+    }
+}
+
+@media (min-width: 769px){
+    .celu-elegido img{
+        width: 70%;
+    }
+    }
+    .imgchicas-celu-elegido-junto{
+        justify-content: flex-start;
+    }
+    /* .nombre-celu{
+        justify-content: flex-end;
+    } */
+    /* .nombre-celu img{
+        width: 50%;
+    } */
+    /* .precio{
+        justify-content: flex-end;
+    } */
+    /* .precio img{
+        width: 50%;
+    } */
+    /* .detalle-celu{
+        display: flex;
+        justify-content: flex-end;
+    } */
+    /* .detalle-celu img{
+        width: 50%;
+    } */
 }
