@@ -3,13 +3,13 @@
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
-    font-size: 14px;
+    font-size: 8px;
 }
 
 .footer{
     background-color: #C3CA02;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 10px 0 0 0;
 }
 
@@ -17,21 +17,23 @@
     padding: 0;
 }
 
+.footer .logo img{
+    width: 100px;
+}
+
 .footer .titulos{
 
     font-size: bolder;
     text-decoration: underline;
-    margin: 30px 0 20px 0;
+    margin: 15px 0 5px 0;
     text-align: center;
 }
 
 .footer section{
     display: block;
     width: 60%;
-    max-width: 186px;
+    max-width: 107px;
     margin: 15px auto;
-
-
 }
 
 .footer section .titulos{
@@ -41,7 +43,7 @@
 
 .footer section ul li {
     text-align: start;
-    line-height: 35px;
+    line-height: 25px;
     list-style-type: none;
 }
 
