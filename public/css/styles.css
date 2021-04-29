@@ -9,10 +9,15 @@ azul noche #252850*/
     font-family: 'Raleway', sans-serif;
 }
 body{
-
+    
     min-width: 360px;
+    margin-top: 120px;
 }
-
+.encabezado{
+    position: fixed;
+    top:0px;
+    backgra
+}
 
 .carrito i{    
     color: #252850;
