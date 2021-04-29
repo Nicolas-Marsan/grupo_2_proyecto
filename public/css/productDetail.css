@@ -195,15 +195,6 @@ input{
         margin-left: 20px;
     }
 
-    .product-detail{
-        width: auto;
-        height: auto;
-        float: right;
-        position: relative;
-        bottom: 50vw;
-        right: 40px
-    }
-
     .botones1{
         display: flex;
         align-items: center;
@@ -218,12 +209,29 @@ input{
     .payment-methods3 img{
         width: 12%
     }
+
+    .product-img-box, .product-detail{
+        display: flex;
+    }
  }
 
 @media (min-width:1200px){
     .imgchicas-celu-elegido-junto{
-
+        margin-left: 20%;
     }
+
+    /* .celu-elegido img{
+        width: 75%;
+    } */
+
+    /* .product-detail{
+        width: auto;
+        height: auto;
+        float: right;
+        position: relative;
+        bottom: 25vw;
+        right: 30%;
+    } */
 
     .payment-methods1 img{
         width: 12%
@@ -233,5 +241,18 @@ input{
     }
     .payment-methods3 img{
         width: 8%
+    }
+
+    input[type=text]{
+        width: 50%;
+    }
+
+    .button-form-preguntar{
+       width: auto;
+    }
+    
+    .boton-preguntar-todo{
+        justify-content:flex-start;
+        margin-left: 10px;
     }
 }
