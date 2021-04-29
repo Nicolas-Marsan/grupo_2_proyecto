@@ -31,6 +31,18 @@
     margin-top: 50px;
 }
 
+.payment-methods1 img{
+    margin-top: 10px;
+}
+
+.payment-methods2 img{
+    margin-top: 10px;
+}
+
+.payment-methods3 img{
+    margin-top: 10px;
+}
+
 .botones1{
     display: flex;
     justify-content: center;
@@ -167,33 +179,70 @@ input{
     .imgchicas-celu-elegido-junto{
         justify-content: center;
     }
+
+    .botones3{
+        display: none;
+    }
 }
 
 @media (min-width: 769px){
     .celu-elegido img{
-        width: 70%;
+        width: auto;
     }
-    }
+
     .imgchicas-celu-elegido-junto{
         justify-content: flex-start;
+        margin-left: 20px;
     }
-    /* .nombre-celu{
-        justify-content: flex-end;
-    } */
-    /* .nombre-celu img{
-        width: 50%;
-    } */
-    /* .precio{
-        justify-content: flex-end;
-    } */
-    /* .precio img{
-        width: 50%;
-    } */
-    /* .detalle-celu{
+
+    .botones1{
         display: flex;
-        justify-content: flex-end;
-    } */
-    /* .detalle-celu img{
+        align-items: center;
+    }
+
+    .payment-methods1 img{
+        width: 15%
+    }
+    .payment-methods2 img{
+        width: 12%
+    }
+    .payment-methods3 img{
+        width: 12%
+    }
+
+    .producto-descripcion-todo{
+        display: flex;
+    }
+
+    .product-detail{
+        margin-top: 60px;
+    }
+ }
+
+@media (min-width:1200px){
+    .payment-methods1 img{
+        width: 12%
+    }
+    .payment-methods2 img{
+        width: 8%
+    }
+    .payment-methods3 img{
+        width: 8%
+    }
+
+    input[type=text]{
         width: 50%;
-    } */
+    }
+
+    .button-form-preguntar{
+       width: auto;
+    }
+    
+    .boton-preguntar-todo{
+        justify-content:flex-start;
+        margin-left: 10px;
+    }
+    .producto-descripcion-todo{
+        justify-content: center;
+    }
 }
