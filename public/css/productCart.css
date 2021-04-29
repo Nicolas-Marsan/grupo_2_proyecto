@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+}
+
+.main-section{
+    display: flex;
+    flex-direction:column;
+    width:50%;
+}
+.articulos img{ 
+    width: 70%
+}
+.articulos{
+    width: 100%;
+    margin:0%;
+    text-align: left;
+}
+.boton-detalle{
+    width:116px;
+    margin-left: 10px;
+     border-radius: 5px;
+     background-color: #C3CA02
+}
+.g9plus{
+    margin-left:5px;
+}
+h1{
+    text-align:center;
+}
+.section-2{
+    display:flex;
+}
+
+.promociones{
+    width:50%;
+}
+
+#promocion{
+    font-weight: bold;
+    font-size: 15px
+}
+
+.div-promocion, .div-promocion2{
+    text-align:center;
+    margin-bottom: 50%;
+}
+
+#codigo, #postal{
+    height: 30px;
+    width: 70%;
+    background-color: #D3D3D3;
+    color:black;
+    font-weight: bold
+}
+
+.enviar{
+    display:flex;
+    width: 100%;
+    margin-top: 5%
+}
+
+.cart-enviar{
+    background-color: black;
+    color: white
+}
+.precio p{
+    font-size: 20px;
+    font-weight:bold
+}
+
+.boton-comprar{
+    text-align: center;
+    margin-top: 15%;
+}
+
+.comprar{
+    padding:8px;
+    background-color: #C3CA02;
+    width: 70%;
+}
+.div-promocion2{
+    margin-bottom: 100%
+}
+
+.main-recomendado{
+    display:flex;
+}
+
+.articulos2{
+    width:50%;
+}
+
+.articulos2 article{
+    text-align:center
+}
+
+
+.main-articulos2{
+    text-align: center;
+}
+
+@media(min-width: 769px){
+.enviar{justify-content: center;}
+.div-promocion{
+    margin-top: 30%
+}
+.articulo1-img{
+    height: 70%;
+    margin-top: 50px
+}
+.main-precio{
+    text-align: center;
+   padding-top: 40%
+}
+.articulos{
+    text-align: center;
+    margin-top: 3%
+}
+.boton-detalle{
+    width: 60%;
+    height: 25px
+}
+#codigo, #postal{
+    height: 35px
+}
+}
+
+@media(min-width: 1200px){
+.div-promocion2{
+    margin-bottom: 10px
+}
+.div-promocion{
+    margin:0;
+}
+.articulos{
+    height: 300px
+}
+.articulo1-img{
+    width:100px;
+}
+.div-promocion{
+    margin-top: 60px
+}
+.div-promocion2{
+    margin-top: 60px
+}
+.main-precio{
+    padding-top: 200px;
+    display:flex;
+    flex-direction: column
+}
+
+#codigo, #postal{
+    width:300px;
+    height: 40px;
+}
+.enviar{
+    margin-top: 10px
+}
+.boton-comprar{
+    margin-top: 40px;
+    text-align: center;
+}
+.comprar{
+    width: 340px;
+}
+.main-recomendado{ 
+justify-content: space-between}
+}
