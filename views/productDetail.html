@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="./css/normalize.css" rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/productDetail.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <title>Smart Shop</title>
 </head>
@@ -16,10 +17,11 @@
         <nav class="logo_barra_manu_carrito">
             
             <div class="logo">
-                <img  src="./images/logoSmart.jpg" >
+                <a href="/"><img  src="./images/logoSmart.jpg"></a>
             </div>
             <div class="barra_busqueda">
-                <input type="search" value="Que estas buscando?">
+                <input type="search" value="Que estas buscando?"><i class="fas fa-search"></i>
+                
             </div>
             <div class="hamburguesa">
                 <i class="fa fa-bars burger"></i>
@@ -34,10 +36,10 @@
         <nav class="iniciar_crear_sesion">
 
             <div class="iniciar_sesion">
-
+                <a href="/login"><p> Iniciar Sesión</p></a>
             </div>
             <div class="crear_cuenta">
-
+                <a href="/register"><p>Crear cuenta</p></a>
             </div>
 
         </nav>
@@ -47,8 +49,79 @@
     <!--  FIN DE HEADER -->
 
     <!-- CONTENIDO DETALLE PRODUCTO -->
-
+        <section class="product-img-box">
+            <div class="imgchicas-celu-elegido-junto">
+                <div class="mas-vistas">
+                    <ul class="imagenes-chicas">
+                        <li><a href="#"><img src="/images/chiquita a51.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="/images/chiquita2 a51.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="celu-elegido">
+                    <img src="/images/samsung a51.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="product-detail">
+            <div class="nombre-celu">
+                <img src="/images/samsung a51 nombre.jpg" alt="" width="90%">
+            </div>
+            <div class="precio">
+                <img src="/images/a51 precio.jpg" alt="" width="70%">
+            </div>
+            <div class="detalle-celu">
+                <img src="/images/detalle a51.jpg" alt="" width="100%">
+            </div>
+        </section>
+            <div class="botones1">
+                <a href="#"><button type="submit" class="button-form">Comprar</button></a>
+                <a href="#"><button type="submit" class="button-form">Agregar al carrito</button></a>
+            </div>
+            <div class="botones3">
+                <a href="#"><button type="submit" class="button-form4">Comprar</button></a>
+            </div>
+            <div class="medios-de-pago-todo">
+                <div class="medios-de-pago">
+                    <h3 class="subtitulo-medio-pago"> Medios de pago</h3>
+                    <div class="payment-methods1">
+                        <p>¡Tarjetas de crédito y cuotas sin interés con bancos seleccionados!</p>
+                        <img src="/images/logos-tarjetascredito.jpg" alt="" width="40%" >
+                    </div>
+                    <div class="payment-methods2">
+                        <p>Tarjetas de débito</p>
+                        <img src="/images/logos-tarjetasdebito.jpg" alt="" width="25%" >
+                    </div>
+                    <div class="payment-methods3">
+                        <p>Efectivo</p>
+                        <img src="/images/logos-efectivo.jpg" alt="" width="30%">
+                    </div>
+                </div>
+            </div>
+            <div class="preguntas-frecuentes-todo">
+                <div class="preguntas-frecuentes">
+                    <h3 class="subtitulo-preguntas">Preguntas frecuentes</h3>
+                </div>
+                <div class="subtitulo-haz-pregunta">
+                    <p>¡Haz tu pregunta!</p>
+                </div>
+                <form action="/productDetail" method="POST" class="cuadro-pregunta">
+                    <label for="question"></label>
+                    <input type="text" name="question" id="question" placeholder="Escribi tu pregunta...">
+                </form>
+            </div> 
+                <div class="boton-preguntar-todo">
+                    <a href="#"><button type="submit" class="button-form-preguntar">Preguntar</button></a>
+                </div>
+            <div class="comentarios-todo">
+                <div class="opiniones-sobre-producto">
+                    <h3 class="subtitulo-opiniones">Opiniones sobre el producto</h3>
+                </div>
+            </div>                     
+    <div class="banner-bajo">
+        <img src="/images/banner enterate.jpg">
+    </div>
     <!-- FIN CONTENIDO DETALLE PRODUCTO -->
+    
     <!-- COMIENZO DE FOOTER -->
     <footer class="footer">
         <div class="logo">

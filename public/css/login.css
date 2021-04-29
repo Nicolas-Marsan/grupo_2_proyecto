@@ -1,3 +1,4 @@
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -5,7 +6,7 @@
     font-family: 'Raleway', sans-serif;
 }
 
-.main-register{
+ .main-login{
     text-align: center;
     width: 100%;
     margin: auto;
@@ -16,7 +17,7 @@
 
 }
 
-.main-register .titulo{
+ .main-login .titulo{
     background-color: #C3CA02;
     width: 100%;
     padding: 15px 1%;
@@ -24,15 +25,15 @@
 }
 
 
-.main-register .control{
+ .main-login .control{
     height: 40px;
     border-radius: 10px;
 }
 
-.main-register .datos-personales, .pass{
+ .main-login .datos-usuario{
     width: 100%;
     background-color:#F3FB9D;
-    padding: 15px 10px;
+    padding: 5px 10px 15px 10px;
     margin: 20px 0 0 0 ;
     border-radius: 10px;
     display: flex;
@@ -40,19 +41,19 @@
 }
 
 
-.main-register .datos-personales .div-nombre, .div-apellido, .div-correo {
+ .main-login, .div-correo {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.main-register .datos-personales .label, .pass .label{
+ .main-login .datos-usuario .label,  .div-pass .label{
     text-align: left;
     width: 100%;
-    margin: 10px 0;
+    margin: 20px 0 5px 0;
 }
 
-.main-register .pass .div-pass, .div-confirm-pass{
+ .main-login  .div-pass {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -60,57 +61,56 @@
     position: relative;
 }
 
-.main-register .pass i{
+ .main-login  .div-pass i{
     position: absolute;
     top: 50px;
     right: 10px;
 }
 
-
-.main-register .terminos-condiciones{
-    flex-direction: column;
-    align-content: center;
-    font-size: 80%;
-    justify-content: left;
-    width: 100%;
-}
-
-.main-register .terminos-condiciones .div-informacion, .div-terminos{
+.main-login .div-recordar-usuario{
     display: flex;
-    text-align: left;
-    margin: 10px 5%;
+    margin: 10px 0 5px 5px;
+    justify-content: space-between;
+    text-align: end;
 }
 
-.main-register .terminos-condiciones .cbx{
-    margin-right: 10px;
+.main-login .div-recordar-usuario .div-recordar{
+    display: flex;
+    align-items: center;
+}
+
+.main-login .div-recordar-usuario .cbx{
+    margin-right: 5px;
     align-self: center;
 }
 
-.main-register .buttons{
+ .main-login .buttons{
     display: flex;
     justify-content: space-around;
     width: 100%;
-    padding: 20px;
+    padding: 30px;
 }
 
-.main-register .buttons button{
+ .main-login .buttons button{
     padding: 5px;
     border-radius: 10px;
 }
 
-.main-register .buttons #enviar{
+ .main-login .buttons #iniciar-sesion{
     background-color: #C3CA02;
     font-weight: bolder;
 }
 
 
+
+
 @media (min-width: 481px){
 
-    .main-register{
+    .main .login{
         width: 80%;
     }
 
-    .main-register .datos-personales{
+    .main .login .datos-usuario{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -118,18 +118,18 @@
         margin: 25px 0 5px 0;
     }
 
-    .main-register  .datos-personales .div-nombre, .div-apellido{
+    .main .login  .datos-usuario .div-nombre, .div-apellido{
         display: flex;
         justify-items: left;
         width: 45%;
     }
 
-    .main-register .datos-personales .div-correo{
+    .main .login .datos-usuario .div-correo{
         width: 95%;
     }
 
 
-    .main-register .terminos-condiciones{
+    .main .login .terminos-condiciones{
         display: inline-block;
         font-size: 100%;
         margin: 20px 0;
@@ -140,7 +140,7 @@
 
 @media (min-width: 769px){
 
-    .main-register{
+    .main .login{
         width: 70%;
     }
 }
@@ -148,7 +148,7 @@
 
 @media (min-width: 1200px){
 
-    .main-register{
+     .main-login{
         width: 40%;
     }
 }

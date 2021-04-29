@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         <link href="./css/normalize.css" rel="stylesheet">
         <link href="./css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/login.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 <body>
@@ -17,7 +18,7 @@
             <nav class="logo_barra_manu_carrito">
                 
                 <div class="logo">
-                    <img  src="./images/logoSmart.jpg" >
+                    <a href="/"><img  src="./images/logoSmart.jpg"></a>
                 </div>
                 <div class="barra_busqueda">
                     <input type="search" value="Que estas buscando?"><i class="fas fa-search"></i>
@@ -46,9 +47,38 @@
 
         </header>
 
-        <main>
 
-        </main>
+            <main class="main-login">
+
+                <h2 class="titulo">INICIAR SESIÓN</h2>
+                <section class="datos-usuario">
+                    <div class="div-correo" >
+                        <label class="label" for="">Correo electrónico</label>
+                        <input type="email" name="correo" id="" class="control">
+                    </div>
+                    <div class="div-pass">
+                        <label class="label" for="">Contraseña</label>
+                        <input type="password" name="pass" id="" class="control"><i class="fas fa-eye-slash"></i>
+                    </div>
+                    <div class="div-recordar-usuario">
+                        <div class="div-recordar">
+                            <input class="cbx" type="checkbox" name="recordar-usuario" id="">
+                            <label for="">Recordar usuario</label>
+                        </div>
+                        <label for=""> <a href="#">¿Olvidaste tu contraseña?</a></label>
+
+                    </div>
+
+                </section>
+
+                <section class="buttons">
+                    <button id="iniciar-sesion" type="submit">Iniciar sesión</button>
+                    <button type="menu">Volver</button>
+                </section>
+                
+    
+                    <p class="register">¿Aún no tienes cuenta? <a href="/register">Crea tu cuenta</a></p>
+            </main>
 
 
         <footer class="footer">
