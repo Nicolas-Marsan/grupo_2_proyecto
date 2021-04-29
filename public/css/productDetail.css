@@ -31,6 +31,18 @@
     margin-top: 50px;
 }
 
+.payment-methods1 img{
+    margin-top: 10px;
+}
+
+.payment-methods2 img{
+    margin-top: 10px;
+}
+
+.payment-methods3 img{
+    margin-top: 10px;
+}
+
 .botones1{
     display: flex;
     justify-content: center;
@@ -166,6 +178,10 @@ input{
 @media(min-width: 481px){
     .imgchicas-celu-elegido-junto{
         justify-content: center;
+    }
+
+    body{
+        width: 100%;
     }
 }
 
