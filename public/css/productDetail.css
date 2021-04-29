@@ -173,10 +173,14 @@ input{
     .celu-elegido img{
         width: 70%;
     }
-    }
     .imgchicas-celu-elegido-junto{
         justify-content: flex-start;
     }
+
+    .botones3{
+        display: none;
+    }
+
     /* .nombre-celu{
         justify-content: flex-end;
     } */
@@ -196,4 +200,4 @@ input{
     /* .detalle-celu img{
         width: 50%;
     } */
-}
+ }
