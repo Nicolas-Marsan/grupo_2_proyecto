@@ -192,14 +192,15 @@ input{
 
     .imgchicas-celu-elegido-junto{
         justify-content: flex-start;
+        margin-left: 20px;
     }
 
     .product-detail{
         width: auto;
         height: auto;
         float: right;
-        position: absolute;
-        top: 30%;
+        position: relative;
+        bottom: 50vw;
         right: 40px
     }
 
@@ -207,8 +208,30 @@ input{
         display: flex;
         align-items: center;
     }
+
+    .payment-methods1 img{
+        width: 15%
+    }
+    .payment-methods2 img{
+        width: 12%
+    }
+    .payment-methods3 img{
+        width: 12%
+    }
  }
 
 @media (min-width:1200px){
+    .imgchicas-celu-elegido-junto{
 
+    }
+
+    .payment-methods1 img{
+        width: 12%
+    }
+    .payment-methods2 img{
+        width: 8%
+    }
+    .payment-methods3 img{
+        width: 8%
+    }
 }
