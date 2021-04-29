@@ -180,40 +180,35 @@ input{
         justify-content: center;
     }
 
-    body{
-        width: 100%;
+    .botones3{
+        display: none;
     }
 }
 
 @media (min-width: 769px){
     .celu-elegido img{
-        width: 70%;
+        width: auto;
     }
+
     .imgchicas-celu-elegido-junto{
         justify-content: flex-start;
     }
 
-    .botones3{
-        display: none;
+    .product-detail{
+        width: auto;
+        height: auto;
+        float: right;
+        position: absolute;
+        top: 30%;
+        right: 40px
     }
 
-    /* .nombre-celu{
-        justify-content: flex-end;
-    } */
-    /* .nombre-celu img{
-        width: 50%;
-    } */
-    /* .precio{
-        justify-content: flex-end;
-    } */
-    /* .precio img{
-        width: 50%;
-    } */
-    /* .detalle-celu{
+    .botones1{
         display: flex;
-        justify-content: flex-end;
-    } */
-    /* .detalle-celu img{
-        width: 50%;
-    } */
+        align-items: center;
+    }
  }
+
+@media (min-width:1200px){
+
+}
