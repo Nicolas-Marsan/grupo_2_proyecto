@@ -210,29 +210,16 @@ input{
         width: 12%
     }
 
-    .product-img-box, .product-detail{
+    .producto-descripcion-todo{
         display: flex;
+    }
+
+    .product-detail{
+        margin-top: 60px;
     }
  }
 
 @media (min-width:1200px){
-    .imgchicas-celu-elegido-junto{
-        margin-left: 20%;
-    }
-
-    /* .celu-elegido img{
-        width: 75%;
-    } */
-
-    /* .product-detail{
-        width: auto;
-        height: auto;
-        float: right;
-        position: relative;
-        bottom: 25vw;
-        right: 30%;
-    } */
-
     .payment-methods1 img{
         width: 12%
     }
@@ -254,5 +241,8 @@ input{
     .boton-preguntar-todo{
         justify-content:flex-start;
         margin-left: 10px;
+    }
+    .producto-descripcion-todo{
+        justify-content: center;
     }
 }
