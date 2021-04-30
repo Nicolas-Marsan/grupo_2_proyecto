@@ -251,4 +251,9 @@ input{
     .producto-descripcion-todo{
         justify-content: center;
     }
+
+    .botones1{
+        justify-content: center;
+        margin-left: 30%
+    }
 }
