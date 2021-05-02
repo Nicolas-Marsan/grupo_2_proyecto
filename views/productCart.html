@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link href="./css/normalize.css" rel="stylesheet">
-    <link href="./css/styles.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <title>Mi Carrito.</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link href="./css/normalize.css" rel="stylesheet">
+        <link href="./css/styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="./css/productCart.css" rel="stylesheet">
+        <title>Mi Carrito.</title>
+    </head>
 <body>
     <header class="encabezado">
         <nav class="logo_barra_manu_carrito">
@@ -61,7 +62,85 @@
 
 
     </header>
-
+    <main>
+        <h1>Mi Carrito</h1>
+        <div class="section-2">
+    <section class="main-section">
+        <article class="articulos"><img class="articulo1-img" src="./images/samsung a21s.jpg" alt="a21"> 
+        <button class="boton-detalle"><a href="#"></a>Detalle</button></article>
+        <article class="articulos"><img class="articulo1-img" src="./images/samsung a51.jpg" alt="a51">
+         <button class="boton-detalle"><a href="#"></a>Detalle</button></article>
+        
+    </section>
+    <section class="promociones">
+        <form action="/" method="GET">
+           <div class="div-promocion"> <label for="codigo" id="promocion">¿Tenés un código de promoción?</label>
+           <div class="enviar"><input type="text" name="codigo" id="codigo" placeholder="Ingresar tu cupon">
+            
+                <button class="cart-enviar">Enviar</button>
+            </div></div>
+    
+           <div class="div-promocion2"> <label for="postal" id="promocion">Calcular costo de envio</label>
+           <div class=" enviar"><input type="text" name="postal" id="postal" placeholder="Codigo postal">
+            <button class="cart-enviar">Enviar</button></div></div>
+           
+           <div class="main-precio"><div class="precio"><p>Subtotal........$</p>
+            <p>Envio..............$</p>
+            <p>Total................$</p></div>
+            <div class="boton-comprar"><button class="comprar">Comprar</button></div></div></div>
+    
+    </section>
+    
+    
+    
+    <h1>Recomendado para vos</h1>
+    <section class="main-recomendado">
+        <article class="main-articulos2"><img class="articulos2" src="./images/moto g30.jpg" alt="g30"></article>
+        <article class="main-articulos2"><img class="articulos2" src="./images/samsung a51.jpg" alt="a51"></article>
+        <article class="main-articulos2"><img class="articulos2" src="./images/moto g9plus.jpg" alt="g9plus"></article>
+        
+    
+    
+    </section>
+    </main>
+        <footer class="footer">
+            <div class="logo">
+                <img src="/images/logoSmart.jpg" alt="Logo SmartShop">
+            </div>
+            <section  class="sobre-nosotros">
+                <h3 class="titulos">SOBRE NOSOTROS</h3>
+                <ul>
+                    <li><a href="#">SOBRE NOSOTROS</a></li>
+                    <li><a href="#">LINEA ÉTICA Y VALORES</a></li>
+                    <li><a href="#">POLÍTICA DE PRIVACIDAD</a></li>
+                </ul>
+            </section>
+    
+            <section class="tienda-smartshop">
+                <h3 class="titulos">TIENDA SMARTSHOP</h3>
+                <ul>
+                    <li><a href="#">MIS PEDIDOS</a></li>
+                    <li><a href="#">MI CARRITO</a></li>
+                    <li><a href="#">CAMBIOS Y DEVOLUCIONES</a></li>
+                </ul>
+            </section>
+            <section class="navegacion">
+                <h3 class="titulos">NAVEGACIÓN</h3>
+                <ul>
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#">PRODUCTOS</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                </ul>
+            </section>
+    
+            <div class="bot-copyright">
+                <div class="espacio-blanco"></div>
+                <div class="copyright">
+                    <i class="far fa-copyright fa-3x"></i>
+                    <p>Copyright SmartShop - 2021. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
     
 </body>
 </html>
