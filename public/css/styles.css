@@ -213,7 +213,9 @@ body{
 .destacados p{
     text-align: center;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 2em;
+    height: 50px;
+    padding-top: 7px;
 }
 
 .celulares_destacados{
@@ -256,6 +258,7 @@ body{
 .menu_lateral .crear_cuenta{
     display:none;
 }
+
 
 
 @media(min-width: 481px){
