@@ -20,8 +20,9 @@
  .main-login .titulo{
     background-color: #C3CA02;
     width: 100%;
-    padding: 15px 1%;
+    padding: 8px 1%;
     border-radius: 10px;
+    font-size: 120%;
 }
 
 
