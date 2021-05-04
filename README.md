@@ -21,7 +21,7 @@ Sitios de referencia
 
 Fueron elegidos por tener un contenido directamente relacionado con los productos que comercializara nuestra empresa.
 
-Enlaces a los wireframes
+Enlaces a los wireframes desktop
 
 HOME - https://www.figma.com/file/K0wA9t3j8OTBrrp6TnZle5/Trabajo-Integrador-DH?node-id=0%3A1
 
@@ -32,6 +32,14 @@ Detalle de producto - https://www.figma.com/file/K0wA9t3j8OTBrrp6TnZle5/Trabajo-
 Formulario de registro - https://www.figma.com/file/K0wA9t3j8OTBrrp6TnZle5/Trabajo-Integrador-DH?node-id=24%3A2
 
 Formulario login - https://www.figma.com/file/K0wA9t3j8OTBrrp6TnZle5/Trabajo-Integrador-DH?node-id=25%3A0
+
+Enlaces a los wireframes mobile
+
+HOME - https://www.figma.com/file/GQdsBqs3b4tw8Zj8Otqvok/Untitled?node-id=0%3A1
+
+Detalle de producto - https://www.figma.com/file/GQdsBqs3b4tw8Zj8Otqvok/Untitled?node-id=1%3A3
+
+Carrito de compras - https://www.figma.com/file/GQdsBqs3b4tw8Zj8Otqvok/Untitled?node-id=1%3A4
 
 Enlace trello
 
