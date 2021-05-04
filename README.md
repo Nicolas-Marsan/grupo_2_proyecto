@@ -48,3 +48,5 @@ https://trello.com/b/zu3kDLFm/proyecto
 Enlace hitHub
 
 https://github.com/Nicolas-Marsan/grupo_2_proyecto
+
+Importante! para ver el detalle del producto hacer clic en detalle de celular A51.
