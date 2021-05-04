@@ -171,8 +171,9 @@ justify-content: space-between}
     margin-left: 25%;
 }
 .articulos .articulo1-img{
-    width: 250px;
+    width: 230px;
     margin-top: 20px;
+    height: 270px
 }
 .boton-detalle{
     width: 250px
@@ -180,6 +181,17 @@ justify-content: space-between}
 h1{
     margin-top:150px
 }
+.div-recomendado{
+    text-align:center
+}
+.boton-detalle2{
+    display:block;
+    margin-left: 30%;
+    border-radius: 5px;
+     background-color: #C3CA02;
+     padding-left:30px;
+     padding-right:30px
 
+}
 }
 
