@@ -238,6 +238,10 @@ body{
     border-radius: 10px;
     
 }
+
+.detalle_celu a:visited{
+    color: black;
+}
 .celu2, .celu3, .celu4{
     align-self: flex-end;
     padding-left: 10px;
