@@ -18,12 +18,17 @@
 
 .main-register .titulo{
     background-color: #C3CA02;
-    width: 100%;
-    padding: 8px 1%;
+    width: 80%;
+    padding: 8px 10px;
     border-radius: 10px;
     font-size: 120%;
+    margin: auto;
 }
 
+.main-register form{
+    margin: auto;
+    width: 80%;
+}
 
 .main-register .control{
     height: 40px;
