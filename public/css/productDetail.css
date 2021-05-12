@@ -19,16 +19,33 @@
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    color: #636363;
+    
 }
 
 .precio{
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
+    color: #78c13a;
+    font-size: 18px;
 }
 
-.detalle-celu{
+.detalle-celu1{
     margin-top: 50px;
+    color: rgba(216, 234, 7, 1);
+    padding: 0 8px;
+}
+
+.detalle-celu2{
+    margin-top: 20px;
+    color: #636363;
+    padding: 0 8px;
+    
+}
+
+.product-detail{
+    justify-content: center;
 }
 
 .payment-methods1 img{
@@ -98,18 +115,12 @@
 
 .medios-de-pago-todo{
     margin-top: 40px;
-    /* margin-left: 20px; */
 }
 
 .medios-de-pago h3{
     color: rgba(0,0,0,.8);
 
 }
-
-/* .payment-methods1{
-    margin-top: 15px;
-}
- */
 
 .medios-de-pago{
     padding: 15px 0;
@@ -218,11 +229,20 @@ input{
 
     .producto-descripcion-todo{
         display: flex;
+        
     }
 
     .product-detail{
         margin-top: 60px;
     }
+
+    .detalle-celu1{
+        text-align: center;
+    }
+
+    /* .detalle-celu2{
+        width: 90%;
+    } */
  }
 
 @media (min-width:1200px){
@@ -255,5 +275,14 @@ input{
     .botones1{
         justify-content: center;
         margin-left: 30%
+    }
+
+    .detalle-celu1{
+        text-align: center;
+    }
+
+    .detalle-celu2{
+        width: 60%;
+        
     }
 }
