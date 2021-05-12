@@ -286,5 +286,6 @@ input{
 
     .producto-descripcion-todo{
         display: flex;
+        width: 100%;
     }
 }
