@@ -239,10 +239,6 @@ input{
     .detalle-celu1{
         text-align: center;
     }
-
-    /* .detalle-celu2{
-        width: 90%;
-    } */
  }
 
 @media (min-width:1200px){
@@ -282,7 +278,13 @@ input{
     }
 
     .detalle-celu2{
-        width: 60%;
-        
+        width: 30%;
+        margin: 0 auto;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .producto-descripcion-todo{
+        display: flex;
     }
 }
