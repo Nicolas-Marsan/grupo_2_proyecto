@@ -1,4 +1,3 @@
-
 *{
     box-sizing: border-box;
     padding: 0;
@@ -6,7 +5,7 @@
     font-family: 'Raleway', sans-serif;
 }
 
- .main-login{
+.main-login{
     text-align: center;
     width: 100%;
     margin: auto;
@@ -17,7 +16,7 @@
 
 }
 
- .main-login .titulo{
+.main-login .titulo{
     background-color: #C3CA02;
     width: 100%;
     padding: 8px 1%;
@@ -26,12 +25,12 @@
 }
 
 
- .main-login .control{
+.main-login .control{
     height: 40px;
     border-radius: 10px;
 }
 
- .main-login .datos-usuario{
+.main-login .datos-usuario{
     width: 100%;
     background-color:#F3FB9D;
     padding: 5px 10px 15px 10px;
@@ -42,19 +41,19 @@
 }
 
 
- .main-login, .div-correo {
+.main-login, .div-correo {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
- .main-login .datos-usuario .label,  .div-pass .label{
+.main-login .datos-usuario .label,  .div-pass .label{
     text-align: left;
     width: 100%;
     margin: 20px 0 5px 0;
 }
 
- .main-login  .div-pass {
+.main-login  .div-pass {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -62,7 +61,7 @@
     position: relative;
 }
 
- .main-login  .div-pass i{
+.main-login  .div-pass i{
     position: absolute;
     top: 55px;
     right: 10px;
@@ -85,19 +84,19 @@
     align-self: center;
 }
 
- .main-login .buttons{
+.main-login .buttons{
     display: flex;
     justify-content: space-around;
     width: 100%;
     padding: 30px;
 }
 
- .main-login .buttons button{
+.main-login .buttons button{
     padding: 5px;
     border-radius: 10px;
 }
 
- .main-login .buttons #iniciar-sesion{
+.main-login .buttons #iniciar-sesion{
     background-color: #C3CA02;
     font-weight: bolder;
 }
