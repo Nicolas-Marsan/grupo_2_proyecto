@@ -4,33 +4,15 @@ const path= require('path');
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 
+const rutasProducts = require('./routes/products.js');
+const rutasUsers = require ('./routes/users.js');
+const rutasHome = require ('./routes/home.js');
+
+app.use('/', rutasHome);
+app.use('/product', rutasProducts);
+app.use('/users', rutasUsers);
+
+
 app.listen(3000, () => {
     console.log('Servidor Corriendo en el puerto 3000');
-    
-})
-app.get('/', function(req , res){
-    let htmlPath = path.join(__dirname,'./views/index.html' );
-    res.sendFile(htmlPath);
 });
-
-app.get('/register', function(req , res){
-    let htmlPath = path.join(__dirname,'./views/register.html' );
-    res.sendFile(htmlPath);
-});
-
-app.get('/login', function(req , res){
-    let htmlPath = path.join(__dirname,'./views/login.html' );
-    res.sendFile(htmlPath);
-});
-
-app.get('/productDetail', function(req , res){
-    let htmlPath = path.join(__dirname,'./views/productDetail.html');
-    res.sendFile(htmlPath);
-});
-
-app.get('/productCart', function(req , res){
-    let htmlPath = path.join(__dirname,'./views/productCart.html' );
-    res.sendFile(htmlPath);
-});
-
-
