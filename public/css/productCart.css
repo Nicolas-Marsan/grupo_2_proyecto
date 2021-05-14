@@ -1,7 +1,9 @@
 *{
     box-sizing: border-box;
 }
-
+.encabezado{
+    z-index:10
+}
 .main-section{
     display: flex;
     flex-direction:column;
@@ -15,16 +17,30 @@
     margin:0%;
     text-align: left;
 }
+.carrito-recomendado{
+margin-bottom: 3%;
+margin-top:5%
+}
+
 .boton-detalle{
     width:116px;
     margin-left: 10px;
      border-radius: 5px;
-     background-color: #C3CA02
+     background-color: #C3CA02;
+     border-radius: 10px
 }
+.boton-detalle2{
+    width:80px;
+    margin-left: 0px;
+     border-radius: 5px;
+     background-color: #C3CA02;
+     border-radius: 10px
+};
+
 .g9plus{
     margin-left:5px;
 }
-h1{
+.carrito-titulo, .carrito-recomendado{
     text-align:center;
 }
 .section-2{
@@ -84,6 +100,7 @@ h1{
 
 .main-recomendado{
     display:flex;
+    justify-content:space-between
 }
 
 .articulos2{
@@ -97,6 +114,23 @@ h1{
 
 .main-articulos2{
     text-align: center;
+    width:32%;
+    display:flex;
+
+}
+.carrito-delete{
+    position:relative;
+    bottom: 85%;
+    padding: px;
+    height: 15px;
+    width:15px;
+    font-size: 10px;
+    background-color: black; 
+    font-weight:bolder;
+    color: white;
+}
+.articulos2{
+    height: 121.44px;
 }
 
 @media(min-width: 769px){
@@ -122,6 +156,22 @@ h1{
 }
 #codigo, #postal{
     height: 35px
+}
+.carrito-delete{
+    bottom: 70%
+}
+.articulos2{
+    width:120px;
+    height: 200px
+}
+.boton-detalle2{
+    width: 120px;
+}
+.div-recomendado{
+    display:flex;
+    flex-direction: column;
+    margin-left:20%
+
 }
 }
 
@@ -178,7 +228,7 @@ justify-content: space-between}
 .boton-detalle{
     width: 250px
 }
-h1{
+.carrito-titulo, .carrito-recomendado{
     margin-top:150px
 }
 .div-recomendado{
@@ -186,12 +236,24 @@ h1{
 }
 .boton-detalle2{
     display:block;
-    margin-left: 30%;
+    margin-left: 10%;
     border-radius: 5px;
      background-color: #C3CA02;
      padding-left:30px;
-     padding-right:30px
+     padding-right:30px;
+     width: 170px;
 
+}
+.carrito-delete{
+    bottom: 90%
+}
+.articulos2{
+    height: 300px;
+    width: 200px
+}
+.carrito-recomendado{
+    font-size: 40px;
+  
 }
 }
 
