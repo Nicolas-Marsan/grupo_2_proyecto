@@ -1,67 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartShop</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-        <link href="/css/normalize.css" rel="stylesheet">
-        <link href="/css/styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="/css/login.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-</head>
+    <%- include('./partials/head') %>
+
 <body>
-    <header class="encabezado">
-        <nav class="logo_barra_manu_carrito">
-            
-            <div class="logo">
-                <a href="/"><img  src="/images/logoSmart.jpg"></a>
-            </div>
-            <div class="barra_busqueda">
-                <input type="search" value="Que estas buscando?"><i class="fas fa-search"></i>
-                
-            </div>
-            <div class="hamburguesa">
-                <i class="fa fa-bars burger"></i>
-            </div>
-            <div class="carrito">
-                <i class="fas fa-shopping-cart"></i>
-            </div>
+    <%- include('./partials/header') %>
 
-
-        </nav>
-
-        <nav class="iniciar_crear_sesion">
-
-            <div class="iniciar_sesion">
-                <a href="/users/login"><p> Iniciar Sesión</p></a>
-            </div>
-            <div class="iniciar_sesion2">
-                <p class="pys"> Productos y servicios  </p>
-            </div>
-            <div class="crear_cuenta">
-                <a href="/users/register"><p>Crear cuenta</p></a>
-            </div>
-            <div class="menu_lateral">
-            <div class="iniciar_sesion3">
-                <a href="/users/login"><p> Iniciar Sesión</p></a>
-            </div>
-            <div class="crear_cuenta_full">
-                <a href="/users/register"><p>Crear cuenta</p></a>
-            </div>
-            <div class="mi_carrito">
-                <a href="/product/productCart"><p>Mi carrito</p></a>
-                <i class="fas fa-shopping-cart"></i>
-            </div>
-        </div>
-
-        </nav>
-
-
-    </header>
 
         <main class="main-login">
 
@@ -100,45 +43,6 @@
         </main>
 
 
-        <footer class="footer">
-            <div class="logo">
-                <img src="/images/logoSmart.jpg" alt="Logo SmartShop">
-            </div>
-    
-            <section  class="sobre-nosotros">
-                <h3 class="titulos">SOBRE NOSOTROS</h3>
-                <ul>
-                    <li><a href="#">SOBRE NOSOTROS</a></li>
-                    <li><a href="#">LINEA ÉTICA Y VALORES</a></li>
-                    <li><a href="#">POLÍTICA DE PRIVACIDAD</a></li>
-                </ul>
-            </section>
-    
-            <section class="tienda-smartshop">
-                <h3 class="titulos">TIENDA SMARTSHOP</h3>
-                <ul>
-                    <li><a href="#">MIS PEDIDOS</a></li>
-                    <li><a href="#">MI CARRITO</a></li>
-                    <li><a href="#">CAMBIOS Y DEVOLUCIONES</a></li>
-                </ul>
-            </section>
-    
-            <section class="navegacion">
-                <h3 class="titulos">NAVEGACIÓN</h3>
-                <ul>
-                    <li><a href="#">INICIO</a></li>
-                    <li><a href="#">PRODUCTOS</a></li>
-                    <li><a href="#">CONTACTO</a></li>
-                </ul>
-            </section>
-    
-            <div class="bot-copyright">
-                <div class="espacio-blanco"></div>
-    
-                <div class="copyright">
-                    <i class="far fa-copyright fa-3x"></i>
-                    <p>Copyright SmartShop - 2021. Todos los derechos reservados.</p>
-                </div>
-            </div>
-        </footer>
+        <%- include('./partials/footer') %>
+
 </html>
