@@ -8,6 +8,8 @@ azul noche #252850*/
 @import url(/css/productCart.css);
 @import url(/css/productDetail.css);
 @import url(/css/normalize.css);
+@import url(/css/crarProducto.css);
+
 *{
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
