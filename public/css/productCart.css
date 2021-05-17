@@ -25,14 +25,14 @@ margin-top:5%
 .boton-detalle{
     width:116px;
     margin-left: 10px;
-     border-radius: 5px;
+     border-radius: 10px;
      background-color: #C3CA02;
      border-radius: 10px
 }
 .boton-detalle2{
     width:80px;
     margin-left: 0px;
-     border-radius: 5px;
+     border-radius: 10px;
      background-color: #C3CA02;
      border-radius: 10px
 };
@@ -237,7 +237,7 @@ justify-content: space-between}
 .boton-detalle2{
     display:block;
     margin-left: 10%;
-    border-radius: 5px;
+    border-radius: 10px;
      background-color: #C3CA02;
      padding-left:30px;
      padding-right:30px;
