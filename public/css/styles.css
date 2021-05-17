@@ -16,7 +16,7 @@ body{
 .encabezado{
     position: fixed;
     top:0px;
-    
+    z-index: 10;
 }
 
 
@@ -149,7 +149,7 @@ body{
     height: 50px;
     display: flex;
     flex-direction: column; 
-    border-radius: 5px;  
+    border-radius: 10px;  
     padding-bottom: 10px; 
 }
 .cuatro .envio .encabezado_envio, .cuatro .cuotas .encabezado_cuotas, .cuatro .garantia .encabezado_garantia, .cuatro .celulares .encabezado_celulares{
@@ -302,7 +302,7 @@ body{
         height: 50px;
         display: flex;
         flex-direction: column; 
-        border-radius: 5px;  
+        border-radius: 10px;  
         padding-bottom: 10px; 
     }
 
@@ -318,7 +318,7 @@ body{
         height: 70px;
         display: flex;
         flex-direction: column; 
-        border-radius: 5px;  
+        border-radius: 10px;  
         padding-bottom: 10px; 
     }
     .cuatro p{
@@ -359,7 +359,7 @@ body{
         height: 100px;
         display: flex;
         flex-direction: column; 
-        border-radius: 5px;  
+        border-radius: 10px;  
         padding-bottom: 10px; 
     }
     .encabezado_envio{
