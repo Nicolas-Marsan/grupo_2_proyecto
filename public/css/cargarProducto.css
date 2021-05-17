@@ -75,17 +75,26 @@ form{
     justify-content: space-evenly;
 
 }
-.detalle{
-    display: flex;
-    justify-content: space-evenly;
-}
-.detalle textarea{
 
+.area{
+
+    width: 380px;
+    height: 300px;
     border-radius: 5px;
+    margin-bottom: 10px;
+    align-self: center;
 }
+
 .foto{
     display: flex;
     justify-content: space-evenly; 
+}
+.foto label{
+    align-self: center;
+}
+.detalle{
+    display: flex;
+    flex-direction: column;
 }
 .nombre{
     display: flex;
