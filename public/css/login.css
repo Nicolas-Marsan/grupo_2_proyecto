@@ -72,16 +72,23 @@
     margin: 10px 0 5px 5px;
     justify-content: space-between;
     text-align: end;
+    font-size: 14px;
 }
 
 .main-login .div-recordar-usuario .div-recordar{
     display: flex;
     align-items: center;
+    width: 50%;
 }
 
 .main-login .div-recordar-usuario .cbx{
-    margin-right: 5px;
     align-self: center;
+    width: 10%;
+}
+
+.main-login .div-recordar-usuario #label{
+    width: 100%;
+    text-align: left;
 }
 
 .main-login .buttons{
