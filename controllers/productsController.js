@@ -11,6 +11,12 @@ const productsController = {
         /* let htmlPath = path.join(__dirname,'../views/productCart.html' );
         res.sendFile(htmlPath); */
         res.render('productCart');
+    },
+
+    crearProduct: function(req , res){
+        /* let htmlPath = path.join(__dirname,'../views/productCart.html' );
+        res.sendFile(htmlPath); */
+        res.render('crearProducto');
     }
 };
 
