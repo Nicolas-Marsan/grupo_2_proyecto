@@ -24,7 +24,12 @@
     font-size: 120%;
     margin: auto;
 }
+.detalle input{
 
+    width: 250px;
+    height: 200px;
+
+}
 form{
     margin: auto;
     width: 80%;
@@ -62,7 +67,7 @@ form{
 
 .producto .nombre input, .producto .precio input, .producto .descripcion input, .pass .Tdetalle input,.pass .detalle input, .pass .foto input {
     border-radius: 5px;
-   
+    margin: 5px;
    }
 
 .Tdetalle{
@@ -73,6 +78,10 @@ form{
 .detalle{
     display: flex;
     justify-content: space-evenly;
+}
+.detalle textarea{
+
+    border-radius: 5px;
 }
 .foto{
     display: flex;

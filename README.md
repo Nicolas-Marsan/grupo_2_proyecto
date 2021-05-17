@@ -49,4 +49,7 @@ Enlace hitHub
 
 https://github.com/Nicolas-Marsan/grupo_2_proyecto
 
-Importante! para ver el detalle del producto hacer clic en detalle de celular A51.
+Importante! 
+
+-Para ver el detalle del producto hacer clic en detalle de celular A51.
+-Para ver el formulario de crar producto la ruta es: http://localhost:3000/crear/crearProducto.
