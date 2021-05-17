@@ -5,17 +5,17 @@
     padding: 0;
 }
 
-.imgchicas-celu-elegido-junto{
+.imgchicas-celu-elegido-junto-pd{
     display: flex;
     max-width: 100%;
     margin-top: 20px;
 }
 
-.mas-vistas{
+.mas-vistas-pd{
     margin-top: 25px;
 }
 
-.nombre-celu{
+.nombre-celu-pd{
     margin-top: 20px;
     display: flex;
     justify-content: center;
@@ -23,7 +23,7 @@
     
 }
 
-.precio{
+.precio-detalleProducto-pd{
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -31,44 +31,44 @@
     font-size: 18px;
 }
 
-.detalle-celu1{
+.detalle-celu1-pd{
     margin-top: 50px;
     color: rgba(216, 234, 7, 1);
     padding: 0 8px;
     text-align: center;
 }
 
-.detalle-celu2{
+.detalle-celu2-pd{
     margin-top: 20px;
     color: #636363;
     padding: 0 8px;
     
 }
 
-.product-detail{
+.product-detail-pd{
     justify-content: center;
 }
 
-.payment-methods1 img{
+.payment-methods1-pd img{
     margin-top: 10px;
 }
 
-.payment-methods2 img{
+.payment-methods2-pd img{
     margin-top: 10px;
 }
 
-.payment-methods3 img{
+.payment-methods3-pd img{
     margin-top: 10px;
 }
 
-.botones1{
+.botones1-pd{
     display: flex;
     justify-content: center;
     justify-content: space-around;
     margin-top: 40px;
 }
 
-.botones2{
+.botones2-pd{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -76,14 +76,14 @@
     margin-top: 100px;
 }
 
-.botones3{
+.botones3-pd{
     position: fixed;
     z-index: 1000;
     left: 5%;
     bottom: 10px;
 }
 
-.button-form{
+.button-form-pd{
     background-color: rgba(216, 234, 7, 1);
     font-size: 20px;
     color: black;
@@ -92,20 +92,20 @@
     border: none;
 }
 
-.button-form2{
+.button-form2-pd{
     background-color: rgba(216, 234, 7, 1);
     padding: 5px 10px;
     border-radius: 5px;
 }
 
-.button-form3{
+.button-form3-pd{
     background-color: rgba(216, 234, 7, 1);
     padding: 5px 10px;
     border-radius: 5px;
     margin-top: 20px;
 }
 
-.button-form4{
+.button-form4-pd{
     background-color: rgba(216, 234, 7, 1);
     border-radius: 8px;
     padding: 5px 10px;
@@ -114,38 +114,38 @@
     width: 90vw;
 }
 
-.medios-de-pago-todo{
+.medios-de-pago-todo-pd{
     margin-top: 40px;
 }
 
-.medios-de-pago h3{
+.medios-de-pago-pd h3{
     color: rgba(0,0,0,.8);
 
 }
 
-.medios-de-pago{
+.medios-de-pago-pd{
     padding: 15px 0;
 }
 
-.medios-de-pago div{
+.medios-de-pago-pd div{
     margin-top: 40px;
 }
 
-.medios-de-pago-todo{
+.medios-de-pago-todo-pd{
     border-top: solid 1px gray;
     padding: 10px;
 }
 
-.preguntas-frecuentes-todo{
+.preguntas-frecuentes-todo-pd{
     padding: 10px;
     border-top: solid 1px gray;
 }
 
-.preguntas-frecuentes-todo div{
+.preguntas-frecuentes-todo-pd div{
     margin-top: 20px;
 }
 
-.cuadro-pregunta{
+.cuadro-pregunta-pd{
     margin-top: 20px;
 }
 
@@ -155,13 +155,13 @@ input{
     
 }
 
-.boton-preguntar-todo{
+.boton-preguntar-todo-pd{
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
 }
 
-.button-form-preguntar{
+.button-form-preguntar-pd{
     background-color: rgba(216, 234, 7, 1);
     padding: 5px 10px;
     border-radius: 5px;
@@ -170,17 +170,17 @@ input{
     height: 30px;
 }
 
-.comentarios-todo{
+.comentarios-todo-pd{
     padding: 10px;
     border-top: solid 1px gray;
     
 }
 
-.subtitulo-opiniones{
+.subtitulo-opiniones-pd{
     margin-top: 20px;
 }
 
-.banner-bajo img{
+.banner-bajo-pd img{
     width: 100%;
     margin-top: 50px;
 }
@@ -188,76 +188,76 @@ input{
 /* COMIENZO MEDIA QUERIES */
 
 @media(min-width: 481px){
-    .imgchicas-celu-elegido-junto{
+    .imgchicas-celu-elegido-junto-pd{
         justify-content: center;
     }
 
-    .botones3{
+    .botones3-pd{
         display: none;
     }
 }
 
 @media (min-width: 769px){
-    .celu-elegido img{
+    .celu-elegido-pd img{
         width: auto;
     }
 
-    .imgchicas-celu-elegido-junto{
+    .imgchicas-celu-elegido-junto-pd{
         justify-content: flex-start;
         margin-left: 20px;
     }
 
-    .botones1{
+    .botones1-pd{
         display: flex;
         justify-content: flex-end;
         margin-bottom: 10%;
     }
 
-    .boton-carrito{
+    .boton-carrito-pd{
         margin-left: 5%;
     }
 
-    .payment-methods1 img{
+    .payment-methods1-pd img{
         width: 15%
     }
-    .payment-methods2 img{
+    .payment-methods2-pd img{
         width: 12%
     }
-    .payment-methods3 img{
+    .payment-methods3-pd img{
         width: 12%
     }
 
-    .producto-descripcion-todo{
+    .producto-descripcion-todo-pd{
         display: flex;   
     }
 
-    .product-detail{
+    .product-detail-pd{
         margin-top: 60px;
     }
 
-    .detalle-celu1{
+    .detalle-celu1-pd{
         text-align: center;
     }
 
-    .detalle-celu2{
+    .detalle-celu2-pd{
         width: 80%;
         margin-left: 50px;
     }
 
-    .botones1{
+    .botones1-pd{
         display: flex;
         justify-content: center;
     }
  }
 
 @media (min-width:1200px){
-    .payment-methods1 img{
+    .payment-methods1-pd img{
         width: 12%
     }
-    .payment-methods2 img{
+    .payment-methods2-pd img{
         width: 8%
     }
-    .payment-methods3 img{
+    .payment-methods3-pd img{
         width: 8%
     }
 
@@ -265,33 +265,33 @@ input{
         width: 50%;
     }
 
-    .button-form-preguntar{
+    .button-form-preguntar-pd{
        width: auto;
     }
     
-    .boton-preguntar-todo{
+    .boton-preguntar-todo-pd{
         justify-content:flex-start;
         margin-left: 10px;
     }
 
-    .producto-descripcion-todo{
+    .producto-descripcion-todo-pd{
         display: flex;
         justify-content: center;
     }
 
-    .detalle-celu1{
+    .detalle-celu1-pd{
         text-align: center;
         
     }
 
-    .detalle-celu2{
+    .detalle-celu2-pd{
         width: 70%;
         margin: 0 auto;
         margin-top: 50px;
         text-align: center;
     }
 
-    .product-detail{
+    .product-detail-pd{
         width: 40%;
     }
 
