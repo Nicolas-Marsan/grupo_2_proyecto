@@ -33,6 +33,7 @@
 .main-register .control{
     height: 40px;
     border-radius: 10px;
+    width: 100%;
 }
 
 .main-register .datos-personales, .pass{
@@ -68,8 +69,12 @@
 
 .main-register .pass i{
     position: absolute;
-    top: 50px;
+    top: 55px;
     right: 10px;
+}
+
+.main-register .pass #i{
+    top: 50px;
 }
 
 
@@ -85,11 +90,12 @@
     display: flex;
     text-align: left;
     margin: 10px 5%;
+    font-size: 16px;
 }
 
 .main-register .terminos-condiciones .cbx{
-    margin-right: 10px;
     align-self: center;
+    width: 10%;
 }
 
 .main-register .buttons{
@@ -107,6 +113,7 @@
 .main-register .buttons #enviar{
     background-color: #C3CA02;
     font-weight: bolder;
+    padding: 8px;
 }
 
 
