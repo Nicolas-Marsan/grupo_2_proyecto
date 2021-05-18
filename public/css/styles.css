@@ -13,7 +13,7 @@ azul noche #252850*/
 *{
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
-    max-width: 1500px;
+      
     
 }
 body{
@@ -214,7 +214,7 @@ body{
 }
 
 .destacados{
-    width: 100vw;
+    width: 100%;
     background-color: #C3CA02;
 }
 .destacados h1{
