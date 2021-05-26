@@ -12,7 +12,7 @@ const rutasUsers = require ('./routes/users.js');
 const rutasHome = require ('./routes/home.js');
 
 app.use('/', rutasHome);
-app.use('/product', rutasProducts);
+app.use('/products', rutasProducts);
 app.use('/users', rutasUsers);
 app.use('/crear', rutasProducts);
 

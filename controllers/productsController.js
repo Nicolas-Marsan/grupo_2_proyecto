@@ -1,6 +1,9 @@
 const path = require('path');
 
 const productsController = {
+    index: function(req, res){
+        res.render('products')
+    },
     productDetail: function(req , res){
         /* let htmlPath = path.join(__dirname,'../views/productDetail.html');
         res.sendFile(htmlPath); */
