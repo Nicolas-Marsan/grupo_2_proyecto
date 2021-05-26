@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.ultimos-lanzamientos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.ultimos-lanzamientos p{
+    display: flex;
+    justify-content: center;
+}
+
+.ultimos-lanzamientos img{
+    width: 50%;
+}
+
+.ultimos-lanzamientos h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.ultimos-lanzamientos article{
+    margin-bottom: 50px;
+}
+
+.favoritos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.favoritos p{
+    display: flex;
+    justify-content: center;
+}
+
+.favoritos img{
+    width: 50%;
+}
+
+.favoritos h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.favoritos article{
+    margin-bottom: 50px;
+}
