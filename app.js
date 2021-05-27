@@ -14,7 +14,7 @@ const rutasHome = require ('./routes/home.js');
 app.use('/', rutasHome);
 app.use('/products', rutasProducts);
 app.use('/users', rutasUsers);
-app.use('/crear', rutasProducts);
+app.use('/', rutasProducts);
 
 /* Servidor */
 app.listen(3000, () => {

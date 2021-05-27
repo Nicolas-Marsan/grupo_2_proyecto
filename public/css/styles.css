@@ -50,10 +50,13 @@ body{
 .logo_barra_manu_carrito .barra_busqueda{
     width: 60%;
     display: flex;
+    
    
 }
 
-
+.logo_barra_manu_carrito .barra_busqueda input{
+outline: none;
+}
 .logo_barra_manu_carrito .barra_busqueda i{
     
     font-size: 1.5em;
