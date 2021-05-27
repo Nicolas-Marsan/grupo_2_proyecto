@@ -22,9 +22,15 @@ const productsController = {
     },
 
     crearProduct: function(req , res){
-        /* let htmlPath = path.join(__dirname,'../views/productCart.html' );
-        res.sendFile(htmlPath); */
+
+    
         res.render('crearProducto');
+    },
+
+    guardarProduct: function(req , res){
+
+    
+        res.send(req.body);
     }
 };
 
