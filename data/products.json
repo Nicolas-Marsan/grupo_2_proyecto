@@ -1,9 +1,83 @@
-[{"id":1,"name":"moto g9plus","price":"$12233.49","detail":"Cohu, Inc.","newmodel":true,"favorite":false,"image":"moto g9plus.jpg"},
-{"id":2,"name":"moto g9plus","price":"$10956.96","detail":"Navios Maritime Acquisition Corporation","newmodel":true,"favorite":true,"image":"moto g9plus.jpg"},
-{"id":3,"name":"moto g30","price":"$1085.35","detail":"Nationstar Mortgage Holdings Inc.","newmodel":true,"favorite":false,"image":"moto g30.jpg"},
-{"id":4,"name":"samsung a21s","price":"$14020.10","detail":"Instructure, Inc.","newmodel":true,"favorite":true,"image":"samsung a21s.jpg"},
-{"id":5,"name":"moto g30","price":"$1918.96","detail":"Aviat Networks, Inc.","newmodel":false,"favorite":true,"image":"moto g30.jpg"},
-{"id":6,"name":"samsung a51","price":"$11669.17","detail":"USA Compression Partners, LP","newmodel":false,"favorite":false,"image":"samsung a51.jpg"},
-{"id":7,"name":"samsung a21s","price":"$10027.45","detail":"WisdomTree Interest Rate Hedged High Yield Bond Fund","newmodel":false,"favorite":false,"image":"samsung a21s.jpg"},
-{"id":8,"name":"samsung a51","price":"$14698.55","detail":"WideOpenWest, Inc.","newmodel":true,"favorite":true,"image":"samsung a51.jpg"},
-{"id":9,"name":"moto g30","price":"$10754.59","detail":"Morgan Stanley China A Share Fund Inc.","newmodel":false,"favorite":false,"image":"moto g30.jpg"}]
+[
+    {
+        "id": 1,
+        "name": "moto g9plus",
+        "price": "$12233.49",
+        "detail": "Cohu, Inc.",
+        "newmodel": true,
+        "favorite": false,
+        "image": "moto g9plus.jpg"
+    },
+    {
+        "id": 2,
+        "name": "moto g9plus",
+        "price": "$10956.96",
+        "detail": "Navios Maritime Acquisition Corporation",
+        "newmodel": true,
+        "favorite": true,
+        "image": "moto g9plus.jpg"
+    },
+    {
+        "id": 3,
+        "name": "moto g30",
+        "price": "$1085.35",
+        "detail": "Nationstar Mortgage Holdings Inc.",
+        "newmodel": true,
+        "favorite": false,
+        "image": "moto g30.jpg"
+    },
+    {
+        "id": 4,
+        "name": "samsung a21s",
+        "price": "$14020.10",
+        "detail": "Instructure, Inc.",
+        "newmodel": true,
+        "favorite": true,
+        "image": "samsung a21s.jpg"
+    },
+    {
+        "id": 5,
+        "name": "moto g30",
+        "price": "$1918.96",
+        "detail": "Aviat Networks, Inc.",
+        "newmodel": false,
+        "favorite": true,
+        "image": "moto g30.jpg"
+    },
+    {
+        "id": 6,
+        "name": "samsung a51",
+        "price": "$11669.17",
+        "detail": "USA Compression Partners, LP",
+        "newmodel": false,
+        "favorite": false,
+        "image": "samsung a51.jpg"
+    },
+    {
+        "id": 7,
+        "name": "samsung a21s",
+        "price": "$10027.45",
+        "detail": "WisdomTree Interest Rate Hedged High Yield Bond Fund",
+        "newmodel": false,
+        "favorite": false,
+        "image": "samsung a21s.jpg"
+    },
+    {
+        "id": 8,
+        "name": "samsung a51",
+        "price": "$14698.55",
+        "detail": "WideOpenWest, Inc.",
+        "newmodel": true,
+        "favorite": true,
+        "image": "samsung a51.jpg"
+    },
+    {
+        "id": 9,
+        "name": "moto g30",
+        "price": "$10754.59",
+        "detail": "Morgan Stanley China A Share Fund Inc.",
+        "newmodel": false,
+        "favorite": false,
+        "image": "moto g30.jpg"
+    }
+]

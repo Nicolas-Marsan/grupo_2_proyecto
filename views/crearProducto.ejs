@@ -11,30 +11,46 @@
         <h2 class="titulo">
             CREAR PRODUCTO
         </h2>
-        <form class='formu' action="/" method="POST" >
+        <form class='formu' action="/crearProducto" method="POST" >
             <section class="producto">
                 <div class="nombre">
                     <label class="label" for="nombre">Nombre</label>
-                    <input required type="text" name="nombre" id="" class="control">
+                    <input  type="text" name="nombre"  class="control">
                 </div>
                 <div class="precio">
-                    <label class="label" for="apellido">Precio</label>
-                    <input required type="text" name="apellido" id="" class="control">
+                    <label class="label" for="precio">Precio</label>
+                    <input  type="text" name="precio"  class="control">
                 </div>
                 <div class="descripcion" >
-                    <label class="label" for="correo">Descripcion</label>
-                    <input required type="text" name="correo" id="" class="control">
+                    <label class="label" for="descripcion">Descripcion</label>
+                    <input  type="text" name="descripcion"  class="control">
                 </div>
             </section>
 
             <section class="pass">
                 <div class="Tdetalle">
-                    <label class="label" for="nombre">Titulo detalle</label>
-                    <input required type="text" name="nombre" id="" class="control">
+                    <label class="label" for="tDetalle">Titulo detalle</label>
+                    <input  type="text" name="tDetalle"  class="control">
                 </div>
                 <div class="detalle">
-                    <label class="label" for="textarea">Detalle</label>
-                    <textarea class="area" name="textarea" ></textarea>
+                    <label class="label" for="detalle">Detalle</label>
+                    <textarea class="area" name="detalle" ></textarea>
+                </div>
+                <div class="descripcion">
+                    <label for="lanzamientos" class="form-label">Newmodel:</label>
+                    <select name="lanzamientos" id="category" class="form-input">
+                        <option value="">Elegí</option>
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                    </select>
+                </div>
+                <div class="descripcion">
+                    <label for="favoritos" class="form-label">Favorite:</label>
+                    <select name="favoritos" id="category" class="form-input">
+                        <option value="">Elegí</option>
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                    </select>
                 </div>
                 <div class="foto">
             

@@ -3,6 +3,18 @@ const fs = require ('fs');
 
 let products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'),{encoding:'utf-8'})); //Leer el JSON y pasarlo a objeto literal
 
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+const lastId = () =>{
+	let ultimo = 0;
+		products.forEach(note => {
+		  if (ultimo < note.id){
+		ultimo = note.id;
+		}
+		});
+	return ultimo;
+	}
+
 const productsController = {
     index: function(req, res){
         let newModels = products.filter((product)=>{return product.newmodel}); // productos nuevos
@@ -28,9 +40,26 @@ const productsController = {
     },
 
     guardarProduct: function(req , res){
+        
+        let datos = {
+			id:lastId() + 1,
+			name: req.body.nombre,
+			price: req.body.precio,
+			detail:req.body.descripcion,
+			newmodel:req.body.lanzamientos,
+			favorite:req.body.favoritos,
+            image:""
+		}
+        
 
-    
-        res.send(req.body.nombre);
+        products.push(datos);
+
+		let nuevo = JSON.stringify(products, null,4);
+
+		fs.writeFileSync(path.join(__dirname, '../data/products.json'),nuevo);
+
+		
+        res.send(req.body);
     }
 };
 
