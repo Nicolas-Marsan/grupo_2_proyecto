@@ -9,11 +9,15 @@ let multerDiskStorage = multer.diskStorage({
 {let folder = path.join(__dirname, '../public/images');
  callback(null,folder);
 },
-	filename: (req,file,callback) =>
-{let imageName = Date.now() + path.extname(file.originalname);
+filename: (req,file,callback) =>
+{let imageName = file.fieldname +  Date.now() + path.extname(file.originalname);
  callback(null,imageName);
-},
+}
 });
+
+
+
+
 
 let fileUpload = multer({storage: multerDiskStorage});
 

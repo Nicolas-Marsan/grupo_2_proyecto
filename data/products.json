@@ -82,18 +82,20 @@
     },
     {
         "id": 10,
-        "name": "galaxy xxx",
-        "price": "200000",
-        "detail": "tremendo",
+        "name": "xiaomi mi 9t",
+        "price": "513132",
+        "detail": "muy bueno",
         "newmodel": "true",
-        "favorite": "false"
+        "favorite": "false",
+        "image": "foto1622155551502.jpg"
     },
     {
         "id": 11,
-        "name": "galaxy xxx",
-        "price": "200000",
-        "detail": "tremendo",
+        "name": "xiaomi mi 9t",
+        "price": "513132",
+        "detail": "muy bueno",
         "newmodel": "true",
-        "favorite": "false"
+        "favorite": "false",
+        "image": "foto1622155597890.jpg"
     }
 ]
