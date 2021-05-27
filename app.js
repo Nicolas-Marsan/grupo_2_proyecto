@@ -5,6 +5,8 @@ const path= require('path');
 /* Configuración de ejs */
 app.set('view engine', 'ejs');
 app.use(express.static(path.resolve(__dirname, 'public')));
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
 
 /* Rutas */
 const rutasProducts = require('./routes/products.js');
