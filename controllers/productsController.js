@@ -48,7 +48,7 @@ const productsController = {
 			detail:req.body.descripcion,
 			newmodel:req.body.lanzamientos,
 			favorite:req.body.favoritos,
-            image:""
+            image:req.file.fileName
 		}
         
 
@@ -59,7 +59,7 @@ const productsController = {
 		fs.writeFileSync(path.join(__dirname, '../data/products.json'),nuevo);
 
 		
-        res.send(req.body);
+        res.send(imageFile.fileName);
     }
 };
 

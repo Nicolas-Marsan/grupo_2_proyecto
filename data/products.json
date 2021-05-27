@@ -79,5 +79,21 @@
         "newmodel": false,
         "favorite": false,
         "image": "moto g30.jpg"
+    },
+    {
+        "id": 10,
+        "name": "galaxy xxx",
+        "price": "200000",
+        "detail": "tremendo",
+        "newmodel": "true",
+        "favorite": "false"
+    },
+    {
+        "id": 11,
+        "name": "galaxy xxx",
+        "price": "200000",
+        "detail": "tremendo",
+        "newmodel": "true",
+        "favorite": "false"
     }
 ]
