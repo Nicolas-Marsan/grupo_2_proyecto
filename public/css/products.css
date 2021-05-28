@@ -89,6 +89,9 @@
 }
 
 @media (min-width: 769px){
+    main{
+        max-width: 1200px;
+    }
     .ultimos-lanzamientos img{
         width: 65%;
     }
@@ -100,6 +103,14 @@
     .ultimos-lanzamientos article{
         transition: all 0.5s;
         border: none;
+    }
+
+    .button-form-products:hover{
+        background-color: greenyellow;
+    }
+
+    .button-form-products{
+        transition: all 0.7s
     }
 
     .ultimos-lanzamientos h2{
