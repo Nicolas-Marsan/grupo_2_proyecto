@@ -79,9 +79,12 @@
 @media (min-width: 481px){
     .ultimos-lanzamientos h2{
         width: 100%;
+        text-align: center;
+        margin-top: 30px;
     }
     .favoritos h2{
         width: 100%;
+        text-align: center;
     }
 }
 
@@ -97,6 +100,10 @@
     .ultimos-lanzamientos article{
         transition: all 0.5s;
         border: none;
+    }
+
+    .ultimos-lanzamientos h2{
+        margin-top: 50px;
     }
 
     .favoritos img{

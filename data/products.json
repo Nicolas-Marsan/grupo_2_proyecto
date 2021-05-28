@@ -13,7 +13,7 @@
         "name": "moto g9plus",
         "price": "$10956.96",
         "detail": "Navios Maritime Acquisition Corporation",
-        "newmodel": true,
+        "newmodel": false,
         "favorite": true,
         "image": "moto g9plus.jpg"
     },
