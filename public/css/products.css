@@ -13,12 +13,15 @@
 }
 
 .ultimos-lanzamientos p{
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .ultimos-lanzamientos img{
     width: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
 }
 
 .ultimos-lanzamientos h2{
@@ -28,6 +31,7 @@
 
 .ultimos-lanzamientos article{
     margin-bottom: 50px;
+    border-top: 1px solid gray;
 }
 
 .favoritos{
@@ -37,23 +41,78 @@
 }
 
 .favoritos p{
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .favoritos img{
     width: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
 }
 
 .favoritos h2{
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .favoritos article{
     margin-bottom: 50px;
+    border-top: 1px solid gray;
+}
+
+.boton-comprar-products{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-form-products{
+    background-color: rgba(216, 234, 7, 1);
+    font-size: 15px;
+    color: black;
+    padding: 7px 15px;
+    border-radius: 10px;
+    border: none;
 }
 
 @media (min-width: 481px){
-    
+    .ultimos-lanzamientos h2{
+        width: 100%;
+    }
+    .favoritos h2{
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px){
+    .ultimos-lanzamientos img{
+        width: 65%;
+    }
+
+    .ultimos-lanzamientos article:hover{
+        border: 1px solid gray;
+    }
+
+    .ultimos-lanzamientos article{
+        transition: all 0.5s;
+        border: none;
+    }
+
+    .favoritos img{
+        width: 65%;
+    }
+
+    .favoritos article:hover{
+        border: 1px solid gray;
+    }
+
+    .favoritos article{
+        transition: all 0.5s;
+        border: none;
+    }
+
+    .boton-comprar-products{
+        margin-bottom: 30px;
+    }
 }
