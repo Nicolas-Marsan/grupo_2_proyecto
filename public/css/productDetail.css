@@ -21,12 +21,13 @@
 }
 
 .celu-elegido-pd img{
-    width: 60%;
-    
+    width: 130px;
+    max-width: 100%;
+    margin-top: 25px;
 }
 
 .imgchicas-celu-elegido-junto-pd{
-    margin-left: 40px;
+    width: 100%;
 }
 
 .mas-vistas-pd{
@@ -215,7 +216,7 @@ input{
 
 @media(min-width: 481px){
     .celu-elegido-pd img{
-        margin-top: 20px;
+        margin-top: 25px;
     }
 
     .botones3-pd{
@@ -225,7 +226,8 @@ input{
 
 @media (min-width: 769px){
     .celu-elegido-pd img{
-        width: 75%;
+        width: 180px;
+        max-width: 100%;
     }
 
     .imgchicas-celu-elegido-junto-pd{
@@ -267,7 +269,7 @@ input{
     }
 
     .button-form-pd{
-        transition: all 0.7s;
+        transition: background-color 0.5s;
     }
 
     .detalle-celu1-pd{
@@ -283,10 +285,6 @@ input{
         display: flex;
         justify-content: center;
     }
-
-    /* .celu-elegido-pd img{
-          
-    } */
  }
 
 @media (min-width:1200px){

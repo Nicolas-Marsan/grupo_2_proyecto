@@ -18,10 +18,11 @@
 }
 
 .ultimos-lanzamientos img{
-    width: 35%;
+    width: 100%;
     display: block;
     margin: 0 auto;
     margin-top: 50px;
+    max-width: 90px;
 }
 
 .ultimos-lanzamientos h2{
@@ -48,10 +49,11 @@
 }
 
 .favoritos img{
-    width: 35%;
+    width: 100%;
     display: block;
     margin: 0 auto;
     margin-top: 50px;
+    max-width: 90px;
 }
 
 .favoritos h2{
@@ -135,7 +137,8 @@
     }
 
     .favoritos img{
-        width: 65%;
+        max-width: 160px;
+        width: 100%;
     }
 
     .favoritos article:hover{
