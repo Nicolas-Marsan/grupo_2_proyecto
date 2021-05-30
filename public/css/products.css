@@ -82,6 +82,15 @@
         text-align: center;
         margin-top: 30px;
     }
+
+    .ultimos-lanzamientos article{
+        min-width: 60%;
+    }
+
+    .favoritos article{
+        min-width: 60%;
+    }
+
     .favoritos h2{
         width: 100%;
         text-align: center;
@@ -93,7 +102,7 @@
         max-width: 1500px;
     }
     .ultimos-lanzamientos img{
-        width: 65%;
+        width: 140px;
     }
 
     .ultimos-lanzamientos article:hover{
@@ -103,6 +112,7 @@
     .ultimos-lanzamientos article{
         transition: all 0.5s;
         border: none;
+        min-width: 20%;
     }
 
     .button-form-products:hover{
