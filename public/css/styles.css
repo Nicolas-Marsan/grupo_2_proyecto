@@ -247,7 +247,11 @@ outline: none;
     background-color: #C3CA02;
     font-weight: bold;
     border-radius: 10px;
-    
+}
+
+.detalle_celu a{
+    text-decoration: none;
+    color: black;
 }
 
 .detalle_celu a:visited{
