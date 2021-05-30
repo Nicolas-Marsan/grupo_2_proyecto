@@ -24,7 +24,7 @@ let fileUpload = multer({storage: multerDiskStorage});
 
 router.get('/', productsController.index);
 
-router.get('/productDetail', productsController.productDetail);
+router.get('/detail/:id', productsController.productDetail);
 
 router.get('/productCart', productsController.productCart);
 
