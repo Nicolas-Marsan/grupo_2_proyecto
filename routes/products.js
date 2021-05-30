@@ -6,7 +6,7 @@ const multer = require('multer');
 
 let multerDiskStorage = multer.diskStorage({    
 	destination: (req,file,callback) => 
-{let folder = path.join(__dirname, '../public/images');
+{let folder = path.join(__dirname, '../public/images/products');
  callback(null,folder);
 },
 filename: (req,file,callback) =>
@@ -24,7 +24,7 @@ let fileUpload = multer({storage: multerDiskStorage});
 
 router.get('/', productsController.index);
 
-router.get('/productDetail', productsController.productDetail);
+router.get('/detail/:id', productsController.productDetail);
 
 router.get('/productCart', productsController.productCart);
 

@@ -22,9 +22,9 @@ const productsController = {
         res.render('products', {favoriteProducts,newModels});
     },
     productDetail: function(req , res){
-        /* let htmlPath = path.join(__dirname,'../views/productDetail.html');
-        res.sendFile(htmlPath); */
-        res.render('productDetail');
+        idURL = req.params.id;
+        let productoSeleccionado = products.filter((product)=>{ return product.id == idURL});
+        res.render('productDetail', {productoSeleccionado});
     },
 
     productCart: function(req , res){

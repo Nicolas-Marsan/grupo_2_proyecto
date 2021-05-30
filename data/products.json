@@ -1,101 +1,83 @@
 [
     {
         "id": 1,
-        "name": "moto g9plus",
-        "price": "$12233.49",
-        "detail": "Cohu, Inc.",
+        "name": "Moto G9 Plus",
+        "price": "22.233",
+        "detail": "SISTEMA DE CUATRO CÁMARAS CON SENSOR PRINCIPAL DE 64 MP. HASTA 2 DÍAS DE BATERÍA + CARGADOR TURBOPOWER™. PROCESADOR QUALCOMM® SNAPDRAGON™ 730G + 128 GB DE ALMACENAMIENTO. SISTEMA OPERATIVO ANDROID 10 Y PERSONALIZACIÓN DE TU TELÉFONO",
         "newmodel": true,
         "favorite": false,
         "image": "moto g9plus.jpg"
     },
     {
         "id": 2,
-        "name": "moto g9plus",
-        "price": "$10956.96",
-        "detail": "Navios Maritime Acquisition Corporation",
+        "name": "Moto G9 Plus",
+        "price": "10.956",
+        "detail": "SISTEMA DE CUATRO CÁMARAS CON SENSOR PRINCIPAL DE 64 MP. HASTA 2 DÍAS DE BATERÍA + CARGADOR TURBOPOWER™. PROCESADOR QUALCOMM® SNAPDRAGON™ 730G + 128 GB DE ALMACENAMIENTO. SISTEMA OPERATIVO ANDROID 10 Y PERSONALIZACIÓN DE TU TELÉFONO",
         "newmodel": false,
         "favorite": true,
         "image": "moto g9plus.jpg"
     },
     {
         "id": 3,
-        "name": "moto g30",
-        "price": "$1085.35",
-        "detail": "Nationstar Mortgage Holdings Inc.",
+        "name": "Moto G30",
+        "price": "18.585",
+        "detail": "SISTEMA DE 4 CÁMARAS CON 64 MP. MEJORÁ TU PERSPECTIVA. GUARDÁ TODO LO QUE QUIERAS. MÁS DE DOS DÍAS DE BATERÍA",
         "newmodel": true,
         "favorite": false,
         "image": "moto g30.jpg"
     },
     {
         "id": 4,
-        "name": "samsung a21s",
-        "price": "$14020.10",
-        "detail": "Instructure, Inc.",
+        "name": "Samsung A21S",
+        "price": "14.020",
+        "detail": "DISEÑO ELEGANTE QUE SE ADAPTA A TU MANO. INCREÍBLE CÁMARA CUÁDRUPLE PARA CAPTURAR MÁS. CÁMARA MACRO PARA CAPTAR LOS DETALLES DE CERCA. UNA BATERÍA QUE NUNCA SE ACABA. ALTO RENDIMIENTO PARA QUE PUEDAS HACER MÁS. SISTEMA DE ALTA SEGURIDAD. PROTEGÉ LO QUE MÁS TE IMPORTA",
         "newmodel": true,
         "favorite": true,
         "image": "samsung a21s.jpg"
     },
     {
         "id": 5,
-        "name": "moto g30",
-        "price": "$1918.96",
-        "detail": "Aviat Networks, Inc.",
+        "name": "Moto G30",
+        "price": "15.918",
+        "detail": "SISTEMA DE 4 CÁMARAS CON 64 MP. MEJORÁ TU PERSPECTIVA. GUARDÁ TODO LO QUE QUIERAS. MÁS DE DOS DÍAS DE BATERÍA",
         "newmodel": false,
         "favorite": true,
         "image": "moto g30.jpg"
     },
     {
         "id": 6,
-        "name": "samsung a51",
-        "price": "$11669.17",
-        "detail": "USA Compression Partners, LP",
+        "name": "Samsung Galaxy A51",
+        "price": "41.999",
+        "detail": "ACERCATE A LO QUE TE IMPORTA CON LA PANTALLA INIFINITY-U DE 6.5 PULGADAS DEL GALAXY A51. UNA PANTALLA DE EXTREMO A EXTREMO CON MARCO CASI INEXISTENTE. SUMERGITE EN TUS VIDEOS Y STREAMINGS FAVORITOS CON SU RESOLUCIÓN FHD+ Y SUPER AMOLED",
         "newmodel": false,
         "favorite": false,
         "image": "samsung a51.jpg"
     },
     {
         "id": 7,
-        "name": "samsung a21s",
-        "price": "$10027.45",
-        "detail": "WisdomTree Interest Rate Hedged High Yield Bond Fund",
+        "name": "Samsung A21S",
+        "price": "10.027",
+        "detail": "DISEÑO ELEGANTE QUE SE ADAPTA A TU MANO. INCREÍBLE CÁMARA CUÁDRUPLE PARA CAPTURAR MÁS. CÁMARA MACRO PARA CAPTAR LOS DETALLES DE CERCA. UNA BATERÍA QUE NUNCA SE ACABA. ALTO RENDIMIENTO PARA QUE PUEDAS HACER MÁS. SISTEMA DE ALTA SEGURIDAD. PROTEGÉ LO QUE MÁS TE IMPORTA",
         "newmodel": false,
         "favorite": false,
         "image": "samsung a21s.jpg"
     },
     {
         "id": 8,
-        "name": "samsung a51",
-        "price": "$14698.55",
-        "detail": "WideOpenWest, Inc.",
+        "name": "Samsung A51",
+        "price": "14.698",
+        "detail": "ACERCATE A LO QUE TE IMPORTA CON LA PANTALLA INIFINITY-U DE 6.5 PULGADAS DEL GALAXY A51. UNA PANTALLA DE EXTREMO A EXTREMO CON MARCO CASI INEXISTENTE. SUMERGITE EN TUS VIDEOS Y STREAMINGS FAVORITOS CON SU RESOLUCIÓN FHD+ Y SUPER AMOLED",
         "newmodel": true,
         "favorite": true,
         "image": "samsung a51.jpg"
     },
     {
         "id": 9,
-        "name": "moto g30",
-        "price": "$10754.59",
-        "detail": "Morgan Stanley China A Share Fund Inc.",
+        "name": "Moto G30",
+        "price": "10.754",
+        "detail": "SISTEMA DE 4 CÁMARAS CON 64 MP. MEJORÁ TU PERSPECTIVA. GUARDÁ TODO LO QUE QUIERAS. MÁS DE DOS DÍAS DE BATERÍA",
         "newmodel": false,
         "favorite": false,
         "image": "moto g30.jpg"
-    },
-    {
-        "id": 10,
-        "name": "xiaomi mi 9t",
-        "price": "513132",
-        "detail": "muy bueno",
-        "newmodel": "true",
-        "favorite": "false",
-        "image": "foto1622155551502.jpg"
-    },
-    {
-        "id": 11,
-        "name": "xiaomi mi 9t",
-        "price": "513132",
-        "detail": "muy bueno",
-        "newmodel": "true",
-        "favorite": "false",
-        "image": "foto1622155597890.jpg"
     }
 ]
