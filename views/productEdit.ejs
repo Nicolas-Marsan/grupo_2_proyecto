@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+
+    <%- include('./partials/header') %>
+
+
+    <main class="main-register">
+      
+        <h2 class="titulo">
+            Editar <%= detalleId.name %> 
+        </h2>
+        <form action="/products/<%= detalleId.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+            <section class="producto">
+                <div class="nombre">
+                    <label class="label" for="nombre">Nombre</label>
+                    <input  type="text" name="nombre"  class="control" value="<%= detalleId.name %>">
+                </div>
+                <div class="precio">
+                    <label class="label" for="precio">Precio</label>
+                    <input  type="text" name="precio"  class="control" value="<%= detalleId.price %>">
+                </div>
+                <div class="descripcion" >
+                    <label class="label" for="descripcion">Descripcion</label>
+                    <input  type="text" name="descripcion"  class="control" value="<%= detalleId.detail %>">
+                </div>
+            </section>
+
+            <section class="pass">
+                <div class="Tdetalle">
+                    <label class="label" for="tDetalle">Titulo detalle</label>
+                    <input  type="text" name="tDetalle"  class="control">
+                </div>
+                <div class="detalle">
+                    <label class="label" for="detalle">Detalle</label>
+                    <textarea class="area" name="detalle" ></textarea>
+                </div>
+                <div class="descripcion">
+                    <label for="lanzamientos" class="form-label">Newmodel:</label>
+                    <select name="lanzamientos" id="category" class="form-input">
+                        <option value="">Elegí</option>
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                    </select>
+                </div>
+                <div class="descripcion">
+                    <label for="favoritos" class="form-label">Favorite:</label>
+                    <select name="favoritos" id="category" class="form-input">
+                        <option value="">Elegí</option>
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                    </select>
+                </div>
+                <div class="foto">
+            
+                    <label for="foto">Foto</label>
+                    <input type="file" id="foto" name="foto" placeholder="foto">
+            
+                </div>
+                
+            </section>
+
+            
+
+
+            <section class="buttons">
+                <button id="enviar" type="submit">Editar</button>
+                <button id="borrar" type="reset">Resetear</button>
+            </section>
+        </form>
+        
+
+</main>
+
+<%- include('./partials/footer') %>
+
+</body>
+</html>
