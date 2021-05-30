@@ -108,7 +108,8 @@
         max-width: 1500px;
     }
     .ultimos-lanzamientos img{
-        width: 140px;
+        max-width: 160px;
+        width: 100%;
     }
 
     .ultimos-lanzamientos article:hover{
