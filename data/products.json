@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Moto G9 Plus",
         "price": "22.233",
-        "detail": "Cohu, Inc.",
+        "detail": "SISTEMA DE CUATRO CÁMARAS CON SENSOR PRINCIPAL DE 64 MP. HASTA 2 DÍAS DE BATERÍA + CARGADOR TURBOPOWER™. PROCESADOR QUALCOMM® SNAPDRAGON™ 730G + 128 GB DE ALMACENAMIENTO. SISTEMA OPERATIVO ANDROID 10 Y PERSONALIZACIÓN DE TU TELÉFONO",
         "newmodel": true,
         "favorite": false,
         "image": "moto g9plus.jpg"
@@ -12,7 +12,7 @@
         "id": 2,
         "name": "Moto G9 Plus",
         "price": "10.956",
-        "detail": "Navios Maritime Acquisition Corporation",
+        "detail": "SISTEMA DE CUATRO CÁMARAS CON SENSOR PRINCIPAL DE 64 MP. HASTA 2 DÍAS DE BATERÍA + CARGADOR TURBOPOWER™. PROCESADOR QUALCOMM® SNAPDRAGON™ 730G + 128 GB DE ALMACENAMIENTO. SISTEMA OPERATIVO ANDROID 10 Y PERSONALIZACIÓN DE TU TELÉFONO",
         "newmodel": false,
         "favorite": true,
         "image": "moto g9plus.jpg"
@@ -21,7 +21,7 @@
         "id": 3,
         "name": "Moto G30",
         "price": "18.585",
-        "detail": "Nationstar Mortgage Holdings Inc.",
+        "detail": "SISTEMA DE 4 CÁMARAS CON 64 MP. MEJORÁ TU PERSPECTIVA. GUARDÁ TODO LO QUE QUIERAS. MÁS DE DOS DÍAS DE BATERÍA",
         "newmodel": true,
         "favorite": false,
         "image": "moto g30.jpg"
@@ -30,7 +30,7 @@
         "id": 4,
         "name": "Samsung A21S",
         "price": "14.020",
-        "detail": "Instructure, Inc.",
+        "detail": "DISEÑO ELEGANTE QUE SE ADAPTA A TU MANO. INCREÍBLE CÁMARA CUÁDRUPLE PARA CAPTURAR MÁS. CÁMARA MACRO PARA CAPTAR LOS DETALLES DE CERCA. UNA BATERÍA QUE NUNCA SE ACABA. ALTO RENDIMIENTO PARA QUE PUEDAS HACER MÁS. SISTEMA DE ALTA SEGURIDAD. PROTEGÉ LO QUE MÁS TE IMPORTA",
         "newmodel": true,
         "favorite": true,
         "image": "samsung a21s.jpg"
@@ -39,7 +39,7 @@
         "id": 5,
         "name": "Moto G30",
         "price": "15.918",
-        "detail": "Aviat Networks, Inc.",
+        "detail": "SISTEMA DE 4 CÁMARAS CON 64 MP. MEJORÁ TU PERSPECTIVA. GUARDÁ TODO LO QUE QUIERAS. MÁS DE DOS DÍAS DE BATERÍA",
         "newmodel": false,
         "favorite": true,
         "image": "moto g30.jpg"
@@ -48,7 +48,7 @@
         "id": 6,
         "name": "Samsung Galaxy A51",
         "price": "41.999",
-        "detail": "Acercate a lo que te importa con la pantalla inifinity-U de 6.5 pulgadas del Galaxy A51. Una pantalla de extremo a extremo con marco casi inexistente. Sumergite en tus videos y streamings favoritos con su resolución FHD+ y Super AMOLED.",
+        "detail": "ACERCATE A LO QUE TE IMPORTA CON LA PANTALLA INIFINITY-U DE 6.5 PULGADAS DEL GALAXY A51. UNA PANTALLA DE EXTREMO A EXTREMO CON MARCO CASI INEXISTENTE. SUMERGITE EN TUS VIDEOS Y STREAMINGS FAVORITOS CON SU RESOLUCIÓN FHD+ Y SUPER AMOLED",
         "newmodel": false,
         "favorite": false,
         "image": "samsung a51.jpg"
@@ -57,7 +57,7 @@
         "id": 7,
         "name": "Samsung A21S",
         "price": "10.027",
-        "detail": "WisdomTree Interest Rate Hedged High Yield Bond Fund",
+        "detail": "DISEÑO ELEGANTE QUE SE ADAPTA A TU MANO. INCREÍBLE CÁMARA CUÁDRUPLE PARA CAPTURAR MÁS. CÁMARA MACRO PARA CAPTAR LOS DETALLES DE CERCA. UNA BATERÍA QUE NUNCA SE ACABA. ALTO RENDIMIENTO PARA QUE PUEDAS HACER MÁS. SISTEMA DE ALTA SEGURIDAD. PROTEGÉ LO QUE MÁS TE IMPORTA",
         "newmodel": false,
         "favorite": false,
         "image": "samsung a21s.jpg"
@@ -66,7 +66,7 @@
         "id": 8,
         "name": "Samsung A51",
         "price": "14.698",
-        "detail": "WideOpenWest, Inc.",
+        "detail": "ACERCATE A LO QUE TE IMPORTA CON LA PANTALLA INIFINITY-U DE 6.5 PULGADAS DEL GALAXY A51. UNA PANTALLA DE EXTREMO A EXTREMO CON MARCO CASI INEXISTENTE. SUMERGITE EN TUS VIDEOS Y STREAMINGS FAVORITOS CON SU RESOLUCIÓN FHD+ Y SUPER AMOLED",
         "newmodel": true,
         "favorite": true,
         "image": "samsung a51.jpg"
@@ -75,7 +75,7 @@
         "id": 9,
         "name": "Moto G30",
         "price": "10.754",
-        "detail": "Morgan Stanley China A Share Fund Inc.",
+        "detail": "SISTEMA DE 4 CÁMARAS CON 64 MP. MEJORÁ TU PERSPECTIVA. GUARDÁ TODO LO QUE QUIERAS. MÁS DE DOS DÍAS DE BATERÍA",
         "newmodel": false,
         "favorite": false,
         "image": "moto g30.jpg"
