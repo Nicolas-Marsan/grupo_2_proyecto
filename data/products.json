@@ -15,7 +15,7 @@
         "detail": "SISTEMA DE CUATRO CÁMARAS CON SENSOR PRINCIPAL DE 64 MP. HASTA 2 DÍAS DE BATERÍA + CARGADOR TURBOPOWER™. PROCESADOR QUALCOMM® SNAPDRAGON™ 730G + 128 GB DE ALMACENAMIENTO. SISTEMA OPERATIVO ANDROID 10 Y PERSONALIZACIÓN DE TU TELÉFONO",
         "newmodel": false,
         "favorite": true,
-        "image": "iPhone 12.jpg"
+        "image": "moto g9plus.jpg"
     },
     {
         "id": 3,
@@ -79,23 +79,5 @@
         "newmodel": false,
         "favorite": false,
         "image": "moto g30.jpg"
-    },
-    {
-        "id": 10,
-        "name": "Xiaomi Mi 9T",
-        "price": "513.132",
-        "detail": "muy bueno",
-        "newmodel": "true",
-        "favorite": "false",
-        "image": "foto1622155551502.jpg"
-    },
-    {
-        "id": 11,
-        "name": "Xiaomi Mi 9T",
-        "price": "513.132",
-        "detail": "muy bueno",
-        "newmodel": "true",
-        "favorite": "false",
-        "image": "foto1622155597890.jpg"
     }
 ]
