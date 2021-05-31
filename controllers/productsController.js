@@ -24,7 +24,12 @@ const productsController = {
     productDetail: function(req , res){
         /* let htmlPath = path.join(__dirname,'../views/productDetail.html');
         res.sendFile(htmlPath); */
-        res.render('productDetail');
+        let id =req.params.id
+
+        let buscado = products.find(uno => uno.id == id);
+
+        
+        res.render('productDetail',{buscado});
     },
 
     productCart: function(req , res){
