@@ -1,83 +1,83 @@
 [
     {
         "id": 1,
-        "name": "moto g9plus",
-        "price": "$12233.49",
-        "detail": "Cohu, Inc.",
+        "name": "Moto G9 Plus",
+        "price": "22.233",
+        "detail": "SISTEMA DE CUATRO CÁMARAS CON SENSOR PRINCIPAL DE 64 MP. HASTA 2 DÍAS DE BATERÍA + CARGADOR TURBOPOWER™. PROCESADOR QUALCOMM® SNAPDRAGON™ 730G + 128 GB DE ALMACENAMIENTO. SISTEMA OPERATIVO ANDROID 10 Y PERSONALIZACIÓN DE TU TELÉFONO",
         "newmodel": true,
         "favorite": false,
         "image": "moto g9plus.jpg"
     },
     {
         "id": 2,
-        "name": "moto g9plus",
-        "price": "$10956.96",
-        "detail": "Navios Maritime Acquisition Corporation",
-        "newmodel": true,
+        "name": "Xiaomi Redmi Note 8",
+        "price": "41.999",
+        "detail": "CUENTA CON 4 CÁMARAS TRASERAS DE 48 MPX, 8 MPX, 2 MPX Y 2 MPX CON INTELIGENCIA ARTIFICIAL. LENTE MACRO, ULTRA GRAN ANGULAR Y SENSOR DE PROFUNDIDAD. CÁMARA FRONTAL DE 13 MPX CON MODO RETRATO. PANTALLA FULL HD+ PARA QUE DISFRUTES DE CONTENIDOS EN ALTA CALIDAD. BATERÍA CON CARGA RÁPIDA PARA USARLO EN TODO MOMENTO. DESBLOQUEO RÁPIDO Y SEGURO CON RECONOCIMIENTO FACIAL Y LECTOR DE HUELLA DACTILAR",
+        "newmodel": false,
         "favorite": true,
-        "image": "moto g9plus.jpg"
+        "image": "xiaomi redmi note 8.jpg"
     },
     {
         "id": 3,
-        "name": "moto g30",
-        "price": "$1085.35",
-        "detail": "Nationstar Mortgage Holdings Inc.",
+        "name": "Samsung Galaxy S20 FE",
+        "price": "81.585",
+        "detail": "TODOS LOS OJOS PUESTOS EN LA PANTALLA INFINITY-O DISPLAY. AMPLIÁ, ACERCÁ Y CONSEGUÍ TU FOTO EN UNA SOLA TOMA. PRO-GRADE CAMERA. UNA CÁMARA CON TRES LENTES DE NIVEL PROFESIONAL. LTE Y WI-FI 6 TE PERMITEN TRANSMITIR CONTENIDO A GRAN VELOCIDAD",
         "newmodel": true,
         "favorite": false,
-        "image": "moto g30.jpg"
+        "image": "samsung galaxy s20 fe.png"
     },
     {
         "id": 4,
-        "name": "samsung a21s",
-        "price": "$14020.10",
-        "detail": "Instructure, Inc.",
+        "name": "iPhone 12",
+        "price": "214.580",
+        "detail": "EL CHIP A14 BIONIC, EL MÁS RÁPIDO EN UN SMARTPHONE. UNA PANTALLA OLED DE BORDE A BORDE. UN NUEVO FRENTE DE CERAMIC SHIELD, CUATRO VECES MÁS RESISTENTE A LAS CAÍDAS. ADEMÁS, AHORA EL MODO NOCHE VIENE EN TODAS LAS CÁMARAS. EL IPHONE 12 LO TIENE TODO. Y ESTÁ DISPONIBLE EN DOS TAMAÑOS PERFECTOS.",
         "newmodel": true,
-        "favorite": true,
-        "image": "samsung a21s.jpg"
+        "favorite": false,
+        "image": "iPhone 12.png"
     },
     {
         "id": 5,
-        "name": "moto g30",
-        "price": "$1918.96",
-        "detail": "Aviat Networks, Inc.",
+        "name": "Moto G30",
+        "price": "15.918",
+        "detail": "SISTEMA DE 4 CÁMARAS CON 64 MP. MEJORÁ TU PERSPECTIVA. GUARDÁ TODO LO QUE QUIERAS. MÁS DE DOS DÍAS DE BATERÍA",
         "newmodel": false,
         "favorite": true,
         "image": "moto g30.jpg"
     },
     {
         "id": 6,
-        "name": "samsung a51",
-        "price": "$11669.17",
-        "detail": "USA Compression Partners, LP",
+        "name": "Samsung Galaxy A51",
+        "price": "41.999",
+        "detail": "ACERCATE A LO QUE TE IMPORTA CON LA PANTALLA INIFINITY-U DE 6.5 PULGADAS DEL GALAXY A51. UNA PANTALLA DE EXTREMO A EXTREMO CON MARCO CASI INEXISTENTE. SUMERGITE EN TUS VIDEOS Y STREAMINGS FAVORITOS CON SU RESOLUCIÓN FHD+ Y SUPER AMOLED",
         "newmodel": false,
-        "favorite": false,
+        "favorite": true,
         "image": "samsung a51.jpg"
     },
     {
         "id": 7,
-        "name": "samsung a21s",
-        "price": "$10027.45",
-        "detail": "WisdomTree Interest Rate Hedged High Yield Bond Fund",
+        "name": "Samsung A21S",
+        "price": "10.027",
+        "detail": "DISEÑO ELEGANTE QUE SE ADAPTA A TU MANO. INCREÍBLE CÁMARA CUÁDRUPLE PARA CAPTURAR MÁS. CÁMARA MACRO PARA CAPTAR LOS DETALLES DE CERCA. UNA BATERÍA QUE NUNCA SE ACABA. ALTO RENDIMIENTO PARA QUE PUEDAS HACER MÁS. SISTEMA DE ALTA SEGURIDAD. PROTEGÉ LO QUE MÁS TE IMPORTA",
         "newmodel": false,
         "favorite": false,
         "image": "samsung a21s.jpg"
     },
     {
         "id": 8,
-        "name": "samsung a51",
-        "price": "$14698.55",
-        "detail": "WideOpenWest, Inc.",
+        "name": "iPhone 11 PRO Max",
+        "price": "256.698",
+        "detail": "EL CHIP A14 BIONIC ES MUY SUPERIOR A CUALQUIER OTRO CHIP DE SMARTPHONE. EL SISTEMA DE CÁMARAS PRO TE PERMITE TOMAR FOTOS ESPECTACULARES CON POCA LUZ, Y EL IPHONE 12 PRO MAX LLEVA TU TALENTO FOTOGRÁFICO MUCHO MÁS ALLÁ. ADEMÁS, EL NUEVO FRENTE DE CERAMIC SHIELD ES CUATRO VECES MÁS RESISTENTE A LAS CAÍDAS. DESCUBRE TODO LO QUE EL IPHONE 12 PRO HACE PARA LLEVARTE AL SIGUIENTE NIVEL",
         "newmodel": true,
         "favorite": true,
-        "image": "samsung a51.jpg"
+        "image": "iPhone 11 pro max.png"
     },
     {
         "id": 9,
-        "name": "moto g30",
-        "price": "$10754.59",
-        "detail": "Morgan Stanley China A Share Fund Inc.",
+        "name": "LG K51S",
+        "price": "30.750",
+        "detail": "4 CÁMARAS PARA CAPTURAR TUS MOMENTOS FAVORITOS. APORTA MÁS VERSATILIDAD A LA FOTOGRAFÍA. CAPTURA TUS MOMENTOS FAVORITOS EN CUALQUIER MOMENTO, EN CUALQUIER LUGAR Y DE LA MANERA QUE DESEES, CON LA EXCELENTE RESOLUCIÓN DE LA CÁMARA ESTÁNDAR, GRAN ANGULAR, SENSOR DE PROFUNDIDAD Y LENTE MACRO",
         "newmodel": false,
         "favorite": false,
-        "image": "moto g30.jpg"
+        "image": "lg k51s.png"
     }
 ]

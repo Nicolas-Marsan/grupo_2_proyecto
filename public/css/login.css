@@ -7,7 +7,7 @@
 
 .main-login{
     text-align: center;
-    width: 100%;
+    width: 80%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -18,11 +18,13 @@
 
 .main-login .titulo{
     background-color: #C3CA02;
-    width: 100%;
+    width: 80%;
     padding: 8px 1%;
     border-radius: 10px;
     font-size: 120%;
+    min-width: 0;
 }
+
 
 
 .main-login .control{
@@ -108,12 +110,15 @@
     font-weight: bolder;
 }
 
+form{
+    width: 80%;
+}
 
 
 
 @media (min-width: 481px){
 
-    .main .login{
+    .main-login{
         width: 80%;
     }
 
@@ -142,6 +147,8 @@
         margin: 20px 0;
     }
 
+    
+
 }
 
 
@@ -150,6 +157,7 @@
     .main .login{
         width: 70%;
     }
+    
 }
 
 

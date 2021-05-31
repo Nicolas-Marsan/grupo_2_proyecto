@@ -13,12 +13,16 @@
 }
 
 .ultimos-lanzamientos p{
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .ultimos-lanzamientos img{
-    width: 50%;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width: 90px;
 }
 
 .ultimos-lanzamientos h2{
@@ -28,6 +32,9 @@
 
 .ultimos-lanzamientos article{
     margin-bottom: 50px;
+    border-top: 1px solid gray;
+    min-width: 70%;
+    max-width: 70%;
 }
 
 .favoritos{
@@ -37,23 +44,114 @@
 }
 
 .favoritos p{
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .favoritos img{
-    width: 50%;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width: 90px;
 }
 
 .favoritos h2{
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .favoritos article{
     margin-bottom: 50px;
+    border-top: 1px solid gray;
+    min-width: 70%;
+    max-width: 70%;
+}
+
+.boton-comprar-products{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-form-products{
+    background-color: rgba(216, 234, 7, 1);
+    font-size: 15px;
+    color: black;
+    padding: 7px 15px;
+    border-radius: 10px;
+    border: none;
 }
 
 @media (min-width: 481px){
-    
+    .ultimos-lanzamientos h2{
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .ultimos-lanzamientos article{
+        min-width: 70%;
+        max-width: 70%;
+    }
+
+    .favoritos article{
+        min-width: 70%;
+        max-width: 70%;
+    }
+
+    .favoritos h2{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 769px){
+    main{
+        max-width: 1500px;
+    }
+    .ultimos-lanzamientos img{
+        max-width: 160px;
+        width: 100%;
+    }
+
+    .ultimos-lanzamientos article:hover{
+        border: 1px solid gray;
+    }
+
+    .ultimos-lanzamientos article{
+        transition: all 0.5s;
+        border: none;
+        min-width: 20%;
+    }
+
+    .button-form-products:hover{
+        background-color: greenyellow;
+    }
+
+    .button-form-products{
+        transition: all 0.7s
+    }
+
+    .ultimos-lanzamientos h2{
+        margin-top: 50px;
+    }
+
+    .favoritos img{
+        max-width: 160px;
+        width: 100%;
+    }
+
+    .favoritos article:hover{
+        border: 1px solid gray;
+    }
+
+    .favoritos article{
+        transition: all 0.5s;
+        border: none;
+        min-width: 20%;
+    }
+
+    .boton-comprar-products{
+        margin-bottom: 30px;
+    }
 }
