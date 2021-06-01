@@ -15,6 +15,24 @@
     font-size: 18px;
 
 }
+.check1{
+    display: flex;
+    justify-content: space-around;
+}
+.check2{
+    display: flex;
+    justify-content: space-around;
+}
+
+.la{
+
+    margin-left: 10px;
+}
+
+.lat{
+
+    margin-left: 40px;
+}
 
 .titulo{
     background-color: #C3CA02;

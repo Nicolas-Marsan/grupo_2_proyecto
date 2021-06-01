@@ -45,9 +45,10 @@ const productsController = {
 			id:lastId() + 1,
 			name: req.body.nombre,
 			price: req.body.precio,
-			detail:req.body.descripcion,
-			newmodel:req.body.lanzamientos,
-			favorite:req.body.favoritos,
+            Tdetail:req.body.tDetalle,
+			detail:req.body.detalle,
+			newmodel:req.body.newmodel,
+			favorite:req.body.favorite,
             image:req.file.filename
 		}
         
