@@ -17,22 +17,15 @@
 }
 .check1{
     display: flex;
-    justify-content: space-around;
+    
+    
 }
-.check2{
-    display: flex;
-    justify-content: space-around;
-}
-
-.la{
-
-    margin-left: 10px;
+.check1 label{
+    width: 80%;
+    margin-left: 100px;
 }
 
-.lat{
 
-    margin-left: 40px;
-}
 
 .titulo{
     background-color: #C3CA02;
