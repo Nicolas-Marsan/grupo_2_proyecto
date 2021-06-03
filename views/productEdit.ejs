@@ -21,37 +21,40 @@
                     <label class="label" for="precio">Precio</label>
                     <input  type="text" name="precio"  class="control" value="<%= detalleId.price %>">
                 </div>
-                <div class="descripcion" >
-                    <label class="label" for="descripcion">Descripcion</label>
-                    <input  type="text" name="descripcion"  class="control" value="<%= detalleId.detail %>">
-                </div>
+                
             </section>
 
             <section class="pass">
                 <div class="Tdetalle">
                     <label class="label" for="tDetalle">Titulo detalle</label>
-                    <input  type="text" name="tDetalle"  class="control">
+                    <input  type="text" name="tDetalle"  class="control" value="<%= detalleId.Tdetail %>">
                 </div>
                 <div class="detalle">
                     <label class="label" for="detalle">Detalle</label>
-                    <textarea class="area" name="detalle" ></textarea>
+                    <textarea class="area" name="detalle" value=""><%= detalleId.detail %></textarea>
                 </div>
-                <div class="descripcion">
-                    <label for="lanzamientos" class="form-label">Newmodel:</label>
-                    <select name="lanzamientos" id="category" class="form-input">
-                        <option value="">Elegí</option>
-                        <option value="true">true</option>
-                        <option value="false">false</option>
-                    </select>
+
+                <!-- <div class="check1">
+                    <label id="label" for="recordar">New Model:</label>
+                    <input class="cbx" type="checkbox" name="newmodel" value="true">
+                    
                 </div>
-                <div class="descripcion">
-                    <label for="favoritos" class="form-label">Favorite:</label>
-                    <select name="favoritos" id="category" class="form-input">
-                        <option value="">Elegí</option>
-                        <option value="true">true</option>
-                        <option value="false">false</option>
-                    </select>
+                <div class="check1">
+                    <label id="label" for="recordar">Favorite:</label>
+                    <input class="cbx" type="checkbox" name="favorite" value="true">
+                    
+                </div> -->
+                
                 </div>
+               
+
+
+
+
+
+
+
+                
                 <div class="foto">
             
                     <label for="foto">Foto</label>

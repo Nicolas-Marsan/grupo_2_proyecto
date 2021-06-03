@@ -76,8 +76,7 @@ const productsController = {
         res.render('productEdit', {products, detalleId, id});
     },
     update:(req, res) =>{
-        console.log(req.body);
-        res.send('estas editando')
+        res.send(req.body)
     },
     destroy:(req, res) =>{
 
