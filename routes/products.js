@@ -32,3 +32,8 @@ router.get('/crearProducto', productsController.crearProduct);
 
 router.post('/crearProducto', fileUpload.single('foto'), productsController.guardarProduct);
 module.exports = router;
+
+router.get('/:id/edit', productsController.edit);
+router.put('/:id/edit', productsController.update)
+
+/* router.delete('/:id', productsController.destroy) */

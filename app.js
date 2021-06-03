@@ -1,12 +1,15 @@
 const express = require('express');
 const app = express();
 const path= require('path');
+const methodOverride = require('method-override');
+ 
 
 /* Configuración de ejs */
 app.set('view engine', 'ejs');
 app.use(express.static(path.resolve(__dirname, 'public')));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
+app.use(methodOverride('_method'));
 
 /* Rutas */
 const rutasProducts = require('./routes/products.js');

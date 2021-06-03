@@ -41,10 +41,16 @@
                     <h4>
                         <%= productoSeleccionado[0].detail %> 
                     </h4>
-                </div>
-            </section>
+                    </div>
+            <div class="editar-eliminar">
+            <button class="boton-editar"><a href="/products/<%= productoSeleccionado[0].id %>/edit">Editar</a></button>
+            <form action="/:id" method="POST" id="formulario-delete">
+            <button class="boton-eliminar">Eliminar</button>
+            </form>
+        </div>
         </div>
         
+    </section>
             <div class="botones1-pd">
                 <div class="boton-comprar-pd">
                     <a href="#"><button type="submit" class="button-form-pd">Comprar</button></a>

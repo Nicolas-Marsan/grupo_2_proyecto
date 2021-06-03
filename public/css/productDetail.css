@@ -83,7 +83,7 @@
     bottom: 10px;
 }
 
-.button-form-pd{
+.button-form-pd, .boton-editar, .boton-eliminar{
     background-color: rgba(216, 234, 7, 1);
     font-size: 20px;
     color: black;
@@ -91,7 +91,16 @@
     border-radius: 10px;
     border: none;
 }
-
+#formulario-delete{
+    margin: 0px;
+}
+.editar-eliminar{
+    display: none;
+    
+}
+.boton-editar a{
+    color: black;
+}
 .button-form2-pd{
     background-color: rgba(216, 234, 7, 1);
     padding: 5px 10px;
@@ -243,7 +252,20 @@ input{
         width: 80%;
         margin-left: 50px;
     }
-
+    .editar-eliminar{
+        display: block;
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+    }
+#formulario-delete{
+    width: 15%;
+    margin-left: 10%;
+    
+}
+.boton-editar a{
+    text-decoration:none;
+}
     .botones1-pd{
         display: flex;
         justify-content: center;
@@ -294,7 +316,7 @@ input{
     .product-detail-pd{
         width: 40%;
     }
-
+    
     main{
         max-width: 1500px;
         margin: 0 auto;

@@ -60,6 +60,18 @@ const productsController = {
 
 		
         res.redirect('products');
+    },
+    edit: (req, res) =>{
+        let detalleId = products.find(producto => producto.id == req.params.id);
+        let id = req.params.id
+        res.render('productEdit', {products, detalleId, id});
+    },
+    update:(req, res) =>{
+        console.log(req.body);
+        res.send('estas editando')
+    },
+    destroy:(req, res) =>{
+
     }
 };
 
