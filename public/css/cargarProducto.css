@@ -16,14 +16,12 @@
 
 }
 .check1{
+    align-self: center;
+    width: 50%;
     display: flex;
     
-    
 }
-.check1 label{
-    width: 80%;
-    margin-left: 100px;
-}
+
 
 
 

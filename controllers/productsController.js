@@ -16,8 +16,8 @@ const lastId = () =>{
 
 const productsController = {
     index: function(req, res){
-        let newModels = products.filter((product)=>{return product.newmodel}); // productos nuevos
-        let favoriteProducts = products.filter((product)=>{return product.favorite}); // productos favoritos
+        let newModels = products.filter((product)=>{return product.category == 'newmodel'}); // productos nuevos
+        let favoriteProducts = products.filter((product)=>{return product.category == 'favorite'}); // productos favoritos
         res.render('products', {favoriteProducts,newModels});
     },
     productDetail: function(req , res){
@@ -39,15 +39,7 @@ const productsController = {
     },
 
     guardarProduct: function(req , res){
-        /*let newmodel =0;
-        let favorite = 0;
-       if(req.body.newmodel==""){
-            newmodel = "false";
-        }/*else {newmodel = "true";}
         
-        if(req.body.newmodel=="null"){
-            favorite = "false";
-        }else {favorite = "true";}*/
 
         let datos = {
 			id:lastId() + 1,
@@ -55,12 +47,11 @@ const productsController = {
 			price: req.body.precio,
             Tdetail:req.body.tDetalle,
 			detail:req.body.detalle,
-			newmodel:req.body.newmodel,
-			favorite:req.body.newmodel,
-            image:req.file.filename
+			category:req.body.select,
+			image:req.file.filename
 		}
         
-        res.send(newmodel);
+        
         products.push(datos);
 
 		let nuevo = JSON.stringify(products, null,4);
