@@ -67,10 +67,37 @@ const productsController = {
         res.render('productEdit', {products, detalleId, id});
     },
     update:(req, res) =>{
-        res.send(req.body)
+        let idModificar = req.params.id;
+        /* metodo editar */
+        let productEdit = products.find(producto => producto.id == idModificar);
+			let imagen = productEdit.image;
+			let filtrado = products.filter(producto => producto.id != idModificar);
+
+			 let  productEditado = productEdit = { 
+				   id: req.params.id,
+                   name: req.body.nombre,
+                   price: req.body.precio,
+                   Tdetail:req.body.tDetalle,
+                   detail:req.body.detalle,
+                   category:req.body.select,
+                   image: imagen
+			};
+
+				
+				/* res.send(productEdit); */
+				
+			 filtrado.push(productEditado);
+
+			  let productJson = JSON.stringify(filtrado, null, 4);
+        fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), productJson); 
+		 res.redirect('/products'); 
     },
     destroy:(req, res) =>{
-
+        let nuevo = products.filter(producto => producto.id != req.params.id);
+        let productJson = JSON.stringify(nuevo, null, 4);
+        
+        fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), productJson);
+		 return res.redirect('/products');
     }
 };
 

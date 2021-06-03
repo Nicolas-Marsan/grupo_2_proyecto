@@ -31,6 +31,6 @@ router.post('/crearProducto', fileUpload.single('foto'), productsController.guar
 module.exports = router;
 
 router.get('/:id/edit', productsController.edit);
-router.put('/:id/edit', productsController.update)
+router.put('/:id/edit', fileUpload.single('foto'), productsController.update)
 
-/* router.delete('/:id', productsController.destroy) */
+router.delete('/:id', productsController.destroy)

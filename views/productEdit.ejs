@@ -15,7 +15,7 @@
             <section class="producto">
                 <div class="nombre">
                     <label class="label" for="nombre">Nombre</label>
-                    <input  type="text" name="nombre"  class="control" value="<%= detalleId.name %>">
+                    <input  type="text" id="nombre"  class="control" value="<%= detalleId.name %>" name="nombre">
                 </div>
                 <div class="precio">
                     <label class="label" for="precio">Precio</label>
@@ -34,17 +34,14 @@
                     <textarea class="area" name="detalle" value=""><%= detalleId.detail %></textarea>
                 </div>
 
-                <!-- <div class="check1">
-                    <label id="label" for="recordar">New Model:</label>
-                    <input class="cbx" type="checkbox" name="newmodel" value="true">
+                <select name="select" class="check1">
                     
-                </div>
-                <div class="check1">
-                    <label id="label" for="recordar">Favorite:</label>
-                    <input class="cbx" type="checkbox" name="favorite" value="true">
-                    
-                </div> -->
+                    <option value="favorite" selected>Favorite</option>
+                    <option value="newmodel">New moldel</option>
+                  </select>
                 
+                </div>      
+            
                 </div>
                
 

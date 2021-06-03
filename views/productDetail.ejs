@@ -44,7 +44,7 @@
                     </div>
             <div class="editar-eliminar">
             <button class="boton-editar"><a href="/products/<%= productoSeleccionado[0].id %>/edit">Editar</a></button>
-            <form action="/:id" method="POST" id="formulario-delete">
+            <form action="/products/<%= productoSeleccionado[0].id %>?_method=DELETE" method="POST" id="formulario-delete">
             <button class="boton-eliminar">Eliminar</button>
             </form>
         </div>
