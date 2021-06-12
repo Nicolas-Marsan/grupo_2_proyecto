@@ -37,6 +37,10 @@ const usersController = {
     },
     processLogin: function(req , res) {
         
+    },
+
+    profile: function(req, res){
+        res.render('profile');
     }
     
 };

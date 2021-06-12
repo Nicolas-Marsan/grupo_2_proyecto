@@ -10,6 +10,7 @@ azul noche #252850*/
 @import url(/css/normalize.css);
 @import url(/css/cargarProducto.css);
 @import url(/css/products.css);
+@import url(/css/profile.css);
 
 *{
     box-sizing: border-box;

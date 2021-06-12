@@ -1,0 +1,53 @@
+.main-profile{
+    text-align: center;
+}
+
+.main-profile h2{
+    margin: 200px 0 50px;
+}
+
+.main-profile .info{
+    display: flex;
+    justify-content: center;
+}
+
+.main-profile .info img{
+    max-width: 250px;
+}
+
+.main-profile .info .datos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin: 0 10px;
+}
+
+.main-profile .info .datos p{
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.main-profile .buttons{
+    display: flex;
+    text-align: center;
+    width: 25%;
+    margin: 10px auto;
+}
+
+.main-profile .buttons #edit, #logout{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #F3FB9D;
+    font-weight: bolder;
+}
+
+.main-profile .buttons #edit:hover{
+    background: #C3CA02;
+}
+
+.main-profile .buttons #logout:hover{
+    background: red;
+    color: white;
+}
+
