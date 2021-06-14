@@ -18,15 +18,22 @@ filename: (req,file,callback) =>{
 
 const fileUpload = multer({ storage });
 
+/* Formulario de registro */
 router.get('/register', usersController.register);
+
+/* Procesar el registro */
 router.post('/register', fileUpload.single('image'), usersController.updateR);
 
-
-
+/* Formulario de login */
 router.get('/login', usersController.login);
+
+/* Procesar el login */
 router.post('/login', usersController.processLogin);
 
+/* Perfil del usuario */
 router.get('/profile', usersController.profile);
 
+/* Logout */
+router.get('/logout', usersController.logout);
 
 module.exports = router;

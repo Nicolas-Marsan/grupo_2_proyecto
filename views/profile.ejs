@@ -5,12 +5,12 @@
 <body>
     <%- include('./partials/header') %>
         <main class="main-profile">
-            <h2>¡Bienvenido NOMBRE DE USUARIO!</h2>
+            <h2>¡Bienvenido <%= user.name %>!</h2>
             <div class="info">
-                <img src="/images/users/image1623517032354.png" alt="profile image">
+                <img src="/images/users/<%= user.Image %> " alt="profile image">
                 <div class="datos">
-                    <p> <strong>Nombre y apellido:</strong> NOMBRE Y APELLIDO DE USUARIO</p>
-                    <p> <strong>Correo electrónico:</strong> MAIL DEL USUARIO</p>
+                    <p> <strong>Nombre y apellido:</strong> <%= user.name %> <%= user.last_name %>  </p>
+                    <p> <strong>Correo electrónico:</strong> <%= user.email %> </p>
                 </div>
             </div>
             <div class="buttons">

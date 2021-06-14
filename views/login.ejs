@@ -9,20 +9,20 @@
         <main class="main-login">
 
                 <h2 class="titulo">INICIAR SESIÓN</h2>
-                <form class="form-login" action="">
+                <form class="form-login" action="/users/login" method="POST">
 
                 <section class="datos-usuario">
                     <div class="div-correo" >
-                        <label class="label" for="correo">Correo electrónico</label>
-                        <input required type="email" name="correo" id="correo" class="control">
+                        <label class="label" for="email">Correo electrónico</label>
+                        <input required type="email" name="email" id="email" class="control">
                     </div>
                     <div class="div-pass">
                         <label class="label" for="pass">Contraseña</label>
-                        <input required type="password" name="pass" id="pass" class="control"><i class="fas fa-eye-slash"></i>
+                        <input required type="password" name="password" id="password" class="control"><i class="fas fa-eye-slash"></i>
                     </div>
                     <div class="div-recordar-usuario">
                         <div class="div-recordar">
-                            <input class="cbx" type="checkbox" name="recordar-usuario" id="recordar">
+                            <input class="cbx" type="checkbox" name="rememberUser" id="rememberUser">
                             <label id="label" for="recordar">Recordar usuario</label>
                         </div>
 

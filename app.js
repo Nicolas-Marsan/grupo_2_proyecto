@@ -1,8 +1,19 @@
 const express = require('express');
+const session = require('express-session');
+const cookies = require('cookie-parser');
 const app = express();
 const path= require('path');
 const methodOverride = require('method-override');
- 
+
+/* Configuracion cookies */
+app.use(cookies());
+
+/* Configuracion de express-session */
+app.use(session({
+    secret: 'Es secreto.',
+    resave: false,
+    saveUninitialized: false
+}));
 
 /* Configuración de ejs */
 app.set('view engine', 'ejs');

@@ -6,8 +6,7 @@ const bcryptjs = require('bcryptjs'); //*hasheare contra/
 
 const usersController = {
     register: function (req , res){
-        /* let htmlPath = path.join(__dirname,'../views/register.html' );
-        res.sendFile(htmlPath); */
+        res.cookie('testing', '¡Hola mundo!');
         res.render('register');
     },
 
@@ -31,16 +30,57 @@ const usersController = {
     },
     
     login: function(req , res){
-        /* let htmlPath = path.join(__dirname,'../views/login.html' );
-        res.sendFile(htmlPath); */
+        
         res.render('login');
     },
+
     processLogin: function(req , res) {
-        
+        let userToLogin = User.findByField('email', req.body.email);
+
+        if(userToLogin) {
+            let passIsOk = bcryptjs.compareSync(req.body.password, userToLogin.password)
+            if(passIsOk) {
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin; /* creo la propiedad userLogged que tiene la info de userToLogin */
+                
+                if(req.body.rememberUser) {
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 69) * 2});
+                }
+                
+                return res.redirect('/users/profile');
+            }
+        }
+
+        /* Esto es para cuando tengamos que hacer validaciones */
+        return res.render('login', {
+            errors: {
+                email: {
+                    msg: 'Las credenciales son inválidas.'
+                }
+            }
+        })
+
+        return res.render('login', {
+            errors: {
+                email: {
+                    msg: 'No se encuentra este email registrado.'
+                }
+            }
+        })
+
+        /* return res.send(userToLogin); */
     },
 
     profile: function(req, res){
-        res.render('profile');
+        console.log(req.cookies.userEmail);
+        res.render('profile', {
+            user: req.session.userLogged /* en la vista profile va a conocer la variable user */
+        });
+    },
+
+    logout: function(req, res){
+        req.session.destroy();
+        return res.redirect('/');
     }
     
 };
