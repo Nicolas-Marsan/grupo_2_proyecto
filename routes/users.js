@@ -16,22 +16,25 @@ filename: (req,file,callback) =>{
 }
 });
 
+const registroMiddleware = require('../middlewares/registroMiddleware');
+const sinUsuarioMiddleware = require('../middlewares/sinUsuarioMiddleware');
+
 const fileUpload = multer({ storage });
 
 /* Formulario de registro */
-router.get('/register', usersController.register);
+router.get('/register',registroMiddleware, usersController.register);
 
 /* Procesar el registro */
 router.post('/register', fileUpload.single('image'), usersController.updateR);
 
 /* Formulario de login */
-router.get('/login', usersController.login);
+router.get('/login',registroMiddleware, usersController.login);
 
 /* Procesar el login */
 router.post('/login', usersController.processLogin);
 
 /* Perfil del usuario */
-router.get('/profile', usersController.profile);
+router.get('/profile',sinUsuarioMiddleware, usersController.profile);
 
 /* Logout */
 router.get('/logout', usersController.logout);

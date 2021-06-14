@@ -8,7 +8,7 @@
     "method-override": "^3.0.0",
     "multer": "^1.4.2"
   },
-  "name": "trabajointegrador",
+  "name": "n",
   "version": "1.0.0",
   "main": "app.js",
   "devDependencies": {
@@ -27,5 +27,5 @@
     "url": "https://github.com/Nicolas-Marsan/grupo_2_proyecto/issues"
   },
   "homepage": "https://github.com/Nicolas-Marsan/grupo_2_proyecto#readme",
-  "description": ""
+  "description": "SmartShop\r Empresa creada para ofrecer soluciones de comunicacion por medio de\r telefonos celulares smart, smartwatchs y accesorios.\r El publico apuntado es todo aquel que tenga una necesidad de comunicacion, ya sea tanto por las llamadas y mensajes basicos como tambien por la necesidad de disponer de un dispositivo movil agil para estar conectado las 24hs."
 }

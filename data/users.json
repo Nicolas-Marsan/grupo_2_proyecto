@@ -14,5 +14,13 @@
   "email": "rodrifm2009@hotmail.com",
   "password": "$2a$10$RRoWvlfSZN4GVjAlq0NhKuIcXh.2DpqC3FbcKjChPm1x9qv.3UBaG",
   "Image": "image1623679262704.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Nicolas",
+  "last_name": "Marsan",
+  "email": "nicomar80@gmail.com",
+  "password": "$2a$10$FzSSUt/qdQHUR8H41I4cl.b/1.Lm.tXeAjXuc7XnHnmfruSYpPKG6",
+  "Image": "image1623693059318.jpg"
  }
 ]
