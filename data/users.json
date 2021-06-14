@@ -22,5 +22,13 @@
   "email": "nicomar80@gmail.com",
   "password": "$2a$10$FzSSUt/qdQHUR8H41I4cl.b/1.Lm.tXeAjXuc7XnHnmfruSYpPKG6",
   "Image": "image1623693059318.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Franco",
+  "last_name": "Spinelli",
+  "email": "franco_spinelli@hotmail.com",
+  "password": "$2a$10$SVdDozebUqetFXmSuRKTe.PnGhBg7ouNhmoKJBi862CbYWN94loNW",
+  "Image": "image1623696550315.jpeg"
  }
 ]

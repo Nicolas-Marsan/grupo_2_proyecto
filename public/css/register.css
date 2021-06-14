@@ -37,6 +37,10 @@
     width: 100%;
 }
 
+.main-register .div-image{
+    width: 95%;
+}
+
 .main-register .datos-personales, .pass{
     width: 100%;
     background-color:#F3FB9D;
@@ -48,29 +52,36 @@
 }
 
 
-.main-register .datos-personales .div-nombre, .div-apellido, .div-correo {
+.main-register .datos-personales .div-nombre, .div-apellido, .div-correo, .div-image {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.main-register .datos-personales .label, .pass .label{
+.main-register .datos-personales .label{
+    margin: 20px 0 5px 0;
     text-align: left;
     width: 100%;
-    margin: 10px 0;
+}
+
+.main-register .pass .label{
+    margin: 5px 0 5px 0;
+    text-align: left;
+    width: 100%;
+    
 }
 
 .main-register .pass .div-pass, .div-confirm-pass{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 95%;
     margin: auto;
     position: relative;
 }
 
 .main-register .pass i{
     position: absolute;
-    top: 55px;
+    top: 40px;
     right: 10px;
 }
 

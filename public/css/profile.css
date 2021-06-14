@@ -3,7 +3,7 @@
 }
 
 .main-profile h2{
-    margin: 200px 0 50px;
+    margin: 150px 0 50px;
 }
 
 .main-profile .info{
@@ -13,6 +13,7 @@
 
 .main-profile .info img{
     max-width: 250px;
+    border-radius: 10px;
 }
 
 .main-profile .info .datos{
@@ -20,7 +21,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 .main-profile .info .datos p{
@@ -36,6 +37,7 @@
 }
 
 .main-profile .buttons #edit, #logout{
+    margin: 15px auto 5px;
     border-radius: 5px;
     padding: 5px;
     background-color: #F3FB9D;
