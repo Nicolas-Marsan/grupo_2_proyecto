@@ -4,7 +4,7 @@ const cookies = require('cookie-parser');
 const app = express();
 const path= require('path');
 const methodOverride = require('method-override');
-
+const usuarioLogueadoMiddleware = require('./middlewares/usuarioLogueadoMiddleware');
 /* Configuracion cookies */
 app.use(cookies());
 
@@ -14,7 +14,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
-
+app.use(usuarioLogueadoMiddleware);
 /* Configuración de ejs */
 app.set('view engine', 'ejs');
 app.use(express.static(path.resolve(__dirname, 'public')));

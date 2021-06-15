@@ -73,6 +73,8 @@ const usersController = {
 
     profile: function(req, res){
         console.log(req.cookies.userEmail);
+
+        //res.send(req.session.userLogged.name);
         res.render('profile', {
             user: req.session.userLogged /* en la vista profile va a conocer la variable user */
         });

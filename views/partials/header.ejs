@@ -33,12 +33,31 @@
             <a href="/users/register"><p>Crear cuenta</p></a>
         </div>
         <div class="menu_lateral">
-        <div class="iniciar_sesion3">
-            <a href="/users/login"><p> Iniciar Sesión</p></a>
-        </div>
-        <div class="crear_cuenta_full">
-            <a href="/users/register"><p>Crear cuenta</p></a>
-        </div>
+            <% if(locals.isLogged) { %>
+
+                <div class="iniciar_sesion3">
+                    <a href="/users/profile"><img src="/images/users/<%= locals.userLogged.Image %> "></a>
+                </div>
+                <div class="crear_cuenta_full">
+                    <p>Hola <%= locals.userLogged.name %></p></a>
+                </div>
+                <div class="crear_cuenta_full">
+                    <a href="/users/logout" style="text-decoration:none"><p class="cerrar">Cerrar sesion</p></a>
+                </div>
+
+            <% } else {%>
+
+                <div class="iniciar_sesion3">
+                    <a href="/users/login"><p> Iniciar Sesión</p></a>
+                </div>
+                <div class="crear_cuenta_full">
+                    <a href="/users/register"><p>Crear cuenta</p></a>
+                </div>
+
+            <% } %>
+        
+
+
         <div class="mi_carrito">
             <a href="/products/productCart"><p>Mi carrito</p></a>
             <a href="/products/productCart"><i class="fas fa-shopping-cart"></i></a>
