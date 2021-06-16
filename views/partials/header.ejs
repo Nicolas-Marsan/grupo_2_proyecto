@@ -8,12 +8,21 @@
             <input type="search" placeholder="Que estas buscando?"><i class="fas fa-search"></i>
             
         </div>
+        <% if(locals.isLogged) { %>
+            <div class="iniciar_sesion3">
+                <a href="/users/profile"><img src="/images/users/<%= locals.userLogged.Image %> "></a>
+            </div>
+            <div class="crear_cuenta_full">
+                        <p><%= locals.userLogged.name %></p></a>
+            </div>
+        <% } %>
         <div class="hamburguesa">
             <i class="fa fa-bars burger"></i>
         </div>
         <div class="carrito">
             <a href="/products/productCart"><i class="fas fa-shopping-cart"></i></a>
         </div>
+        
 
 
     </div>
@@ -46,20 +55,20 @@
             </div>
 
         <% } else {%>
-            <div class="crear_cuenta">
+            <!-- <div class="crear_cuenta">
                 <a href="/users/register"><p>Crear cuenta</p></a>
-            </div>
+            </div> -->
             <% }%>
 
         <div class="menu_lateral">
             <% if(locals.isLogged) { %>
 
-                <div class="iniciar_sesion3">
+                <!-- <div class="iniciar_sesion3">
                     <a href="/users/profile"><img src="/images/users/<%= locals.userLogged.Image %> "></a>
-                </div>
-                <div class="crear_cuenta_full">
+                </div> -->
+                <!-- <div class="crear_cuenta_full">
                     <p><%= locals.userLogged.name %></p></a>
-                </div>
+                </div> -->
                 <div class="crear_cuenta_full">
                     <a href="/users/logout" style="text-decoration:none"><p class="cerrar">Cerrar sesion</p></a>
                 </div>
