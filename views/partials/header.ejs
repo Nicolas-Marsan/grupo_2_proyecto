@@ -20,18 +20,37 @@
 
     <nav class="iniciar_crear_sesion">
 
-        <div class="iniciar_sesion">
-            <a href="/users/login"><p> Iniciar Sesión</p></a>
-        </div>
+        <% if(locals.isLogged) { %>
+
+            <div class="usuario_mobile">
+                <p ><%= locals.userLogged.name %></p>
+            </div>
+
+        <% } else {%>
+            <div class="iniciar_sesion">
+                <a href="/users/login"><p class="inicia_mobile"> Iniciar Sesión</p></a>
+            </div>
+
+            <% } %>
+
         <div class="iniciar_sesion2">
             <a href="/products"><p class="pys"> Productos</p></a>
         </div>
         <div class="crear_producto">
             <a href="/crearProducto"><p class="pys"> Crear producto  </p></a>
         </div>
-        <div class="crear_cuenta">
-            <a href="/users/register"><p>Crear cuenta</p></a>
-        </div>
+
+        <% if(locals.isLogged) { %>
+            <div class="cerrar_mobile">
+                <a href="/users/logout" style="text-decoration:none"><p >Cerrar sesion</p></a>
+            </div>
+
+        <% } else {%>
+            <div class="crear_cuenta">
+                <a href="/users/register"><p>Crear cuenta</p></a>
+            </div>
+            <% }%>
+
         <div class="menu_lateral">
             <% if(locals.isLogged) { %>
 
@@ -39,7 +58,7 @@
                     <a href="/users/profile"><img src="/images/users/<%= locals.userLogged.Image %> "></a>
                 </div>
                 <div class="crear_cuenta_full">
-                    <p>Hola <%= locals.userLogged.name %></p></a>
+                    <p><%= locals.userLogged.name %></p></a>
                 </div>
                 <div class="crear_cuenta_full">
                     <a href="/users/logout" style="text-decoration:none"><p class="cerrar">Cerrar sesion</p></a>
