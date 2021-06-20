@@ -7,7 +7,7 @@ const productDetailMiddleware = require ('../middlewares/middlewares')
 
 let multerDiskStorage = multer.diskStorage({    
 	destination: (req,file,callback) => 
-{let folder = path.join(__dirname, '../public/images/products');
+{let folder = path.join(__dirname, '../../public/images/products');
  callback(null,folder);
 },
 filename: (req,file,callback) =>
@@ -28,9 +28,12 @@ router.get('/productCart', productsController.productCart);
 router.get('/crearProducto', productsController.crearProduct);
 
 router.post('/crearProducto', fileUpload.single('foto'), productsController.guardarProduct);
-module.exports = router;
+
 
 router.get('/:id/edit', productsController.edit);
 router.put('/:id/edit', fileUpload.single('foto'), productsController.update)
 
 router.delete('/:id', productsController.destroy)
+
+
+module.exports = router;

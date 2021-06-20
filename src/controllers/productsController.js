@@ -39,12 +39,13 @@ const productsController = {
     },
 
     guardarProduct: function(req , res){
-        
+        console.log(req.body);
 
         let datos = {
+            
 			id:lastId() + 1,
 			name: req.body.nombre,
-			price: req.body.precio,
+			price: parseInt(req.body.precio),
             Tdetail:req.body.tDetalle,
 			detail:req.body.detalle,
 			category:req.body.select,
