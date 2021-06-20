@@ -16,11 +16,13 @@ const lastId = () =>{
 
 const productsController = {
     index: function(req, res){
+        let products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'),{encoding:'utf-8'}));
         let newModels = products.filter((product)=>{return product.category == 'newmodel'}); // productos nuevos
         let favoriteProducts = products.filter((product)=>{return product.category == 'favorite'}); // productos favoritos
         res.render('products', {favoriteProducts,newModels});
     },
     productDetail: function(req , res){
+        let products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'),{encoding:'utf-8'}));
         idURL = req.params.id;
         let productoSeleccionado = products.filter((product)=>{ return product.id == idURL});
         res.render('productDetail', {productoSeleccionado});
