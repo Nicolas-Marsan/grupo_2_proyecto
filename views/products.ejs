@@ -8,30 +8,19 @@
     <main class="main-products">
         
         <section class="ultimos-lanzamientos">
-            <h2>Lo más nuevo</h2>
-            <% for (let i = 0; i < newModels.length; i++) {%>
+            <h2>Productos</h2>
+            <% for (let i = 0; i < products.length; i++) {%>
                 <article>
-                    <a href="/products/detail/<%= newModels[i].id %>"><img src="/images/products/<%= newModels[i].image %>" alt="Lo más nuevo"></a>
-                    <p><%= newModels[i].name%></p>
+                    <a href="/products/detail/<%= products[i].id %>"><img src="/images/products/<%= products[i].image %>" alt="Lo más nuevo"></a>
+                    <p><%= products[i].name%></p>
                     <div class="boton-comprar-products">
-                        <a href="/products/detail/<%= newModels[i].id %>"><button type="submit" class="button-form-products">Comprar</button></a>
+                        <a href="/products/detail/<%= products[i].id %>"><button type="submit" class="button-form-products">Comprar</button></a>
                     </div>
                 </article>
             <% } %> 
         </section>
 
-        <section class="favoritos">
-            <h2>Lo más vendido</h2>
-            <% for (let i = 0; i < favoriteProducts.length; i++) {%>
-                <article>
-                    <a href="/products/detail/<%= favoriteProducts[i].id %>"><img src="/images/products/<%= favoriteProducts[i].image %>" alt="Lo más nuevo"></a>
-                    <p><%= favoriteProducts[i].name%></p>
-                    <div class="boton-comprar-products">
-                        <a href="/products/detail/<%= favoriteProducts[i].id %>"><button type="submit" class="button-form-products">Comprar</button></a>
-                    </div>
-                </article>
-            <% } %> 
-        </section>
+        
 
     </main>
 

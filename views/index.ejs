@@ -87,58 +87,35 @@
             <h1> DESTACADOS</h1>
         </section>
 
-        <section class="celulares_destacados">
-
-                <div class="celu1">
-                        <div class="foto_celu1">
-                            <img src="./images/products/moto g9plus.jpg">
+        <section class="main-products">
+        
+            <section class="ultimos-lanzamientos">
+                <h2>Lo más nuevo</h2>
+                <% for (let i = 0; i < newModels.length; i++) {%>
+                    <article>
+                        <a href="/products/detail/<%= newModels[i].id %>"><img src="/images/products/<%= newModels[i].image %>" alt="Lo más nuevo"></a>
+                        <p><%= newModels[i].name%></p>
+                        <div class="boton-comprar-products">
+                            <a href="/products/detail/<%= newModels[i].id %>"><button type="submit" class="button-form-products">Comprar</button></a>
                         </div>
-
-                        <div class="detalle_celu">
-                            <a href="/products/detail/1"><p>Detalle</p></a>
+                    </article>
+                <% } %> 
+            </section>
+    
+            <section class="favoritos">
+                <h2>Lo más vendido</h2>
+                <% for (let i = 0; i < favoriteProducts.length; i++) {%>
+                    <article>
+                        <a href="/products/detail/<%= favoriteProducts[i].id %>"><img src="/images/products/<%= favoriteProducts[i].image %>" alt="Lo más nuevo"></a>
+                        <p><%= favoriteProducts[i].name%></p>
+                        <div class="boton-comprar-products">
+                            <a href="/products/detail/<%= favoriteProducts[i].id %>"><button type="submit" class="button-form-products">Comprar</button></a>
                         </div>
-
-
-                </div>
-                <div class="celu2">
-                    <div class="foto_celu2">
-                        <img src="./images/products/moto g30.jpg">
-                    </div>
-
-                    <div class="detalle_celu"> 
-                        <a href="/products/detail/5"><p>Detalle</p></a>
-                    </div>
-
-                </div>
-                <div class="celu3">
-                    <div class="foto_celu3">
-                        <img src="./images/products/samsung a21s.jpg">
-                    </div>
-
-                    <div class="detalle_celu">
-                        <a href="/products/detail/7"><p>Detalle</p></a>
-                    </div>
-
-                </div>
-                <div class="celu4">
-                    <div class="foto_celu4">
-                        <img src="./images/products/samsung a51.jpg">
-                    </div>
-
-                    <div class="detalle_celu">
-                        <a href="/products/detail/6"><p>Detalle</p></a>
-                    </div>
-
-                </div>
-
-
-
-
-
-
-
+                    </article>
+                <% } %> 
+            </section>
+    
         </section>
-
 
 
     </main>

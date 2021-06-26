@@ -354,7 +354,9 @@ margin-left: 80px;
     .mi_carrito i{
         padding-top: 5px;
     }
-
+    .crear_cuenta{
+        display: none;
+    }
     
     
     

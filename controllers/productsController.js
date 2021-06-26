@@ -16,9 +16,9 @@ const lastId = () =>{
 
 const productsController = {
     index: function(req, res){
-        let newModels = products.filter((product)=>{return product.category == 'newmodel'}); // productos nuevos
-        let favoriteProducts = products.filter((product)=>{return product.category == 'favorite'}); // productos favoritos
-        res.render('products', {favoriteProducts,newModels});
+        //let newModels = products.filter((product)=>{return product.category == 'newmodel'}); // productos nuevos
+        //let favoriteProducts = products.filter((product)=>{return product.category == 'favorite'}); // productos favoritos
+        res.render('products', {products});
     },
     productDetail: function(req , res){
         idURL = req.params.id;
