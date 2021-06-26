@@ -4,7 +4,7 @@ const cookies = require('cookie-parser');
 const app = express();
 const path= require('path');
 const methodOverride = require('method-override');
-const usuarioLogueadoMiddleware = require('./middlewares/usuarioLogueadoMiddleware');
+const usuarioLogueadoMiddleware = require('./src/middlewares/usuarioLogueadoMiddleware');
 /* Configuracion cookies */
 app.use(cookies());
 
@@ -17,15 +17,16 @@ app.use(session({
 app.use(usuarioLogueadoMiddleware);
 /* Configuración de ejs */
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './src/views'));
 app.use(express.static(path.resolve(__dirname, 'public')));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
 
 /* Rutas */
-const rutasProducts = require('./routes/products.js');
-const rutasUsers = require ('./routes/users.js');
-const rutasHome = require ('./routes/home.js');
+const rutasProducts = require('./src/routes/products.js');
+const rutasUsers = require ('./src/routes/users.js');
+const rutasHome = require ('./src/routes/home.js');
 
 app.use('/', rutasHome);
 app.use('/products', rutasProducts);

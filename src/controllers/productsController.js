@@ -21,6 +21,7 @@ const productsController = {
         res.render('products', {products});
     },
     productDetail: function(req , res){
+        let products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'),{encoding:'utf-8'}));
         idURL = req.params.id;
         let productoSeleccionado = products.filter((product)=>{ return product.id == idURL});
         res.render('productDetail', {productoSeleccionado});
@@ -39,12 +40,13 @@ const productsController = {
     },
 
     guardarProduct: function(req , res){
-        
+        console.log(req.body);
 
         let datos = {
+            
 			id:lastId() + 1,
 			name: req.body.nombre,
-			price: req.body.precio,
+			price: parseInt(req.body.precio),
             Tdetail:req.body.tDetalle,
 			detail:req.body.detalle,
 			category:req.body.select,
