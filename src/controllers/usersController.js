@@ -3,12 +3,22 @@ const fs = require('fs');
 const path = require('path');
 const User = require('../models/Users');
 const bcryptjs = require('bcryptjs'); //*hasheare contra/
+const db = require("../database/models");
 
 const usersController = {
     register: function (req , res){
         res.cookie('testing', '¡Hola mundo!');
         res.render('register');
     },
+
+    all: (req, res) => {
+      
+		db.Usuarios.findAll()
+         .then(function(usuarios){
+            //res.send(peliculas);
+           res.render("listadoUsuarios",{usuarios:usuarios})
+         })
+	},
 
     updateR: function(req, res) {
         
