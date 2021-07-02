@@ -22,4 +22,6 @@ module.exports = (sequelize, dataTypes) => {
 
     const Categoria = sequelize.define(alias, cols, config);
 
+    return Categoria;
+
 }

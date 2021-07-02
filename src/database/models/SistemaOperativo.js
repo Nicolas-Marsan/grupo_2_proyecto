@@ -22,4 +22,6 @@ module.exports = (sequelize, dataTypes) => {
 
     const Sistema_Operativo = sequelize.define(alias, cols, config);
 
+    return Sistema_Operativo;
+
 }

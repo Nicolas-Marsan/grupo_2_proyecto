@@ -26,4 +26,6 @@ module.exports = (sequelize, dataTypes) => {
 
     const Pantalla = sequelize.define(alias, cols, config);
 
+    return Pantalla;
+
 }

@@ -22,4 +22,6 @@ module.exports = (sequelize, dataTypes) => {
 
     const Memoria = sequelize.define(alias, cols, config);
 
+    return Memoria;
+
 }

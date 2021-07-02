@@ -25,4 +25,6 @@ module.exports = (sequelize, dataTypes) => {
     /* Color.associate = function(models){
         Color.
     }  */
+
+    return Color;
 }

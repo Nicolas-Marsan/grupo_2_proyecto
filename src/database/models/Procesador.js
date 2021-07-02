@@ -22,4 +22,6 @@ module.exports = (sequelize, dataTypes) => {
 
     const Procesador = sequelize.define(alias, cols, config);
 
+    return Procesador;
+
 }
