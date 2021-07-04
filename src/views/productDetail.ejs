@@ -20,18 +20,18 @@
                         </ul>
                     </div>
                     <div class="celu-elegido-pd">
-                        <img src="/images/products/<%= productoSeleccionado[0].image %>" alt="">
+                        <img src="/images/products/<%=productoSeleccionado.imagen%>" alt="">
                     </div>
                 </div>
             </section>
             <section class="product-detail-pd">
                 <div class="nombre-celu-pd">
                     <!-- <img src="/images/samsung a51 nombre.jpg" alt="" width="90%"> -->
-                    <h1><%= productoSeleccionado[0].name %> </h1>
+                    <h1><%= productoSeleccionado.modelo %> </h1>
                 </div>
                 <div class="precio-detalleProducto-pd">
                     <!-- <img src="/images/a51 precio.jpg" alt="" width="70%"> -->
-                    <h2>$<%= productoSeleccionado[0].price %> </h2>
+                    <h2>$<%= productoSeleccionado.precio_unitario %> </h2>
                 </div>
                 <div class="detalle-celu1-pd">
                     <!-- <img src="/images/detalle a51.jpg" alt="" width="100%"> -->
@@ -39,12 +39,12 @@
                 </div>
                 <div class="detalle-celu2-pd">
                     <h4>
-                        <%= productoSeleccionado[0].detail %> 
+                        <%= productoSeleccionado.modelo %> 
                     </h4>
                     </div>
             <div class="editar-eliminar">
-            <button class="boton-editar"><a href="/products/<%= productoSeleccionado[0].id %>/edit">Editar</a></button>
-            <form action="/products/<%= productoSeleccionado[0].id %>?_method=DELETE" method="POST" id="formulario-delete">
+            <button class="boton-editar"><a href="/products/<%= productoSeleccionado.id %>/edit">Editar</a></button>
+            <form action="/products/<%= productoSeleccionado.id %>?_method=DELETE" method="POST" id="formulario-delete">
             <button class="boton-eliminar">Eliminar</button>
             </form>
         </div>

@@ -11,8 +11,8 @@
             <h2>Productos</h2>
             <% for (let i = 0; i < products.length; i++) {%>
                 <article>
-                    <a href="/products/detail/<%= products[i].id %>"><img src="/images/products/<%= products[i].image %>" alt="Lo más nuevo"></a>
-                    <p><%= products[i].name%></p>
+                    <a href="/products/detail/<%= products[i].id %>"><img src="/images/products/<%= products[i].imagen %>" alt="Lo más nuevo"></a>
+                    <p><%= products[i].modelo%></p>
                     <div class="boton-comprar-products">
                         <a href="/products/detail/<%= products[i].id %>"><button type="submit" class="button-form-products">Comprar</button></a>
                     </div>
