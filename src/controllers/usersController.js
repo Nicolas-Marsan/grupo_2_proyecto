@@ -73,7 +73,7 @@ const usersController = {
     },
 
     processLogin: function(req , res) {
-        let passUserToLogin=0;
+        
         let userToLogin=0;
         db.Usuarios.findAll({
             where: {
@@ -91,18 +91,20 @@ const usersController = {
             if(passIsOk) {
                 //delete userToLogin.password;
                 req.session.userLogged = userToLogin; 
-                
+                //console.log("es esto" + res.locals);
                 if(req.body.rememberUser) {
                     res.cookie('userEmail', req.body.email, { maxAge: (1000 * 69) * 2});
                 }
                 
-                return res.redirect('/users/profile');
+                return res.render('profile',{
+                    user: req.session.userLogged /* en la vista profile va a conocer la variable user */
+                });
             }
           
         }
         })
-        
-        
+        //req.session.userLogged = userToLogin;
+       
         
        //console.log(userToLogin);
         
@@ -146,7 +148,7 @@ const usersController = {
     profile: function(req, res){
         console.log(req.cookies.userEmail);
 
-        //res.send(req.session.userLogged.name);
+        //res.send("estas ahi logged?" + req.locals);
         res.render('profile', {
             user: req.session.userLogged /* en la vista profile va a conocer la variable user */
         });

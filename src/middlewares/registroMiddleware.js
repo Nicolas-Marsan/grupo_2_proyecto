@@ -1,6 +1,7 @@
 function registroMiddleware(req, res, next) {
 	if (req.session.userLogged) {
-		return res.redirect('/users/profile');
+		console.log('decime que es ' + req.session.userLogged);
+		//return res.redirect('/users/profile');
 	}
 	next();
 }
