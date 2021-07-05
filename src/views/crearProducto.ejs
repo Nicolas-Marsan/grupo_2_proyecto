@@ -14,18 +14,28 @@
         <form class='formu' action="/crearProducto" method="POST" enctype="multipart/form-data">
             <section class="producto">
                 <div class="nombre">
-                    <label class="label" for="nombre">Nombre</label>
-                    <input  type="text" name="nombre"  class="control">
+                    <label class="label" for="modelo">Modelo</label>
+                    <input  type="text" name="modelo"  class="control">
                 </div>
                 <div class="precio">
-                    <label class="label" for="precio">Precio</label>
-                    <input type="text" name="precio"  class="control">
+                    <label class="label" for="precio">Marca:</label>
+                    <select name="marca">
+                        <% if(locals.products.marcas && products.marcas.length) {%> 
+                        <% for(let i = 0; i < products.marcas.length; i++) {%>
+                            <% if(products.marcas[i].id == products.marca_id) {%> 
+                            <option selected value="<%= products.marcas[i].id %>"><%= products.marcas[i].nombre %></option>
+                                <% } else {%>
+                                    <option value="<%= products.marcas[i].id %>"><%= products.marcas[i].nombre %></option>
+                                    <% } %>
+                                    <% } %>  
+                                    <% } %> 
+                    </select>
                 </div>
                 
             </section>
 
             <section class="pass">
-                <div class="Tdetalle">
+                <!-- <div class="Tdetalle">
                     <label class="label" for="tDetalle">Titulo detalle</label>
                     <input  type="text" name="tDetalle"  class="control">
                 </div>
@@ -40,7 +50,7 @@
                     <option value="newmodel">New moldel</option>
                   </select>
                 
-                </div>      
+                </div> -->      
 
               
                 <div class="foto">

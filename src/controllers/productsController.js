@@ -45,8 +45,13 @@ const productsController = {
 
     crearProduct: function(req , res){
 
-    
-        res.render('crearProducto');
+        db.Producto.findAll({
+            include: [{all: true}]
+        })
+        .then(products =>{
+            res.render('crearProducto', {products})
+            /* res.send(products) */
+        })
     },
 
     guardarProduct: function(req , res){
