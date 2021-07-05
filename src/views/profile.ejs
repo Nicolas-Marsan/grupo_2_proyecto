@@ -10,7 +10,7 @@
                 <img src="/images/users/<%= user.Image %> " alt="profile image">
                 <div class="datos">
                     <p> <strong>Nombre y apellido:</strong> <%= user.name %> <%= user.last_name %>  </p>
-                    <p> <strong>Correo electrónico:</strong> <%= user.email %> </p>
+                    <p> <strong>Correo electrónico:</strong> <%= locals.userLogged.name %> </p>
                 </div>
             </div>
             <div class="buttons">

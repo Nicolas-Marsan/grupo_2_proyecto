@@ -20,7 +20,7 @@ let cols = {
     mail: {
         type:dataTypes.STRING
     },
-    contraseña: {
+    password: {
         type: dataTypes.STRING
     }
 };

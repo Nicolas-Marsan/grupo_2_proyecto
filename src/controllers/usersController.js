@@ -21,14 +21,42 @@ const usersController = {
 	},
 
     updateR: function(req, res) {
-        
-        /* let userInDB = User.findByField('email', req.body.email);
-        if (userInDB) {
+        let userInDB;
+        db.Usuarios.findAll({
+            where: {
+               mail: {[db.Sequelize.Op.eq] : req.body.email}
+            }
+         })
+        .then(function(usuario){
+            userInDB=usuario[0];
+
+            
+
+            db.Usuarios.create({
+                nombre: req.body.name,
+                apellido: req.body.last_name,
+                mail: req.body.email,
+                password:bcryptjs.hashSync(req.body.password, 10)
+             });
+
+
+             res.redirect('/users/login')
+           /* let bodyEntero = {
+                ...req.body,
+                password: bcryptjs.hashSync(req.body.password, 10), //* hashear contraseña/
+                Image: req.file.filename, //* pedir el nombre que le dimos a la imagen /
+            }
+
+            User.create(bodyEntero);
+        return res.redirect('/users/login')*/
+        })
+
+        /*if (userInDB) {
         return res.render('register', {
         oldData: req.body
        })
     } */   
-       let bodyEntero = {
+       /*let bodyEntero = {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10), //* hashear contraseña/
             Image: req.file.filename, //* pedir el nombre que le dimos a la imagen /
@@ -36,7 +64,7 @@ const usersController = {
 
 
        User.create(bodyEntero);
-        return res.redirect('/users/login')
+        return res.redirect('/users/login')*/
     },
     
     login: function(req , res){
@@ -45,14 +73,48 @@ const usersController = {
     },
 
     processLogin: function(req , res) {
-        let userToLogin = User.findByField('email', req.body.email);
+        let passUserToLogin=0;
+        let userToLogin=0;
+        db.Usuarios.findAll({
+            where: {
+               mail: {[db.Sequelize.Op.eq] : req.body.email}
+            }
+         })
+        .then(function(usuario){
+            userToLogin=usuario[0];
+
+            
+           if(userToLogin) {
+            let passIsOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            
+            
+            if(passIsOk) {
+                //delete userToLogin.password;
+                req.session.userLogged = userToLogin; 
+                
+                if(req.body.rememberUser) {
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 69) * 2});
+                }
+                
+                return res.redirect('/users/profile');
+            }
+          
+        }
+        })
+        
+        
+        
+       //console.log(userToLogin);
+        
+
+        /*let userToLogin = User.findByField('email', req.body.email);
 
         if(userToLogin) {
-            let passIsOk = bcryptjs.compareSync(req.body.password, userToLogin.password)
+            let passIsOk = req.body.password.localeCompare(userToLogin.password); //bcryptjs.compareSync(req.body.password, userToLogin.password)
             if(passIsOk) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin; /* creo la propiedad userLogged que tiene la info de userToLogin */
-                
+                /*
                 if(req.body.rememberUser) {
                     res.cookie('userEmail', req.body.email, { maxAge: (1000 * 69) * 2});
                 }
@@ -62,21 +124,21 @@ const usersController = {
         }
 
         /* Esto es para cuando tengamos que hacer validaciones */
-        return res.render('login', {
+        /*return res.render('login', {
             errors: {
                 email: {
                     msg: 'Las credenciales son inválidas.'
                 }
             }
-        })
+        })*/
 
-        return res.render('login', {
+        /*return res.render('login', {
             errors: {
                 email: {
                     msg: 'No se encuentra este email registrado.'
                 }
             }
-        })
+        })*/
 
         /* return res.send(userToLogin); */
     },
