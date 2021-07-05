@@ -21,6 +21,11 @@ const sinUsuarioMiddleware = require('../middlewares/sinUsuarioMiddleware');
 
 const fileUpload = multer({ storage });
 
+
+/* probando conexion con db */
+router.get('/all', usersController.all);
+
+
 /* Formulario de registro */
 router.get('/register',registroMiddleware, usersController.register);
 

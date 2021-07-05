@@ -90,9 +90,14 @@ INSERT INTO `smartshop_db`.`usuarios_ordenes` (`usuario_id`, `orden_id`) VALUES 
 
 
 
-INSERT INTO `smartshop_db`.`productos` (`modelo`, `marca_id`, `categoria_id`, `sistema_operativo_id`, `ram_id`, `memoria_id`, `pantalla_id`, `procesador_id`, `color_id`, `stock`, `precio_unitario`) VALUES ('iPhone 12', '1', '1', '1', '3', '2', '3', '1', '5', '3', '25000');
-INSERT INTO `smartshop_db`.`productos` (`modelo`, `marca_id`, `categoria_id`, `sistema_operativo_id`, `ram_id`, `memoria_id`, `pantalla_id`, `procesador_id`, `color_id`, `stock`, `precio_unitario`) VALUES ('Moto G9 Plus', '2', '2', '2', '1', '1', '1', '2', '2', '2', '20000');
-INSERT INTO `smartshop_db`.`productos` (`modelo`, `marca_id`, `categoria_id`, `sistema_operativo_id`, `ram_id`, `memoria_id`, `pantalla_id`, `procesador_id`, `color_id`, `stock`, `precio_unitario`) VALUES ('Samsung Galaxy A51', '3', '3', '2', '2', '2', '2', '2', '3', '5', '15000');
+INSERT INTO `smartshop_db`.`productos` (`modelo`, `marca_id`, `categoria_id`, `sistema_operativo_id`, `ram_id`, `memoria_id`, `pantalla_id`, `procesador_id`, `color_id`, `imagen`, `stock`, `precio_unitario`) VALUES ('iPhone 12', '1', '1', '1', '3', '2', '3', '1', '5','iPhone 12.png', '3', '250000');
+INSERT INTO `smartshop_db`.`productos` (`modelo`, `marca_id`, `categoria_id`, `sistema_operativo_id`, `ram_id`, `memoria_id`, `pantalla_id`, `procesador_id`, `color_id`, `imagen`, `stock`, `precio_unitario`) VALUES ('Moto G9 Plus', '3', '2', '2', '1', '1', '1', '2', '4','moto g9plus.jpg', '2', '200000');
+INSERT INTO `smartshop_db`.`productos` (`modelo`, `marca_id`, `categoria_id`, `sistema_operativo_id`, `ram_id`, `memoria_id`, `pantalla_id`, `procesador_id`, `color_id`, `imagen`, `stock`, `precio_unitario`) VALUES ('Samsung Galaxy A51', '2', '3', '2', '2', '2', '2', '5', '3','samsung a51.jpg', '5', '150000');
+INSERT INTO `smartshop_db`.`productos` (`modelo`, `marca_id`, `categoria_id`, `sistema_operativo_id`, `ram_id`, `memoria_id`, `pantalla_id`, `procesador_id`, `color_id`, `imagen`, `stock`, `precio_unitario`) VALUES ('Xiaomi Redmi Note 8', '4', '3', '2', '1', '2', '2', '8', '4', 'xiaomi redmi note 8.jpg', '2', '90000');
+INSERT INTO `smartshop_db`.`productos` (`modelo`, `marca_id`, `categoria_id`, `sistema_operativo_id`, `ram_id`, `memoria_id`, `pantalla_id`, `procesador_id`, `color_id`, `imagen`, `stock`, `precio_unitario`) VALUES ('Samsung Galaxy S20 FE', '3', '1', '2', '2', '3', '4', '5', '1', 'samsung galaxy s20 fe.png', '4', '220000');
+INSERT INTO `smartshop_db`.`productos` (`modelo`, `marca_id`, `categoria_id`, `sistema_operativo_id`, `ram_id`, `memoria_id`, `pantalla_id`, `procesador_id`, `color_id`, `imagen`, `stock`, `precio_unitario`) VALUES ('Moto G30', '2', '2', '2', '1', '1', '1', '7', '2', 'moto g30.jpg', '8', '180000');
+INSERT INTO `smartshop_db`.`productos` (`modelo`, `marca_id`, `categoria_id`, `sistema_operativo_id`, `ram_id`, `memoria_id`, `pantalla_id`, `procesador_id`, `color_id`, `imagen`, `stock`, `precio_unitario`) VALUES ('Samgun A21S', '3', '1', '2', '1', '2', '1', '6', '5', 'samsung a21s.jpg', '1', '149000');
+INSERT INTO `smartshop_db`.`productos` (`modelo`, `marca_id`, `categoria_id`, `sistema_operativo_id`, `ram_id`, `memoria_id`, `pantalla_id`, `procesador_id`, `color_id`, `imagen`, `stock`, `precio_unitario`) VALUES ('iPhone 11 PRO Max', '1', '1', '1', '6', '3', '4', '1', '2', 'iPhone 11 pro max.png', '2', '280000');
 
 
 

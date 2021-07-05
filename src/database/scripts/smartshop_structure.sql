@@ -22,7 +22,7 @@
       `id` INT NOT NULL AUTO_INCREMENT,
       `nombre` VARCHAR(255) COLLATE utf8mb4_unicode_ci  NOT NULL,
       `apellido` VARCHAR(255) COLLATE utf8mb4_unicode_ci  NOT NULL,
-      `mail` VARCHAR(255) COLLATE utf8mb4_unicode_ci  NOT NULL,
+      `mail` VARCHAR(255) COLLATE utf8mb4_unicode_ci  NOT NULL UNIQUE,
       `contraseña` VARCHAR(255) COLLATE utf8mb4_unicode_ci  NOT NULL,
       `tyc` TINYINT(1) NOT NULL,
       `newletter` TINYINT(1) NULL DEFAULT NULL,
