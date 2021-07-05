@@ -1,6 +1,8 @@
 const path = require('path');
 const fs = require ('fs');
-
+const db = require('../database/models');
+const Producto = db.Producto;
+const { Op } = require("sequelize");
 let products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'),{encoding:'utf-8'})); //Leer el JSON y pasarlo a objeto literal
 
 
@@ -18,13 +20,21 @@ const productsController = {
     index: function(req, res){
         //let newModels = products.filter((product)=>{return product.category == 'newmodel'}); // productos nuevos
         //let favoriteProducts = products.filter((product)=>{return product.category == 'favorite'}); // productos favoritos
-        res.render('products', {products});
+        /* res.render('products', {products}); */
+        db.Producto.findAll()
+        .then(products =>{
+            res.render('products', {products})
+        })
     },
     productDetail: function(req , res){
-        let products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'),{encoding:'utf-8'}));
+        /* let products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'),{encoding:'utf-8'}));
         idURL = req.params.id;
         let productoSeleccionado = products.filter((product)=>{ return product.id == idURL});
-        res.render('productDetail', {productoSeleccionado});
+        res.render('productDetail', {productoSeleccionado}); */
+        db.Producto.findByPk(req.params.id)
+        .then(productoSeleccionado =>{
+            res.render('productDetail', {productoSeleccionado})
+        })
     },
 
     productCart: function(req , res){
