@@ -20,7 +20,16 @@ let cols = {
     mail: {
         type:dataTypes.STRING
     },
-    contraseña: {
+    password: {
+        type: dataTypes.STRING
+    },
+    tyc: {
+        type: dataTypes.TINYINT
+    },
+    newletter: {
+        type: dataTypes.TINYINT
+    },
+    imagen: {
         type: dataTypes.STRING
     }
 };
