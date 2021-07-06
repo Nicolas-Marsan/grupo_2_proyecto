@@ -44,39 +44,40 @@ const productsController = {
     },
 
     crearProduct: function(req , res){
-
-        db.Producto.findAll({
-            include: [{all: true}]
-        })
-        .then(products =>{
-            res.render('crearProducto', {products})
-            /* res.send(products) */
+        let marcasRquest = db.Marca.findAll();
+        let categoriasRquest = db.Categoria.findAll();
+        let colorRquest = db.Color.findAll();
+        let memoriaRquest = db.Memoria.findAll();
+        let pantallaRquest = db.Pantalla.findAll();
+        let procesadorRquest = db.Procesador.findAll();
+        let ramRquest = db.Ram.findAll();
+        let sisOpRquest = db.Sistema_Operativo.findAll();
+        /* db.Memoria.findAll().then(memoria=>{res.send(memoria)}) */
+        
+        Promise.all([marcasRquest, categoriasRquest, colorRquest, memoriaRquest, pantallaRquest, procesadorRquest, ramRquest, sisOpRquest])
+        .then(function([marcas, categorias, color, memoria, pantalla, procesador, ram, sistemaOperativo]){
+            res.render('crearProducto', {marcas, categorias, color, memoria, pantalla, procesador, ram, sistemaOperativo})
+            /* res.send([marcas, categorias]) */
         })
     },
 
     guardarProduct: function(req , res){
-        console.log(req.body);
-
-        let datos = {
-            
-			id:lastId() + 1,
-			name: req.body.nombre,
-			price: parseInt(req.body.precio),
-            Tdetail:req.body.tDetalle,
-			detail:req.body.detalle,
-			category:req.body.select,
-			image:req.file.filename
-		}
-        
-        
-        products.push(datos);
-
-		let nuevo = JSON.stringify(products, null,4);
-
-		fs.writeFileSync(path.join(__dirname, '../data/products.json'),nuevo);
-
-		
-        res.redirect('products');
+        let filename = req.file.filename;
+        db.Producto.create({
+            modelo: req.body.modelo,
+            marca_id: req.body.marca,
+            color_id: req.body.color,
+            memoria_id: req.body.memoria,
+            pantalla_id: req.body.pantalla,
+            procesador_id: req.body.procesador,
+            ram_id: req.body.ram,
+            sistema_operativo_id: req.body.sistema_operativo,
+            marca_id: req.body.marca,
+            precio_unitario: req.body.precio,
+            imagen: filename,
+            categoria_id: req.body.categorias,
+            stock:1
+        }).then(()=>res.redirect('/products'))
     },
     edit: (req, res) =>{
         let detalleId = products.find(producto => producto.id == req.params.id);

@@ -17,20 +17,8 @@
                     <label class="label" for="modelo">Modelo</label>
                     <input  type="text" name="modelo"  class="control">
                 </div>
-                <div class="precio">
-                    <label class="label" for="precio">Marca:</label>
-                    <select name="marca">
-                        <% if(locals.products.marcas && products.marcas.length) {%> 
-                        <% for(let i = 0; i < products.marcas.length; i++) {%>
-                            <% if(products.marcas[i].id == products.marca_id) {%> 
-                            <option selected value="<%= products.marcas[i].id %>"><%= products.marcas[i].nombre %></option>
-                                <% } else {%>
-                                    <option value="<%= products.marcas[i].id %>"><%= products.marcas[i].nombre %></option>
-                                    <% } %>
-                                    <% } %>  
-                                    <% } %> 
-                    </select>
-                </div>
+                <%- include('./partials/selectCreate') %>
+                
                 
             </section>
 
@@ -56,7 +44,7 @@
                 <div class="foto">
             
                     <label for="foto">Foto</label>
-                    <input type="file" id="foto" name="foto" placeholder="foto">
+                    <input type="file" id="foto" name="imagen" placeholder="foto">
             
                 </div>
                 

@@ -27,7 +27,7 @@ router.get('/productCart', productsController.productCart);
 
 router.get('/crearProducto', productsController.crearProduct);
 
-router.post('/crearProducto', fileUpload.single('foto'), productsController.guardarProduct);
+router.post('/crearProducto', fileUpload.single('imagen'), productsController.guardarProduct);
 
 
 router.get('/:id/edit', productDetailMiddleware, productsController.edit);

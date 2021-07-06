@@ -42,7 +42,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         imagen: {
-            type: dataTypes.DATE
+            type: dataTypes.STRING
         },
         stock: {
             type: dataTypes.INTEGER,
@@ -66,6 +66,11 @@ module.exports = (sequelize, dataTypes) => {
             as: "marcas",
 
             foreignKey: "marca_id"
+        });
+        Producto.belongsTo(models.Categoria,{
+            as: "categorias",
+
+            foreignKey: "categoria_id"
         });
     }
     
