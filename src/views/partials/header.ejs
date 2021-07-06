@@ -10,7 +10,7 @@
         </div>
         <% if(locals.isLogged) { %>
             <div class="iniciar_sesion3">
-                <a href="/users/profile"><img src="/images/users/<%= locals.userLogged.Image %> "></a>
+                <a href="/users/profile"><img src="/images/users/<%= locals.userLogged.imagen %> "></a>
             </div>
             <div class="crear_cuenta_full">
                         <p><%= locals.userLogged.name %></p></a>
@@ -32,7 +32,7 @@
         <% if(locals.isLogged) { %>
 
             <div class="usuario_mobile">
-                <p ><%= locals.userLogged.name %></p>
+                <p ><%= locals.userLogged.nombre %></p>
             </div>
 
         <% } else {%>

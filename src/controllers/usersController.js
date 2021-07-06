@@ -29,14 +29,15 @@ const usersController = {
          })
         .then(function(usuario){
             userInDB=usuario[0];
-
+            
             
 
             db.Usuarios.create({
                 nombre: req.body.name,
                 apellido: req.body.last_name,
                 mail: req.body.email,
-                password:bcryptjs.hashSync(req.body.password, 10)
+                password:bcryptjs.hashSync(req.body.password, 10),
+                imagen:req.file.filename
              });
 
 
@@ -96,9 +97,7 @@ const usersController = {
                     res.cookie('userEmail', req.body.email, { maxAge: (1000 * 69) * 2});
                 }
                 
-                return res.render('profile',{
-                    user: req.session.userLogged /* en la vista profile va a conocer la variable user */
-                });
+                return res.redirect('profile');
             }
           
         }

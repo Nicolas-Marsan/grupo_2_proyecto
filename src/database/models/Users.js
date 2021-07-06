@@ -22,6 +22,15 @@ let cols = {
     },
     password: {
         type: dataTypes.STRING
+    },
+    tyc: {
+        type: dataTypes.TINYINT
+    },
+    newletter: {
+        type: dataTypes.TINYINT
+    },
+    imagen: {
+        type: dataTypes.STRING
     }
 };
 
