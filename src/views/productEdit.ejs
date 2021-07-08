@@ -9,53 +9,24 @@
     <main class="main-register">
       
         <h2 class="titulo">
-            Editar <%= detalleId.name %> 
+            Editar <%= producto.name %> 
         </h2>
-        <form action="/products/<%= detalleId.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form action="/products/<%= producto.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
             <section class="producto">
                 <div class="nombre">
-                    <label class="label" for="nombre">Nombre</label>
-                    <input  type="text" id="nombre"  class="control" value="<%= detalleId.name %>" name="nombre">
+                    <label class="label" for="modelo">Modelo</label>
+                    <input  type="text" name="modelo"  class="control">
                 </div>
-                <div class="precio">
-                    <label class="label" for="precio">Precio</label>
-                    <input  type="text" name="precio"  class="control" value="<%= detalleId.price %>">
-                </div>
+                <%- include('./partials/selectEdit') %>
+                
                 
             </section>
 
-            <section class="pass">
-                <div class="Tdetalle">
-                    <label class="label" for="tDetalle">Titulo detalle</label>
-                    <input  type="text" name="tDetalle"  class="control" value="<%= detalleId.Tdetail %>">
-                </div>
-                <div class="detalle">
-                    <label class="label" for="detalle">Detalle</label>
-                    <textarea class="area" name="detalle" value=""><%= detalleId.detail %></textarea>
-                </div>
-
-                <select name="select" class="check1">
-                    
-                    <option value="favorite" selected>Favorite</option>
-                    <option value="newmodel">New moldel</option>
-                  </select>
-                
-                </div>      
-            
-                </div>
-               
-
-
-
-
-
-
-
-                
+            <section class="pass">              
                 <div class="foto">
             
                     <label for="foto">Foto</label>
-                    <input type="file" id="foto" name="foto" placeholder="foto">
+                    <input type="file" id="foto" name="imagen" placeholder="foto">
             
                 </div>
                 
@@ -65,8 +36,9 @@
 
 
             <section class="buttons">
-                <button id="enviar" type="submit">Editar</button>
+                <button id="enviar" type="submit">Crear producto</button>
                 <button id="borrar" type="reset">Resetear</button>
+                <button type="menu">Volver</button>
             </section>
         </form>
         

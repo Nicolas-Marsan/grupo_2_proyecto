@@ -72,6 +72,36 @@ module.exports = (sequelize, dataTypes) => {
 
             foreignKey: "categoria_id"
         });
+        Producto.belongsTo(models.Color,{
+            as: "colores",
+
+            foreignKey: "color_id"
+        });
+        Producto.belongsTo(models.Memoria,{
+            as: "memorias",
+
+            foreignKey: "memoria_id"
+        });
+        Producto.belongsTo(models.Pantalla,{
+            as: "pantallas",
+
+            foreignKey: "pantalla_id"
+        });
+        Producto.belongsTo(models.Procesador,{
+            as: "procesadores",
+
+            foreignKey: "procesador_id"
+        });
+        Producto.belongsTo(models.Ram,{
+            as: "rams",
+
+            foreignKey: "ram_id"
+        });
+        Producto.belongsTo(models.SistemaOperativo,{
+            as: "sistemas_operativos",
+
+            foreignKey: "sistema_Operativo_id"
+        });
     }
     
 

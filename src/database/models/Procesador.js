@@ -22,6 +22,13 @@ module.exports = (sequelize, dataTypes) => {
 
     const Procesador = sequelize.define(alias, cols, config);
 
+    Procesador.associate = function(models){
+        Procesador.hasMany(models.Producto,{
+            as: "productos",
+
+            foreignKey: "procesador_id"
+        })
+    }
     return Procesador;
 
 }

@@ -1,0 +1,84 @@
+<div class="precio">
+    <label class="label" for="precio">Precio:</label>
+    <input type="number" name="precio">
+</div>
+<div class="precio">
+    <label class="label" for="precio">Marca:</label>
+    <select name="marca">
+        
+        <% for(let i = 0; i < marcas.length; i++) {%> 
+            <option value="<%= marcas[i].id %>"><%= marcas[i].nombre %></option>
+                    <% } %>  
+                    
+    </select>
+</div>
+<div class="precio">
+    <label class="label" for="precio">Categoria:</label>
+    <select name="categorias">
+        
+        <% for(let i = 0; i < categorias.length; i++) {%> 
+            <option value="<%= categorias[i].id %>"><%= categorias[i].nombre %></option>
+                    <% } %>  
+                    
+    </select>
+</div>
+<div class="precio">
+    <label class="label" for="precio">Color:</label>
+    <select name="color">
+        
+        <% for(let i = 0; i < color.length; i++) {%> 
+            <option value="<%= color[i].id %>"><%= color[i].nombre %></option>
+                    <% } %>  
+                    
+    </select>
+</div>
+<div class="precio">
+    <label class="label" for="precio">Memoria:</label>
+    <select name="memoria">
+        
+        <% for(let i = 0; i < memoria.length; i++) {%> 
+            <option value="<%= memoria[i].id %>"><%= memoria[i].valor %></option>
+                    <% } %>  
+                    
+    </select>
+</div>
+<div class="precio">
+    <label class="label" for="precio">Pantalla:</label>
+    <select name="pantalla">
+        
+        <% for(let i = 0; i < pantalla.length; i++) {%> 
+            <option value="<%= pantalla[i].id %>"><%= pantalla[i].tamaño %></option>
+                    <% } %>  
+                    
+    </select>
+</div>
+<div class="precio">
+    <label class="label" for="precio">Procesador:</label>
+    <select name="procesador">
+        
+        <% for(let i = 0; i < procesador.length; i++) {%> 
+            <option value="<%= procesador[i].id %>"><%= procesador[i].nombre %></option>
+                    <% } %>  
+                    
+    </select>
+</div>
+<div class="precio">
+    <label class="label" for="precio">Ram:</label>
+    <select name="ram">
+        
+        <% for(let i = 0; i < ram.length; i++) {%> 
+            <option value="<%= ram[i].id %>"><%= ram[i].valor %></option>
+                    <% } %>  
+                    
+    </select>
+</div>
+<div class="precio">
+    <label class="label" for="precio">Sistema Operativo:</label>
+    <select name="sistema_operativo">
+        
+        <% for(let i = 0; i < sistemaOperativo.length; i++) {%> 
+            <option value="<%= sistemaOperativo[i].id %>"><%= sistemaOperativo[i].nombre %></option>
+                    <% } %>  
+                    
+    </select>
+</div>

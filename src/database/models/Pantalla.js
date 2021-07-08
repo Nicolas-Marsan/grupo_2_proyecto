@@ -26,6 +26,13 @@ module.exports = (sequelize, dataTypes) => {
 
     const Pantalla = sequelize.define(alias, cols, config);
 
+    Pantalla.associate = function(models){
+        Pantalla.hasMany(models.Producto,{
+            as: "productos",
+
+            foreignKey: "pantalla_id"
+        })
+    }
     return Pantalla;
 
 }

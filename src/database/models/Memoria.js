@@ -21,7 +21,13 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const Memoria = sequelize.define(alias, cols, config);
+    Memoria.associate = function(models){
+        Memoria.hasMany(models.Producto,{
+            as: "productos",
 
+            foreignKey: "memoria_id"
+        })
+    }
     return Memoria;
 
 }

@@ -22,6 +22,13 @@ module.exports = (sequelize, dataTypes) => {
 
     const Sistema_Operativo = sequelize.define(alias, cols, config);
 
+    Sistema_Operativo.associate = function(models){
+        Sistema_Operativo.hasMany(models.Producto,{
+            as: "productos",
+
+            foreignKey: "sistema_operativo_id"
+        })
+    }
     return Sistema_Operativo;
 
 }
