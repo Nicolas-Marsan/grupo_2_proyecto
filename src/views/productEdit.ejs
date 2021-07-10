@@ -9,13 +9,17 @@
     <main class="main-register">
       
         <h2 class="titulo">
-            Editar <%= producto.name %> 
+            Editar <%= producto.modelo %> 
         </h2>
         <form action="/products/<%= producto.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
             <section class="producto">
                 <div class="nombre">
                     <label class="label" for="modelo">Modelo</label>
-                    <input  type="text" name="modelo"  class="control">
+                    <input  type="text" name="modelo"  class="control" value="<%= producto.modelo %>">
+                </div>
+                <div class="precio">
+                    <label class="label" for="precio">Precio:</label>
+                    <input type="number" name="precio" value="<%= producto.precio_unitario %>">
                 </div>
                 <%- include('./partials/selectEdit') %>
                 

@@ -80,7 +80,9 @@ const productsController = {
         }).then(()=>res.redirect('/products'))
     },
     edit: (req, res) =>{
-        let productoRquest = db.Producto.findByPk(req.body.id);
+       let productoRquest = db.Producto.findByPk(req.params.id, {
+            include: [{all: true}]
+        })
         let marcasRquest = db.Marca.findAll();
         let categoriasRquest = db.Categoria.findAll();
         let colorRquest = db.Color.findAll();
@@ -89,12 +91,12 @@ const productsController = {
         let procesadorRquest = db.Procesador.findAll();
         let ramRquest = db.Ram.findAll();
         let sisOpRquest = db.Sistema_Operativo.findAll();
-        
+
         Promise.all([productoRquest, marcasRquest, categoriasRquest, colorRquest, memoriaRquest, pantallaRquest, procesadorRquest, ramRquest, sisOpRquest])
         .then(function([producto, marcas, categorias, color, memoria, pantalla, procesador, ram, sistemaOperativo]){
-            res.render('crearProducto', {producto, marcas, categorias, color, memoria, pantalla, procesador, ram, sistemaOperativo})
-            /* res.send([marcas, categorias]) */
-        })
+            res.render('productEdit', {producto, marcas, categorias, color, memoria, pantalla, procesador, ram, sistemaOperativo})})
+
+        /* .then(producto => {/* res.render('productEdit', {producto}) res.send(producto)  }) */
         
     },
     update:(req, res) =>{
@@ -123,11 +125,14 @@ const productsController = {
 		 res.redirect('/products');  */
     },
     destroy:(req, res) =>{
-        let nuevo = products.filter(producto => producto.id != req.params.id);
+        /* let nuevo = products.filter(producto => producto.id != req.params.id);
         let productJson = JSON.stringify(nuevo, null, 4);
         
         fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), productJson);
-		 return res.redirect('/products');
+		 return res.redirect('/products'); */
+         Producto.findByPk({
+             where: {id:req.params.id}
+         })
     }
 };
 
