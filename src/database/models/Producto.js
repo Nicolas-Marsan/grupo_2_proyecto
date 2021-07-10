@@ -72,7 +72,7 @@ module.exports = (sequelize, dataTypes) => {
 
             foreignKey: "categoria_id"
         });
-        Producto.belongsTo(models.Color,{
+         Producto.belongsTo(models.Color,{
             as: "colores",
 
             foreignKey: "color_id"
@@ -97,12 +97,12 @@ module.exports = (sequelize, dataTypes) => {
 
             foreignKey: "ram_id"
         });
-        Producto.belongsTo(models.SistemaOperativo,{
+        Producto.belongsTo(models.Sistema_Operativo,{
             as: "sistemas_operativos",
 
-            foreignKey: "sistema_Operativo_id"
+            foreignKey: "sistema_operativo_id"
         });
-    }
+    } 
     
 
 
