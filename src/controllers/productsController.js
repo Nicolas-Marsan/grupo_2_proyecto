@@ -101,38 +101,29 @@ const productsController = {
     },
     update:(req, res) =>{
        
-       
-       
-       
-        /* let idModificar = req.params.id;
-        /* metodo editar 
-        let productEdit = db.Producto.find(producto => producto.id == idModificar);
-			let imagen = productEdit.image; */
-			/* let filtrado = products.filter(producto => producto.id != idModificar);
-			 let  productEditado = productEdit = { 
-				   id: req.params.id,
-                   name: req.body.nombre,
-                   price: req.body.precio,
-                   Tdetail:req.body.tDetalle,
-                   detail:req.body.detalle,
-                   category:req.body.select,
-                   image: imagen
-			};
-				/* res.send(productEdit); 
-			 filtrado.push(productEditado);
-			  let productJson = JSON.stringify(filtrado, null, 4);
-        fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), productJson); 
-		 res.redirect('/products');  */
+        db.Producto.update({
+            modelo: req.body.modelo,
+            marca_id: req.body.marca,
+            color_id: req.body.color,
+            memoria_id: req.body.memoria,
+            pantalla_id: req.body.pantalla,
+            procesador_id: req.body.procesador,
+            ram_id: req.body.ram,
+            sistema_operativo_id: req.body.sistema_operativo,
+            marca_id: req.body.marca,
+            precio_unitario: req.body.precio,
+            categoria_id: req.body.categorias,
+            stock:1
+        }, {
+            where: {
+                id: req.params.id
+            }
+        }).then(()=>res.redirect('/products'))
     },
     destroy:(req, res) =>{
-        /* let nuevo = products.filter(producto => producto.id != req.params.id);
-        let productJson = JSON.stringify(nuevo, null, 4);
-        
-        fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), productJson);
-		 return res.redirect('/products'); */
-         Producto.findByPk({
+         db.Producto.destroy({
              where: {id:req.params.id}
-         })
+         }).then(()=>res.redirect('/products'))
     }
 };
 
