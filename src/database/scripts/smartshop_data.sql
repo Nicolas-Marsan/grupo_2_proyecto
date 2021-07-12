@@ -1,23 +1,23 @@
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (1, 'Dew', 'Kitchener', 'dkitchener0@ftc.gov', 'zN9wh4h3KN', true, false);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (2, 'Allina', 'Cheshir', 'acheshir1@ihg.com', '2kfUDp2Ts', true, false);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (3, 'Katrinka', 'Vakhrushin', 'kvakhrushin2@networkadvertising.org', 'iApuMtId0', true, false);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (4, 'Cedric', 'Hawksley', 'chawksley3@howstuffworks.com', '6H953F', true, false);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (5, 'Salim', 'Taffee', 'staffee4@bigcartel.com', 'xfaTexy3Mm', true, true);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (6, 'Shel', 'Davidowich', 'sdavidowich5@example.com', 'zriy64hEF', true, true);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (7, 'Carleton', 'Frunks', 'cfrunks6@qq.com', 'vIHvCxR1N', true, true);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (8, 'Olivia', 'Levesque', 'olevesque7@zdnet.com', 'MvnzuhzT', true, true);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (9, 'Nappy', 'Sinclaire', 'nsinclaire8@cisco.com', '0aIBZ4', true, true);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (10, 'Angelita', 'Adamowitz', 'aadamowitz9@mayoclinic.com', 'MVSSl4JoSmel', true, true);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (11, 'Jared', 'Pauly', 'jpaulya@imdb.com', 'Uxf7LQhyT2', true, false);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (12, 'Callie', 'Bricham', 'cbrichamb@oracle.com', 'iyFrCNP0c8E', true, true);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (13, 'Nerte', 'Urlin', 'nurlinc@salon.com', 'SCcMA94dOZ', true, true);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (14, 'Tull', 'Jukubczak', 'tjukubczakd@sakura.ne.jp', 'O60io0PP0s', true, true);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (15, 'Rourke', 'Shavel', 'rshavele@omniture.com', 'LlM1jKSo', true, true);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (16, 'Ozzie', 'Muehle', 'omuehlef@shop-pro.jp', '3YgF58UkSJP', true, false);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (17, 'Hamilton', 'Maron', 'hmarong@deliciousdays.com', 'jAqJ1YZoqNP', true, true);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (18, 'Flint', 'Melliard', 'fmelliardh@mediafire.com', 'AiG7bw', true, false);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (19, 'Monah', 'Ashfold', 'mashfoldi@economist.com', '9nZERC', true, true);
-insert into usuarios (id, nombre, apellido, mail, contraseña, tyc, newletter) values (20, 'Mahmud', 'Fallows', 'mfallowsj@pagesperso-orange.fr', 'lU80QKUr', true, true);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (1, 'Dew', 'Kitchener', 'dkitchener0@ftc.gov', 'zN9wh4h3KN', true, false);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (2, 'Allina', 'Cheshir', 'acheshir1@ihg.com', '2kfUDp2Ts', true, false);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (3, 'Katrinka', 'Vakhrushin', 'kvakhrushin2@networkadvertising.org', 'iApuMtId0', true, false);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (4, 'Cedric', 'Hawksley', 'chawksley3@howstuffworks.com', '6H953F', true, false);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (5, 'Salim', 'Taffee', 'staffee4@bigcartel.com', 'xfaTexy3Mm', true, true);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (6, 'Shel', 'Davidowich', 'sdavidowich5@example.com', 'zriy64hEF', true, true);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (7, 'Carleton', 'Frunks', 'cfrunks6@qq.com', 'vIHvCxR1N', true, true);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (8, 'Olivia', 'Levesque', 'olevesque7@zdnet.com', 'MvnzuhzT', true, true);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (9, 'Nappy', 'Sinclaire', 'nsinclaire8@cisco.com', '0aIBZ4', true, true);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (10, 'Angelita', 'Adamowitz', 'aadamowitz9@mayoclinic.com', 'MVSSl4JoSmel', true, true);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (11, 'Jared', 'Pauly', 'jpaulya@imdb.com', 'Uxf7LQhyT2', true, false);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (12, 'Callie', 'Bricham', 'cbrichamb@oracle.com', 'iyFrCNP0c8E', true, true);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (13, 'Nerte', 'Urlin', 'nurlinc@salon.com', 'SCcMA94dOZ', true, true);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (14, 'Tull', 'Jukubczak', 'tjukubczakd@sakura.ne.jp', 'O60io0PP0s', true, true);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (15, 'Rourke', 'Shavel', 'rshavele@omniture.com', 'LlM1jKSo', true, true);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (16, 'Ozzie', 'Muehle', 'omuehlef@shop-pro.jp', '3YgF58UkSJP', true, false);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (17, 'Hamilton', 'Maron', 'hmarong@deliciousdays.com', 'jAqJ1YZoqNP', true, true);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (18, 'Flint', 'Melliard', 'fmelliardh@mediafire.com', 'AiG7bw', true, false);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (19, 'Monah', 'Ashfold', 'mashfoldi@economist.com', '9nZERC', true, true);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter) values (20, 'Mahmud', 'Fallows', 'mfallowsj@pagesperso-orange.fr', 'lU80QKUr', true, true);
 
 
 
