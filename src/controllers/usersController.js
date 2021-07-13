@@ -19,6 +19,43 @@ const usersController = {
            res.render("listadoUsuarios",{usuarios:usuarios})
          })
 	},
+    editarUsuario: (req, res) => {
+      
+		res.render('editarUsuario', {
+            user: req.session.userLogged /* en la vista profile va a conocer la variable user */
+        });
+	},
+    actualiza: function(req, res) {
+        
+
+            //return res.send(req.body);
+            db.Usuarios.update({
+                nombre: req.body.name,
+                apellido: req.body.last_name,
+                mail: req.body.email,
+                contrasenia:bcryptjs.hashSync(req.body.contrasenia, 10),
+                imagen:req.file.filename,
+            },{where:{
+                id: req.params.id
+            }
+
+            
+             });
+             req.session.destroy();
+             
+             res.redirect('/users/login');
+           
+        
+
+      
+    },
+    
+    login: function(req , res){
+        
+        res.render('login');
+    },
+
+
 
     updateR: function(req, res) {
         let userInDB;
@@ -36,7 +73,7 @@ const usersController = {
                 nombre: req.body.name,
                 apellido: req.body.last_name,
                 mail: req.body.email,
-                password:bcryptjs.hashSync(req.body.password, 10),
+                contrasenia:bcryptjs.hashSync(req.body.contrasenia, 10),
                 imagen:req.file.filename
              });
 
@@ -86,7 +123,7 @@ const usersController = {
 
             
            if(userToLogin) {
-            let passIsOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            let passIsOk = bcryptjs.compareSync(req.body.contrasenia, userToLogin.contrasenia);
             
             
             if(passIsOk) {

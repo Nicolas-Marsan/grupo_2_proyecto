@@ -35,6 +35,11 @@ router.post('/register', fileUpload.single('image'), usersController.updateR);
 /* Formulario de login */
 router.get('/login',registroMiddleware, usersController.login);
 
+/* Formulario de editar perfil */
+router.get('/editarUsuario', usersController.editarUsuario);
+
+
+
 /* Procesar el login */
 router.post('/login', usersController.processLogin);
 
@@ -43,5 +48,8 @@ router.get('/profile',sinUsuarioMiddleware, usersController.profile);
 
 /* Logout */
 router.get('/logout', usersController.logout);
+
+/* actualiza datos */
+router.post('/actualiza/:id',fileUpload.single('image'), usersController.actualiza);
 
 module.exports = router;
