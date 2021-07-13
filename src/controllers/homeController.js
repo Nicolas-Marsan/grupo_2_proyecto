@@ -9,11 +9,14 @@ const homeController = {
         /* let newModels = products.filter((product)=>{return product.category == 'newmodel'}); // productos nuevos
         let favoriteProducts = products.filter((product)=>{return product.category == 'favorite'}); // productos favoritos
         res.render('index', {favoriteProducts,newModels}); */
-        let productoRequest = db.Producto.findAll()
-        .then(products =>{
-            res.render('index', {products})
+        let productoNuevoRequest = db.Producto.findAll({where: {categoria_id: 1}});
+        let productoUsadoRequest = db.Producto.findAll({where: {categoria_id: 2}});
+
+        Promise.all([productoNuevoRequest, productoUsadoRequest])
+        .then(function([nuevo, usado]){
+            res.render('index', {nuevo,usado});
+            
         })
-        
     }
 };
 
