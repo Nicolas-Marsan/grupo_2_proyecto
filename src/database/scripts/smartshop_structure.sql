@@ -26,6 +26,7 @@
       `contrasenia` VARCHAR(255) COLLATE utf8mb4_unicode_ci  NOT NULL,
       `tyc` TINYINT(1) NOT NULL,
       `newletter` TINYINT(1) NULL DEFAULT NULL,
+      `imagen` VARCHAR(255) COLLATE utf8mb4_unicode_ci,
       PRIMARY KEY (`id`))
     ENGINE = InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
     
