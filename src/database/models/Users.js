@@ -26,7 +26,7 @@ let cols = {
     tyc: {
         type: dataTypes.TINYINT
     },
-    newletter, imagen: {
+    newletter: {
         type: dataTypes.TINYINT
     },
     imagen: {
