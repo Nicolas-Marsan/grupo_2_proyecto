@@ -4,7 +4,7 @@ const db = require('../database/models');
 const Producto = db.Producto;
 const { Op } = require("sequelize");
 let products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'),{encoding:'utf-8'})); //Leer el JSON y pasarlo a objeto literal
-
+let carrito = [];
 
 const lastId = () =>{
 	let ultimo = 0;
@@ -124,7 +124,22 @@ const productsController = {
          db.Producto.destroy({
              where: {id:req.params.id}
          }).then(()=>res.redirect('/products'))
-    }
+    },
+    carrito:(req, res) =>{
+        db.Producto.findByPk(req.params.id)
+        .then(productoSeleccionado =>{
+            
+            carrito.push(productoSeleccionado);
+            res.redirect('/products');
+        })
+
+        
+   },
+   verCarrito:(req, res) =>{
+    
+    res.render('productCart',{carrito});
+    
+}
 };
 
 module.exports = productsController;

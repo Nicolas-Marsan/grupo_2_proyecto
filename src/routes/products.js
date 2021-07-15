@@ -27,13 +27,17 @@ router.get('/productCart', productsController.productCart);
 
 router.get('/crearProducto', productsController.crearProduct);
 
+router.get('/verCarrito',productsController.verCarrito);
+
 router.post('/crearProducto', fileUpload.single('imagen'), productsController.guardarProduct);
 
 
 router.get('/:id/edit', productDetailMiddleware, productsController.edit);
-router.put('/:id/edit', /* fileUpload.single('foto'), */ productsController.update)
+router.put('/:id/edit', /* fileUpload.single('foto'), */ productsController.update);
 
-router.delete('/:id', productsController.destroy)
+router.delete('/:id', productsController.destroy);
+
+router.post('/carrito/:id',productsController.carrito);
 
 
 module.exports = router;

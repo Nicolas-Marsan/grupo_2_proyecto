@@ -55,9 +55,9 @@
                 <div class="boton-comprar-pd">
                     <a href="#"><button type="submit" class="button-form-pd">Comprar</button></a>
                 </div>
-                <div class="boton-carrito-pd">
+                <form  action='/products/carrito/<%=productoSeleccionado.id%>' class="boton-carrito-pd" method="POST">
                     <a href="#"><button type="submit" class="button-form-pd">Agregar al carrito</button></a>
-                </div>
+                </form>
             </div>
             <div class="botones3-pd">
                 <a href="#"><button type="submit" class="button-form4-pd">Comprar</button></a>
