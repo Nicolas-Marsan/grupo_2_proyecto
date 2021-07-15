@@ -9,9 +9,13 @@
     <section class="main-section">
         <% let precioAcum = 0 %>
         <% for (let i=0; i<carrito.length ; i++){%>
-        
+        <% let id = carrito[i].id %>
         <% precioAcum += carrito[i].precio_unitario; %>
-        <article class="articulos"><img class="articulo1-img" src="/images/products/<%=carrito[i].imagen %>" alt="a21"> <button class="carrito-delete">X</button>
+        <article class="articulos"><img class="articulo1-img" src="/images/products/<%=carrito[i].imagen %>" alt="a21"> 
+           <form action="/products/sacarCarrito/<%= id %>" method="POST" >
+            <button type="submit" class="carrito-delete">X</button>
+           </form> 
+        
         <button class="boton-detalle"><%=carrito[i].modelo %></button></article>
 
         <%}%>

@@ -135,6 +135,12 @@ const productsController = {
 
         
    },
+   sacarCarrito:(req, res) =>{
+        
+      carrito =  carrito.filter(uno => uno.id!= req.params.id);
+
+     res.redirect('/verCarrito');
+},
    verCarrito:(req, res) =>{
     
     res.render('productCart',{carrito});

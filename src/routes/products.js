@@ -38,6 +38,7 @@ router.put('/:id/edit', /* fileUpload.single('foto'), */ productsController.upda
 router.delete('/:id', productsController.destroy);
 
 router.post('/carrito/:id',productsController.carrito);
+router.post('/SacarCarrito/:id',productsController.sacarCarrito);
 
 
 module.exports = router;
