@@ -128,9 +128,20 @@ const productsController = {
     carrito:(req, res) =>{
         db.Producto.findByPk(req.params.id)
         .then(productoSeleccionado =>{
-            
-            carrito.push(productoSeleccionado);
-            res.redirect('/products');
+            if(productoSeleccionado.stock >= req.body.cantidad){
+            db.Ordenes_detalles.create({
+                producto_id: productoSeleccionado.id,
+                usuario_id: req.session.userLogged.id,
+                cantidad: req.body.cantidad,
+                estado:'abierta'
+                
+            }).then(()=>res.redirect('/products'))
+            }else {
+                
+                res.render('sinStock');
+            }
+            //carrito.push(productoSeleccionado);
+           // res.redirect('/products');
         })
 
         
@@ -143,9 +154,25 @@ const productsController = {
 },
    verCarrito:(req, res) =>{
     
-    res.render('productCart',{carrito});
+    db.Ordenes_detalles.findAll({
+        include: [{all: true}],
+        where: {
+           usuario_id: {[db.Sequelize.Op.eq] : req.session.userLogged.id },
+           estado: {[db.Sequelize.Op.eq] : 'abierta' }
+        }
+     })
+     let usuario = db.Usuario.findAll();
+     let producto = db.Producto.findAll();
+     Promise.all([usuario,producto,orden])
+     .then(function([ordenn,usuario,producto]){
+        
+
+        res.send(ordenn,usuario,producto);
+    })
+    
     
 }
 };
 
 module.exports = productsController;
+

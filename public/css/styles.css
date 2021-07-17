@@ -262,6 +262,16 @@ margin: 0 10px;
     
     
 }
+.sinStock{
+    text-align: center;
+    margin-top: 200px;
+    font-size: 40px;
+    font-weight: bold;
+    width: 100%;
+    background-color: #C3CA02;
+    margin-bottom: 200px;
+}
+
 
 .destacados{
     width: 100%;

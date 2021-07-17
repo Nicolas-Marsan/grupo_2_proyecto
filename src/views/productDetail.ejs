@@ -56,7 +56,10 @@
                     <a href="#"><button type="submit" class="button-form-pd">Comprar</button></a>
                 </div>
                 <form  action='/products/carrito/<%=productoSeleccionado.id%>' class="boton-carrito-pd" method="POST">
+                    <label class="boton-carrito-pd" for="cantidad">Cantidad</label>
+                    <input  type="text" name="cantidad"  class="control">
                     <a href="#"><button type="submit" class="button-form-pd">Agregar al carrito</button></a>
+                    
                 </form>
             </div>
             <div class="botones3-pd">

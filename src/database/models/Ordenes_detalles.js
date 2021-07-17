@@ -3,52 +3,51 @@ const Sequelize = require('sequelize');
 
 module.exports = (sequelize,dataTypes) => {
 
-let alias = "Usuarios";
+let alias = "Ordenes_detalles";
 let cols = {
     id: {
         type: dataTypes.INTEGER,
         primaryKey:true,
         autoIncrement:true
     },
-    nombre: {
-        type: dataTypes.STRING
+    producto_id: {
+        type: dataTypes.INTEGER
     },
-    apellido:{
+    usuario_id:{
 
-        type: dataTypes.STRING
+        type: dataTypes.INTEGER
     },
-    mail: {
-        type:dataTypes.STRING
+    cantidad: {
+        type:dataTypes.INTEGER
     },
-    contrasenia: {
-        type: dataTypes.STRING
-    },
-    tyc: {
-        type: dataTypes.TINYINT
-    },
-    newletter: {
-        type: dataTypes.TINYINT
-    },
-    imagen: {
+    estado: {
         type: dataTypes.STRING
     }
 };
 
 let config = {
-    tableName: "usuarios",
+    tableName: "ordenes_detalles",
     timestamps: false
 
 }
-const Usuarios = sequelize.define(alias,cols,config);
+const Ordenes_detalles = sequelize.define(alias,cols,config);
+
+Ordenes_detalles.associate = function(models){
+    Ordenes_detalles.belongsTo(models.Usuarios,{
+        as: "usuario",
+
+        foreignKey: "usuario_id"
+    });
+    Ordenes_detalles.belongsTo(models.Producto,{
+        as: "producto",
+
+        foreignKey: "producto_id"
+    });
+} 
 
 
-Usuarios.associate = function(models){
-    Usuarios.hasMany(models.Ordenes_detalles,{
-        as: "orden_usuario",
 
-        
-    })
-}
+
 /*Pelicula.associate = function(models){
     Pelicula.belongsTo(models.Generos, {
 
@@ -68,5 +67,5 @@ Usuarios.associate = function(models){
 }*/
 
 
-return Usuarios;
+return Ordenes_detalles;
 }

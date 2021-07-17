@@ -4,7 +4,7 @@ const path = require('path');
 const productsController = require ('../controllers/productsController.js')
 const multer = require('multer');
 const productDetailMiddleware = require ('../middlewares/productDetailMiddleware')
-
+const sinUsuarioMiddleware = require ('../middlewares/sinUsuarioMiddleware')
 let multerDiskStorage = multer.diskStorage({    
 	destination: (req,file,callback) => 
 {let folder = path.join(__dirname, '../../public/images/products');
@@ -37,7 +37,7 @@ router.put('/:id/edit', /* fileUpload.single('foto'), */ productsController.upda
 
 router.delete('/:id', productsController.destroy);
 
-router.post('/carrito/:id',productsController.carrito);
+router.post('/carrito/:id',sinUsuarioMiddleware,productsController.carrito);
 router.post('/SacarCarrito/:id',productsController.sacarCarrito);
 
 
