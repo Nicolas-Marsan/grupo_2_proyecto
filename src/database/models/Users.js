@@ -42,13 +42,7 @@ let config = {
 const Usuarios = sequelize.define(alias,cols,config);
 
 
-Usuarios.associate = function(models){
-    Usuarios.hasMany(models.Ordenes_detalles,{
-        as: "orden_usuario",
 
-        
-    })
-}
 /*Pelicula.associate = function(models){
     Pelicula.belongsTo(models.Generos, {
 

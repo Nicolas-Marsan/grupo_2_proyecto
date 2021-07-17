@@ -155,19 +155,18 @@ const productsController = {
    verCarrito:(req, res) =>{
     
     db.Ordenes_detalles.findAll({
-        include: [{all: true}],
+        include:[{association: 'detalle'}],
         where: {
            usuario_id: {[db.Sequelize.Op.eq] : req.session.userLogged.id },
            estado: {[db.Sequelize.Op.eq] : 'abierta' }
         }
      })
-     let usuario = db.Usuario.findAll();
-     let producto = db.Producto.findAll();
-     Promise.all([usuario,producto,orden])
-     .then(function([ordenn,usuario,producto]){
+     
+     
+     .then(function(productos){
         
-
-        res.send(ordenn,usuario,producto);
+        //return res.send(productos[0].detalle.modelo);
+        res.render('productCart',{productos});
     })
     
     

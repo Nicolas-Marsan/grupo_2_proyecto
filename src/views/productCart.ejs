@@ -7,18 +7,20 @@
         <h1 class="carrito-titulo">Mi Carrito</h1>
         <div class="section-2">
     <section class="main-section">
-        <% let precioAcum = 0 %>
-        <% for (let i=0; i<carrito.length ; i++){%>
-        <% let id = carrito[i].id %>
-        <% precioAcum += carrito[i].precio_unitario; %>
-        <article class="articulos"><img class="articulo1-img" src="/images/products/<%=carrito[i].imagen %>" alt="a21"> 
-           <form action="/products/sacarCarrito/<%= id %>" method="POST" >
+        
+        <%let acum = 0;%>
+        <% for (let i = 0 ;i< productos.length; i++){%>
+            <% acum += productos[i].detalle.precio_unitario %>
+ 
+        <article class="articulos"><img class="articulo1-img" src="/images/products/<%=productos[i].detalle.imagen%>" alt="a21"> 
+           <form action="/products/sacarCarrito/<%=productos[i].id%>" method="POST" >
             <button type="submit" class="carrito-delete">X</button>
            </form> 
         
-        <button class="boton-detalle"><%=carrito[i].modelo %></button></article>
+        <button class="boton-detalle"><%=productos[i].detalle.modelo %></button></article>
 
         <%}%>
+        
         
     </section>
     <section class="promociones">
@@ -34,7 +36,7 @@
             <button class="cart-enviar">Enviar</button></div></div>
            
            <div class="carrito-precio"><div class="precio">
-            <p>Total $ <%= precioAcum %></p></div>
+            <p>Total $ <%= acum %> </p></div>
             <div class="boton-comprar"><button class="comprar">Comprar</button></div></div></div>
     
     </section>

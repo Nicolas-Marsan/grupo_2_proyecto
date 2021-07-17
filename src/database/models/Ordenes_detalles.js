@@ -33,13 +33,9 @@ let config = {
 const Ordenes_detalles = sequelize.define(alias,cols,config);
 
 Ordenes_detalles.associate = function(models){
-    Ordenes_detalles.belongsTo(models.Usuarios,{
-        as: "usuario",
-
-        foreignKey: "usuario_id"
-    });
+    
     Ordenes_detalles.belongsTo(models.Producto,{
-        as: "producto",
+        as: "detalle",
 
         foreignKey: "producto_id"
     });

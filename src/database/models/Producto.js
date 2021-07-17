@@ -106,8 +106,8 @@ module.exports = (sequelize, dataTypes) => {
 
     Producto.associate = function(models){
         Producto.hasMany(models.Ordenes_detalles,{
-            as: "orden_producto",
-    
+            as: "producto",
+            foreignKey: "producto_id"
             
         })
     }
