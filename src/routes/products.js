@@ -27,6 +27,8 @@ router.get('/productCart', productsController.productCart);
 
 router.get('/crearProducto', productsController.crearProduct);
 
+router.post('/comprar', productsController.comprar);
+
 router.get('/verCarrito',sinUsuarioMiddleware,productsController.verCarrito);
 
 router.post('/crearProducto', fileUpload.single('imagen'), productsController.guardarProduct);

@@ -220,6 +220,11 @@ input{
     width: 100%;
     margin-top: 50px;
 }
+.canti{
+    width: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
 
 /* COMIENZO MEDIA QUERIES */
 
@@ -232,6 +237,11 @@ input{
         display: none;
     }
 }
+.canti{
+    width: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
 
 @media (min-width: 769px){
     .celu-elegido-pd img{
@@ -243,6 +253,11 @@ input{
         justify-content: flex-start;
         margin-left: 20px;
         margin-top: 40px;
+    }
+    .canti{
+        width: 25px;
+        border: 1px solid black;
+        border-radius: 5px;
     }
 
     .botones1-pd{
@@ -316,13 +331,16 @@ input{
     .payment-methods2-pd img{
         width: 8%
     }
+    .canti{
+        width: 25px;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
     .payment-methods3-pd img{
         width: 8%
     }
 
-    input[type=text]{
-        width: 50%;
-    }
+   
 
     .button-form-preguntar-pd{
        width: auto;

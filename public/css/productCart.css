@@ -12,6 +12,10 @@
 .articulos img{ 
     width: 70%
 }
+
+.borrar{
+    text-align: right;
+}
 .articulos{
     width: 100%;
     margin:0%;
@@ -182,12 +186,8 @@ margin-top:5%
 .div-promocion{
     margin:0;
 }
-.articulos{
-    height: 300px
-}
-.articulo1-img{
-    width:100px;
-}
+
+
 .div-promocion{
     margin-top: 60px
 }
@@ -223,7 +223,7 @@ justify-content: space-between}
 .articulos .articulo1-img{
     width: 230px;
     margin-top: 20px;
-    height: 270px
+    height: 400px;
 }
 .boton-detalle{
     width: 250px

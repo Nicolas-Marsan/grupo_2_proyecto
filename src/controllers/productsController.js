@@ -128,6 +128,8 @@ const productsController = {
     carrito:(req, res) =>{
         db.Producto.findByPk(req.params.id)
         .then(productoSeleccionado =>{
+
+        if(req.body.cantidad == 0){req.body.cantidad = 1}
             if(productoSeleccionado.stock >= req.body.cantidad){
             db.Ordenes_detalles.create({
                 producto_id: productoSeleccionado.id,
@@ -141,16 +143,20 @@ const productsController = {
                 res.render('sinStock');
             }
             //carrito.push(productoSeleccionado);
-           // res.redirect('/products');
+          // res.redirect('/products');
         })
+
+    
 
         
    },
    sacarCarrito:(req, res) =>{
         
-      carrito =  carrito.filter(uno => uno.id!= req.params.id);
+    db.Ordenes_detalles.destroy({
+        where: {id:req.params.id}
+    }).then(()=>res.redirect('/verCarrito'))
 
-     res.redirect('/verCarrito');
+     
 },
    verCarrito:(req, res) =>{
     
@@ -169,6 +175,46 @@ const productsController = {
         res.render('productCart',{productos});
     })
     
+    
+},
+comprar:(req, res) =>{
+
+    
+    db.Ordenes_detalles.findAll({
+        include:[{association: 'detalle'}],
+        where: {
+           usuario_id: {[db.Sequelize.Op.eq] : req.session.userLogged.id },
+           estado: {[db.Sequelize.Op.eq] : 'abierta' }
+        }
+     }).then(function(productos){
+         
+        for(let i =0;i<productos.length ; i++){
+
+            db.Ordenes_detalles.update({
+                estado:'cerrado'
+            }, {
+                where: {
+                    usuario_id: {[db.Sequelize.Op.eq] : req.session.userLogged.id },
+                    estado: {[db.Sequelize.Op.eq] : 'abierta' }
+                }
+            })
+            //console.log(productos[i].detalle.stock)
+            //console.log(productos[i].cantidad)
+            db.Producto.update({
+                stock:(productos[i].detalle.stock - productos[i].cantidad)
+            }, {
+                where: {
+                    id: {[db.Sequelize.Op.eq] : productos[i].detalle.id }
+                     
+                }
+            })
+
+
+        }
+
+        res.redirect('/products');
+    })
+  
     
 }
 };
