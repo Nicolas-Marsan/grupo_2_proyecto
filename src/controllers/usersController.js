@@ -134,20 +134,7 @@ const usersController = {
                     res.cookie('userEmail', req.body.email, { maxAge: (1000 * 69) * 2});
                 }
                 //console.log(userToLogin.id);
-                db.Ordenes_detalles.findAll({
-                    include:[{association: 'detalle'}],
-                    where: {
-                       usuario_id: {[db.Sequelize.Op.eq] : userToLogin.id },
-                       estado: {[db.Sequelize.Op.eq] : 'abierta' }
-                    }
-                 })
-                 
-                 
-                 .then(function(productos){
-                    console.log(productos.length);
-                    res.locals.cantrito = productos.length;
-                    
-                })
+                
 
                 return res.redirect('profile');
             }

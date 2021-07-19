@@ -5,6 +5,7 @@ const app = express();
 const path= require('path');
 const methodOverride = require('method-override');
 const usuarioLogueadoMiddleware = require('./src/middlewares/usuarioLogueadoMiddleware');
+const variableMiddleware = require('./src/middlewares/variableMiddleware');
 /* Configuracion cookies */
 app.use(cookies());
 
@@ -15,6 +16,7 @@ app.use(session({
     saveUninitialized: false
 }));
 app.use(usuarioLogueadoMiddleware);
+app.use(variableMiddleware);
 /* Configuración de ejs */
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './src/views'));
