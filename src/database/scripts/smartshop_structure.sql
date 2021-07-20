@@ -146,26 +146,14 @@
     -- -----------------------------------------------------
     CREATE TABLE IF NOT EXISTS `smartshop_db`.`ordenes_detalles` (
       `id` INT NOT NULL AUTO_INCREMENT,
+      `usuario_id` INT NOT NULL,
       `producto_id` INT NOT NULL,
       `cantidad` INT NOT NULL DEFAULT 1,
-      `total` INT NOT NULL,
-      `envio` TINYINT(1) NULL DEFAULT NULL,
+      `estado` VARCHAR(255) NOT NULL,
       PRIMARY KEY (`id`),
       INDEX `producto_id_idx` (`producto_id` ASC))
     ENGINE = InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
     
-    
-    -- -----------------------------------------------------
-    -- Table `smartshop_db`.`usuarios_ordenes`
-    -- -----------------------------------------------------
-    CREATE TABLE IF NOT EXISTS `smartshop_db`.`usuarios_ordenes` (
-      `id` INT NOT NULL AUTO_INCREMENT,
-      `usuario_id` INT NOT NULL,
-      `orden_id` INT NOT NULL,
-      PRIMARY KEY (`id`),
-      INDEX `usuario_id_idx` (`usuario_id` ASC),
-      INDEX `orden_id_idx` (`orden_id` ASC))
-    ENGINE = InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
     
     
     SET SQL_MODE=@OLD_SQL_MODE;

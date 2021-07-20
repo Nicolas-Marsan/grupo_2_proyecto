@@ -80,15 +80,6 @@ INSERT INTO `smartshop_db`.`procesadores` (`nombre`) VALUES ('MediaTek Helio G85
 
 
 
-INSERT INTO `smartshop_db`.`usuarios_ordenes` (`usuario_id`, `orden_id`) VALUES ('1', '1');
-INSERT INTO `smartshop_db`.`usuarios_ordenes` (`usuario_id`, `orden_id`) VALUES ('1', '2');
-INSERT INTO `smartshop_db`.`usuarios_ordenes` (`usuario_id`, `orden_id`) VALUES ('1', '3');
-INSERT INTO `smartshop_db`.`usuarios_ordenes` (`usuario_id`, `orden_id`) VALUES ('2', '4');
-INSERT INTO `smartshop_db`.`usuarios_ordenes` (`usuario_id`, `orden_id`) VALUES ('3', '5');
-INSERT INTO `smartshop_db`.`usuarios_ordenes` (`usuario_id`, `orden_id`) VALUES ('3', '6');
-INSERT INTO `smartshop_db`.`usuarios_ordenes` (`usuario_id`, `orden_id`) VALUES ('4', '7');
-
-
 
 INSERT INTO `smartshop_db`.`productos` (`modelo`, `marca_id`, `categoria_id`, `sistema_operativo_id`, `ram_id`, `memoria_id`, `pantalla_id`, `procesador_id`, `color_id`, `imagen`, `stock`, `precio_unitario`) VALUES ('iPhone 12', '1', '1', '1', '3', '2', '3', '1', '5','iPhone 12.png', '3', '250000');
 INSERT INTO `smartshop_db`.`productos` (`modelo`, `marca_id`, `categoria_id`, `sistema_operativo_id`, `ram_id`, `memoria_id`, `pantalla_id`, `procesador_id`, `color_id`, `imagen`, `stock`, `precio_unitario`) VALUES ('Moto G9 Plus', '3', '2', '2', '1', '1', '1', '2', '4','moto g9plus.jpg', '2', '200000');
@@ -101,7 +92,6 @@ INSERT INTO `smartshop_db`.`productos` (`modelo`, `marca_id`, `categoria_id`, `s
 
 
 
-INSERT INTO `smartshop_db`.`ordenes_detalles` (`producto_id`, `cantidad`, `total`, `envio`) VALUES ('1', '2', '50000', '1');
-INSERT INTO `smartshop_db`.`ordenes_detalles` (`producto_id`, `cantidad`, `total`, `envio`) VALUES ('3', '1', '15000', '0');
-INSERT INTO `smartshop_db`.`ordenes_detalles` (`producto_id`, `cantidad`, `total`, `envio`) VALUES ('3', '2', '30000', '0');
-INSERT INTO `smartshop_db`.`ordenes_detalles` (`producto_id`, `cantidad`, `total`, `envio`) VALUES ('2', '1', '2000', '1');
+INSERT INTO `smartshop_db`.`ordenes_detalles` (`id`, `usuario_id`, `producto_id`, `cantidad`, `estado`) VALUES ('1', '2', '3', '1', 'ABIERTA');
+INSERT INTO `smartshop_db`.`ordenes_detalles` (`id`, `usuario_id`, `producto_id`, `cantidad`, `estado`) VALUES ('2', '2', '5', '1', 'ABIERTA');
+INSERT INTO `smartshop_db`.`ordenes_detalles` (`id`, `usuario_id`, `producto_id`, `cantidad`, `estado`) VALUES ('3', '3', '4', '2', 'CERRADA');
