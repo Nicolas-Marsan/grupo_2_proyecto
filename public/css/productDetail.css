@@ -267,7 +267,8 @@ input{
     }
 
     .boton-carrito-pd{
-        margin-left: 5%;
+        text-align: center;
+        margin-top: 70px;
     }
 
     .payment-methods1-pd img{
