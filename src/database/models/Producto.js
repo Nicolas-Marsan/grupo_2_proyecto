@@ -102,15 +102,17 @@ module.exports = (sequelize, dataTypes) => {
 
             foreignKey: "sistema_operativo_id"
         });
+
+        Producto.associate = function(models){
+            Producto.hasMany(models.Ordenes_detalles,{
+                as: "producto",
+                foreignKey: "producto_id"
+                
+            })
+        }
     } 
 
-    Producto.associate = function(models){
-        Producto.hasMany(models.Ordenes_detalles,{
-            as: "producto",
-            foreignKey: "producto_id"
-            
-        })
-    }
+    
     
 
 

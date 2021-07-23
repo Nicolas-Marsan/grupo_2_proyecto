@@ -94,9 +94,9 @@ const productsController = {
 
         Promise.all([productoRquest, marcasRquest, categoriasRquest, colorRquest, memoriaRquest, pantallaRquest, procesadorRquest, ramRquest, sisOpRquest])
         .then(function([producto, marcas, categorias, color, memoria, pantalla, procesador, ram, sistemaOperativo]){
-            res.render('productEdit', {producto, marcas, categorias, color, memoria, pantalla, procesador, ram, sistemaOperativo})})
+            res.render('productEdit', {producto, marcas, categorias, color, memoria, pantalla, procesador, ram, sistemaOperativo})}).catch((e)=>res.send(e))
 
-        /* .then(producto => {/* res.render('productEdit', {producto}) res.send(producto)  }) */
+        /*  .then(producto => { res.render('productEdit', {producto}) /* res.send(producto )  })  */
         
     },
     update:(req, res) =>{
