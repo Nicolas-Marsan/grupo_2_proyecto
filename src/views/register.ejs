@@ -40,8 +40,13 @@
                             <% } %>
                         </div>
                         <div class="div-image"> 
-                            <label class="label" for="email">Imagen de perfil</label>
+                            <label class="label" for="image">Imagen de perfil</label>
                             <input type="file" name="image">
+                            <% if (locals.errors && errors.image) { %>
+                                <div class="texto-error-validacion">
+                                    <%= errors.image.msg %>
+                                </div>
+                            <% } %>
                         </div>
                     </section>
     

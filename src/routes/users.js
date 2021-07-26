@@ -22,16 +22,7 @@ const sinUsuarioMiddleware = require('../middlewares/sinUsuarioMiddleware');
 
 const fileUpload = multer({ storage });
 
-/* Validaciones */
-const validations = [
-    body('name').notEmpty().withMessage('El campo nombre no puede estar vacío'),
-    body('last_name').notEmpty().withMessage('El campo apellido no puede estar vacío'),
-    body('email')
-    .notEmpty().withMessage('El campo email no puede estar vacío').bail() /* bail() detiene las validaciones si salta este error */
-    .isEmail().withMessage('Debes escribir un formato de correo válido'),
-    /* body('image').notEmpty(), */
-    body('contrasenia').notEmpty().withMessage('El campo contraseña no puede estar vacío')
-];
+const validations = require('../middlewares/validateRegisterMiddleware');
 
 /* probando conexion con db */
 router.get('/all', usersController.all);
