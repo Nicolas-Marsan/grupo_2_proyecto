@@ -4,6 +4,7 @@ const path = require('path');
 const User = require('../models/Users');
 const bcryptjs = require('bcryptjs'); //*hasheare contra/
 const db = require("../database/models");
+const { validationResult }= require('express-validator');
 
 const usersController = {
     register: function (req , res){
@@ -88,6 +89,15 @@ const usersController = {
             User.create(bodyEntero);
         return res.redirect('/users/login')*/
         })
+
+        const resultadoValidaciones = validationResult(req);
+
+        if (resultadoValidaciones.errors.length > 0) {
+            return res.render('register.ejs', {
+                errors: resultadoValidaciones.mapped(),
+                oldData: req.body,
+            })
+        }
 
         /*if (userInDB) {
         return res.render('register', {

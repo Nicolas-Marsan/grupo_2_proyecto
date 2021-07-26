@@ -3,6 +3,7 @@ const router = express.Router();
 const path = require('path');
 const usersController = require ('../controllers/usersController.js');
 const multer = require('multer');
+const { body } = require('express-validator');
 
 let storage = multer.diskStorage({    
 	destination: (req,file,callback) => {
@@ -21,6 +22,16 @@ const sinUsuarioMiddleware = require('../middlewares/sinUsuarioMiddleware');
 
 const fileUpload = multer({ storage });
 
+/* Validaciones */
+const validations = [
+    body('name').notEmpty().withMessage('El campo nombre no puede estar vacío'),
+    body('last_name').notEmpty().withMessage('El campo apellido no puede estar vacío'),
+    body('email')
+    .notEmpty().withMessage('El campo email no puede estar vacío').bail() /* bail() detiene las validaciones si salta este error */
+    .isEmail().withMessage('Debes escribir un formato de correo válido'),
+    /* body('image').notEmpty(), */
+    body('contrasenia').notEmpty().withMessage('El campo contraseña no puede estar vacío')
+];
 
 /* probando conexion con db */
 router.get('/all', usersController.all);
@@ -30,7 +41,7 @@ router.get('/all', usersController.all);
 router.get('/register',registroMiddleware, usersController.register);
 
 /* Procesar el registro */
-router.post('/register', fileUpload.single('image'), usersController.updateR);
+router.post('/register', fileUpload.single('image'), validations, usersController.updateR);
 
 /* Formulario de login */
 router.get('/login',registroMiddleware, usersController.login);

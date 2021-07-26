@@ -17,6 +17,7 @@ app.use(session({
 }));
 app.use(usuarioLogueadoMiddleware);
 app.use(variableMiddleware);
+
 /* Configuración de ejs */
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './src/views'));

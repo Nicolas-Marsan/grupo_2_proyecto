@@ -5,6 +5,10 @@
     font-family: 'Raleway', sans-serif;
 }
 
+.texto-error-validacion {
+    color: red;
+}
+
 .main-register{
     text-align: center;
     width: 100%;
