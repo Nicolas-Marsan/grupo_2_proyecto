@@ -3,16 +3,16 @@
     padding: 0;
     margin: 0;
     font-family: 'Raleway', sans-serif;
+
 }
 
-.main-register{
-    text-align: center;
-    width: 100%;
+.form-product-register{
+    text-align: left;
+    max-width: 100vw;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    padding: 30px 0 0 0;
-    font-size: 18px;
+    font-size: 14px;
 
 }
 .check1{
@@ -22,27 +22,26 @@
     
 }
 
+.precio.top, .nombre.top{
+    padding: 0;
+}
 
 
-
-.titulo{
+.titulo.producto{
     background-color: #C3CA02;
     width: 80%;
     padding: 8px 10px;
     border-radius: 10px;
     font-size: 120%;
     margin: auto;
+    text-align: center;
 }
-.detalle input{
-
-    width: 250px;
-    height: 200px;
-
-}
-form{
+.form-product-register{
     margin: auto;
-    width: 80%;
+    max-width: 100%;
 }
+
+
 
 
 /*-------------------------------------------------------------------------------*/
@@ -54,6 +53,19 @@ form{
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    justify-items: center;
+    align-content: space-between;
+    
+}
+
+.precio, .nombre{
+    width: 100%;
+    background-color:#F3FB9D;
+    padding: 15px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     
 }
 
@@ -77,12 +89,23 @@ form{
 .producto .nombre input, .producto .precio input, .producto .descripcion input, .pass .Tdetalle input,.pass .detalle input, .pass .foto input {
     border-radius: 5px;
     margin: 5px;
+    max-height: 30px;
    }
 
 .Tdetalle{
     display: flex;
     justify-content: space-evenly;
 
+}
+
+select{
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+
+option{
+    text-align: center;
 }
 
 
@@ -126,19 +149,19 @@ form{
 }
 
 
-.main-register .buttons{
+.form-product-register .buttons{
     display: flex;
     justify-content: space-around;
     width: 100%;
     padding: 20px;
 }
 
-.main-register .buttons button{
+.form-product-register .buttons button{
     padding: 5px;
     border-radius: 10px;
 }
 
-.main-register .buttons #enviar{
+.form-product-register .buttons #enviar{
     background-color: #C3CA02;
     font-weight: bolder;
 }
@@ -146,11 +169,11 @@ form{
 
 @media (min-width: 481px){
 
-    .main-register{
+    .form-product-register{
         width: 80%;
     }
 
-    .main-register .datos-personales{
+    .form-product-register .datos-personales{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -158,18 +181,18 @@ form{
         margin: 25px 0 5px 0;
     }
 
-    .main-register  .datos-personales .div-nombre, .div-apellido{
+    .form-product-register  .datos-personales .div-nombre, .div-apellido{
         display: flex;
         justify-items: left;
         width: 45%;
     }
 
-    .main-register .datos-personales .div-correo{
+    .form-product-register .datos-personales .div-correo{
         width: 95%;
     }
 
 
-    .main-register .terminos-condiciones{
+    .form-product-register .terminos-condiciones{
         display: inline-block;
         font-size: 100%;
         margin: 20px 0;
@@ -180,15 +203,24 @@ form{
 
 @media (min-width: 769px){
 
-    .main-register{
+    .form-product-register{
         width: 70%;
     }
+    .texto-error-validacion{
+        font-size: 14px;
+    }
+
 }
 
 
 @media (min-width: 1200px){
 
-    .main-register{
+    .form-product-register{
         width: 40%;
+        font-size: 18px;
+    }
+
+    select{
+        font-size: 18px;
     }
 }

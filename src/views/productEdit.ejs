@@ -13,31 +13,31 @@
         </h2>
         <form action="/products/<%= producto.id %>/edit?_method=PUT" method="POST">
             <section class="producto">
-                <div class="nombre">
-                    <label class="label" for="modelo">Modelo</label>
-                    <input  type="text" name="modelo"  class="control" value="<%= producto.modelo %>">
+
+                <div class="nombre top">
+                    <label class="label" for="modelo">Modelo:</label>
+                    <input  type="text" name="modelo"  class="control" value="<%= locals.oldData && oldData.modelo != "" ? oldData.modelo : producto.modelo%>">
                 </div>
-                <div class="precio">
-                    <label class="label" for="precio">Precio:</label>
-                    <input type="number" name="precio" value="<%= producto.precio_unitario %>">
-                </div>
-                <%- include('./partials/selectEdit') %>
+                <% if (locals.errors && errors.modelo) { %>
+                    <div class="texto-error-validacion">
+                        <p><%= errors.modelo.msg %></p>
+                    </div>
+                <% } %>
                 
+                <div class="precio top">
+                    <label class="label" for="precio">Precio:</label>
+                    <input  type="number" name="precio" value="<%= locals.oldData && oldData.precio != "" ? oldData.precio : producto.precio_unitario%>">
+                </div>
+                <% if (locals.errors && errors.precio) { %>
+                    <div class="texto-error-validacion">
+                        <p><%= errors.precio.msg %></p>
+                    </div>
+                <% } %>
+
+                <%- include('./partials/selectEdit') %>
+    
                 
             </section>
-
-            <!-- <section class="pass">              
-                <div class="foto">
-            
-                    <label for="foto">Foto</label>
-                    <input type="file" id="foto" name="imagen" placeholder="foto">
-            
-                </div>
-                
-            </section> -->
-
-            
-
 
             <section class="buttons">
                 <button id="enviar" type="submit">Editar producto</button>

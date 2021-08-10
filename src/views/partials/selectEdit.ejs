@@ -4,25 +4,19 @@
     <select name="marca">
         
         <% for(let i = 0; i < marcas.length; i++) {%> 
-            <% if(marcas[i].id == producto.marca_id) {%> 
-            <option selected value="<%= marcas[i].id %>"><%= marcas[i].nombre %></option>
-                    <% } else { %>  
-                        <option value="<%= marcas[i].id %>"><%= marcas[i].nombre %></option>
-                        <% } %> 
-                        <% } %> 
+            <option value="<%= marcas[i].id %>" <%= locals.oldData && marcas[i].id == oldData.marca ? 'selected' : null %>><%= marcas[i].nombre %></option>
+        <% } %>  
+
+                    
     </select>
 </div>
 <div class="precio">
     <label class="label" for="precio">Categoria:</label>
     <select name="categorias">
         
-                    <% for(let i = 0; i < categorias.length; i++) {%> 
-                        <% if(categorias[i].id == producto.categoria_id) {%> 
-                        <option selected value="<%= categorias[i].id %>"><%= categorias[i].nombre %></option>
-                                <% } else { %>  
-                                    <option value="<%= categorias[i].id %>"><%= categorias[i].nombre %></option>
-                                    <% } %> 
-                                    <% } %>   
+        <% for(let i = 0; i < categorias.length; i++) {%> 
+            <option value="<%= categorias[i].id %>" <%= locals.oldData && categorias[i].id == oldData.categorias ? 'selected' : null %>><%= categorias[i].nombre %></option>
+        <% } %>  
                     
     </select>
 </div>
@@ -31,12 +25,8 @@
     <select name="color">
         
         <% for(let i = 0; i < color.length; i++) {%> 
-            <% if(color[i].id == producto.color_id) {%> 
-                <option selected value="<%= color[i].id %>"><%= color[i].nombre %></option>
-                        <% } else { %>  
-                            <option value="<%= color[i].id %>"><%= color[i].nombre %></option>
-                            <% } %> 
-                    <% } %>  
+            <option value="<%= color[i].id %>" <%= locals.oldData && color[i].id == oldData.color ? 'selected' : null %>><%= color[i].nombre %></option>
+            <% } %>  
                     
     </select>
 </div>
@@ -45,12 +35,8 @@
     <select name="memoria">
         
         <% for(let i = 0; i < memoria.length; i++) {%> 
-            <% if(memoria[i].id == producto.memoria_id) {%> 
-                <option selected value="<%= memoria[i].id %>"><%= memoria[i].valor %></option>
-                        <% } else { %>  
-                            <option value="<%= memoria[i].id %>"><%= memoria[i].valor %></option>
-                            <% } %> 
-                    <% } %>  
+            <option value="<%= memoria[i].id %>" <%= locals.oldData && color[i].id == oldData.color ? 'selected' : null %>><%= memoria[i].valor %></option>
+        <% } %>  
                     
     </select>
 </div>
@@ -59,12 +45,8 @@
     <select name="pantalla">
         
         <% for(let i = 0; i < pantalla.length; i++) {%> 
-            <% if(pantalla[i].id == producto.pantalla_id) {%> 
-                <option selected value="<%= pantalla[i].id %>"><%= pantalla[i].tamaño %></option>
-                        <% } else { %>  
-                            <option value="<%= pantalla[i].id %>"><%= pantalla[i].tamaño %></option>
-                            <% } %> 
-                    <% } %>  
+            <option value="<%= pantalla[i].id %>" <%= locals.oldData && pantalla[i].id == oldData.pantalla ? 'selected' : null %>><%= pantalla[i].tamaño %></option>
+        <% } %>  
                     
     </select>
 </div>
@@ -73,12 +55,8 @@
     <select name="procesador">
         
         <% for(let i = 0; i < procesador.length; i++) {%> 
-            <% if(procesador[i].id == producto.procesador_id) {%> 
-                <option selected value="<%= procesador[i].id %>"><%= procesador[i].nombre %></option>
-                        <% } else { %>  
-                            <option value="<%= procesador[i].id %>"><%= procesador[i].nombre %></option>
-                            <% } %> 
-                    <% } %>  
+            <option value="<%= procesador[i].id %>" <%= locals.oldData && procesador[i].id == oldData.procesador ? 'selected' : null %>><%= procesador[i].nombre %></option>
+        <% } %>  
                     
     </select>
 </div>
@@ -87,12 +65,8 @@
     <select name="ram">
         
         <% for(let i = 0; i < ram.length; i++) {%> 
-            <% if(ram[i].id == producto.ram_id) {%> 
-                <option selected value="<%= ram[i].id %>"><%= ram[i].valor %></option>
-                        <% } else { %>  
-                            <option value="<%= ram[i].id %>"><%= ram[i].valor %></option>
-                            <% } %>
-                    <% } %>  
+            <option value="<%= ram[i].id %>" <%= locals.oldData && ram[i].id == oldData.ram ? 'selected' : null %>><%= ram[i].valor %></option>
+        <% } %>  
                     
     </select>
 </div>
@@ -101,12 +75,8 @@
     <select name="sistema_operativo">
         
         <% for(let i = 0; i < sistemaOperativo.length; i++) {%> 
-            <% if(sistemaOperativo[i].id == producto.sistema_operativo_id) {%> 
-                <option selected value="<%= sistemaOperativo[i].id %>"><%= sistemaOperativo[i].nombre %></option>
-                        <% } else { %>  
-                            <option value="<%= sistemaOperativo[i].id %>"><%= sistemaOperativo[i].nombre %></option>
-                            <% } %>
-                    <% } %>  
+            <option value="<%= sistemaOperativo[i].id %>" <%= locals.oldData && sistemaOperativo[i].id == oldData.sistema_operativo ? 'selected' : null %>><%= sistemaOperativo[i].nombre %></option>
+        <% } %>  
                     
     </select>
 </div>

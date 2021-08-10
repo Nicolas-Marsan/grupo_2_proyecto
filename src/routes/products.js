@@ -1,10 +1,15 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-const productsController = require ('../controllers/productsController.js')
+const productsController = require ('../controllers/productsController.js');
 const multer = require('multer');
-const productDetailMiddleware = require ('../middlewares/productDetailMiddleware')
-const sinUsuarioMiddleware = require ('../middlewares/sinUsuarioMiddleware')
+const productDetailMiddleware = require ('../middlewares/productDetailMiddleware');
+const sinUsuarioMiddleware = require ('../middlewares/sinUsuarioMiddleware');
+const validateCreateProductMiddlewares = require ('../middlewares/validateCreateProductMiddlewares');
+const validateEditMiddlewares = require ('../middlewares/validateEditMiddlewares');
+
+
+
 let multerDiskStorage = multer.diskStorage({    
 	destination: (req,file,callback) => 
 {let folder = path.join(__dirname, '../../public/images/products');
@@ -31,11 +36,11 @@ router.post('/comprar', productsController.comprar);
 
 router.get('/verCarrito',sinUsuarioMiddleware,productsController.verCarrito);
 
-router.post('/crearProducto', fileUpload.single('imagen'), productsController.guardarProduct);
+router.post('/crearProducto', fileUpload.single('imagen'), validateCreateProductMiddlewares, productsController.guardarProduct);
 
 
 router.get('/:id/edit', productDetailMiddleware, productsController.edit);
-router.put('/:id/edit', /* fileUpload.single('foto'), */ productsController.update);
+router.put('/:id/edit', validateEditMiddlewares, productsController.update);
 
 router.delete('/:id', productsController.destroy);
 

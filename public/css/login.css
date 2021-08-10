@@ -111,6 +111,7 @@
 }
 
 form{
+    margin: auto;
     width: 80%;
 }
 
@@ -120,6 +121,11 @@ form{
 
     .main-login{
         width: 80%;
+    }
+
+    .main-login .titulo{
+        width: 80%;
+        margin: auto;
     }
 
     .main .login .datos-usuario{
@@ -155,7 +161,15 @@ form{
 @media (min-width: 769px){
 
     .main .login{
-        width: 70%;
+        width: 80%;
+        margin: auto;
+    }
+    form{
+        width: 80%;
+    }
+
+    .main-login .titulo{
+        width: 80%;
     }
     
 }

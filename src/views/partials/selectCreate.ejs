@@ -1,14 +1,20 @@
-<div class="precio">
+<div class="precio top">
     <label class="label" for="precio">Precio:</label>
-    <input type="number" name="precio">
+    <input type="number" name="precio" value="<%= locals.oldData && oldData.precio != "" ? oldData.precio : null%>">
 </div>
+<% if (locals.errors && errors.precio) { %>
+    <div class="texto-error-validacion">
+        <p><%= errors.precio.msg %></p>
+    </div>
+<% } %>
 <div class="precio">
     <label class="label" for="precio">Marca:</label>
     <select name="marca">
         
         <% for(let i = 0; i < marcas.length; i++) {%> 
-            <option value="<%= marcas[i].id %>"><%= marcas[i].nombre %></option>
-                    <% } %>  
+            <option value="<%= marcas[i].id %>" <%= locals.oldData && marcas[i].id == oldData.marca ? 'selected' : null %>><%= marcas[i].nombre %></option>
+        <% } %>  
+
                     
     </select>
 </div>
@@ -17,8 +23,8 @@
     <select name="categorias">
         
         <% for(let i = 0; i < categorias.length; i++) {%> 
-            <option value="<%= categorias[i].id %>"><%= categorias[i].nombre %></option>
-                    <% } %>  
+            <option value="<%= categorias[i].id %>" <%= locals.oldData && categorias[i].id == oldData.categorias ? 'selected' : null %>><%= categorias[i].nombre %></option>
+        <% } %>  
                     
     </select>
 </div>
@@ -27,8 +33,8 @@
     <select name="color">
         
         <% for(let i = 0; i < color.length; i++) {%> 
-            <option value="<%= color[i].id %>"><%= color[i].nombre %></option>
-                    <% } %>  
+            <option value="<%= color[i].id %>" <%= locals.oldData && color[i].id == oldData.color ? 'selected' : null %>><%= color[i].nombre %></option>
+            <% } %>  
                     
     </select>
 </div>
@@ -37,8 +43,8 @@
     <select name="memoria">
         
         <% for(let i = 0; i < memoria.length; i++) {%> 
-            <option value="<%= memoria[i].id %>"><%= memoria[i].valor %></option>
-                    <% } %>  
+            <option value="<%= memoria[i].id %>" <%= locals.oldData && color[i].id == oldData.color ? 'selected' : null %>><%= memoria[i].valor %></option>
+        <% } %>  
                     
     </select>
 </div>
@@ -47,8 +53,8 @@
     <select name="pantalla">
         
         <% for(let i = 0; i < pantalla.length; i++) {%> 
-            <option value="<%= pantalla[i].id %>"><%= pantalla[i].tamaño %></option>
-                    <% } %>  
+            <option value="<%= pantalla[i].id %>" <%= locals.oldData && pantalla[i].id == oldData.pantalla ? 'selected' : null %>><%= pantalla[i].tamaño %></option>
+        <% } %>  
                     
     </select>
 </div>
@@ -57,8 +63,8 @@
     <select name="procesador">
         
         <% for(let i = 0; i < procesador.length; i++) {%> 
-            <option value="<%= procesador[i].id %>"><%= procesador[i].nombre %></option>
-                    <% } %>  
+            <option value="<%= procesador[i].id %>" <%= locals.oldData && procesador[i].id == oldData.procesador ? 'selected' : null %>><%= procesador[i].nombre %></option>
+        <% } %>  
                     
     </select>
 </div>
@@ -67,8 +73,8 @@
     <select name="ram">
         
         <% for(let i = 0; i < ram.length; i++) {%> 
-            <option value="<%= ram[i].id %>"><%= ram[i].valor %></option>
-                    <% } %>  
+            <option value="<%= ram[i].id %>" <%= locals.oldData && ram[i].id == oldData.ram ? 'selected' : null %>><%= ram[i].valor %></option>
+        <% } %>  
                     
     </select>
 </div>
@@ -77,8 +83,8 @@
     <select name="sistema_operativo">
         
         <% for(let i = 0; i < sistemaOperativo.length; i++) {%> 
-            <option value="<%= sistemaOperativo[i].id %>"><%= sistemaOperativo[i].nombre %></option>
-                    <% } %>  
+            <option value="<%= sistemaOperativo[i].id %>" <%= locals.oldData && sistemaOperativo[i].id == oldData.sistema_operativo ? 'selected' : null %>><%= sistemaOperativo[i].nombre %></option>
+        <% } %>  
                     
     </select>
 </div>

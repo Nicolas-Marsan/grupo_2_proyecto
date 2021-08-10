@@ -5,12 +5,9 @@
     font-family: 'Raleway', sans-serif;
 }
 
-.texto-error-validacion {
-    color: red;
-}
 
 .main-register{
-    text-align: center;
+    text-align: left;
     width: 100%;
     margin: auto;
     display: flex;
@@ -21,6 +18,7 @@
 }
 
 .main-register .titulo{
+    text-align: center;
     background-color: #C3CA02;
     width: 80%;
     padding: 8px 10px;
@@ -144,7 +142,6 @@
         flex-direction: row;
         justify-content: space-around;
         flex-wrap: wrap;
-        margin: 25px 0 5px 0;
     }
 
     .main-register  .datos-personales .div-nombre, .div-apellido{

@@ -5,6 +5,8 @@ const Producto = db.Producto;
 const { Op } = require("sequelize");
 let products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'),{encoding:'utf-8'})); //Leer el JSON y pasarlo a objeto literal
 let carrito = [];
+const { validationResult }= require('express-validator');
+const e = require('express');
 
 const lastId = () =>{
 	let ultimo = 0;
@@ -59,25 +61,57 @@ const productsController = {
             res.render('crearProducto', {marcas, categorias, color, memoria, pantalla, procesador, ram, sistemaOperativo})
             /* res.send([marcas, categorias]) */
         })
+
     },
 
-    guardarProduct: function(req , res){
-        let filename = req.file.filename;
-        db.Producto.create({
-            modelo: req.body.modelo,
-            marca_id: req.body.marca,
-            color_id: req.body.color,
-            memoria_id: req.body.memoria,
-            pantalla_id: req.body.pantalla,
-            procesador_id: req.body.procesador,
-            ram_id: req.body.ram,
-            sistema_operativo_id: req.body.sistema_operativo,
-            marca_id: req.body.marca,
-            precio_unitario: req.body.precio,
-            imagen: filename,
-            categoria_id: req.body.categorias,
-            stock:1
-        }).then(()=>res.redirect('/products'))
+    guardarProduct: async function(req , res){
+        try {
+            let marcasRquest = await db.Marca.findAll();
+            let categoriasRquest = await db.Categoria.findAll();
+            let colorRquest = await db.Color.findAll();
+            let memoriaRquest = await db.Memoria.findAll();
+            let pantallaRquest = await db.Pantalla.findAll();
+            let procesadorRquest = await db.Procesador.findAll();
+            let ramRquest = await db.Ram.findAll();
+            let sisOpRquest = await db.Sistema_Operativo.findAll();
+            /* db.Memoria.findAll().then(memoria=>{res.send(memoria)}) */
+
+            const resultadoValidaciones = validationResult(req);
+
+            if (resultadoValidaciones.errors.length > 0) {
+                console.log(req.body);
+                console.log(resultadoValidaciones.mapped());
+                return res.render('crearProducto.ejs', {
+                    marcas: marcasRquest, categorias: categoriasRquest, color: colorRquest, memoria: memoriaRquest, pantalla: pantallaRquest, procesador: procesadorRquest, ram: ramRquest, sistemaOperativo: sisOpRquest, errors: resultadoValidaciones.mapped(),
+                    oldData: req.body}
+                );
+            } else {
+                let filename = req.file.filename;
+        
+                await db.Producto.create({
+                modelo: req.body.modelo,
+                marca_id: req.body.marca,
+                color_id: req.body.color,
+                memoria_id: req.body.memoria,
+                pantalla_id: req.body.pantalla,
+                procesador_id: req.body.procesador,
+                ram_id: req.body.ram,
+                sistema_operativo_id: req.body.sistema_operativo,
+                marca_id: req.body.marca,
+                precio_unitario: req.body.precio,
+                imagen: filename,
+                categoria_id: req.body.categorias,
+                stock:1
+                })
+                return res.redirect('/products')
+            };
+        }catch(e) {
+            console.log(e);
+            return res.redirect('/');
+        }   
+
+        
+        
     },
     edit: (req, res) =>{
        let productoRquest = db.Producto.findByPk(req.params.id, {
@@ -99,31 +133,63 @@ const productsController = {
         /*  .then(producto => { res.render('productEdit', {producto}) /* res.send(producto )  })  */
         
     },
-    update:(req, res) =>{
-       
-        db.Producto.update({
-            modelo: req.body.modelo,
-            marca_id: req.body.marca,
-            color_id: req.body.color,
-            memoria_id: req.body.memoria,
-            pantalla_id: req.body.pantalla,
-            procesador_id: req.body.procesador,
-            ram_id: req.body.ram,
-            sistema_operativo_id: req.body.sistema_operativo,
-            marca_id: req.body.marca,
-            precio_unitario: req.body.precio,
-            categoria_id: req.body.categorias,
-            stock:1
-        }, {
-            where: {
-                id: req.params.id
+    update: async (req, res) =>{
+        try {
+            let productoRquest = await db.Producto.findByPk(req.params.id, {
+                include: [{all: true}]
+            })
+            let marcasRquest = await db.Marca.findAll();
+            let categoriasRquest = await db.Categoria.findAll();
+            let colorRquest = await db.Color.findAll();
+            let memoriaRquest = await db.Memoria.findAll();
+            let pantallaRquest = await db.Pantalla.findAll();
+            let procesadorRquest = await db.Procesador.findAll();
+            let ramRquest = await db.Ram.findAll();
+            let sisOpRquest = await db.Sistema_Operativo.findAll();
+            /* db.Memoria.findAll().then(memoria=>{res.send(memoria)}) */
+
+            const resultadoValidaciones = validationResult(req);
+            console.log(req.file);
+            if (resultadoValidaciones.errors.length > 0) {
+                console.log(req.body);
+                console.log(resultadoValidaciones.mapped());
+                return res.render('productEdit.ejs', {
+                    producto: productoRquest, marcas: marcasRquest, categorias: categoriasRquest, color: colorRquest, memoria: memoriaRquest, pantalla: pantallaRquest, procesador: procesadorRquest, ram: ramRquest, sistemaOperativo: sisOpRquest, errors: resultadoValidaciones.mapped(),
+                    oldData: req.body}
+                );
+            } else {
+                let filename = req.file.filename;
+                
+                await db.Producto.update({
+                modelo: req.body.modelo,
+                marca_id: req.body.marca,
+                color_id: req.body.color,
+                memoria_id: req.body.memoria,
+                pantalla_id: req.body.pantalla,
+                procesador_id: req.body.procesador,
+                ram_id: req.body.ram,
+                sistema_operativo_id: req.body.sistema_operativo,
+                marca_id: req.body.marca,
+                precio_unitario: req.body.precio,
+                categoria_id: req.body.categorias,
+                imagen: filename,
+                stock:1
+                }, {
+                    where: {
+                        id: req.params.id
+                    }
+                })
+                res.redirect('/products')
             }
-        }).then(()=>res.redirect('/products'))
+        }catch(e){
+            console.log(e)
+            return res.redirect('/')
+        };
     },
     destroy:(req, res) =>{
-         db.Producto.destroy({
-             where: {id:req.params.id}
-         }).then(()=>res.redirect('/products'))
+        db.Producto.destroy({
+            where: {id:req.params.id}
+        }).then(()=>res.redirect('/products'))
     },
     carrito:(req, res) =>{
         db.Producto.findByPk(req.params.id)

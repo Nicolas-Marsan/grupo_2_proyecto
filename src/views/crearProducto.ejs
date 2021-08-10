@@ -7,50 +7,39 @@
 
 
     <main class="main-register">
-      
-        <h2 class="titulo">
+        
+        <h2 class="titulo producto">
             CREAR PRODUCTO
         </h2>
-        <form class='formu' action="/crearProducto" method="POST" enctype="multipart/form-data">
+        <form class='form-product-register' action="/crearProducto" method="POST" enctype="multipart/form-data">
             <section class="producto">
-                <div class="nombre">
-                    <label class="label" for="modelo">Modelo</label>
-                    <input  type="text" name="modelo"  class="control">
+                <div class="nombre top">
+                    <label class="label" for="modelo">Modelo:</label>
+                    <input  type="text" name="modelo"  class="control" value="<%= locals.oldData && oldData.modelo != "" ? oldData.modelo : null%>">
                 </div>
+                <% if (locals.errors && errors.modelo) { %>
+                    <div class="texto-error-validacion">
+                        <p><%= errors.modelo.msg %></p>
+                    </div>
+                <% } %>
+                
                 <%- include('./partials/selectCreate') %>
                 
-                
-            </section>
-
-            <section class="pass">
-                <!-- <div class="Tdetalle">
-                    <label class="label" for="tDetalle">Titulo detalle</label>
-                    <input  type="text" name="tDetalle"  class="control">
-                </div>
-                <div class="detalle">
-                    <label class="label" for="detalle">Detalle</label>
-                    <textarea class="area" name="detalle" ></textarea>
-                </div>
-
-                <select name="select" class="check1">
-                    
-                    <option value="favorite" selected>Favorite</option>
-                    <option value="newmodel">New moldel</option>
-                  </select>
-                
-                </div> -->      
-
-              
-                <div class="foto">
+                <div class="nombre top">
             
                     <label for="foto">Foto</label>
                     <input type="file" id="foto" name="imagen" placeholder="foto">
-            
                 </div>
+                <% if (locals.errors && errors.imagen) { %>
+                    <div class="texto-error-validacion">
+                        <p><%= errors.imagen.msg %></p>
+                    </div>
+                <% } %>
                 
             </section>
 
-            
+                
+                
 
 
             <section class="buttons">
