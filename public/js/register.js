@@ -4,14 +4,13 @@ window.onload = function(){
     
     form.addEventListener('submit',function(e){
         e.preventDefault();
+        //eName.innerHTML = '';
+        //eLast.innerHTML = '';
 
-        let errorNombre = "";
-        let errorNombre = "";
-        let errorNombre = "";
-        let errorNombre = "";
+        let errores = [];
 
-        let eName = document.querySelector('.errorName');
-        let eLast = document.querySelector('.errorLast');
+        let erroresUL = document.querySelector('.errores');
+        
         let nombre = document.querySelector('#name');
         let apellido = document.querySelector('#last_name');
         let correo = document.querySelector('#email');
@@ -24,7 +23,7 @@ window.onload = function(){
             nombre.classList.add('is-invalid');
             errores.push("Minimo 2 caracteres");
             //nombre.value ="minimo 2 caracteres";
-            //eName.innerHTML += "Minimo 2 caracteres";
+            //eName.innerHTML += errorN;
         }else{
            nombre.classList.remove('is-invalid');
            nombre.classList.add('control');
@@ -35,14 +34,23 @@ window.onload = function(){
             apellido.classList.add('is-invalid');
             errores.push("No puede estar vacio");
             //nombre.value ="minimo 2 caracteres";
-            //eLast.innerHTML += "No puede esatar vacio";
+            //eLast.innerHTML += errorA;
         }else{
             apellido.classList.remove('is-invalid');
             apellido.classList.add('control');
             correo.focus();
         }
 
-
+        if(errores.length >0){
+            //e.preventDefault();
+            erroresUL.innerHTML = '';
+            for(let i=0 ; i<errores.length; i++){
+                
+                erroresUL.innerHTML += `<li>${errores[i]}</li>`;
+                
+            }
+            
+        }
 
 
 
