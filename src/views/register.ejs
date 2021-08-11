@@ -11,10 +11,12 @@
                     CREÁ TU CUENTA
                 </h2>
                 <form action="/users/register" method="POST" enctype="multipart/form-data">
+                    
                     <section class="datos-personales">
                         <div class="div-nombre">
                             <label class="label" for="name">Nombre</label>
                             <input type="text" name="name" id="name" class="control" value="<%= locals.oldData ? oldData.name : null %>">
+                            <ul class="errorName"></ul>
                             <% if (locals.errors && errors.name) { %>
                                 <div class="texto-error-validacion">
                                     <p><%= errors.name.msg %></p>
@@ -24,6 +26,7 @@
                         <div class="div-apellido">
                             <label class="label" for="last_name">Apellido</label>
                             <input  type="text" name="last_name" id="last_name" class="control" value="<%= locals.oldData ? oldData.last_name : null %>">
+                            <ul class="errorLast"></ul>
                             <% if (locals.errors && errors.last_name) { %>
                                 <div class="texto-error-validacion">
                                 <%= errors.last_name.msg %>
@@ -88,7 +91,7 @@
                 
 
         </main>
-
+        <script src="/js/register.js"></script> 
         <%- include('./partials/footer') %>
 
 </html>

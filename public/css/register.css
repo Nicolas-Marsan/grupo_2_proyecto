@@ -130,6 +130,14 @@
     padding: 8px;
 }
 
+.is-invalid {
+  
+    border: 3px solid red;
+    height: 40px;
+    border-radius: 10px;
+    width: 100%;
+ }
+
 
 @media (min-width: 481px){
 
