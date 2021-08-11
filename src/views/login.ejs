@@ -29,6 +29,11 @@
                         <label for=""> <a href="#">¿Olvidaste tu contraseña?</a></label>
 
                     </div>
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="texto-error-validacion">
+                        <%= errors.email.msg %> 
+                        </div>
+                    <% } %>
                 </section>
 
                 <section class="buttons">

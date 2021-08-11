@@ -18,8 +18,8 @@ const validations = [
     
     body('contrasenia')
     .notEmpty().withMessage('El campo contraseña no puede estar vacío').bail()
-    .isLength({ min: 8 }).withMessage('La contraseña debe tener como mínimo 8 caracteres')
-    .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/, "i").withMessage('La contraseña debe contener al menos una mayuscula, una minuscula, un número y un caracter especial'),
+    .isLength({ min: 8 }).withMessage('La contraseña debe tener como mínimo 8 caracteres'),
+    /* .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/, "i").withMessage('La contraseña debe contener al menos una mayuscula, una minuscula, un número y un caracter especial'), */
     
 
     body('image').custom((value, { req }) => {

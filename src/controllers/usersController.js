@@ -147,55 +147,21 @@ const usersController = {
                 
 
                 return res.redirect('profile');
-            }
-          
+            }else{
+                return res.render('login', {
+                    errors: {
+                        email: {
+                            msg: 'Las credenciales son inválidas.'
+                        }
+                    }
+                })
+            } 
         }
-
-
         })
 
-
-        
-        //req.session.userLogged = userToLogin;
-       
-        
-       //console.log(userToLogin);
-        
-
-        /*let userToLogin = User.findByField('email', req.body.email);
-
-        if(userToLogin) {
-            let passIsOk = req.body.password.localeCompare(userToLogin.password); //bcryptjs.compareSync(req.body.password, userToLogin.password)
-            if(passIsOk) {
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin; /* creo la propiedad userLogged que tiene la info de userToLogin */
-                /*
-                if(req.body.rememberUser) {
-                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 69) * 2});
-                }
-                
-                return res.redirect('/users/profile');
-            }
-        }
-
         /* Esto es para cuando tengamos que hacer validaciones */
-        /*return res.render('login', {
-            errors: {
-                email: {
-                    msg: 'Las credenciales son inválidas.'
-                }
-            }
-        })*/
 
-        /*return res.render('login', {
-            errors: {
-                email: {
-                    msg: 'No se encuentra este email registrado.'
-                }
-            }
-        })*/
-
-        /* return res.send(userToLogin); */
+        
     },
 
     profile: function(req, res){
