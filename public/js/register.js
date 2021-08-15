@@ -1,7 +1,7 @@
 window.onload = function(){
     
     let form = document.querySelector('form');
-    let errorM =[];
+    //let errorM =[];
     form.addEventListener('submit',function(e){
         //e.preventDefault();
        
@@ -35,6 +35,44 @@ window.onload = function(){
 
 
         }
+
+       // alert(correo.value);
+        let dondeM=correo.value.indexOf('.');
+        //alert(dondeM);
+        if(correo.value == ''){
+            errores.push('El mail no puede estar vacio')
+        }else if(dondeM == -1){
+            errores.push('El mail debe tener un punto')
+        }else if(dondeM != -1){
+            let valid=0
+            for(let i=0 ; i<correo.value.length; i++){
+
+                if(correo.value[i] == '@' ){
+                    valid++;
+                }
+
+
+            }
+
+            
+            
+            if(valid == 0){errores.push('El mail debe tener un @')}
+            //alert(correo.value[dondeM]);
+        }if(correo.value[dondeM] =='.'){
+            dondeM++;
+            //alert(correo.value[dondeM]);
+            if(correo.value[dondeM] == 'c' ){
+                dondeM++;
+            }else if(correo.value[dondeM] == 'o' ){
+                dondeM++;
+            }else if(correo.value[dondeM] == 'm' ){
+                dondeM++;
+            }else{errores.push('El mail debe tener .com')}
+
+
+        }
+
+
         if(contra.value == ''){
 
             errores.push('La contraseña no puede estar vacia')
@@ -84,11 +122,13 @@ window.onload = function(){
         errorName.innerHTML = '';
         errorLast.innerHTML = '';
         erroresUL.innerHTML = '';
+        errorMail.innerHTML = '';
         //alert(errorM);
         
         if(errores.length >0){
             e.preventDefault();
             erroresUL.innerHTML = '';
+            errorMail.innerHTML = '';
             errorFoto.innerHTML = '';
             errorContra.innerHTML = '';
             errorName.innerHTML = '';
@@ -111,7 +151,7 @@ window.onload = function(){
 
                     errorContra.innerHTML += `<p>${errores[i]}</p>`;
                 }
-                if(errores[i] == 'Ya existe este mail'){
+                if(errores[i] == 'Ya existe este mail' || errores[i] == 'El mail no puede estar vacio' || errores[i] == 'El mail debe tener un punto' || errores[i] == 'El mail debe tener un @' || errores[i] == 'El mail debe tener .com'){
 
                     errorMail.innerHTML += `<p>${errores[i]}</p>`;
                 }
