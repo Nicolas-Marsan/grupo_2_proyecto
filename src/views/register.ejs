@@ -36,6 +36,7 @@
                         <div class="div-correo" >
                             <label class="label" for="email">Correo electrónico</label>
                             <input  type="text" name="email" id="email" class="control" value="<%= locals.oldData ? oldData.email : null %>">
+                            <ul class="errorMail"></ul>
                             <% if (locals.errors && errors.email) { %>
                                 <div class="texto-error-validacion">
                                 <%= errors.email.msg %>
@@ -44,7 +45,8 @@
                         </div>
                         <div class="div-image"> 
                             <label class="label" for="image">Imagen de perfil</label>
-                            <input type="file" name="image">
+                            <input type="file" name="image" id='foto'>
+                            <ul class="errorFoto"></ul>
                             <% if (locals.errors && errors.image) { %>
                                 <div class="texto-error-validacion">
                                     <%= errors.image.msg %>
@@ -57,6 +59,7 @@
                             <div class="div-pass">
                                 <label class="label" for="pass">Contraseña</label>
                                 <input  type="password" name="contrasenia" id="pass" class="control"><i class="fas fa-eye-slash"></i>
+                                <ul class="errorContra"></ul>
                                 <% if (locals.errors && errors.contrasenia) { %>
                                     <div class="texto-error-validacion">
                                     <%= errors.contrasenia.msg %>

@@ -5,6 +5,7 @@ const User = require('../models/Users');
 const bcryptjs = require('bcryptjs'); //*hasheare contra/
 const db = require("../database/models");
 const { validationResult }= require('express-validator');
+const { Op } = require("sequelize");
 
 const usersController = {
     register: function (req , res){
@@ -14,10 +15,15 @@ const usersController = {
 
     all: (req, res) => {
       
-		db.Usuarios.findAll()
+		db.Usuarios.findAll(
+            {
+                where:{
+                    mail: {[Op.like]: '%' + req.query.mail + '%'}             
+                }
+            })
          .then(function(usuarios){
             //res.send(peliculas);
-           res.render("listadoUsuarios",{usuarios:usuarios})
+           return res.status(200).json(usuarios);
          })
 	},
     editarUsuario: (req, res) => {
