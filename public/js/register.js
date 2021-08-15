@@ -34,8 +34,11 @@ window.onload = function(){
 
 
         }
+        if(contra.value == ''){
 
-        if(contra.value.length <8){
+            errores.push('La contraseña no puede estar vacia')
+        }
+        else if(contra.value.length <8){
             errores.push('La contraseña debe tener minimo 8 caracteres')
         }
         /*fetch('http://localhost:3000/users/all?mail=' + correo.value)
@@ -89,19 +92,19 @@ window.onload = function(){
                 
                 if(errores[i] == 'La foto debe ser JPG, JPEG, PNG o GIF'){
 
-                    errorFoto.innerHTML += `<li>${errores[i]}</li>`;
+                    errorFoto.innerHTML += `<p>${errores[i]}</p>`;
                 }
                 if(errores[i] == 'Minimo 2 caracteres'){
 
-                    errorName.innerHTML += `<li>${errores[i]}</li>`;
+                    errorName.innerHTML += `<p>${errores[i]}</p>`;
                 }
                 if(errores[i] == 'No puede estar vacio'){
 
-                    errorLast.innerHTML += `<li>${errores[i]}</li>`;
+                    errorLast.innerHTML += `<p>${errores[i]}</p>`;
                 }
-                if(errores[i] == 'La contraseña debe tener minimo 8 caracteres'){
+                if(errores[i] == 'La contraseña debe tener minimo 8 caracteres' || errores[i] == 'La contraseña no puede estar vacia'){
 
-                    errorContra.innerHTML += `<li>${errores[i]}</li>`;
+                    errorContra.innerHTML += `<p>${errores[i]}</p>`;
                 }
 
                //erroresUL.innerHTML += `<li>${errores[i]}</li>`;
