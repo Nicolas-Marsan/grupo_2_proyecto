@@ -1,12 +1,13 @@
 window.onload = function(){
     
     let form = document.querySelector('form');
-    
+    let errorM =[];
     form.addEventListener('submit',function(e){
         //e.preventDefault();
        
         let errores = [];
         
+        let errorMail = document.querySelector('.errorMail');
         let errorContra = document.querySelector('.errorContra');
         let errorLast = document.querySelector('.errorLast');
         let errorName = document.querySelector('.errorName');
@@ -41,15 +42,18 @@ window.onload = function(){
         else if(contra.value.length <8){
             errores.push('La contraseña debe tener minimo 8 caracteres')
         }
-        /*fetch('http://localhost:3000/users/all?mail=' + correo.value)
+
+        
+        fetch('http://localhost:3000/users/all?mail=' + correo.value)
 			.then ( res => res.json())
 			.then ( data => {
-                alert('el del fethc  ' + data[0].mail);	
-                if(data[0].mail != ''){  errores.push("Ya existe este mail")}  
+                                   
+                //alert('el del fethc  ' + data[0].mail);	
+                if(data[0].mail != ''){  alert("Ya existe este mail")}  
                 	
 			})
-			.catch (err => console.log(err));*/
-              
+			.catch (err => console.log(err));
+        
         let n=nombre.value;
         
         if(n.length <3){
@@ -80,7 +84,8 @@ window.onload = function(){
         errorName.innerHTML = '';
         errorLast.innerHTML = '';
         erroresUL.innerHTML = '';
-        alert(errores);
+        //alert(errorM);
+        
         if(errores.length >0){
             e.preventDefault();
             erroresUL.innerHTML = '';
@@ -106,6 +111,11 @@ window.onload = function(){
 
                     errorContra.innerHTML += `<p>${errores[i]}</p>`;
                 }
+                if(errores[i] == 'Ya existe este mail'){
+
+                    errorMail.innerHTML += `<p>${errores[i]}</p>`;
+                }
+
 
                //erroresUL.innerHTML += `<li>${errores[i]}</li>`;
                
