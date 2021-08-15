@@ -24,14 +24,18 @@ window.onload = function(){
         
 
         if(foto.value != ''){
-
+            let cont2=0;
             if(foto.value[donde] == 'j' || foto.value[donde] == 'p' || foto.value[donde] == 'g'){
                 donde++;
-            }else if(foto.value[donde] == 'p' || foto.value[donde] == 'n' || foto.value[donde] == 'i' ){
+                cont2++;
+            } if(foto.value[donde] == 'p' || foto.value[donde] == 'n' || foto.value[donde] == 'i' ){
                 donde++;
-            }else if(foto.value[donde] == 'g' || foto.value[donde] == 'f' ){
+                cont2++;
+            } if(foto.value[donde] == 'g' || foto.value[donde] == 'f' ){
                 donde++;
-            }else{errores.push('La foto debe ser JPG, JPEG, PNG o GIF')}
+                cont2++;
+            }
+            if(cont2 != 3){errores.push('La foto debe ser JPG, JPEG, PNG o GIF')}
 
 
         }
@@ -45,6 +49,7 @@ window.onload = function(){
             errores.push('El mail debe tener un punto')
         }else if(dondeM != -1){
             let valid=0
+            //alert(dondeM);
             for(let i=0 ; i<correo.value.length; i++){
 
                 if(correo.value[i] == '@' ){
@@ -59,15 +64,25 @@ window.onload = function(){
             if(valid == 0){errores.push('El mail debe tener un @')}
             //alert(correo.value[dondeM]);
         }if(correo.value[dondeM] =='.'){
+            
             dondeM++;
-            //alert(correo.value[dondeM]);
+            let cont=0;
+            
             if(correo.value[dondeM] == 'c' ){
+                cont++;
                 dondeM++;
-            }else if(correo.value[dondeM] == 'o' ){
+                
+            }if(correo.value[dondeM] == 'o' ){
+                cont++;
                 dondeM++;
-            }else if(correo.value[dondeM] == 'm' ){
+                
+            }if(correo.value[dondeM] == 'm' ){
+                cont++;
                 dondeM++;
-            }else{errores.push('El mail debe tener .com')}
+                
+            }
+            
+            if(cont!=3){errores.push('El mail debe tener .com')}
 
 
         }
