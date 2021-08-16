@@ -15,8 +15,9 @@
             <section class="producto">
                 <div class="nombre top">
                     <label class="label" for="modelo">Modelo:</label>
-                    <input  type="text" name="modelo"  class="control" value="<%= locals.oldData && oldData.modelo != "" ? oldData.modelo : null%>">
+                    <input  type="text" name="modelo"  id="control" value="<%= locals.oldData && oldData.modelo != "" ? oldData.modelo : null%>">
                 </div>
+                <ul class="errorModelo"></ul>
                 <% if (locals.errors && errors.modelo) { %>
                     <div class="texto-error-validacion">
                         <p><%= errors.modelo.msg %></p>
@@ -30,6 +31,7 @@
                     <label for="foto">Foto</label>
                     <input type="file" id="foto" name="imagen" placeholder="foto">
                 </div>
+                <ul class="errorFoto"></ul>
                 <% if (locals.errors && errors.imagen) { %>
                     <div class="texto-error-validacion">
                         <p><%= errors.imagen.msg %></p>
@@ -51,7 +53,7 @@
         
 
 </main>
-
+<script src="/js/products.js"></script>
 <%- include('./partials/footer') %>
 
 </body>

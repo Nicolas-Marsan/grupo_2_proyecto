@@ -2,6 +2,7 @@ window.onload = function(){
     
     let form = document.querySelector('form');
     //let errorM =[];
+    
     form.addEventListener('submit',function(e){
         //e.preventDefault();
        

@@ -115,6 +115,10 @@ form{
     width: 80%;
 }
 
+.errorModelo, .errorPrecio, .errorFoto{
+    text-align: center;
+    margin-left: 100px;
+}
 
 
 @media (min-width: 481px){
