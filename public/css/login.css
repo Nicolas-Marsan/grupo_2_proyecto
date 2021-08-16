@@ -119,7 +119,10 @@ form{
     text-align: center;
     margin-left: 100px;
 }
-
+.errorEmail, .errorPassword{
+    text-align: center;
+    margin-left: 100px;
+}
 
 @media (min-width: 481px){
 

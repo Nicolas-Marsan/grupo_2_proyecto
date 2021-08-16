@@ -14,12 +14,14 @@
                 <section class="datos-usuario">
                     <div class="div-correo" >
                         <label class="label" for="email">Correo electrónico</label>
-                        <input required type="email" name="email" id="email" class="control">
+                        <input type="text" name="email" id="email" class="control">
                     </div>
+                    <ul class="errorEmail"></ul>
                     <div class="div-pass">
                         <label class="label" for="pass">Contraseña</label>
-                        <input required type="password" name="contrasenia" id="contrasenia" class="control"><i class="fas fa-eye-slash"></i>
+                        <input type="password" name="contrasenia" id="contrasenia" class="control"><i class="fas fa-eye-slash"></i>
                     </div>
+                    <ul class="errorPassword"></ul>
                     <div class="div-recordar-usuario">
                         <div class="div-recordar">
                             <input class="cbx" type="checkbox" name="rememberUser" id="rememberUser">
@@ -47,7 +49,7 @@
                     <p class="register">¿Aún no tienes cuenta? <a href="/users/register">Creá tu cuenta</a></p>
         </main>
 
-
+        <script src="/js/users.js"></script>
         <%- include('./partials/footer') %>
 
 </html>
