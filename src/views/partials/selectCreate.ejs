@@ -1,7 +1,8 @@
 <div class="precio top">
     <label class="label" for="precio">Precio:</label>
-    <input type="number" name="precio" value="<%= locals.oldData && oldData.precio != "" ? oldData.precio : null%>">
+    <input type="number" id="precio" name="precio" value="<%= locals.oldData && oldData.precio != "" ? oldData.precio : null%>">
 </div>
+<ul class="errorPrecio"></ul>
 <% if (locals.errors && errors.precio) { %>
     <div class="texto-error-validacion">
         <p><%= errors.precio.msg %></p>
