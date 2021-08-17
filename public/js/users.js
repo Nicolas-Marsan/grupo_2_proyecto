@@ -14,26 +14,22 @@ window.onload = function () {
         let errorEmail = document.querySelector('.errorEmail')
         let errorPassword = document.querySelector('.errorPassword')
 
-        //
-
-        
-    
+        //Para comprobar que el mail viene en formato valido
+        let expresion = /\w+@\w+\.[a-z]/ 
 
         if(email.value == ''){
-            errores.push('Debes ingresar tu correo electronico')
+            errores.push('Debes ingresar un correo electronico')
             email.classList.add('is-invalid')
-        } else if (email.value == '@'){
-            errores.push('El correo electronico debe contener un @')
-        } else if (email.value == '.com'){
-            errores.push('El correo electronico debe contener un .com')
-
+        } else if(!expresion.test(email.value)){
+            errores.push('Debes ingresar un correo electronico valido')
+            email.classList.add('is-invalid')
         } else {
             email.classList.remove('is-invalid')
-            modelo.classList.add('control');
+            email.classList.add('control');
         }
 
         if (password.value == '') {
-            errores.push('Debes ingresar tu contraseña')
+            errores.push('Debes ingresar una contraseña')
             password.classList.add('is-invalid')
         } else {
             password.classList.remove('is-invalid')
@@ -49,10 +45,13 @@ window.onload = function () {
             errorPassword.innerHTML += '';
 
             for (let i = 0; i < errores.length; i++) {
-               if (errores[i] == 'Debes ingresar tu correo electronico') {
+               if (errores[i] == 'Debes ingresar un correo electronico') {
                    errorEmail.innerHTML += `<p>${errores[i]}</p>`
                }
-               if (errores[i] == 'Debes ingresar tu contraseña') {
+               if (errores[i] == 'Debes ingresar un correo electronico valido') {
+                errorEmail.innerHTML += `<p>${errores[i]}</p>`
+            }
+               if (errores[i] == 'Debes ingresar una contraseña') {
                 errorPassword.innerHTML += `<p>${errores[i]}</p>`
             }
             }
