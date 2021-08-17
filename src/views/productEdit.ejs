@@ -16,8 +16,9 @@
 
                 <div class="nombre top">
                     <label class="label" for="modelo">Modelo:</label>
-                    <input  type="text" name="modelo"  class="control" value="<%= locals.oldData && oldData.modelo != "" ? oldData.modelo : producto.modelo%>">
+                    <input  type="text" name="modelo" id="control" value="<%= locals.oldData && oldData.modelo != "" ? oldData.modelo : producto.modelo%>">
                 </div>
+                <ul class="errorModelo"></ul>
                 <% if (locals.errors && errors.modelo) { %>
                     <div class="texto-error-validacion">
                         <p><%= errors.modelo.msg %></p>
@@ -26,8 +27,10 @@
                 
                 <div class="precio top">
                     <label class="label" for="precio">Precio:</label>
-                    <input  type="number" name="precio" value="<%= locals.oldData && oldData.precio != "" ? oldData.precio : producto.precio_unitario%>">
+                    <input  type="number" name="precio" id="precio" value="<%= locals.oldData && oldData.precio != "" ? oldData.precio : producto.precio_unitario%>">
                 </div>
+                <ul class="errorPrecio"></ul>
+
                 <% if (locals.errors && errors.precio) { %>
                     <div class="texto-error-validacion">
                         <p><%= errors.precio.msg %></p>
@@ -50,6 +53,6 @@
 </main>
 
 <%- include('./partials/footer') %>
-
+<script src="/js/editproductos.js"></script>
 </body>
 </html>

@@ -115,7 +115,14 @@ form{
     width: 80%;
 }
 
-
+.errorModelo, .errorPrecio, .errorFoto{
+    text-align: center;
+    margin-left: 100px;
+}
+.errorEmail, .errorPassword{
+    text-align: center;
+    margin-top: 10px;
+}
 
 @media (min-width: 481px){
 

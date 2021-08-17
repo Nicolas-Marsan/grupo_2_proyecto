@@ -73,27 +73,17 @@ const usersController = {
          })
         .then(function(usuario){
             userInDB=usuario[0];
+            console.log(userInDB);
             
-            
-
-            db.Usuarios.create({
-                nombre: req.body.name,
-                apellido: req.body.last_name,
-                mail: req.body.email,
-                contrasenia:bcryptjs.hashSync(req.body.contrasenia, 10),
-                imagen:req.file.filename
-             });
-
-
-             res.redirect('/users/login')
-           /* let bodyEntero = {
-                ...req.body,
-                password: bcryptjs.hashSync(req.body.password, 10), //* hashear contraseña/
-                Image: req.file.filename, //* pedir el nombre que le dimos a la imagen /
+            if(userInDB){
+                return res.render('register', {oldData: req.body,
+                    errors:{
+                        email: {
+                            msg: 'Este mail ya se encuentra en uso',
+                        }
+                    }
+                })
             }
-
-            User.create(bodyEntero);
-        return res.redirect('/users/login')*/
         })
 
         const resultadoValidaciones = validationResult(req);
@@ -103,22 +93,27 @@ const usersController = {
                 errors: resultadoValidaciones.mapped(),
                 oldData: req.body,
             })
-        }
+        } else {
+            let imagen;
 
-        /*if (userInDB) {
-        return res.render('register', {
-        oldData: req.body
-       })
-    } */   
-       /*let bodyEntero = {
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password, 10), //* hashear contraseña/
-            Image: req.file.filename, //* pedir el nombre que le dimos a la imagen /
+        if(req.file){
+            imagen = req.file.filename
+        } else {
+            imagen = null;
         }
 
 
-       User.create(bodyEntero);
-        return res.redirect('/users/login')*/
+        db.Usuarios.create({
+            nombre: req.body.name,
+            apellido: req.body.last_name,
+            mail: req.body.email,
+            contrasenia:bcryptjs.hashSync(req.body.contrasenia, 10),
+            imagen:imagen
+            });
+
+
+            res.redirect('/users/login')
+        }
     },
     
     login: function(req , res){
@@ -164,10 +159,6 @@ const usersController = {
             } 
         }
         })
-
-        /* Esto es para cuando tengamos que hacer validaciones */
-
-        
     },
 
     profile: function(req, res){
