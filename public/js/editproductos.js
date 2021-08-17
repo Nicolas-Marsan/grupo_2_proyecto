@@ -56,7 +56,6 @@ window.onload = function() {
 
 
 
-        console.log(errores);
 
         errorModelo.innerHTML = '';
         errorPrecio.innerHTML = '';
