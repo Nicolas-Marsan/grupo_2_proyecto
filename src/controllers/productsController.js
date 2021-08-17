@@ -203,16 +203,8 @@ const productsController = {
                 
                 res.render('sinStock');
             }
-<<<<<<< HEAD
 
         })
-
-    
-
-        
-=======
-        })       
->>>>>>> b25dfdf27e36808558d645dfd50b966045f73ed6
    },
    sacarCarrito:(req, res) =>{
         
