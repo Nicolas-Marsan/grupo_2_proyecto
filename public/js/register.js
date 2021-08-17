@@ -14,6 +14,7 @@ window.onload = function(){
         let errorFoto = document.querySelector('.errorFoto');
         let erroresUL = document.querySelector('.errores');
         
+        let terminos = document.querySelector('.terminos-condiciones');
         let nombre = document.querySelector('#name');
         let apellido = document.querySelector('#last_name');
         let correo = document.querySelector('#email');
@@ -22,6 +23,7 @@ window.onload = function(){
        
         let donde=foto.value.indexOf('.')+1;
         
+        console.log(terminos);
 
         if(foto.value != ''){
             let cont2=0;
@@ -96,7 +98,7 @@ window.onload = function(){
             errores.push('La contraseña debe tener minimo 8 caracteres')
         }
 
-        
+        if(correo.value != ''){
         fetch('http://localhost:3000/users/all?mail=' + correo.value)
 			.then ( res => res.json())
 			.then ( data => {
@@ -106,7 +108,7 @@ window.onload = function(){
                 	
 			})
 			.catch (err => console.log(err));
-        
+        }
         let n=nombre.value;
         
         if(n.length <3){
