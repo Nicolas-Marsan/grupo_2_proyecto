@@ -20,19 +20,12 @@ const lastId = () =>{
 
 const productsController = {
     index: function(req, res){
-        //let newModels = products.filter((product)=>{return product.category == 'newmodel'}); // productos nuevos
-        //let favoriteProducts = products.filter((product)=>{return product.category == 'favorite'}); // productos favoritos
-        /* res.render('products', {products}); */
         db.Producto.findAll()
         .then(products =>{
             res.render('products', {products})
         })
     },
     productDetail: function(req , res){
-        /* let products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'),{encoding:'utf-8'}));
-        idURL = req.params.id;
-        let productoSeleccionado = products.filter((product)=>{ return product.id == idURL});
-        res.render('productDetail', {productoSeleccionado}); */
         db.Producto.findByPk(req.params.id)
         .then(productoSeleccionado =>{
             res.render('productDetail', {productoSeleccionado})
@@ -40,8 +33,7 @@ const productsController = {
     },
 
     productCart: function(req , res){
-        /* let htmlPath = path.join(__dirname,'../views/productCart.html' );
-        res.sendFile(htmlPath); */
+
         res.render('productCart');
     },
 
@@ -54,12 +46,12 @@ const productsController = {
         let procesadorRquest = db.Procesador.findAll();
         let ramRquest = db.Ram.findAll();
         let sisOpRquest = db.Sistema_Operativo.findAll();
-        /* db.Memoria.findAll().then(memoria=>{res.send(memoria)}) */
+
         
         Promise.all([marcasRquest, categoriasRquest, colorRquest, memoriaRquest, pantallaRquest, procesadorRquest, ramRquest, sisOpRquest])
         .then(function([marcas, categorias, color, memoria, pantalla, procesador, ram, sistemaOperativo]){
             res.render('crearProducto', {marcas, categorias, color, memoria, pantalla, procesador, ram, sistemaOperativo})
-            /* res.send([marcas, categorias]) */
+
         })
 
     },
@@ -130,7 +122,7 @@ const productsController = {
         .then(function([producto, marcas, categorias, color, memoria, pantalla, procesador, ram, sistemaOperativo]){
             res.render('productEdit', {producto, marcas, categorias, color, memoria, pantalla, procesador, ram, sistemaOperativo})}).catch((e)=>res.send(e))
 
-        /*  .then(producto => { res.render('productEdit', {producto}) /* res.send(producto )  })  */
+
         
     },
     update: async (req, res) =>{
@@ -146,7 +138,6 @@ const productsController = {
             let procesadorRquest = await db.Procesador.findAll();
             let ramRquest = await db.Ram.findAll();
             let sisOpRquest = await db.Sistema_Operativo.findAll();
-            /* db.Memoria.findAll().then(memoria=>{res.send(memoria)}) */
 
             const resultadoValidaciones = validationResult(req);
             console.log(req.file);
@@ -208,8 +199,7 @@ const productsController = {
                 
                 res.render('sinStock');
             }
-            //carrito.push(productoSeleccionado);
-          // res.redirect('/products');
+
         })
 
     
@@ -237,7 +227,7 @@ const productsController = {
      
      .then(function(productos){
         
-        //return res.send(productos[0].detalle.modelo);
+
         res.render('productCart',{productos});
     })
     
@@ -264,8 +254,6 @@ comprar:(req, res) =>{
                     estado: {[db.Sequelize.Op.eq] : 'abierta' }
                 }
             })
-            //console.log(productos[i].detalle.stock)
-            //console.log(productos[i].cantidad)
             db.Producto.update({
                 stock:(productos[i].detalle.stock - productos[i].cantidad)
             }, {

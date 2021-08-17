@@ -22,7 +22,7 @@ const usersController = {
                 }
             })
          .then(function(usuarios){
-            //res.send(peliculas);
+            
            return res.status(200).json(usuarios);
          })
 	},
@@ -35,7 +35,7 @@ const usersController = {
     actualiza: function(req, res) {
         
 
-            //return res.send(req.body);
+           
             db.Usuarios.update({
                 nombre: req.body.name,
                 apellido: req.body.last_name,
@@ -124,47 +124,46 @@ const usersController = {
     processLogin: function(req , res) {
         
         let userToLogin=0;
+        
         db.Usuarios.findAll({
             where: {
                mail: {[db.Sequelize.Op.eq] : req.body.email}
             }
          })
         .then(function(usuario){
-            userToLogin=usuario[0];
-
             
-           if(userToLogin) {
+            userToLogin=usuario[0];
+            
+            if(userToLogin) {
             let passIsOk = bcryptjs.compareSync(req.body.contrasenia, userToLogin.contrasenia);
             
             
             if(passIsOk) {
-                //delete userToLogin.password;
                 req.session.userLogged = userToLogin; 
-                //console.log("es esto" + res.locals);
+               
                 if(req.body.rememberUser) {
                     res.cookie('userEmail', req.body.email, { maxAge: (1000 * 69) * 2});
                 }
-                //console.log(userToLogin.id);
+                
                 
 
                 return res.redirect('profile');
-            }else{
+            } else {
                 return res.render('login', {
                     errors: {
                         email: {
                             msg: 'Las credenciales son inválidas.'
+                            }
                         }
-                    }
-                })
-            } 
-        }
+                    })
+                } 
+            }
         })
     },
 
     profile: function(req, res){
         console.log(req.cookies.userEmail);
 
-        //res.send("estas ahi logged?" + req.locals);
         res.render('profile', {
             user: req.session.userLogged /* en la vista profile va a conocer la variable user */
         });
