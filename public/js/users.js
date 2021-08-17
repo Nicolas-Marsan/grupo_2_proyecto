@@ -3,7 +3,7 @@ window.onload = function () {
     console.log(form);
     form.addEventListener('submit', function (e) {
         e.preventDefault();
-
+        console.log(e);
         //acumulador de errores
         let errores = []
         //datos
@@ -38,9 +38,9 @@ window.onload = function () {
 
         errorEmail.innerHTML = '';
         errorPassword.innerHTML = '';
-
+        console.log(errores)
         if (errores.length > 0) {
-            e.preventDefault();
+            /* e.preventDefault(); */
             errorEmail.innerHTML += '';
             errorPassword.innerHTML += '';
 
@@ -55,7 +55,10 @@ window.onload = function () {
                 errorPassword.innerHTML += `<p>${errores[i]}</p>`
             }
             }
+        } else {
+            form.submit()
         }
+        
 
 
 

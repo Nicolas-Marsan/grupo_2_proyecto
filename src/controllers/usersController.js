@@ -73,19 +73,17 @@ const usersController = {
          })
         .then(function(usuario){
             userInDB=usuario[0];
+            console.log(userInDB);
             
-            
-
-            db.Usuarios.create({
-                nombre: req.body.name,
-                apellido: req.body.last_name,
-                mail: req.body.email,
-                contrasenia:bcryptjs.hashSync(req.body.contrasenia, 10),
-                imagen:req.file.filename
-             });
-
-
-             res.redirect('/users/login')
+            if(userInDB){
+                return res.render('register', {oldData: req.body,
+                    errors:{
+                        email: {
+                            msg: 'Este mail ya se encuentra en uso',
+                        }
+                    }
+                })
+            }
         })
 
         const resultadoValidaciones = validationResult(req);
@@ -95,6 +93,26 @@ const usersController = {
                 errors: resultadoValidaciones.mapped(),
                 oldData: req.body,
             })
+        } else {
+            let imagen;
+
+        if(req.file){
+            imagen = req.file.filename
+        } else {
+            imagen = null;
+        }
+
+
+        db.Usuarios.create({
+            nombre: req.body.name,
+            apellido: req.body.last_name,
+            mail: req.body.email,
+            contrasenia:bcryptjs.hashSync(req.body.contrasenia, 10),
+            imagen:imagen
+            });
+
+
+            res.redirect('/users/login')
         }
     },
     
@@ -106,16 +124,17 @@ const usersController = {
     processLogin: function(req , res) {
         
         let userToLogin=0;
+        
         db.Usuarios.findAll({
             where: {
                mail: {[db.Sequelize.Op.eq] : req.body.email}
             }
          })
         .then(function(usuario){
-            userToLogin=usuario[0];
-
             
-           if(userToLogin) {
+            userToLogin=usuario[0];
+            
+            if(userToLogin) {
             let passIsOk = bcryptjs.compareSync(req.body.contrasenia, userToLogin.contrasenia);
             
             
@@ -129,31 +148,17 @@ const usersController = {
                 
 
                 return res.redirect('profile');
-            }else{
+            } else {
                 return res.render('login', {
                     errors: {
                         email: {
                             msg: 'Las credenciales son inválidas.'
+                            }
                         }
-                    }
-                })
-            } 
-        }
+                    })
+                } 
+            }
         })
-
-        /* Validacion de que no me registre una cuenta con un mail ya existente en la db */
-        
-        let userInDb = db.Usuarios.findByField('mail', req.body.email);
-
-        if(userInDb){
-            return res.render('register', {
-                errors: {
-                    email: {
-                        msg: 'Este mail ya se encuentra en uso'
-                    }
-                },
-            })
-        }
     },
 
     profile: function(req, res){

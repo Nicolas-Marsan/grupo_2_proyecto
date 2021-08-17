@@ -1,4 +1,4 @@
-window.onload = function(){
+/* window.onload = function(){
     
     let form = document.querySelector('form');
     //let errorM =[];
@@ -186,4 +186,4 @@ window.onload = function(){
 
     });
 
-}
+} */
