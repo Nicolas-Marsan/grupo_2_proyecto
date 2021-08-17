@@ -86,14 +86,6 @@ const usersController = {
 
 
              res.redirect('/users/login')
-           /* let bodyEntero = {
-                ...req.body,
-                password: bcryptjs.hashSync(req.body.password, 10), //* hashear contraseña/
-                Image: req.file.filename, //* pedir el nombre que le dimos a la imagen /
-            }
-
-            User.create(bodyEntero);
-        return res.redirect('/users/login')*/
         })
 
         const resultadoValidaciones = validationResult(req);
@@ -104,21 +96,6 @@ const usersController = {
                 oldData: req.body,
             })
         }
-
-        /*if (userInDB) {
-        return res.render('register', {
-        oldData: req.body
-       })
-    } */   
-       /*let bodyEntero = {
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password, 10), //* hashear contraseña/
-            Image: req.file.filename, //* pedir el nombre que le dimos a la imagen /
-        }
-
-
-       User.create(bodyEntero);
-        return res.redirect('/users/login')*/
     },
     
     login: function(req , res){
@@ -165,9 +142,19 @@ const usersController = {
         }
         })
 
-        /* Esto es para cuando tengamos que hacer validaciones */
-
+        /* Validacion de que no me registre una cuenta con un mail ya existente en la db */
         
+        let userInDb = db.Usuarios.findByField('mail', req.body.email);
+
+        if(userInDb){
+            return res.render('register', {
+                errors: {
+                    email: {
+                        msg: 'Este mail ya se encuentra en uso'
+                    }
+                },
+            })
+        }
     },
 
     profile: function(req, res){
