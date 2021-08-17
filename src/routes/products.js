@@ -39,7 +39,7 @@ router.get('/verCarrito',sinUsuarioMiddleware,productsController.verCarrito);
 router.post('/crearProducto', fileUpload.single('imagen'), validateCreateProductMiddlewares, productsController.guardarProduct);
 
 
-router.get('/:id/edit', productDetailMiddleware, productsController.edit);
+router.get('/:id/edit', productsController.edit);
 router.put('/:id/edit', validateEditMiddlewares, productsController.update);
 
 router.delete('/:id', productsController.destroy);
