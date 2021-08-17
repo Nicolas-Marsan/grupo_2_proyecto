@@ -13,7 +13,7 @@ let storage = multer.diskStorage({
 },
 filename: (req,file,callback) =>{
     let imageName = file.fieldname +  Date.now() + path.extname(file.originalname);
- callback(null, imageName);
+callback(null, imageName);
 }
 });
 

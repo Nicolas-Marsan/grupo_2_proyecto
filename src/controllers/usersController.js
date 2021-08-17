@@ -73,19 +73,17 @@ const usersController = {
          })
         .then(function(usuario){
             userInDB=usuario[0];
+            console.log(userInDB);
             
-            
-
-            db.Usuarios.create({
-                nombre: req.body.name,
-                apellido: req.body.last_name,
-                mail: req.body.email,
-                contrasenia:bcryptjs.hashSync(req.body.contrasenia, 10),
-                imagen:req.file.filename
-             });
-
-
-             res.redirect('/users/login')
+            if(userInDB){
+                return res.render('register', {oldData: req.body,
+                    errors:{
+                        email: {
+                            msg: 'Este mail ya se encuentra en uso',
+                        }
+                    }
+                })
+            }
         })
 
         const resultadoValidaciones = validationResult(req);
@@ -95,6 +93,26 @@ const usersController = {
                 errors: resultadoValidaciones.mapped(),
                 oldData: req.body,
             })
+        } else {
+            let imagen;
+
+        if(req.file){
+            imagen = req.file.filename
+        } else {
+            imagen = null;
+        }
+
+
+        db.Usuarios.create({
+            nombre: req.body.name,
+            apellido: req.body.last_name,
+            mail: req.body.email,
+            contrasenia:bcryptjs.hashSync(req.body.contrasenia, 10),
+            imagen:imagen
+            });
+
+
+            res.redirect('/users/login')
         }
     },
     
@@ -141,20 +159,6 @@ const usersController = {
             } 
         }
         })
-
-        /* Validacion de que no me registre una cuenta con un mail ya existente en la db */
-        
-        let userInDb = db.Usuarios.findByField('mail', req.body.email);
-
-        if(userInDb){
-            return res.render('register', {
-                errors: {
-                    email: {
-                        msg: 'Este mail ya se encuentra en uso'
-                    }
-                },
-            })
-        }
     },
 
     profile: function(req, res){
