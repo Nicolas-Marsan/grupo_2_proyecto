@@ -124,16 +124,17 @@ const usersController = {
     processLogin: function(req , res) {
         
         let userToLogin=0;
+        
         db.Usuarios.findAll({
             where: {
                mail: {[db.Sequelize.Op.eq] : req.body.email}
             }
          })
         .then(function(usuario){
-            userToLogin=usuario[0];
-
             
-           if(userToLogin) {
+            userToLogin=usuario[0];
+            
+            if(userToLogin) {
             let passIsOk = bcryptjs.compareSync(req.body.contrasenia, userToLogin.contrasenia);
             
             
@@ -148,16 +149,16 @@ const usersController = {
                 
 
                 return res.redirect('profile');
-            }else{
+            } else {
                 return res.render('login', {
                     errors: {
                         email: {
                             msg: 'Las credenciales son inválidas.'
+                            }
                         }
-                    }
-                })
-            } 
-        }
+                    })
+                } 
+            }
         })
     },
 

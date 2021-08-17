@@ -6,9 +6,7 @@ let products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products
 
 const homeController = {
     home: function(req , res){
-        /* let newModels = products.filter((product)=>{return product.category == 'newmodel'}); // productos nuevos
-        let favoriteProducts = products.filter((product)=>{return product.category == 'favorite'}); // productos favoritos
-        res.render('index', {favoriteProducts,newModels}); */
+
         let productoNuevoRequest = db.Producto.findAll({where: {categoria_id: 1}});
         let productoUsadoRequest = db.Producto.findAll({where: {categoria_id: 2}});
 

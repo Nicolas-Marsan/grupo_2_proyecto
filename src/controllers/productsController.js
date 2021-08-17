@@ -146,7 +146,6 @@ const productsController = {
             let procesadorRquest = await db.Procesador.findAll();
             let ramRquest = await db.Ram.findAll();
             let sisOpRquest = await db.Sistema_Operativo.findAll();
-            /* db.Memoria.findAll().then(memoria=>{res.send(memoria)}) */
 
             const resultadoValidaciones = validationResult(req);
             console.log(req.file);
@@ -208,13 +207,7 @@ const productsController = {
                 
                 res.render('sinStock');
             }
-            //carrito.push(productoSeleccionado);
-          // res.redirect('/products');
-        })
-
-    
-
-        
+        })       
    },
    sacarCarrito:(req, res) =>{
         
