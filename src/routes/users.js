@@ -27,6 +27,9 @@ const validations = require('../middlewares/validateRegisterMiddleware');
 /* probando conexion con db */
 router.get('/all', usersController.all);
 
+router.get('/users',usersController.users);
+
+router.get('/userId',usersController.userId);
 
 /* Formulario de registro */
 router.get('/register',registroMiddleware, usersController.register);
