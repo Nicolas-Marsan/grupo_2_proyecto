@@ -3,7 +3,6 @@ const router = express.Router();
 const path = require('path');
 const productsController = require ('../controllers/productsController.js');
 const multer = require('multer');
-const productDetailMiddleware = require ('../middlewares/productDetailMiddleware');
 const sinUsuarioMiddleware = require ('../middlewares/sinUsuarioMiddleware');
 const validateCreateProductMiddlewares = require ('../middlewares/validateCreateProductMiddlewares');
 const validateEditMiddlewares = require ('../middlewares/validateEditMiddlewares');
