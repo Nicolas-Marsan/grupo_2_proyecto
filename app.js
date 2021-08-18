@@ -30,11 +30,13 @@ app.use(methodOverride('_method'));
 const rutasProducts = require('./src/routes/products.js');
 const rutasUsers = require ('./src/routes/users.js');
 const rutasHome = require ('./src/routes/home.js');
+const rutasApi = require ('./src/routes/api.js');
 
 app.use('/', rutasHome);
 app.use('/products', rutasProducts);
 app.use('/users', rutasUsers);
-app.use('/', rutasProducts);
+app.use('/api', rutasApi);
+
 
 
 /* Servidor */
