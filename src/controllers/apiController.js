@@ -1,4 +1,5 @@
 const db = require('../database/models');
+const { Op } = require("sequelize");
 
 const apiController = {
     list: async(req , res) => {
@@ -86,6 +87,58 @@ const apiController = {
         }catch (err){
             console.log(err);
         };
+    },
+    users: (req,res) =>{
+        db.Usuarios.findAll()
+         .then(function(usuarios){
+             let nUsuarios=[];
+
+            for (let i=0;i<usuarios.length;i++){
+               nUsuarios.push( {   
+                    Id:usuarios[i].id,
+                    Nombre:usuarios[i].nombre,
+                    Mail:usuarios[i].mail,
+                    Perfil:"http://localhost:3000/users/profile"
+                })
+            }            
+           return res.status(200).json({
+                
+                count: usuarios.length,
+                users: nUsuarios
+
+           });
+         })
+
+    },
+
+    userId: (req,res) =>{
+        db.Usuarios.findAll( {
+            where:{
+                id: {[Op.eq]:  req.params.id }  
+                }           
+            })
+         .then(function(usuarios){
+             console.log(usuarios);
+             let nUsuarios=[];
+
+                    nUsuarios.push( {   
+                    Id:usuarios[0].id,
+                    Nombre:usuarios[0].nombre,
+                    Apellido:usuarios[0].apellido,
+                    Mail:usuarios[0].mail,
+                    Tyc:usuarios[0].tyc,
+                    Newletter:usuarios[0].newletter,
+                    Imagen:"/images/users/"+usuarios[0].imagen
+                })
+                       
+           return res.status(200).json({
+                
+                
+                usuario: nUsuarios
+
+           });
+         })
+
     }
 
 
