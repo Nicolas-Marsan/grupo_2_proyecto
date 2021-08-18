@@ -201,10 +201,6 @@ const productsController = {
             }
 
         })
-
-    
-
-        
    },
    sacarCarrito:(req, res) =>{
         
