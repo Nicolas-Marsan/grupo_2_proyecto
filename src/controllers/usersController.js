@@ -1,7 +1,3 @@
-const express = require('express');
-const fs = require('fs');
-const path = require('path');
-const User = require('../models/Users');
 const bcryptjs = require('bcryptjs'); //*hasheare contra/
 const db = require("../database/models");
 const { validationResult }= require('express-validator');

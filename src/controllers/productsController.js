@@ -51,7 +51,6 @@ const productsController = {
         Promise.all([marcasRquest, categoriasRquest, colorRquest, memoriaRquest, pantallaRquest, procesadorRquest, ramRquest, sisOpRquest])
         .then(function([marcas, categorias, color, memoria, pantalla, procesador, ram, sistemaOperativo]){
             res.render('crearProducto', {marcas, categorias, color, memoria, pantalla, procesador, ram, sistemaOperativo})
-
         })
 
     },
