@@ -17,16 +17,11 @@ const apiController = {
             return res.status(200).json({
                 status: 200,
                 count: productos.length,
-                // countByCategory: categorias.map(categoria => {
-                //     categoria.map(cate => {
-                //         productos.map(producto =>{
-                //             if (producto.id == cate.id){
-                //                 return {cate: cate.nombre}
-                //             }
-                //         })
-                //     })
-                // })
-                // ,
+                countByCategory: {
+                    nuevo: productos.filter(producto => producto.categoria_id == 1).length,
+                    usado: productos.filter(producto => producto.categoria_id == 2).length,
+                    favorito: productos.filter(producto => producto.categoria_id == 3).length,
+                },
                 data: productos.map(producto => {
                     return{
                         id: producto.id,
