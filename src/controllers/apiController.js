@@ -5,15 +5,7 @@ const apiController = {
     list: async(req , res) => {
         try{
             let productos = await db.Producto.findAll();
-            let categorias = await db.Categoria.findAll();
-            // let marcas = await db.Marca.findAll();
-            // let colores = await db.Color.findAll();
-            // let memorias = await db.Memoria.findAll();
-            // let pantallas = await db.Pantalla.findAll();
-            // let procesadores = await db.Procesador.findAll();
-            // let rams = await db.Ram.findAll();
-            // let sistemasOperativos = await db.Sistema_Operativo.findAll();
-            
+            let categorias = await db.Categoria.findAll();      
             return res.status(200).json({
                 status: 200,
                 count: productos.length,
@@ -28,15 +20,6 @@ const apiController = {
                         modelo: producto.modelo,
                         precio: producto.precio_unitario,
                         categoria: categorias.filter(categoria => categoria.id === producto.id)[0],
-                        // marca: marcas.filter(marca => marca.id === producto.id)[0],
-                        // sistema_operativo: sistemasOperativos.filter(sistemaOperativo => sistemaOperativo.id === producto.id)[0],
-                        // ram: rams.filter(ram => ram.id === producto.id)[0],
-                        // memoria: memorias.filter(memoria => memoria.id === producto.id)[0],
-                        // pantalla: pantallas.filter(pantalla => pantalla.id === producto.id)[0],
-                        // pantalla: pantallas.filter(pantalla => pantalla.id === producto.id)[0],
-                        // procesador: procesadores.filter(procesador => procesador.id === producto.id)[0],
-                        // color: colores.filter(color => color.id === producto.id)[0],
-                        // imagen: producto.imagen,
                         detalle_url: `http://localhost:3000/products/detail/${producto.id}`,
                     };
                 }),
