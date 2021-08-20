@@ -2,6 +2,9 @@ const bcryptjs = require('bcryptjs'); //*hasheare contra/
 const db = require("../database/models");
 const { validationResult }= require('express-validator');
 const { Op } = require("sequelize");
+const fs = require("fs");
+const path = require('path');
+
 
 const usersController = {
     register: function (req , res){
@@ -121,8 +124,6 @@ const usersController = {
          })
         .then(function(usuario){
             userInDB=usuario[0];
-            console.log(userInDB);
-            
             if(userInDB){
                 return res.render('register', {oldData: req.body,
                     errors:{
@@ -137,6 +138,7 @@ const usersController = {
         const resultadoValidaciones = validationResult(req);
 
         if (resultadoValidaciones.errors.length > 0) {
+            fs.unlinkSync(path.join(__dirname, `../../public/images/users/${req.file.filename}`))
             return res.render('register.ejs', {
                 errors: resultadoValidaciones.mapped(),
                 oldData: req.body,
