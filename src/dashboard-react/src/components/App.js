@@ -1,4 +1,5 @@
 import '../App.css';
+import ContentRow from './ContentRow';
 import Footer from './Footer';
 import Header from './Header';
 function App() {
@@ -6,6 +7,8 @@ function App() {
     <>
     <Header/>
 
+    <ContentRow/>
+    
     <Footer/>
     </>
   );

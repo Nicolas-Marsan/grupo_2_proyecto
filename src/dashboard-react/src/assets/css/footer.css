@@ -5,7 +5,10 @@
     font-family: 'Raleway', sans-serif;
 
 }
-
+.dashboard {
+    margin-top: 110px;
+    display: flex;
+}
 .footer{
     background-color: #C3CA02;
     text-align: center;
