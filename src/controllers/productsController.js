@@ -70,7 +70,7 @@ const productsController = {
             const resultadoValidaciones = validationResult(req);
 
             if (resultadoValidaciones.errors.length > 0) {
-                console.log(req.body);
+                fs.unlinkSync(path.join(__dirname, `../../public/images/products/${req.file.filename}`));
                 console.log(resultadoValidaciones.mapped());
                 return res.render('crearProducto.ejs', {
                     marcas: marcasRquest, categorias: categoriasRquest, color: colorRquest, memoria: memoriaRquest, pantalla: pantallaRquest, procesador: procesadorRquest, ram: ramRquest, sistemaOperativo: sisOpRquest, errors: resultadoValidaciones.mapped(),
