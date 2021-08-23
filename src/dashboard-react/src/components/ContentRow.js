@@ -5,28 +5,10 @@ import Card from './Card';
 
 
 
-let TotalProducto = {
-    title: 'Motorola',
-    color: 'success',
-    cuantity: '10',
-    icon: 'fa-clipboard-list'
-}
-let TotalUsuario = {
-    title: 'Iphone',
-    color: 'success',
-    cuantity: '10',
-    icon: 'fa-clipboard-list'
-}
-let TotalCategoria = {
-    title: 'Samsung',
-    color: 'success',
-    cuantity: '10',
-    icon: 'fa-clipboard-list'
-}
 
-let tarjeta = [TotalProducto, TotalUsuario, TotalCategoria]
 function ContentRow(){
     const [productos, setProductos] = useState([]);
+    
 
     useEffect(() => {
         console.log('me estoy montando');
@@ -43,15 +25,25 @@ function ContentRow(){
         console.log('se actualizó el componente');
     }, [productos]);
 
-    useEffect(()=> ()=> console.log('Se desmontó el componente'),[]);
-
-    return (
+    useEffect(()=> console.log('Se desmontó el componente'),[]);
     
-        
+    
+
+    let TotalProductos = {
+        title: 'Productos',
+        cuantity: productos.count
+    }
+    let TotalUsuarios = {
+        title: 'Iphone',
+        cuantity: '10'
+    }
+    let tarjeta = [TotalProductos, TotalUsuarios]
+
+    return (  
         <div className="dashboard">
-        {tarjeta.map((tarjetita, i)=>{
-            return <Card {...tarjetita} key={i}/>
-        })}
+            {tarjeta.map((tarjetita, i)=>{
+                return <Card {...tarjetita} key={i} />
+            })}
         </div>
     )
 }
