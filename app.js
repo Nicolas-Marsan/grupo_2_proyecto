@@ -17,6 +17,11 @@ app.use(session({
 }));
 app.use(usuarioLogueadoMiddleware);
 app.use(variableMiddleware);
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 
 /* Configuración de ejs */
 app.set('view engine', 'ejs');

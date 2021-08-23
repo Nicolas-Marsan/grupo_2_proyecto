@@ -2,6 +2,33 @@ window.onload = function(){
     
     let form = document.querySelector('form');
     //let errorM =[];
+
+    let pass = document.querySelector('.fa-eye-slash');
+    let passw = document.querySelector('#pass');
+    pass.addEventListener('click',function(){
+
+        //alert(pass.classList);
+        if(pass.classList == "fas fa-eye-slash"){
+            pass.classList.remove("fa-eye-slash");
+            pass.classList.add("fa-eye");
+            passw.setAttribute('type', 'text');
+        }else{
+            pass.classList.remove("fa-eye")
+            pass.classList.add("fa-eye-slash");
+            passw.setAttribute('type', 'password');
+
+        }
+        //pass.classList.toggle("fa-eye");
+        //pass.classList.remove("fa-eye-slash");
+        //pass.classList.add("fa-eye")
+    })
+
+
+
+
+
+
+
     
     form.addEventListener('submit',function(e){
         //e.preventDefault();
