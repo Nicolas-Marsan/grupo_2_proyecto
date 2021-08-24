@@ -15,7 +15,6 @@ function ContentRow(){
         fetch('http://localhost:3000/api/productos')
             .then ( res => res.json())
             .then ( data => {
-                console.log(data);
                 setProductos(data)
             })
             .catch (err => console.log(err));
@@ -34,6 +33,7 @@ function ContentRow(){
             .then ( respo => respo.json())
             .then ( users => {
                 setUsuarios(users)
+                
             })
             .catch (err => console.log(err));
     }, []);
@@ -52,9 +52,10 @@ function ContentRow(){
         title: 'Cantidad de usuarios',
         cuantity: usuarios.count
     }
-    /* let TotalCategorias = {
+
+   /*  let TotalCategorias = {
         title: 'Cantidad de categorias',
-        cuantity: productos.countByCategory.length
+        cuantity: Object.keys(productos.countByCategory).length
     } */
     let tarjeta = [TotalProductos, TotalUsuarios/* , TotalCategorias */]
 
