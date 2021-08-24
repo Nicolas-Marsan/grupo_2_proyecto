@@ -13,7 +13,8 @@ function Listado (){
             })
             .catch (err => console.log(err));
     }, []);
-    console.log(totalProductos.data);
+    console.log('-----------------');
+    console.log(totalProductos);
     /* let TotalDeProductos = [
         Modelo: ,
         Precio:

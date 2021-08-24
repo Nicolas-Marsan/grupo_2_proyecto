@@ -5,11 +5,11 @@ const apiController = {
     list: async(req , res) => {
         try{
             let productos = await db.Producto.findAll();
-            let categorias = await db.Categoria.findAll();      
+            let categorias = await db.Categoria.findAll();
             return res.status(200).json({
                 status: 200,
                 count: productos.length,
-                countByCategory: categorias = [
+                countByCategory: categoriasArray = [
                     { nombre: "Nuevo",
                         cantidad: productos.filter(producto => producto.categoria_id == 1).length},
                     { nombre: "Usado",
