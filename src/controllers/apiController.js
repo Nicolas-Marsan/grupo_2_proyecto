@@ -19,7 +19,7 @@ const apiController = {
                         id: producto.id,
                         modelo: producto.modelo,
                         precio: producto.precio_unitario,
-                        categoria: categorias.filter(categoria => categoria.id === producto.id)[0],
+                        categoria: categorias.filter(categoria => categoria.id == producto.categoria_id)[0],
                         detalle_url: `http://localhost:3000/products/detail/${producto.id}`,
                     };
                 }),
