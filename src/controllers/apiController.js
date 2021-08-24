@@ -9,11 +9,14 @@ const apiController = {
             return res.status(200).json({
                 status: 200,
                 count: productos.length,
-                countByCategory: {
-                    nuevo: productos.filter(producto => producto.categoria_id == 1).length,
-                    usado: productos.filter(producto => producto.categoria_id == 2).length,
-                    favorito: productos.filter(producto => producto.categoria_id == 3).length,
-                },
+                countByCategory: categorias = [
+                    { nombre: "Nuevo",
+                        cantidad: productos.filter(producto => producto.categoria_id == 1).length},
+                    { nombre: "Usado",
+                    cantidad: productos.filter(producto => producto.categoria_id == 2).length},
+                    { nombre: "Favorito",
+                    cantidad: productos.filter(producto => producto.categoria_id == 3).length},
+                ],
                 data: productos.map(producto => {
                     return{
                         id: producto.id,
@@ -65,6 +68,19 @@ const apiController = {
         }catch (err){
             console.log(err);
         };
+    },
+    lastProduct: async(req, res) => {
+        let lastProduct = await db.Producto.findOne({
+            order: [
+                ['id', 'DESC'],
+            ]
+        })
+        res.status(200).json({
+            status: 200,
+            data: {
+                ...lastProduct.dataValues
+            }
+        })
     },
     users: (req,res) =>{
         db.Usuarios.findAll()
