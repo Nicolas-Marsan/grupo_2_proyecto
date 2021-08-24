@@ -1,7 +1,40 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
+import CardHijoCategorias from './CardHijoCategorias';
 
-function CardCategories(props) {
+function CardCategories() {
+  const [categorias, setCategorias] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:3000/api/productos')
+            .then( res => res.json())
+            .then ( data => {
+                console.log(data);
+                setCategorias(data.data);
+            })
+            .catch( err => console.log(err));
+    }, []);
+
+    useEffect(() => {}, [categorias]);
+
+
+    /* let categoriaProducto = {
+      categoria: categorias.countByCategory,
+    }
+
+    let tarjeta = [categoriaProducto] */
+
+    let nuevos = {
+      categoria: 'nuevo',
+      /* cantidad: categorias.countByCategory.nuevo */
+    }
+
+    let usados = {
+      categoria: 'usado',
+      /* cantidad: categorias.countByCategory.usado */
+    }
+
+    let tarjetas = [nuevos, usados]
+
     return(
         <div className="col-lg-6 mb-4">
       <div className="card shadow mb-4">
@@ -10,31 +43,12 @@ function CardCategories(props) {
             Categorias y productos en base de datos:
           </h5>
         </div>
-        <div className="card-body">
-          <div className="row">
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">{props.categoria}</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {tarjetas.map((tarjeta, i) => (
+          <CardHijoCategorias {...tarjeta} key={i}/>
+        ))}
       </div>
     </div>
     )
 }
 
-CardCategories.defaultProps = {
-    categoria: 'No category',
-    cantidadProductos: 'No cuantity',
-}
-
-CardCategories.propTypes = {
-    atritutes: PropTypes.shape({
-        categoria: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number
-        ]).isRequired,
-    })
-}
 export default CardCategories;

@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Header from './Header';
 import LastUserInDb from './LastUserInDb';
 import CategoriesInDb from './CategoriesInDb';
+import CardHijoCategorias from './CardHijoCategorias';
 
 import Listado from './Listado';
 function App() {

@@ -18,17 +18,27 @@ function CategoriesInDb(){
     useEffect(() => {}, [categorias]);
 
 
-    let categoriaProducto = {
+    /* let categoriaProducto = {
       categoria: categorias.countByCategory,
     }
 
-    let tarjeta = [categoriaProducto]
+    let tarjeta = [categoriaProducto] */
+
+    let nuevos = {
+      categoria: 'nuevo',
+      cantidad: 4
+    }
+
+    let usados = {
+      categoria: 'usado',
+      cantidad: 7
+    }
+
+    let tarjetas = [nuevos, usados]
 
     return (
       <div>
-          {tarjeta.map((categoria, i)=>{
-            return <CardCategories{...categoria} kei={i} />
-          })}
+          <CardCategories/>
       </div>
     );
 }
