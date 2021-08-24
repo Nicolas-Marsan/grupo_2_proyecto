@@ -2,7 +2,7 @@ import '../App.css';
 import ContentRow from './ContentRow';
 import Footer from './Footer';
 import Header from './Header';
-import LastUserInDb from './LastUserInDb';
+import LastProductInDb from './LastProductInDb';
 import CategoriesInDb from './CategoriesInDb';
 import CardHijoCategorias from './CardHijoCategorias';
 
@@ -14,7 +14,7 @@ function App() {
 
     <ContentRow/>
 
-    <LastUserInDb/>
+    <LastProductInDb/>
     
     <CategoriesInDb/>
 

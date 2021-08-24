@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 
-function LastUserInDb(){
+function LastProductInDb(){
 
     const [producto, setProducto] = useState([]);
 
@@ -38,4 +38,4 @@ function LastUserInDb(){
     )
 }
 
-export default LastUserInDb;
+export default LastProductInDb;

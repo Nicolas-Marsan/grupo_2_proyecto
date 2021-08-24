@@ -17,25 +17,6 @@ function CategoriesInDb(){
 
     useEffect(() => {}, [categorias]);
 
-
-    /* let categoriaProducto = {
-      categoria: categorias.countByCategory,
-    }
-
-    let tarjeta = [categoriaProducto] */
-
-    let nuevos = {
-      categoria: 'nuevo',
-      cantidad: 4
-    }
-
-    let usados = {
-      categoria: 'usado',
-      cantidad: 7
-    }
-
-    let tarjetas = [nuevos, usados]
-
     return (
       <div>
           <CardCategories/>
