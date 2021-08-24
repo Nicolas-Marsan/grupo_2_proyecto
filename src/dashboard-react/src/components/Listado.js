@@ -1,22 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import PropsListado from './PropsListado';
 
-let TotalDeProductos = [
-    {
-        Modelo: 'Samsung',
-        Precio: '3500',
-        Categoria: 'Nuevo',
-        Link: 'http://localhost:3000/products/detail/4'
-    },
-    {
-        Modelo: 'Samsung',
-        Precio: '3500',
-        Categoria: 'Nuevo',
-        Link: 'http://localhost:3000/products/detail/4'
-    },
-
-    
-]
 
 
 function Listado (){
