@@ -15,11 +15,21 @@
                     <div class="div-correo" >
                         <label class="label" for="email">Correo electrónico</label>
                         <input type="text" name="email" id="email" class="control">
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="texto-error-validacion">
+                            <%= errors.email.msg %> 
+                            </div>
+                        <% } %>
                     </div>
                     <ul class="errorEmail"></ul>
                     <div class="div-pass">
                         <label class="label" for="pass">Contraseña</label>
                         <input type="password" name="contrasenia" id="contrasenia" class="control"><i class="fas fa-eye-slash"></i>
+                        <% if (locals.errors && errors.contrasenia) { %>
+                            <div class="texto-error-validacion">
+                            <%= errors.contrasenia.msg %> 
+                            </div>
+                        <% } %>
                     </div>
                     <ul class="errorPassword"></ul>
                     <div class="div-recordar-usuario">
@@ -31,11 +41,7 @@
                         <label for=""> <a href="#">¿Olvidaste tu contraseña?</a></label>
 
                     </div>
-                    <% if (locals.errors && errors.email) { %>
-                        <div class="texto-error-validacion">
-                        <%= errors.email.msg %> 
-                        </div>
-                    <% } %>
+                    
                 </section>
 
                 <section class="buttons">

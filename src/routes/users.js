@@ -4,6 +4,7 @@ const path = require('path');
 const usersController = require ('../controllers/usersController.js');
 const multer = require('multer');
 const { body } = require('express-validator');
+const validateLoginMiddlewares = require ('../middlewares/validateLoginMiddleware');
 
 let storage = multer.diskStorage({    
 	destination: (req,file,callback) => {
@@ -44,7 +45,7 @@ router.get('/editarUsuario', usersController.editarUsuario);
 
 
 /* Procesar el login */
-router.post('/login', usersController.processLogin);
+router.post('/login', validateLoginMiddlewares, usersController.processLogin);
 
 /* Perfil del usuario */
 router.get('/profile',sinUsuarioMiddleware, usersController.profile);
