@@ -52,18 +52,28 @@ function ContentRow(){
         title: 'Cantidad de usuarios',
         cuantity: usuarios.count
     }
-
-     /*  let TotalCategorias = {
+   
+      /* let TotalCategorias = {
         title: 'Cantidad de categorias',
-        cuantity: Object.keys(productos.countByCategory).length
+        cuantity: productos.countByCategory.length
     } */
-    let tarjeta = [TotalProductos, TotalUsuarios /* TotalCategorias */]
 
+    let TotalCategorias = {
+        title: 'Cantidad de categorias',
+        cuantity: productos.countByCategory ? productos.countByCategory.length : 'No cuantity'
+    }
+
+    let tarjeta = [TotalProductos, TotalUsuarios, TotalCategorias]
+    console.log(tarjeta);
     return (  
         <div className="dashboard">
-            {tarjeta.map((tarjetita, i)=>{
-                return <Card {...tarjetita} key={i} />
-            })}
+            {
+            tarjeta.map((tarjetita, i)=>{
+                return <Card
+                {...tarjetita} key={i} />
+            })
+            }
+            
         </div>
     )
 }
