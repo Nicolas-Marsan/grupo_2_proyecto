@@ -56,7 +56,7 @@ function ContentRow(){
         title: 'Cantidad de categorias',
         cuantity: productos.countByCategory.length
     } */
-    let tarjeta = [TotalProductos, TotalUsuarios/* , TotalCategorias */]
+    let tarjeta = [TotalProductos, TotalUsuarios/* , TotalCategorias */ ]
 
     return (  
         <div className="dashboard">
