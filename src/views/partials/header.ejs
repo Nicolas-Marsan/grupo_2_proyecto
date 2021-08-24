@@ -45,10 +45,12 @@
         <div class="iniciar_sesion2">
             <a href="/products"><p class="pys"> Productos</p></a>
         </div>
+
+        <% if(locals.isLogged) { %>
         <div class="crear_producto">
             <a href="/products/crearProducto"><p class="pys"> Crear producto  </p></a>
         </div>
-
+        <% }%>
         <% if(locals.isLogged) { %>
             <div class="cerrar_mobile">
                 <a href="/users/logout" style="text-decoration:none"><p >Cerrar sesion</p></a>
