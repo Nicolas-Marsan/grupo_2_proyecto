@@ -53,11 +53,11 @@ function ContentRow(){
         cuantity: usuarios.count
     }
 
-   /*  let TotalCategorias = {
+    /*   let TotalCategorias = {
         title: 'Cantidad de categorias',
         cuantity: Object.keys(productos.countByCategory).length
     } */
-    let tarjeta = [TotalProductos, TotalUsuarios/* , TotalCategorias */ ]
+    let tarjeta = [TotalProductos, TotalUsuarios/* , TotalCategorias */]
 
     return (  
         <div className="dashboard">

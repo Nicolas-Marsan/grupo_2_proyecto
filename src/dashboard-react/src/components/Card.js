@@ -26,7 +26,7 @@ function Card(props){
 
 Card.defaultProps = {
     title: 'No Title',
-    cuantity: 'No cuatity',
+    cuantity: 'No cuantity',
 }
 
 /* PROPTYPES */

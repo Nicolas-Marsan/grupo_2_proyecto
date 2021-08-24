@@ -15,14 +15,16 @@ function LastUserInDb(){
             .catch( err => console.log(err));
     }, []);
 
-    console.log(setProductos);
+    
     
     useEffect(() => {}, [productos]);
 
+    console.log(productos);
 
-   /*  let ultimoProductoCreado = Object.keys(productos.data).filter(producto => producto.id < 100)
 
-    console.log(ultimoProductoCreado); */
+    let ultimoProductoCreado = productos.filter(producto => producto.id < 100)
+
+    console.log(ultimoProductoCreado);
 
     return(
         <div className="col-lg-6 mb-4">
@@ -34,8 +36,8 @@ function LastUserInDb(){
                     <div className="text-center">
                         <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" /* style={{width: 40 +'rem'}} src={imagenFondo} */ alt=" completar con la imagen "/>
                     </div>
-                    <h1> </h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
+                    <h1>{productos.modelo} </h1>
+                    <p>{productos.modelo} Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
                     <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver detalle del producto</a>
                 </div>
             </div>

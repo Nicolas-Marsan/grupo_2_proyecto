@@ -3,6 +3,7 @@ import ContentRow from './ContentRow';
 import Footer from './Footer';
 import Header from './Header';
 import LastUserInDb from './LastUserInDb';
+import CategoriesInDb from './CategoriesInDb';
 
 import Listado from './Listado';
 function App() {
@@ -14,6 +15,8 @@ function App() {
 
     <LastUserInDb/>
     
+    <CategoriesInDb/>
+
     <Listado/>
     
     <Footer/>
