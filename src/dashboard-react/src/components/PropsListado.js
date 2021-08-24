@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom'
+
 
 function PropsListado(props){
     return (
@@ -8,7 +8,7 @@ function PropsListado(props){
                     <td>{props.modelo}</td>
                     <td>{props.precio}</td>
                     <td>{props.categoria}</td>
-                    <td> <Link to={props.link}>{props.link}</Link></td>
+                    <td><a href={props.link} target='_blank' rel='noreferrer'>{props.link}</a></td>
                 </tr>
             )
     }
