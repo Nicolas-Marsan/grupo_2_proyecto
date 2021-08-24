@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Header from './Header';
 import LastUserInDb from './LastUserInDb';
 
+import Listado from './Listado';
 function App() {
   return (
     <>
@@ -12,6 +13,8 @@ function App() {
     <ContentRow/>
 
     <LastUserInDb/>
+    
+    <Listado/>
     
     <Footer/>
     </>
