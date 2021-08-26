@@ -172,7 +172,12 @@ const usersController = {
     },
 
     processLogin: function(req , res) {
-        
+        const resultadoValidaciones = validationResult(req);
+
+        if (resultadoValidaciones.errors.length > 0){
+            return res.render('login', {errors: resultadoValidaciones.mapped(), old: req.body});
+        }
+        console.log(resultadoValidaciones.errors);
         let userToLogin=0;
         
         db.Usuarios.findAll({
