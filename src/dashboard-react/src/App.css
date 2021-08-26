@@ -5,3 +5,8 @@
   display: flex;
   flex-direction: column;
 }
+
+.paneles-juntos{
+  display: flex;
+  flex-wrap: wrap;
+}

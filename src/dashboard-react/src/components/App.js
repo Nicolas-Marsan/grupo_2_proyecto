@@ -2,9 +2,7 @@ import '../App.css';
 import ContentRow from './ContentRow';
 import Footer from './Footer';
 import Header from './Header';
-import LastProductInDb from './LastProductInDb';
-import CategoriesInDb from './CategoriesInDb';
-import CardHijoCategorias from './CardHijoCategorias';
+import Paneles from './Paneles';
 
 import Listado from './Listado';
 function App() {
@@ -14,9 +12,7 @@ function App() {
 
     <ContentRow/>
 
-    <LastProductInDb/>
-    
-    <CategoriesInDb/>
+    <Paneles/>
 
     <Listado/>
     
