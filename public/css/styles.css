@@ -16,6 +16,10 @@ azul noche #252850*/
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif; 
 }
+.iniciar_crear_sesion{
+    display: flex;
+    justify-content: flex-end;
+}
 body{
     
     min-width: 360px;
