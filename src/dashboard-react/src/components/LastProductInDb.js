@@ -31,11 +31,9 @@ function LastProductInDb(){
                     </div>
                     <h1 style={{color: 'black', textAlign: 'center'}}> {producto.modelo} </h1>
                     <h1 style={{color: 'black', textAlign: 'center'}}> $ {producto.precio_unitario} </h1>
-                <tr>
-                    <td>
-                        <a className="btn btn-danger" target='_blank' rel='noreferrer' href={producto.detalle_url}> Ver detalle del producto</a>
-                    </td>
-                </tr>     
+                <div className="boton-ver-detalle">
+                    <a className="btn btn-danger" target='_blank' rel='noreferrer' href={producto.detalle_url}> Ver detalle del producto</a>
+                </div>  
                 </div>
             </div>
         </div>

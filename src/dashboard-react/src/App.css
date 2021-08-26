@@ -10,3 +10,7 @@
   display: flex;
   justify-content: center;
 }
+
+.boton-ver-detalle{
+  text-align: center;
+}
