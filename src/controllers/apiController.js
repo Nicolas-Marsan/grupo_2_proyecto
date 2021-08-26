@@ -78,7 +78,8 @@ const apiController = {
         res.status(200).json({
             status: 200,
             data: {
-                ...lastProduct.dataValues
+                ...lastProduct.dataValues,
+                detalle_url: `http://localhost:3000/products/detail/${lastProduct.id}`, 
             }
         })
     },

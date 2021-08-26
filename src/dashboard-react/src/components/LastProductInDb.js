@@ -29,11 +29,11 @@ function LastProductInDb(){
                     <div className="text-center">
                         <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 150 +'px'}}  src={`http://localhost:3000/images/products/${producto.imagen} `} alt=" completar con la imagen "/>
                     </div>
-                    <h1 style={{color: 'black'}}> {producto.modelo} </h1>
-                    <h1 style={{color: 'black'}}> $ {producto.precio_unitario} </h1>
+                    <h1 style={{color: 'black', textAlign: 'center'}}> {producto.modelo} </h1>
+                    <h1 style={{color: 'black', textAlign: 'center'}}> $ {producto.precio_unitario} </h1>
                 <tr>
                     <td>
-                        <a className="btn btn-danger" target='_blank' rel='noreferrer' href={producto.imagen}> Ver detalle del producto</a>
+                        <a className="btn btn-danger" target='_blank' rel='noreferrer' href={producto.detalle_url}> Ver detalle del producto</a>
                     </td>
                 </tr>     
                 </div>
