@@ -256,7 +256,7 @@ comprar:(req, res) =>{
 
         }
 
-        res.redirect('/products');
+        res.render('comprar');
     })
   
     
