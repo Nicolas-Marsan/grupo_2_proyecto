@@ -61,7 +61,7 @@ window.onload = function(){
             } if(foto.value[donde] == 'p' || foto.value[donde] == 'n' || foto.value[donde] == 'i' ){
                 donde++;
                 cont2++;
-            } if(foto.value[donde] == 'g' || foto.value[donde] == 'f' ){
+            } if(foto.value[donde] == 'g' || foto.value[donde] == 'f' || foto.value[donde] == 'e'){
                 donde++;
                 cont2++;
             }

@@ -139,16 +139,12 @@ const productsController = {
             let sisOpRquest = await db.Sistema_Operativo.findAll();
 
             const resultadoValidaciones = validationResult(req);
-            console.log(req.file);
             if (resultadoValidaciones.errors.length > 0) {
-                console.log(req.body);
-                console.log(resultadoValidaciones.mapped());
                 return res.render('productEdit.ejs', {
                     producto: productoRquest, marcas: marcasRquest, categorias: categoriasRquest, color: colorRquest, memoria: memoriaRquest, pantalla: pantallaRquest, procesador: procesadorRquest, ram: ramRquest, sistemaOperativo: sisOpRquest, errors: resultadoValidaciones.mapped(),
                     oldData: req.body}
                 );
             } else {
-                let filename = req.file.filename;
                 
                 await db.Producto.update({
                 modelo: req.body.modelo,
@@ -162,7 +158,6 @@ const productsController = {
                 marca_id: req.body.marca,
                 precio_unitario: req.body.precio,
                 categoria_id: req.body.categorias,
-                imagen: filename,
                 stock:1
                 }, {
                     where: {

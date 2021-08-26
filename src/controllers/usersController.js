@@ -83,25 +83,30 @@ const usersController = {
             user: req.session.userLogged /* en la vista profile va a conocer la variable user */
         });
 	},
-    actualiza: function(req, res) {
-        
-
+    actualiza: async function(req, res) {
+            let usuario = await db.Usuarios.findByPk(req.session.userLogged.id);
            
+            let imagen = usuario.imagen;
+
+            if (req.file){
+                console.log(req.file);
+                imagen = req.file.filename;
+            };
+
             db.Usuarios.update({
                 nombre: req.body.name,
                 apellido: req.body.last_name,
                 mail: req.body.email,
                 contrasenia:bcryptjs.hashSync(req.body.contrasenia, 10),
-                imagen:req.file.filename,
+                imagen: imagen,
             },{where:{
                 id: req.params.id
             }
 
             
              });
-             req.session.destroy();
              
-             res.redirect('/users/login');
+             res.redirect('/users/profile');
            
         
 

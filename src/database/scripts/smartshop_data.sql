@@ -18,7 +18,7 @@ insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter, i
 insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter, imagen) values (18, 'Flint', 'Melliard', 'fmelliardh@mediafire.com', 'AiG7bw', true, false, null);
 insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter, imagen) values (19, 'Monah', 'Ashfold', 'mashfoldi@economist.com', '9nZERC', true, true, null);
 insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter, imagen) values (20, 'Mahmud', 'Fallows', 'mfallowsj@pagesperso-orange.fr', 'lU80QKUr', true, true, null);
-insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter, imagen) values (21, 'Admin', 'Admin', 'admin@gmail.com', '$2a$10$eWxouwQ8iQ2zvQhWL1fDGu8puH185uCWeWQ1ZnBSGWNQJyEitI2QS', true, true, null);
+insert into usuarios (id, nombre, apellido, mail, contrasenia, tyc, newletter, imagen) values (21, 'Admin', 'Admin', 'admin@gmail.com', '$2a$10$eWxouwQ8iQ2zvQhWL1fDGu8puH185uCWeWQ1ZnBSGWNQJyEitI2QS', true, true, 'Homero-admin.jpg');
 
 
 
