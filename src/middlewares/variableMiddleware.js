@@ -1,6 +1,7 @@
 const db = require("../database/models");
 
 function variableMiddleware(req, res, next) {
+    
     if (req.session.userLogged) {
 		
 	

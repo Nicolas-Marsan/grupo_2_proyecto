@@ -46,10 +46,11 @@
             <a href="/products"><p class="pys"> Productos</p></a>
         </div>
 
-        <% if(locals.isLogged) { %>
+        <% if(locals.isLogged && locals.admin) { %>
         <div class="crear_producto">
             <a href="/products/crearProducto"><p class="pys"> Crear producto  </p></a>
         </div>
+        <p class="crear_producto">ADMINISTRADOR</p>
         <% }%>
         <% if(locals.isLogged) { %>
             <div class="cerrar_mobile">

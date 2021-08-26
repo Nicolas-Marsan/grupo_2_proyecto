@@ -2,6 +2,7 @@ const User = require('../models/Users');
 
 function usuarioLogueadoMiddleware(req, res, next) {
 	res.locals.isLogged = false;
+	
 
 	let emailInCookie = req.cookies.userEmail;
 	let userFromCookie = User.findByField('email', emailInCookie);

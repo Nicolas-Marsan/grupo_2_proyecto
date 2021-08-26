@@ -6,6 +6,7 @@ const path= require('path');
 const methodOverride = require('method-override');
 const usuarioLogueadoMiddleware = require('./src/middlewares/usuarioLogueadoMiddleware');
 const variableMiddleware = require('./src/middlewares/variableMiddleware');
+const adminMiddleware = require('./src/middlewares/adminMiddleware');
 /* Configuracion cookies */
 app.use(cookies());
 
@@ -17,6 +18,7 @@ app.use(session({
 }));
 app.use(usuarioLogueadoMiddleware);
 app.use(variableMiddleware);
+app.use(adminMiddleware);
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");

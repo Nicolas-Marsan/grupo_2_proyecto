@@ -11,6 +11,15 @@
                 <div class="datos">
                     <p> <strong>Nombre y apellido:</strong> <%= user.nombre %> <%= user.apellido %>  </p>
                     <p> <strong>Correo electrónico:</strong> <%= user.mail %> </p>
+
+                    
+                    <% if(locals.admin) { %>
+                        <p> <strong>Usuario Administrador</strong></p>
+                        <% }%>
+                   
+
+
+
                 </div>
             </div>
             <div class="buttons">
