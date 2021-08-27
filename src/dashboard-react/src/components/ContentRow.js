@@ -11,7 +11,6 @@ function ContentRow(){
     
 
     useEffect(() => {
-        console.log('me estoy montando productos');
         fetch('http://localhost:3000/api/productos')
             .then ( res => res.json())
             .then ( data => {
@@ -21,14 +20,12 @@ function ContentRow(){
     }, []);
 
     useEffect(() => {
-        console.log('se actualizó el componente productos');
     }, [productos]);
 
     
     
     const [usuarios, setUsuarios] = useState([]);
     useEffect(() => {
-        console.log('me estoy montando');
         fetch('http://localhost:3000/api/users')
             .then ( respo => respo.json())
             .then ( users => {
@@ -38,7 +35,7 @@ function ContentRow(){
             .catch (err => console.log(err));
     }, []);
     useEffect(() => {
-        console.log('se actualizó el componente usuarios');
+
     }, [usuarios]);
 
     useEffect(()=> console.log('Se desmontó el componente'),[]);
@@ -64,7 +61,6 @@ function ContentRow(){
     }
 
     let tarjeta = [TotalProductos, TotalUsuarios, TotalCategorias]
-    console.log(tarjeta);
     return (  
         <div className="dashboard">
             {

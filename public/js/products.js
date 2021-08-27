@@ -1,6 +1,5 @@
 window.onload = function() {
     let form = document.querySelector('form')
-    console.log(form);
     form.addEventListener('submit', function (e) {
         //e.preventDefault();
         let errores = []
@@ -19,7 +18,6 @@ window.onload = function() {
 
 
         let lugarF = foto.value.indexOf('.') + 1;
-        console.log(modelo.type);
 
         if(modelo.value == ''){
             errores.push('Debes ingresar un modelo')
@@ -72,7 +70,6 @@ window.onload = function() {
             if(contador != 3){errores.push('La imagen debe ser formato JPG, JPEG o PNG')}
 
         }
-        console.log(errores);
 
         errorModelo.innerHTML = '';
         errorPrecio.innerHTML = '';

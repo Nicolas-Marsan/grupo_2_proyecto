@@ -9,7 +9,6 @@ const validateLoginMiddlewares = require ('../middlewares/validateLoginMiddlewar
 let storage = multer.diskStorage({    
 	destination: (req,file,callback) => {
     let folder = path.join(__dirname, '../../public/images/users');
-    console.log(folder)
  callback(null, folder);
 },
 filename: (req,file,callback) =>{

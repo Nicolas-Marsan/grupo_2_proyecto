@@ -110,6 +110,16 @@
     border-radius: 10px;
     border: none;
 }
+
+.volver{
+    background-color: rgba(0, 255, 0, 0.483);
+    font-size: 20px;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+}
+
 #formulario-delete{
     margin: 0px;
 }
@@ -333,7 +343,8 @@ input{
         width: 8%
     }
     .canti{
-        width: 25px;
+        text-align: center;
+        width: 35px;
         border: 1px solid black;
         border-radius: 5px;
     }

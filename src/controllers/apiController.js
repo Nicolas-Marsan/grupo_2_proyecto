@@ -113,7 +113,6 @@ const apiController = {
                 }           
             })
          .then(function(usuarios){
-             console.log(usuarios);
              let nUsuarios=[];
 
                     nUsuarios.push( {   

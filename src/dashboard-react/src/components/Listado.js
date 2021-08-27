@@ -13,12 +13,7 @@ function Listado (){
             })
             .catch (err => console.log(err));
     }, []);
-    console.log('-----------------');
-    console.log(totalProductos);
-    /* let TotalDeProductos = [
-        Modelo: ,
-        Precio:
-    ] */
+
     return (
         /* <!-- DataTales Example --> */
         <div className="card shadow mb-4">
@@ -29,7 +24,7 @@ function Listado (){
                             <tr>
                                 <th>Modelo</th>
                                 <th>Precio</th>
-                                <th>Categoria</th>
+                                <th>Categoría</th>
                                 <th>Link</th>
                             </tr>
                         </thead>

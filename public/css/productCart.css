@@ -97,6 +97,8 @@ margin-top:5%
     padding:8px;
     background-color: #C3CA02;
     width: 70%;
+    border-radius: 12px;
+    font-weight: bold;
 }
 .div-promocion2{
     margin-bottom: 100%

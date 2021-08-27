@@ -188,8 +188,6 @@ const usersController = {
             
             
                 if(passIsOk) {
-                    console.log('11111111');
-                    console.log(userToLogin);
                 req.session.userLogged = userToLogin; 
                
                 if(req.body.rememberUser) {

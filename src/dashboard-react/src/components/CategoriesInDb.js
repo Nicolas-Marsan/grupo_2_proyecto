@@ -9,7 +9,6 @@ function CategoriesInDb(){
         fetch('http://localhost:3000/api/productos')
             .then( res => res.json())
             .then ( data => {
-                console.log(data);
                 setCategorias(data.data);
             })
             .catch( err => console.log(err));

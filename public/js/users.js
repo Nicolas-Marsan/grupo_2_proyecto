@@ -1,6 +1,5 @@
 window.onload = function () {
     let form = document.querySelector('form')
-    console.log(form);
 
     let pass = document.querySelector('.fa-eye-slash');
     let passw = document.querySelector('#contrasenia');
@@ -27,7 +26,6 @@ window.onload = function () {
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
-        console.log(e);
         //acumulador de errores
         let errores = []
         //datos
@@ -58,11 +56,9 @@ window.onload = function () {
         } else {
             password.classList.remove('is-invalid')
         }
-        console.log(errores);
 
         errorEmail.innerHTML = '';
         errorPassword.innerHTML = '';
-        console.log(errores)
         if (errores.length > 0) {
             /* e.preventDefault(); */
             errorEmail.innerHTML += '';

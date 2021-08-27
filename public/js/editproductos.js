@@ -13,13 +13,6 @@ window.onload = function() {
         // los datos
         let modelo = document.querySelector('#control')
         let precio = document.querySelector('#precio')
-        console.log(modelo);
-        console.log(precio);
-
-
-
-       
-        console.log(modelo.type);
 
         if(modelo.value == ''){
             errores.push('Debes ingresar un modelo')
