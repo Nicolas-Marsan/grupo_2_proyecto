@@ -41,7 +41,6 @@ const usersController = {
                 }           
             })
          .then(function(usuarios){
-             console.log(usuarios);
              let nUsuarios=[];
 
                     nUsuarios.push( {   
@@ -85,40 +84,31 @@ const usersController = {
 	},
     actualiza: async function(req, res) {
             let usuario = await db.Usuarios.findByPk(req.session.userLogged.id);
-           
+
             let imagen = usuario.imagen;
 
             if (req.file){
-                console.log(req.file);
                 imagen = req.file.filename;
             };
-
-            db.Usuarios.update({
+            
+            let userEdited = {
+                id: req.params.id,
                 nombre: req.body.name,
                 apellido: req.body.last_name,
                 mail: req.body.email,
                 contrasenia:bcryptjs.hashSync(req.body.contrasenia, 10),
                 imagen: imagen,
-            },{where:{
-                id: req.params.id
             }
+            db.Usuarios.update(userEdited, {where:{
+                id: req.params.id
+            }  
+            });
 
-            
-             });
-             
-             res.redirect('/users/profile');
-           
-        
+            res.render('profile', {
+                user: req.session.userLogged /* en la vista profile va a conocer la variable user */
+            });
 
-      
     },
-    
-    login: function(req , res){
-        
-        res.render('login');
-    },
-
-
 
     updateR: function(req, res) {
         let userInDB;
@@ -183,7 +173,6 @@ const usersController = {
         if (resultadoValidaciones.errors.length > 0){
             return res.render('login', {errors: resultadoValidaciones.mapped(), old: req.body});
         }
-        console.log(resultadoValidaciones.errors);
         let userToLogin=0;
         
         db.Usuarios.findAll({
@@ -194,12 +183,13 @@ const usersController = {
         .then(function(usuario){
             
             userToLogin=usuario[0];
-            console.log(userToLogin);
             if(userToLogin) {
                 let passIsOk = bcryptjs.compareSync(req.body.contrasenia, userToLogin.contrasenia);
             
             
                 if(passIsOk) {
+                    console.log('11111111');
+                    console.log(userToLogin);
                 req.session.userLogged = userToLogin; 
                
                 if(req.body.rememberUser) {
@@ -210,7 +200,7 @@ const usersController = {
 
                 return res.redirect('profile');
             } else {
-                return res.render('login', {
+                return res.render('login', {old: req.body,
                     errors: {
                         email: {
                             msg: 'Las credenciales son inválidas.'
@@ -219,7 +209,7 @@ const usersController = {
                     })
                 } 
             } else {
-                return res.render('login', {
+                return res.render('login', {old: req.body,
                     errors: {
                         email: {
                             msg: 'Las credenciales son inválidas.'
@@ -231,7 +221,6 @@ const usersController = {
     },
 
     profile: function(req, res){
-        console.log(req.cookies.userEmail);
 
         res.render('profile', {
             user: req.session.userLogged /* en la vista profile va a conocer la variable user */
