@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head') %>
+    <script defer src="/js/detalleProducto.js"></script>
 
 <body>
     <!-- COMIENZO DE HEADER -->
@@ -20,7 +21,8 @@
                         </ul>
                     </div> -->
                     <div class="celu-elegido-pd">
-                        <img src="/images/products/<%=productoSeleccionado.imagen%>" alt="">
+                        <img src="/images/products/<%=productoSeleccionado.imagen%>" alt="celu">
+                        <p class="condicion"></p>
                     </div>
                 </div>
             </section>
@@ -37,11 +39,26 @@
                     <!-- <img src="/images/detalle a51.jpg" alt="" width="100%"> -->
                     <h3>LA PANTALLA PARA VER MÁS DEL MUNDO</h3>
                 </div>
-                <div class="detalle-celu2-pd">
+                <!-- <div class="detalle-celu2-pd">
                     <h4>
                         <%= productoSeleccionado.modelo %> 
                     </h4>
-                    </div>
+                </div> -->
+
+
+                <section class="detalle-producto">
+                    <ul>
+                        <li>Marca: <span class="normal marca"></span></li>
+                        <li>Sistema operativo: <span class="normal sistema-operativo"></span></li>
+                        <li>Memoria: <span class="normal memoria"></span></li>
+                        <li>Memoria ram: <span class="normal ram"></span></li>
+                        <li>Tamaño de pantalla: <span class="normal tamaño-pantalla"></span></li>
+                        <li>Resolución de pantalla: <span class="normal resolucion-pantalla"></span></li>
+                        <li>Procesador: <span class="normal procesador"></span></li>
+                        <li>Color: <span class="normal color"></span></li>
+                    </ul>
+                </section>
+
 
                     <% if(locals.isLogged && locals.admin) { %>
                    <div class="editar-eliminar">
@@ -63,8 +80,11 @@
                     <label class="boton-carrito-pd" for="cantidad">Cantidad</label>
                     <input  class='canti' type="text" name="cantidad"  class="control" value="1">
                     <a href="#"><button type="submit" class="button-form-pd">Agregar al carrito</button></a>
-                    <a href="/products"><button class="volver">Volver</button></a>
                 </form>
+                <div class="div-volver">
+                    <a href="/products"><button class="volver">Volver</button></a>
+                </div>
+                
             </div>
             <div>
                 

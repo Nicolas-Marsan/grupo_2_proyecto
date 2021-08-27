@@ -111,6 +111,11 @@
     border: none;
 }
 
+.div-volver{
+    margin-top: 20px;
+    text-align: center;
+}
+
 .volver{
     background-color: rgba(0, 255, 0, 0.483);
     font-size: 20px;
@@ -118,6 +123,7 @@
     padding: 5px 10px;
     border-radius: 10px;
     border: none;
+    text-align: center;
 }
 
 #formulario-delete{
@@ -236,6 +242,30 @@ input{
     border-radius: 5px;
 }
 
+.detalle-producto{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 20px auto 0;
+}
+
+.detalle-producto ul li{
+    list-style-type: none;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.normal{
+    font-weight: normal;
+}
+
+.condicion{
+    text-align: center;
+    margin: 15px;
+    font-size: 18px;
+    color: red;
+    font-weight: bolder;
+}
 /* COMIENZO MEDIA QUERIES */
 
 @media(min-width: 481px){
@@ -278,7 +308,6 @@ input{
 
     .boton-carrito-pd{
         text-align: center;
-        margin-top: 70px;
     }
 
     .payment-methods1-pd img{
@@ -387,5 +416,14 @@ input{
     main{
         max-width: 1500px;
         margin: 0 auto;
+    }
+
+    .detalle-producto{
+        margin: 30px auto;
+    }
+    
+    .detalle-producto ul li{
+        font-size: 16px;
+        margin: 10px 0;
     }
 }
