@@ -39,5 +39,6 @@ function cargarDetalle(idProducto) {
     .catch(err => console.error(err));
 }
 
+
 cargarDetalle(idProducto());
 

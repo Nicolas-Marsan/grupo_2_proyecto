@@ -21,7 +21,7 @@
                         </ul>
                     </div> -->
                     <div class="celu-elegido-pd">
-                        <img src="/images/products/<%=productoSeleccionado.imagen%>" alt="celu">
+                        <img src="/images/products/<%=productoSeleccionado ? productoSeleccionado.imagen : 'no-disponible.jpg'%>" alt="celu">
                         <p class="condicion"></p>
                     </div>
                 </div>
@@ -29,11 +29,11 @@
             <section class="product-detail-pd">
                 <div class="nombre-celu-pd">
                     <!-- <img src="/images/samsung a51 nombre.jpg" alt="" width="90%"> -->
-                    <h1><%= productoSeleccionado.modelo %> </h1>
+                    <h1><%= productoSeleccionado ? productoSeleccionado.modelo : 'no disponible' %> </h1>
                 </div>
                 <div class="precio-detalleProducto-pd">
                     <!-- <img src="/images/a51 precio.jpg" alt="" width="70%"> -->
-                    <h2>$<%= productoSeleccionado.precio_unitario %> </h2>
+                    <h2>$<%= productoSeleccionado ? productoSeleccionado.precio_unitario : 'no disponible' %> </h2>
                 </div>
                 <div class="detalle-celu1-pd">
                     <!-- <img src="/images/detalle a51.jpg" alt="" width="100%"> -->
@@ -41,7 +41,7 @@
                 </div>
                 <!-- <div class="detalle-celu2-pd">
                     <h4>
-                        <%= productoSeleccionado.modelo %> 
+                        <%= productoSeleccionado ? productoSeleccionado.modelo : 'no disponible' %> 
                     </h4>
                 </div> -->
 
@@ -62,8 +62,8 @@
 
                     <% if(locals.isLogged && locals.admin) { %>
                    <div class="editar-eliminar">
-            <button class="boton-editar"><a href="/products/<%= productoSeleccionado.id %>/edit">Editar</a></button>
-            <form action="/products/<%= productoSeleccionado.id %>?_method=DELETE" method="POST" id="formulario-delete">
+            <button class="boton-editar"><a href="/products/<%= productoSeleccionado ? productoSeleccionado.id : 'no disponible' %>/edit">Editar</a></button>
+            <form action="/products/<%= productoSeleccionado ? productoSeleccionado.id : 'no disponible' %>?_method=DELETE" method="POST" id="formulario-delete">
             <button class="boton-eliminar">Eliminar</button>
             </form>
         </div>
@@ -76,7 +76,7 @@
                 <div class="boton-comprar-pd">
                     <a href="#"><button type="submit" class="button-form-pd">Comprar</button></a>
                 </div> -->
-                <form  action='/products/carrito/<%=productoSeleccionado.id%>' class="boton-carrito-pd" method="POST">
+                <form  action='/products/carrito/<%=productoSeleccionado ? productoSeleccionado.id : 'no disponible'%>' class="boton-carrito-pd" method="POST">
                     <label class="boton-carrito-pd" for="cantidad">Cantidad</label>
                     <input  class='canti' type="text" name="cantidad"  class="control" value="1">
                     <a href="#"><button type="submit" class="button-form-pd">Agregar al carrito</button></a>
