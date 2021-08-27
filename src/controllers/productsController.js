@@ -200,7 +200,7 @@ const productsController = {
         
     db.Ordenes_detalles.destroy({
         where: {id:req.params.id}
-    }).then(()=>res.redirect('/verCarrito'))
+    }).then(()=>res.redirect('/products/verCarrito'))
 
      
 },

@@ -143,7 +143,9 @@ const usersController = {
         const resultadoValidaciones = validationResult(req);
 
         if (resultadoValidaciones.errors.length > 0) {
-            fs.unlinkSync(path.join(__dirname, `../../public/images/users/${req.file.filename}`))
+            if(req.file){
+                fs.unlinkSync(path.join(__dirname, `../../public/images/users/${req.file.filename}`))
+            }
             return res.render('register.ejs', {
                 errors: resultadoValidaciones.mapped(),
                 oldData: req.body,
@@ -153,10 +155,9 @@ const usersController = {
 
         if(req.file){
             imagen = req.file.filename
-        } else {
-            imagen = null;
+        } else{
+            imagen = 'invitado.jpg';
         }
-
 
         db.Usuarios.create({
             nombre: req.body.name,
@@ -193,12 +194,12 @@ const usersController = {
         .then(function(usuario){
             
             userToLogin=usuario[0];
-            
+            console.log(userToLogin);
             if(userToLogin) {
-            let passIsOk = bcryptjs.compareSync(req.body.contrasenia, userToLogin.contrasenia);
+                let passIsOk = bcryptjs.compareSync(req.body.contrasenia, userToLogin.contrasenia);
             
             
-            if(passIsOk) {
+                if(passIsOk) {
                 req.session.userLogged = userToLogin; 
                
                 if(req.body.rememberUser) {
@@ -217,6 +218,14 @@ const usersController = {
                         }
                     })
                 } 
+            } else {
+                return res.render('login', {
+                    errors: {
+                        email: {
+                            msg: 'Las credenciales son inválidas.'
+                            }
+                        }
+                    })
             }
         })
     },
