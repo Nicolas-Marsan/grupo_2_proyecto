@@ -11,6 +11,9 @@ let color = document.querySelector('.color');
 function idProducto(){
     let url = location.href;
     let idProducto = url[(url.length - 1)];
+    if (url[(url.length - 2)] > 0 && url[(url.length - 2)] < 10){
+        idProducto = `${url[(url.length - 2)]}${url[(url.length - 1)]}`
+    }
     return idProducto;
 }
 

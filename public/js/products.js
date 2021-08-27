@@ -57,13 +57,13 @@ window.onload = function() {
             errores.push('Debes ingresar una imagen')
         } else {
             let contador=0;
-            if(foto.value[lugarF] == 'j' || foto.value[lugarF] == 'p' ){
+            if(foto.value[lugarF] == 'j' || foto.value[lugarF] == 'p' || foto.value[lugarF] == 'g'){
                 lugarF++;
                 contador++;
-            } if(foto.value[lugarF] == 'pe' || foto.value[lugarF] == 'p' || foto.value[lugarF] == 'n' ){
+            } if(foto.value[lugarF] == 'p' || foto.value[lugarF] == 'n' || foto.value[lugarF] == 'i' ){
                 lugarF++;
                 contador++;
-            } if(foto.value[lugarF] == 'g'){
+            } if(foto.value[lugarF] == 'g' || foto.value[lugarF] == 'f' || foto.value[lugarF] == 'e'){
                 lugarF++;
                 contador++;
             }
