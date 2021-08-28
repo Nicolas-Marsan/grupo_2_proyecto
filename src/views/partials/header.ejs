@@ -8,9 +8,9 @@
             <input type="search" placeholder="¿Qué estás buscando?"><i class="fas fa-search"></i>
             
         </div>
-        <% if(locals.isLogged) { %>
+        <% if(locals.isLogged && locals.userLogged) { %>
             <div class="iniciar_sesion3">
-                <a href="/users/profile"><img src="/images/users/<%= locals.userLogged.imagen %> "></a>
+                <a href="/users/profile"><img src="/images/users/<%= locals.userLogged.imagen %>"></a>
             </div>
             <div class="crear_cuenta_full">
                         <p><%= locals.userLogged.name %></p></a>
@@ -29,7 +29,7 @@
 
     <nav class="iniciar_crear_sesion">
 
-        <% if(locals.isLogged) { %>
+        <% if(locals.isLogged && locals.userLogged) { %>
 
             <div class="usuario_mobile">
                 <p ><%= locals.userLogged.nombre %></p>
@@ -64,7 +64,7 @@
             <% }%>
 
         <div class="menu_lateral">
-            <% if(locals.isLogged) { %>
+            <% if(locals.isLogged && locals.userLogged) { %>
 
                 <!-- <div class="iniciar_sesion3">
                     <a href="/users/profile"><img src="/images/users/<%= locals.userLogged.Image %> "></a>

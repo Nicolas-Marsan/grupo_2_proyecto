@@ -104,9 +104,9 @@ const usersController = {
             }  
             });
 
-            res.render('profile', {
-                user: req.session.userLogged /* en la vista profile va a conocer la variable user */
-            });
+            req.session.userLogged = userEdited
+
+            res.redirect('/users/profile');
 
     },
 

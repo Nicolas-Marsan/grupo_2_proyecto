@@ -1,20 +1,26 @@
-const User = require('../models/Users');
+const db = require ('../database/models');
 
-function usuarioLogueadoMiddleware(req, res, next) {
+async function usuarioLogueadoMiddleware(req, res, next) {
 	res.locals.isLogged = false;
-	
 
-	let emailInCookie = req.cookies.userEmail;
-	let userFromCookie = User.findByField('email', emailInCookie);
+	if (req.cookies.userEmail){
+		let usuarioEnCookie = await db.Usuarios.findAll({
+			where: {mail: req.cookies.userEmail}
+		})
+		req.session.userLogged = {
+			id: usuarioEnCookie[0].dataValues.id,
+			nombre: usuarioEnCookie[0].dataValues.nombre,
+			apellido: usuarioEnCookie[0].dataValues.apellido,
+			mail: usuarioEnCookie[0].dataValues.mail,
+			imagen: usuarioEnCookie[0].dataValues.imagen,
+		}
+		res.locals.isLogged = true;
+		res.locals.userLogged = req.session.userLogged
 
-	if (userFromCookie) {
-		req.session.userLogged = userFromCookie;
-	}
-
-	if (req.session.userLogged) {
+	} else if (req.session.userLogged) {
 		res.locals.isLogged = true;
 		res.locals.userLogged = req.session.userLogged;
-	}
+	} 	
 
 	next();
 }

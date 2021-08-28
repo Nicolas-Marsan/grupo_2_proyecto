@@ -3,20 +3,10 @@ const fs = require ('fs');
 const db = require('../database/models');
 const Producto = db.Producto;
 const { Op } = require("sequelize");
-let products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'),{encoding:'utf-8'})); //Leer el JSON y pasarlo a objeto literal
 let carrito = [];
 const { validationResult }= require('express-validator');
 const e = require('express');
 
-const lastId = () =>{
-	let ultimo = 0;
-		products.forEach(note => {
-		  if (ultimo < note.id){
-		ultimo = note.id;
-		}
-		});
-	return ultimo;
-	}
 
 const productsController = {
     index: function(req, res){
