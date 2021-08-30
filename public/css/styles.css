@@ -41,6 +41,10 @@ body{
     margin: auto 0;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 
 .logo_barra_manu_carrito{
     width: 100vw;
