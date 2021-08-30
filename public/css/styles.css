@@ -174,7 +174,7 @@ margin: 0 10px;
 
 .crear_producto{
     display: none;
-    padding: 5px 0px 10px;
+    padding: 5px 0px 0px;
 }
 .iniciar_crear_sesion .crear_cuenta_full, .iniciar_crear_sesion .iniciar_sesion p, .iniciar_crear_sesion .iniciar_sesion2 p,.iniciar_crear_sesion .iniciar_sesion3 p, .iniciar_crear_sesion .mi_carrito p{
     padding-bottom: 10px;
