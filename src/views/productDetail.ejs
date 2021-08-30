@@ -14,26 +14,19 @@
         <div class="producto-descripcion-todo-pd">
             <section class="product-img-box-pd">
                 <div class="imgchicas-celu-elegido-junto-pd">
-                    <!-- <div class="mas-vistas-pd">
-                        <ul class="imagenes-chicas-pd">
-                            <li><a href="#"><img src="/images/chiquita a51.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="/images/chiquita2 a51.jpg" alt=""></a></li>
-                        </ul>
-                    </div> -->
                     <div class="celu-elegido-pd">
-                        <img src="/images/products/<%=productoSeleccionado ? productoSeleccionado.imagen : 'no-disponible.jpg'%>" alt="celu">
+                        <div class="imagen-celu"></div>
                         <p class="condicion"></p>
                     </div>
                 </div>
             </section>
             <section class="product-detail-pd">
                 <div class="nombre-celu-pd">
-                    <!-- <img src="/images/samsung a51 nombre.jpg" alt="" width="90%"> -->
-                    <h1><%= productoSeleccionado ? productoSeleccionado.modelo : 'no disponible' %> </h1>
+                   
+                    
                 </div>
                 <div class="precio-detalleProducto-pd">
-                    <!-- <img src="/images/a51 precio.jpg" alt="" width="70%"> -->
-                    <h2>$<%= productoSeleccionado ? productoSeleccionado.precio_unitario : 'no disponible' %> </h2>
+                    <h2></h2>
                 </div>
                 <div class="detalle-celu1-pd">
                     <!-- <img src="/images/detalle a51.jpg" alt="" width="100%"> -->
@@ -44,7 +37,8 @@
                         <%= productoSeleccionado ? productoSeleccionado.modelo : 'no disponible' %> 
                     </h4>
                 </div> -->
-
+                <i onclick="anterior()" class="anterior fas fa-caret-square-left"></i>
+                <i onclick="siguiente()" class="siguiente fas fa-caret-square-right"></i>
 
                 <section class="detalle-producto">
                     <ul>
@@ -63,6 +57,7 @@
                     <% if(locals.isLogged && locals.admin) { %>
                    <div class="editar-eliminar">
             <button class="boton-editar"><a href="/products/<%= productoSeleccionado ? productoSeleccionado.id : 'no disponible' %>/edit">Editar</a></button>
+            
             <form action="/products/<%= productoSeleccionado ? productoSeleccionado.id : 'no disponible' %>?_method=DELETE" method="POST" id="formulario-delete">
             <button class="boton-eliminar">Eliminar</button>
             </form>
@@ -76,11 +71,14 @@
                 <div class="boton-comprar-pd">
                     <a href="#"><button type="submit" class="button-form-pd">Comprar</button></a>
                 </div> -->
-                <form  action='/products/carrito/<%=productoSeleccionado ? productoSeleccionado.id : 'no disponible'%>' class="boton-carrito-pd" method="POST">
-                    <label class="boton-carrito-pd" for="cantidad">Cantidad</label>
-                    <input  class='canti' type="text" name="cantidad"  class="control" value="1">
-                    <a href="#"><button type="submit" class="button-form-pd">Agregar al carrito</button></a>
-                </form>
+                <div class="agregar-carrito">
+                    <form  action='/products/carrito/<%=productoSeleccionado ? productoSeleccionado.id : 'no disponible'%>' class="boton-carrito-pd" method="POST">
+                        <label class="boton-carrito-pd" for="cantidad">Cantidad</label>
+                        <input  class='canti' type="text" name="cantidad"  class="control" value="1">
+                        <a href="#"><button type="submit" class="button-form-pd">Agregar al carrito</button></a>
+                    </form>
+
+                </div>
                 <div class="div-volver">
                     <a href="/products"><button class="volver">Volver</button></a>
                 </div>

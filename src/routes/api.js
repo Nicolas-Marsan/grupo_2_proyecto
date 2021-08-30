@@ -4,6 +4,7 @@ const apiController = require ('../controllers/apiController');
 
 
 router.get('/productos', apiController.list);
+router.get('/productos/full', apiController.full);
 router.get('/productos/ultimo',apiController.lastProduct);
 router.get('/users',apiController.users);
 

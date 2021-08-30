@@ -69,6 +69,52 @@ const apiController = {
             console.log(err);
         };
     },
+    full: async (req, res) => {
+        try{
+            let productos = await db.Producto.findAll();
+            let categorias = await db.Categoria.findAll();
+            let marcas = await db.Marca.findAll();
+            let colores = await db.Color.findAll();
+            let memorias = await db.Memoria.findAll();
+            let pantallas = await db.Pantalla.findAll();
+            let procesadores = await db.Procesador.findAll();
+            let rams = await db.Ram.findAll();
+            let sistemasOperativos = await db.Sistema_Operativo.findAll();
+
+            return res.status(200).json({
+                status: 200,
+                count: productos.length,
+                data: productos.map(producto => { 
+                    return {
+                        id: producto.id,
+                        modelo: producto.modelo,
+                        precio: producto.precio_unitario,
+                        categoria: categorias.filter(categoria => categoria.id === producto.categoria_id)[0],
+                        marca: marcas.filter(marca => marca.id === producto.marca_id)[0],
+                        sistema_operativo: sistemasOperativos.filter(sistemaOperativo => sistemaOperativo.id === producto.sistema_operativo_id)[0],
+                        ram: rams.filter(ram => ram.id === producto.ram_id)[0],
+                        memoria: memorias.filter(memoria => memoria.id === producto.memoria_id)[0],
+                        pantalla: pantallas.filter(pantalla => pantalla.id === producto.pantalla_id)[0],
+                        procesador: procesadores.filter(procesador => procesador.id === producto.procesador_id)[0],
+                        color: colores.filter(color => color.id === producto.color_id)[0],
+                        imagen: producto.imagen,
+                        imagen_url: `http://localhost:3000/public/images/products/${producto.imagen}`,
+                        detalle_url: `http://localhost:3000/products/detail/${producto.id}`
+                    }
+                }) 
+            });
+
+        }catch(err){
+            console.error(err);
+        }
+        
+    },
+
+
+
+
+
+
     lastProduct: async(req, res) => {
         let lastProduct = await db.Producto.findOne({
             order: [
