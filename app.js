@@ -50,3 +50,8 @@ app.use('/api', rutasApi);
 app.listen(3000, () => {
     console.log('Servidor Corriendo en el puerto 3000');
 });
+
+app.use((req, res, next) => {
+    res.status(404).render('error-404');
+    next();
+});

@@ -1,0 +1,31 @@
+.imagen-error{
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    margin: auto;
+}
+
+.btn-inicio{
+    position: absolute;
+    left: 40%;
+    top: 56%;
+    background-color: rgba(216, 234, 7, 1);
+    font-size: 14px;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: black 1px solid;
+}
+
+@media (min-width: 1200px){
+    .imagen-error{
+        width: 45vw;
+    }
+}
+
+.btn-inicio{
+    left: 48vw;
+    top: 68vh;
+    font-size: 20px;
+    font-weight: bold;
+}
