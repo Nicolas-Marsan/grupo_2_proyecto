@@ -69,6 +69,10 @@
     right: 10px;
 }
 
+.main-login  .div-pass i:hover{
+    cursor: pointer;
+}
+
 .main-login .div-recordar-usuario{
     display: flex;
     margin: 10px 0 5px 5px;
@@ -81,6 +85,10 @@
     display: flex;
     align-items: center;
     width: 50%;
+}
+
+.main-login .div-recordar-usuario .div-recordar:hover, .cbx:hover{
+    cursor: pointer;
 }
 
 .main-login .div-recordar-usuario .cbx{
@@ -106,8 +114,15 @@
 }
 
 .main-login .buttons #iniciar-sesion{
-    background-color: #C3CA02;
+    margin: auto;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #F3FB9D;
     font-weight: bolder;
+}
+
+.main-login .buttons #iniciar-sesion:hover{
+    background: #C3CA02;
 }
 
 form{
@@ -116,6 +131,7 @@ form{
 }
 
 .errorModelo, .errorPrecio, .errorFoto{
+    margin-top: 10px;
     text-align: center;
     margin-left: 100px;
 }

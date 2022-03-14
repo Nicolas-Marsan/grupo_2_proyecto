@@ -103,13 +103,29 @@
 }
 
 .button-form-pd, .boton-editar, .boton-eliminar{
+    margin: auto;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #F3FB9D;
+    font-weight: bolder;
+}
+
+.button-form-pd:hover, .boton-editar:hover{
+    background: #C3CA02;
+}
+
+.boton-eliminar:hover{
+    background: red;
+    color: white;}
+
+/* .button-form-pd, .boton-editar, .boton-eliminar{
     background-color: rgba(216, 234, 7, 1);
     font-size: 20px;
     color: black;
     padding: 5px 10px;
     border-radius: 10px;
     border: none;
-}
+} */
 
 .div-volver{
     margin-top: 20px;
@@ -117,13 +133,9 @@
 }
 
 .volver{
-    background-color: rgba(0, 255, 0, 0.483);
-    font-size: 20px;
-    color: black;
-    padding: 5px 10px;
-    border-radius: 10px;
-    border: none;
-    text-align: center;
+    padding: 5px;
+    border-radius: 10px
+    
 }
 
 #formulario-delete{
@@ -355,13 +367,6 @@ input{
         margin-top: 40px;
     }
 
-    .button-form-pd:hover{
-        background-color: greenyellow;
-    }
-
-    .button-form-pd{
-        transition: background-color 0.5s;
-    }
 
     .detalle-celu1-pd{
         text-align: center;

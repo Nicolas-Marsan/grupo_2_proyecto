@@ -13,20 +13,20 @@ const validateCreateProductMiddlewares = [
     .isLength({ min: 1}).withMessage('El modelo debe tener como mínimo un caracter').bail()
     .isNumeric().withMessage('El campo precio debe contener solo números'),
 
-    body('imagen').custom((value, { req }) => {
-        let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif'];
-        if (!file) {
-            throw new Error('Tienes que subir una imagen')
-        } else {
-            let fileExtension = path.extname(file.originalname);
-            if (!acceptedExtensions.includes(fileExtension)) {
-                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
-            }
-        }
+    // body('imagen').custom((value, { req }) => {
+    //     let file = req.file;
+    //     let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif'];
+    //     if (!file) {
+    //         throw new Error('Tienes que subir una imagen')
+    //     } else {
+    //         let fileExtension = path.extname(file.originalname);
+    //         if (!acceptedExtensions.includes(fileExtension)) {
+    //             throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+    //         }
+    //     }
 
-        return true;
-    }),
+    //     return true;
+    // }),
 ];
 
 module.exports = validateCreateProductMiddlewares;

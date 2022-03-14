@@ -8,11 +8,11 @@
     <main class="main-products">
         <script>alert(error)</script>
         <section class="ultimos-lanzamientos">
-            <h2>Productos</h2>
+            <h2 class="subtitulo">Nuestros productos</h2>
             <% for (let i = 0; i < products.length; i++) {%>
                 <article>
+                    <strong><p><%= products[i].modelo%></p></strong>
                     <a href="/products/detail/<%= products[i].id %>"><img src="/images/products/<%= products[i].imagen %>" alt="Lo más nuevo"></a>
-                    <p><%= products[i].modelo%></p>
                     <div class="boton-comprar-products">
                         <a href="/products/detail/<%= products[i].id %>"><button type="submit" class="button-form-products">Detalle</button></a>
                     </div>

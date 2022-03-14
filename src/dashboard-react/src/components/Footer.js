@@ -9,7 +9,7 @@ function Footer() {
         </div>
         <section className="sobre-nosotros">
           <h3 className="titulos">SOBRE NOSOTROS</h3>
-          <ul>
+          <ul className="titulos-ul">
             <li><Link to="#">SOBRE NOSOTROS</Link></li>
             <li><Link to="#">LINEA ÉTICA Y VALORES</Link></li>
             <li><Link to="#">POLÍTICA DE PRIVACIDAD</Link></li>

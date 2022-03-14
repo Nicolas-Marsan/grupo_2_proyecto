@@ -21,8 +21,7 @@
                 </div>
             </section>
             <section class="product-detail-pd">
-                <div class="nombre-celu-pd">
-                   
+                <div class="nombre-celu-pd">                  
                     
                 </div>
                 <div class="precio-detalleProducto-pd">
@@ -54,7 +53,8 @@
                 </section>
 
 
-                    <% if(locals.isLogged && locals.admin) { %>
+        
+                <% if(locals.isLogged && locals.admin) { %>
                    <div class="editar-eliminar">
             <button class="boton-editar"><a href="/products/<%= productoSeleccionado ? productoSeleccionado.id : 'no disponible' %>/edit">Editar</a></button>
             
@@ -71,17 +71,21 @@
                 <div class="boton-comprar-pd">
                     <a href="#"><button type="submit" class="button-form-pd">Comprar</button></a>
                 </div> -->
-                <div class="agregar-carrito">
-                    <form  action='/products/carrito/<%=productoSeleccionado ? productoSeleccionado.id : 'no disponible'%>' class="boton-carrito-pd" method="POST">
-                        <label class="boton-carrito-pd" for="cantidad">Cantidad</label>
-                        <input  class='canti' type="text" name="cantidad"  class="control" value="1">
-                        <a href="#"><button type="submit" class="button-form-pd">Agregar al carrito</button></a>
-                    </form>
-
-                </div>
-                <div class="div-volver">
-                    <a href="/products"><button class="volver">Volver</button></a>
-                </div>
+                <% if(!locals.isLogged || locals.isLogged && !locals.admin) { %>
+                    
+                    <div class="agregar-carrito">
+                        <form  action='/products/carrito/<%=productoSeleccionado ? productoSeleccionado.id : 'no disponible'%>' class="boton-carrito-pd" method="POST">
+                            <label class="boton-carrito-pd" for="cantidad">Cantidad</label>
+                            <input  class='canti' type="text" name="cantidad"  class="control" value="1" autocomplete="off">
+                            <a href="#"><button type="submit" class="button-form-pd">Agregar al carrito</button></a>
+                        </form>
+    
+                    </div>
+                    <div class="div-volver">
+                        <a href="/products"><button class="volver">Volver</button></a>
+                    </div>
+                    
+                <% } %> 
                 
             </div>
             <div>
@@ -116,7 +120,7 @@
                 </div>
                 <form action="/productDetail" method="POST" class="cuadro-pregunta">
                     <label for="question"></label>
-                    <input type="text" name="question" id="question" placeholder="Escribi tu pregunta...">
+                    <input type="text" name="question" id="question" placeholder="Escribí tu pregunta...">
                 </form>
             </div> 
                 <div class="boton-preguntar-todo-pd">

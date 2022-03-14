@@ -14,7 +14,7 @@
                 <section class="datos-usuario">
                     <div class="div-correo" >
                         <label class="label" for="email">Correo electrónico</label>
-                        <input type="text" name="email" id="email" class="control" value="<%= locals.old ? locals.old.email : "" %>">
+                        <input type="text" name="email" id="email" class="control" value="<%= locals.old ? locals.old.email : "" %>" autoFocus>
                         <% if (locals.errors && errors.email) { %>
                             <div class="texto-error-validacion">
                             <%= errors.email.msg %> 

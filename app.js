@@ -47,8 +47,8 @@ app.use('/api', rutasApi);
 
 
 /* Servidor */
-app.listen(3000, () => {
-    console.log('Servidor Corriendo en el puerto 3000');
+app.listen(3003, () => {
+    console.log('Servidor Corriendo en el puerto 3003');
 });
 
 app.use((req, res, next) => {

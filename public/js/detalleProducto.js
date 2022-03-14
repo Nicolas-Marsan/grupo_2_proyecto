@@ -13,6 +13,7 @@ let color = document.querySelector('.color');
 let btnEditarEliminar = document.querySelector('.editar-eliminar');
 let agregarCarrito = document.querySelector('.agregar-carrito');
 
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 
@@ -38,8 +39,6 @@ function cargarPrimerProducto(idContador) {
     fetch(`http://localhost:3000/api/productos/full`)
     .then(res => res.json())
     .then(dataApi => {
-
-        console.log(dataApi.data);
         let arrayID = dataApi.data.map(element => element.id)
         if (arrayID.includes(idContador)){
             let producto = dataApi.data.filter(element => element.id == idContador);
@@ -109,11 +108,17 @@ function anterior(){
 }
 
 function mostrarProducto(producto) {
-    console.log(producto);
+
+    if (producto[0].categoria.nombre == 'Nuevo'){
+        condicion.style.color = 'green'
+    }
+    if (producto[0].categoria.nombre == 'Usado'){
+        condicion.style.color = 'red'
+    }
     {
         imagen.innerHTML = `<img class="imagen-celu" src="/images/products/${producto[0].imagen}" alt="celu">`;
         modelo.innerHTML = `<h1>${producto[0].modelo}</h1>`;
-        precio.innerHTML = `<h2>${producto[0].precio}</h2>`;
+        precio.innerHTML = `<h2>$${toThousand(producto[0].precio)}</h2>`;
         condicion.innerText = producto[0].categoria.nombre;
         marca.innerText = producto[0].marca.nombre;
         sistemaOperativo.innerText = producto[0].sistema_operativo.nombre;
@@ -123,18 +128,18 @@ function mostrarProducto(producto) {
         resolucionPantalla.innerText = `${producto[0].pantalla.resolucion} pxs`;
         procesador.innerText = producto[0].procesador.nombre;
         color.innerText = producto[0].color.nombre;
-        btnEditarEliminar.innerHTML = `<button class="boton-editar"><a href="/products/${producto[0].id}/edit">Editar</a></button><form action="/products/${producto[0].id}?_method=DELETE" method="POST" id="formulario-delete">
-        <button class="boton-eliminar">Eliminar</button>
-        </form>`;
+        if (btnEditarEliminar){
+            btnEditarEliminar.innerHTML = `<button class="boton-editar"><a href="/products/${producto[0].id}/edit">Editar</a></button><form action="/products/${producto[0].id}?_method=DELETE" method="POST" id="formulario-delete">
+            <button class="boton-eliminar">Eliminar</button>
+            </form>`;
+        }
         agregarCarrito.innerHTML = `<form  action='/products/carrito/${producto[0].id}' class="boton-carrito-pd" method="POST">
         <label class="boton-carrito-pd" for="cantidad">Cantidad</label>
-        <input  class='canti' type="text" name="cantidad"  class="control" value="1">
+        <input  class='canti' type="text" name="cantidad"  class="control" value="1" autocomplete="off">
         <a href="#"><button type="submit" class="button-form-pd">Agregar al carrito</button></a>
     </form>`
         
-        if (producto[0].categoria.nombre != 'Usado'){
-            condicion.style.color = 'green'
-        }
+        
     }
 }
 

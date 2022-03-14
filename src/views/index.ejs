@@ -21,7 +21,7 @@
                         <i class="fas fa-truck"></i>
                     </div>
                     <div class="detalle1">
-                        <p>Envio y retiro gratis</p>
+                        <p>Envío y retiro gratis</p>
                     </div>
                 </div>
 
@@ -36,7 +36,7 @@
                         <i class="fas fa-file-contract"></i>
                    </div>
                   <div class="detalle2">
-                    <p>Garantia de fabrica</p>
+                    <p>Garantía de fabrica</p>
                   </div>
                   </div>
                   <div class="pie_cuotas">
@@ -52,7 +52,7 @@
                     <i class="far fa-credit-card"></i>
                   </div>
                   <div class="detalle3">
-                    <p>Cuotas sin interes</p>
+                    <p>Cuotas sin interés</p>
                  </div>
                 </div>
                 <div class="pie_garantia">
@@ -82,35 +82,35 @@
 
         </section>
 
-        <section class="destacados">
+        <!-- <section class="destacados">
 
             <h1> DESTACADOS</h1>
-        </section>
+        </section> -->
 
         <section class="main-products">
         
             <section class="ultimos-lanzamientos">
-                <h2>Lo más nuevo</h2>
+                <h2 class="subtitulo">Lo más nuevo</h2>
                 <% for (let i = 0; i < nuevo.length; i++) {%>
                     <article>
+                        <strong><p><%= nuevo[i].modelo%></p></strong>
                         <a href="/products/detail/<%= nuevo[i].id %>"><img src="/images/products/<%= nuevo[i].imagen %>" alt="Lo más nuevo"></a>
-                        <p><%= nuevo[i].name%></p>
-                        <div class="boton-comprar-products">
+                        <!-- <div class="boton-comprar-products">
                             <a href="/products/detail/<%= nuevo[i].id %>"><button type="submit" class="button-form-products">Detalle</button></a>
-                        </div>
+                        </div> -->
                     </article>
                 <% } %> 
             </section>
     
             <section class="favoritos">
-                <h2>Usados</h2>
+                <h2 class="subtitulo">Usados</h2>
                 <% for (let i = 0; i < usado.length; i++) {%>
                     <article>
+                        <strong><p><%= usado[i].modelo%></p></strong>
                         <a href="/products/detail/<%= usado[i].id %>"><img src="/images/products/<%= usado[i].imagen %>" alt="Lo más nuevo"></a>
-                        <p><%= usado[i].name%></p>
-                        <div class="boton-comprar-products">
+                        <!-- <div class="boton-comprar-products">
                             <a href="/products/detail/<%= usado[i].id %>"><button type="submit" class="button-form-products">Detalle</button></a>
-                        </div>
+                        </div> -->
                     </article>
                 <% } %> 
             </section>

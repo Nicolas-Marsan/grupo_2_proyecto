@@ -1,6 +1,35 @@
 *{
     box-sizing: border-box;
 }
+
+#precio{
+    display: none;
+}
+
+.descuento-aplicado{
+    text-decoration: line-through;
+}
+
+.descuento-aplicado-input{
+    border: 2px solid #C3CA02;
+}
+
+.descuento-aplicado-text{
+    display: none;
+    color:#C3CA02;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.descuento-no-aplicado-text{
+    display: none;
+    color:red;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
 .encabezado{
     z-index:10
 }
@@ -8,6 +37,8 @@
     display: flex;
     flex-direction:column;
     width:50%;
+    justify-content: center;
+    margin: auto;
 }
 .articulos img{ 
     width: 70%
@@ -27,11 +58,10 @@ margin-top:5%
 }
 
 .boton-detalle{
-    width:116px;
-    margin-left: 10px;
-     border-radius: 10px;
-     background-color: #C3CA02;
-     border-radius: 10px
+    width:100%;
+    text-align: center;   
+    font-weight: bold;
+    margin: auto;
 }
 .boton-detalle2{
     width:80px;
@@ -53,6 +83,7 @@ margin-top:5%
 
 .promociones{
     width:50%;
+    margin: auto;
 }
 
 #promocion{
@@ -69,8 +100,11 @@ margin-top:5%
     height: 30px;
     width: 70%;
     background-color: #D3D3D3;
-    color:black;
     font-weight: bold
+}
+
+#total{
+    margin-right: 15px;
 }
 
 .enviar{
@@ -81,7 +115,8 @@ margin-top:5%
 
 .cart-enviar{
     background-color: black;
-    color: white
+    color: white;
+    padding: 5px;
 }
 .precio p{
     font-size: 20px;
@@ -99,9 +134,6 @@ margin-top:5%
     width: 70%;
     border-radius: 12px;
     font-weight: bold;
-}
-.div-promocion2{
-    margin-bottom: 100%
 }
 
 .main-recomendado{
@@ -122,8 +154,19 @@ margin-top:5%
     text-align: center;
     width:32%;
     display:flex;
-
 }
+
+.precio.cart{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    background-color: #C3CA02;
+    justify-content: center;
+    margin: auto;
+    border-radius: 8px;
+    padding: 10px;
+}
+
 .carrito-delete{
     position:relative;
     bottom: 85%;
@@ -194,10 +237,9 @@ margin-top:5%
     margin-top: 60px
 }
 .div-promocion2{
-    margin-top: 60px
+    margin-top: 20px
 }
 .main-precio{
-    padding-top: 200px;
     display:flex;
     flex-direction: column
 }
@@ -217,11 +259,9 @@ margin-top:5%
     width: 340px;
 }
 .main-recomendado{ 
-justify-content: space-between}
-.articulos{
-    width: 300px;
-    margin-left: 25%;
+justify-content: space-between
 }
+
 .articulos .articulo1-img{
     width: 230px;
     margin-top: 20px;
@@ -258,7 +298,7 @@ justify-content: space-between}
   
 }
 .carrito-precio{
-    margin-top: 300px
+    margin-top: 50px
 }
 }
 

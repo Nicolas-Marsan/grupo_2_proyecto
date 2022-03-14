@@ -15,7 +15,7 @@
                     <section class="datos-personales">
                         <div class="div-nombre">
                             <label class="label" for="name">Nombre</label>
-                            <input type="text" name="name" id="name" class="control" value="<%= locals.oldData ? oldData.name : null %>">
+                            <input type="text" name="name" id="name" class="control" value="<%= locals.oldData ? oldData.name : null %>" autofocus>
                             <ul class="errorName"></ul>
                             <% if (locals.errors && errors.name) { %>
                                 <div class="texto-error-validacion">

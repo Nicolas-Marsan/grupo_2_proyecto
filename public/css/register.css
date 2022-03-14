@@ -124,10 +124,17 @@
     border-radius: 10px;
 }
 
+
 .main-register .buttons #enviar{
-    background-color: #C3CA02;
-    font-weight: bolder;
+    margin: auto;
+    border-radius: 5px;
     padding: 8px;
+    background-color: #F3FB9D;
+    font-weight: bolder;
+}
+
+.main-register .buttons #enviar:hover{
+    background: #C3CA02;
 }
 
 .is-invalid {

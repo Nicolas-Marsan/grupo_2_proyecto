@@ -22,7 +22,7 @@
     
 }
 
-.precio.top, .nombre.top{
+.precio-create.top, .nombre.top{
     padding: 0;
 }
 
@@ -58,7 +58,7 @@
     
 }
 
-.precio, .nombre{
+.precio-create, .nombre{
     width: 100%;
     background-color:#F3FB9D;
     padding: 15px 0;
@@ -86,7 +86,7 @@
 
 }
 
-.producto .nombre input, .producto .precio input, .producto .descripcion input, .pass .Tdetalle input,.pass .detalle input, .pass .foto input {
+.producto .nombre input, .producto .precio-create input, .producto .descripcion input, .pass .Tdetalle input,.pass .detalle input, .pass .foto input {
     border-radius: 5px;
     margin: 5px;
     max-height: 30px;
@@ -134,7 +134,7 @@ option{
     justify-content: space-evenly;
 }
 
-.precio{
+.precio-create{
     display: flex;
     justify-content: space-evenly;
 }

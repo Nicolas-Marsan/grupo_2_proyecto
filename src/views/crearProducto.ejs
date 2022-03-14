@@ -9,13 +9,13 @@
     <main class="main-register">
         
         <h2 class="titulo producto">
-            CREAR PRODUCTO
+            PUBLICAR NUEVO PRODUCTO
         </h2>
         <form class='form-product-register' action="/products/crearProducto" method="POST" enctype="multipart/form-data">
             <section class="producto">
                 <div class="nombre top">
                     <label class="label" for="modelo">Modelo:</label>
-                    <input  type="text" name="modelo"  id="control" value="<%= locals.oldData && oldData.modelo != "" ? oldData.modelo : null%>">
+                    <input  type="text" name="modelo"  id="control" value="<%= locals.oldData && oldData.modelo != "" ? oldData.modelo : null%>" autocomplete="off" autoFocus>
                 </div>
                 <ul class="errorModelo"></ul>
                 <% if (locals.errors && errors.modelo) { %>
@@ -46,7 +46,7 @@
 
             <section class="buttons">
                 <button id="enviar" type="submit">Crear producto</button>
-                <button id="borrar" type="reset">Resetear</button>
+                <!-- <button id="borrar" type="reset">Resetear</button> -->
                 <button type="menu">Volver</button>
             </section>
         </form>

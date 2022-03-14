@@ -22,21 +22,21 @@ const validations = [
     /* .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/, "i").withMessage('La contraseña debe contener al menos una mayuscula, una minuscula, un número y un caracter especial'), */
     
 
-    body('image').custom((value, { req }) => {
-        let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif'];
+    // body('image').custom((value, { req }) => {
+    //     let file = req.file;
+    //     let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif'];
         
 
-        if (!file) {
-        } else {
-            let fileExtension = path.extname(file.originalname);
-            if (!acceptedExtensions.includes(fileExtension)) {
-                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
-            }
-        }
+    //     if (!file) {
+    //     } else {
+    //         let fileExtension = path.extname(file.originalname);
+    //         if (!acceptedExtensions.includes(fileExtension)) {
+    //             throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+    //         }
+    //     }
 
-        return true;
-    }),
+    //     return true;
+    // }),
 
     
 

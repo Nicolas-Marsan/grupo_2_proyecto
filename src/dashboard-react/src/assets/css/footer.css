@@ -42,8 +42,13 @@
 
 .footer section .titulos{
     text-align: start;
+    font-size: 1.17em;
 }
 
+.footer section .titulos ul{
+    display: flex;
+    align-items: flex-start;
+}
 
 .footer section ul li {
     text-align: start;
@@ -54,6 +59,7 @@
 .footer section ul li a{
     text-decoration: none;
     color: black;
+    font-size: 14px;
 }
 
 .footer section ul li a:hover{
@@ -67,12 +73,14 @@
 
 .footer .bot-copyright .copyright{
     display: flex;
-    padding: 30px 10%;
+    padding: 10px 10%;
     justify-content: center;
     text-align: center;
     margin: auto;
     background-color: #fff;
     border-top: black 1.5px solid;
+    color:black;;
+    
 }
 
 
@@ -80,7 +88,8 @@
     text-align: start;
     justify-self: center;
     align-self: center;
-    margin-left: 10px;
+    margin: 0 0 0 10px;
+    color: black;
 }
 .encabezado{
     position: fixed;
@@ -208,7 +217,7 @@ outline: none;
     }
 
     .footer .bot-copyright .espacio-blanco{
-        padding: 3%;
+        padding: 0%;
     }
 
     .footer .bot-copyright .copyright{

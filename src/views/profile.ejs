@@ -9,16 +9,12 @@
             <div class="info">
                 <img src="/images/users/<%= user.imagen %> " alt="profile image">
                 <div class="datos">
+                    <% if(locals.admin) { %>
+                        <p id="administrador"> <strong>Usuario Administrador</strong></p>
+                    <% }%>
+                    
                     <p> <strong>Nombre y apellido:</strong> <%= user.nombre %> <%= user.apellido %>  </p>
                     <p> <strong>Correo electrónico:</strong> <%= user.mail %> </p>
-
-                    
-                    <% if(locals.admin) { %>
-                        <p> <strong>Usuario Administrador</strong></p>
-                        <% }%>
-                   
-
-
 
                 </div>
             </div>

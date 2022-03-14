@@ -17,59 +17,59 @@ window.onload = function() {
 
 
 
-        let lugarF = foto.value.indexOf('.') + 1;
+        // let lugarF = foto.value.indexOf('.') + 1;
 
-        if(modelo.value == ''){
-            errores.push('Debes ingresar un modelo')
-            modelo.classList.add('is-invalid')
-        } else if(modelo.value.length < 5) {
-            errores.push('El modelo debe tener mas de 5 caracteres')
-            modelo.classList.add('is-invalid')
-        }else if(modelo.type == 'number') {
-            errores.push('El modelo tiene que ser de tipo texto')
-            modelo.classList.add('is-invalid')
-        } else {
-            modelo.classList.remove('is-invalid');
-            modelo.classList.add('control');
-        }
-
-
-        if(precio.value == ''){
-            errores.push('Debes ingresar un precio')
-            precio.classList.add('is-invalid')
-
-        } else if(modelo.type == 'number') {
-            errores.push('El precio tiene que ser de tipo numerico')
-            precio.classList.add('is-invalid')
-
-        } else {
-            precio.classList.remove('is-invalid');
-            precio.classList.add('control');
-        }
+        // if(modelo.value == ''){
+        //     errores.push('Debes ingresar un modelo')
+        //     modelo.classList.add('is-invalid')
+        // } else if(modelo.value.length < 5) {
+        //     errores.push('El modelo debe tener mas de 5 caracteres')
+        //     modelo.classList.add('is-invalid')
+        // }else if(modelo.type == 'number') {
+        //     errores.push('El modelo tiene que ser de tipo texto')
+        //     modelo.classList.add('is-invalid')
+        // } else {
+        //     modelo.classList.remove('is-invalid');
+        //     modelo.classList.add('control');
+        // }
 
 
-        /* if(precio.value == ''){
-            errores.push('Debes ingresar un precio')
-        } */
+        // if(precio.value == ''){
+        //     errores.push('Debes ingresar un precio')
+        //     precio.classList.add('is-invalid')
+
+        // } else if(modelo.type == 'number') {
+        //     errores.push('El precio tiene que ser de tipo numerico')
+        //     precio.classList.add('is-invalid')
+
+        // } else {
+        //     precio.classList.remove('is-invalid');
+        //     precio.classList.add('control');
+        // }
 
 
-        if(foto.value == ''){
-            errores.push('Debes ingresar una imagen')
-        } else {
-            let contador=0;
-            if(foto.value[lugarF] == 'j' || foto.value[lugarF] == 'p' || foto.value[lugarF] == 'g'){
-                lugarF++;
-                contador++;
-            } if(foto.value[lugarF] == 'p' || foto.value[lugarF] == 'n' || foto.value[lugarF] == 'i' ){
-                lugarF++;
-                contador++;
-            } if(foto.value[lugarF] == 'g' || foto.value[lugarF] == 'f' || foto.value[lugarF] == 'e'){
-                lugarF++;
-                contador++;
-            }
-            if(contador != 3){errores.push('La imagen debe ser formato JPG, JPEG o PNG')}
+        // /* if(precio.value == ''){
+        //     errores.push('Debes ingresar un precio')
+        // } */
 
-        }
+
+        // if(foto.value == ''){
+        //     errores.push('Debes ingresar una imagen')
+        // } else {
+        //     let contador=0;
+        //     if(foto.value[lugarF] == 'j' || foto.value[lugarF] == 'p' || foto.value[lugarF] == 'g'){
+        //         lugarF++;
+        //         contador++;
+        //     } if(foto.value[lugarF] == 'p' || foto.value[lugarF] == 'n' || foto.value[lugarF] == 'i' ){
+        //         lugarF++;
+        //         contador++;
+        //     } if(foto.value[lugarF] == 'g' || foto.value[lugarF] == 'f' || foto.value[lugarF] == 'e'){
+        //         lugarF++;
+        //         contador++;
+        //     }
+        //     if(contador != 3){errores.push('La imagen debe ser formato JPG, JPEG o PNG')}
+
+        // }
 
         errorModelo.innerHTML = '';
         errorPrecio.innerHTML = '';

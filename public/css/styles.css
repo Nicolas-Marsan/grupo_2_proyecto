@@ -30,8 +30,10 @@ body{
 
 .texto-error-validacion{
     color: red;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
 .encabezado{
@@ -46,6 +48,16 @@ button:hover{
     cursor: pointer;
 }
 
+
+.encabezado{
+}
+
+#home{
+    position: absolute;
+    left: 50px;
+    bottom: 7px;
+    font-weight: bold;
+}
 
 .logo_barra_manu_carrito{
     width: 100vw;
@@ -136,6 +148,22 @@ outline: none;
         
         
 
+}
+
+.ultimos-lanzamientos article, .favoritos article, .ultimos-lanzamientos article{
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.ultimos-lanzamientos article{
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.subtitulo{
+    width: 50%;
+    padding: 5px;
+    background-color: #C3CA02 ;
 }
 
 .iniciar_sesion p{
